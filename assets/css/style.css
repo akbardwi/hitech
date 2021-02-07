@@ -273,8 +273,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  top: 20px;
-  right: 15px;
+  top: 40px;
+  right: 1px;
   z-index: 9998;
   border: 0;
   background: none;
@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav {
   position: fixed;
-  top: 55px;
+  top: 75px;
   right: 15px;
   bottom: 15px;
   left: 15px;
@@ -458,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991px) {
   #hero {
-    height: 90vh;
+    height: 110vh;
     text-align: center;
   }
   #hero .animated {
@@ -471,24 +471,6 @@ h1, h2, h3, h4, h5, h6 {
   #hero .hero-img img {
     width: 50%;
   }
-}
-@media (max-width: 700px){
-  #hero .wave { 
-    top: 800px;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-  }
-}
-@media (min-width : 991px){
-  #hero .wave {
-    display: inline-block; 
-    position: absolute; 
-    top: 387px; 
-    left: 0; 
-    z-index: -1; 
-    width: 100%;
-  } 
 }
 
 @media (max-width: 768px) {
@@ -1917,7 +1899,10 @@ section {
   .tulisan{
     /* padding-right: 30%; */
     width: 100%;
-    font-size:105px;
+    font-size:99px;
+    text-align: center;
+    align-items: center;
+    left: 1000px;
   }
 }
 
