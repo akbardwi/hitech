@@ -1073,7 +1073,7 @@ section {
 .team .member h4 {
   font-weight: 700;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 30px;
   color: #37517e;
 }
 
@@ -2085,5 +2085,47 @@ body.showLoginForm .popup {
   z-index: 2;
   transform:translate(-50%,-50%);
 }
+.input-form{
+	border: none;
+	background-color: transparent;
+	color: solid #000000;
+	border-bottom: 2px solid #000;
+	width: 466px;
+	padding: 15px 0px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	outline: none;
+}
+.input-form-row{
+  border: none;
+	background-color: transparent;
+	color: #000000;
+	border-bottom: 2px solid #000;
+	width: 227px;
+	padding: 15px 0px;
+	font-size: 15px;
+	letter-spacing: 1px;
+	outline: none;
 
-	
+}
+@media (max-width:700px){
+  .input-form{
+    width: 300px;
+  }
+  .input-form-row{
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    border-bottom: 2px solid #000;
+    width: 300px;
+    padding: 15px 0px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    outline: none;
+  
+  }
+}
+.cstmbg{
+  background-color: #37517e;
+  color: #fff;
+}
