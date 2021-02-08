@@ -39,7 +39,7 @@
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="#event">Event</a></li>
                 <li><a href="#pembicara">Pembicara</a></li>
-                <li><a href="#contact">lorem</a></li>
+                <li><a href="#contact">Hubungi kami</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
         </div>
@@ -118,7 +118,7 @@
                 </div>
             </section>
             <!-- Modal SF -->
-            <div class="modal fade" id="sfModal" tabindex="-1" aria-labelledby="sfModalLabel" aria-hidden="true">
+            <div class="modal fade" id="sfModal" tabindex="-1" aria-labelledby="sfModalLabel" aria-hidden="true" style="z-index: 9999999;">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -127,6 +127,25 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
+                        <div class="row justify-content-between">
+                                <div class="col-4 mb-3">
+                                    <p class="radio-label">Kategori Aplikasi</p>
+                                </div>
+                                <div class="col text-right">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="web" name="category" class="custom-control-input">
+                                        <label class="custom-control-label" for="web">Web</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="mobile" name="category" class="custom-control-input">
+                                        <label class="custom-control-label" for="mobile">Mobile</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="game" name="category" class="custom-control-input">
+                                        <label class="custom-control-label" for="game">Game</label>
+                                    </div>
+                                </div>
+                            </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="JudulAplikasi">Judul Aplikasi</label>
@@ -165,7 +184,7 @@
                 </div>
             </div> 
             <!-- Modal HF -->
-            <div class="modal fade" id="hfModal" tabindex="-1" aria-labelledby="hfModalLabel" aria-hidden="true">
+            <div class="modal fade" id="hfModal" tabindex="-1" aria-labelledby="hfModalLabel" aria-hidden="true"style="z-index: 9999999;">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -212,7 +231,7 @@
                 </div>
             </div> 
             <!-- Modal OT -->
-            <div class="modal fade" id="otModal" tabindex="-1" aria-labelledby="otModalLabel" aria-hidden="true">
+            <div class="modal fade" id="otModal" tabindex="-1" aria-labelledby="otModalLabel" aria-hidden="true"style="z-index: 9999999;">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -221,18 +240,37 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
+                        <div class="row justify-content-between">
+                            <div class="col-4 mb-3">
+                                <p class="radio-label">Kategori Peserta</p>
+                            </div>
+                            <div class="col text-right">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="radioMhs" name="otCategory"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="radioMhs">Mahasiswa</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="radioUmum" name="otCategory"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="radioUmum">Umum</label>
+                                </div>
+                            </div>
+                        </div>
                         <div class="modal-body">
                             <div class="form-group">
                                 <label for="Nama">Nama</label>
                                 <input type="text" class="form-control" id="Nama">
                             </div>
-                            <div class="form-group">
-                                <label for="Asalkampus">Asal Kampus</label>
-                                <input type="text" class="form-control" id="Asalkampus">
-                            </div>
-                            <div class="form-group">
-                                <label for="Nim">NIM</label>
-                                <input type="text" class="form-control" id="Nim">
+                            <div id="mahasiswa">
+                                <div class="form-group">
+                                    <label for="Asalkampus">Asal Kampus</label>
+                                    <input type="text" class="form-control" id="Asalkampus">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Nim">NIM</label>
+                                    <input type="text" class="form-control" id="Nim">
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="NomerWA">Nomor Whatsapp</label>
@@ -334,5 +372,15 @@
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init()
+    $('#radioUmum').on('click', function () {
+        $('#mahasiswa').hide()
+    })
+
+    $('#radioMhs').on('click', function () {
+        $('#mahasiswa').show()
+    })
+</script>
 </body>
 </html>
