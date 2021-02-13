@@ -43,7 +43,13 @@
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                 <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="#event">Event</a></li>
+                <li class="drop-down"><a href="#event">Event</a>
+                    <ul>
+                        <li><a href="#sf">Software Fair</a></li>
+                        <li><a href="#hf">Hardware Fair</a></li>
+                        <li><a href="#ot">Open Talk</a></li>
+                    </ul>
+                </li>
                 <li><a href="#pembicara">Pembicara</a></li>
                 <li><a href="#pengunjung">Pengunjung</a></li>
                 <li><a href="#kontak">Hubungi kami</a></li>
@@ -87,7 +93,7 @@
         <!-- envent -->
         <!-- ======= event lisi ======= -->
         <div class="menu">
-            <section class="card" data-aos="fade-left" >
+            <section class="card" data-aos="fade-left" id="sf">
                 <img src="assets/img/sf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150">
                 <div>
                     <h3><strong>Software Fair</strong></h3>
@@ -116,7 +122,7 @@
                     </button>
                 </div>         
             </section>
-            <section class="card" data-aos="fade-left" >
+            <section class="card" data-aos="fade-left"id="hf">
                 <img src="assets/img/hf-logo.png" alt="" />
                 <div>
                     <h3><strong>Hardware Fair</strong></h3>
@@ -144,7 +150,7 @@
                     </button>
                 </div>
             </section>      
-            <section class="card" data-aos="fade-right" >
+            <section class="card" data-aos="fade-right"id="ot">
                 <img src="assets/img/ot-logo.png" alt="" />
                 <div>
                     <h3><strong>Open Talk</strong></h3>
@@ -370,75 +376,67 @@
             </div>
         </section>
         <br>
-        <div id="pengunjung">
-            <div class="section-title">
-                <h2>Pengunjung</h2>
-            </div>
-            
-            <div class="section">
-                
-                <div class="container">
-                <div class="row full-height justify-content-center">
-                    <div class="col-12 text-center align-self-center py-5">
-                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                        <h6 class="mb-0 pb-3">
-                        <span>Log In </span>
-                        <span>Sign Up</span>
-                        </h6>
-                        <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-                        <label for="reg-log"></label>
-            
-                        <div class="card-3d-wrap mx-auto">
-                        <div class="card-3d-wrapper">
-                            <div class="card-front">
-                            <div class="center-wrap">
-                                <div class="section text-center">
-                                <h4 class="mb-4 pb-3">Log In</h4>
-                                <div class="form-group">
-                                    <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                                    <i class="input-icon uil uil-at"></i>
-                                </div>  
-                                <div class="form-group mt-2">
-                                    <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                                    <i class="input-icon uil uil-lock-alt"></i>
-                                </div>
-                                <a href="#" class="buttn mt-4">submit</a>
-                                    <p class="mb-0 mt-4 text-center">
-                                    <a href="#0" class="link">Forgot your password?</a>
-                                    </p>
-                                </div>
-                            </div>
-                            </div>
-            
-                            <div class="card-back">
-                            <div class="center-wrap">
-                                <div class="section text-center">
-                                <h4 class="mb-4 pb-3">Sign Up</h4>
-                                <div class="form-group">
-                                    <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
-                                    <i class="input-icon uil uil-user"></i>
-                                </div>  
-                                <div class="form-group mt-2">
-                                    <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                                    <i class="input-icon uil uil-at"></i>
-                                </div>  
-                                <div class="form-group mt-2">
-                                    <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                                    <i class="input-icon uil uil-lock-alt"></i>
-                                </div>
-                                <a href="#" class="buttn mt-4">submit</a>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
+        <br>
     </main>
+    <div id="pengunjung">
+        <div class="section-title"data-aos="fade-up">
+            <h2>Pengunjung</h2>
+        </div>
+            <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                    <h6 class="mb-0 pb-3">
+                    <span>Log In </span>
+                    <span>Sign Up</span>
+                    </h6>
+                    <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                    <label for="reg-log"></label>
+                    <div class="card-3d-wrap mx-auto">
+                    <div class="card-3d-wrapper">
+                        <div class="card-front">
+                        <div class="center-wrap">
+                            <div class="section text-center">
+                            <h4 class="mb-4 pb-3">Log In</h4>
+                            <div class="form-group">
+                                <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                <i class="input-icon uil uil-at"></i>
+                            </div>  
+                            <div class="form-group mt-2">
+                                <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                <i class="input-icon uil uil-lock-alt"></i>
+                            </div>
+                            <a href="#" class="buttn mt-4">submit</a>
+                                <p class="mb-0 mt-4 text-center">
+                                <a href="#0" class="link">Forgot your password?</a>
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+        
+                        <div class="card-back" id="signup">
+                        <div class="center-wrap">
+                            <div class="section text-center">
+                            <h4 class="mb-4 pb-3">Sign Up</h4>
+                            <div class="form-group">
+                                <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
+                                <i class="input-icon uil uil-user"></i>
+                            </div>  
+                            <div class="form-group mt-2">
+                                <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                <i class="input-icon uil uil-at"></i>
+                            </div>  
+                            <div class="form-group mt-2">
+                                <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                <i class="input-icon uil uil-lock-alt"></i>
+                            </div>
+                            <a href="#" class="buttn mt-4">submit</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+            </div>
+    </div>
     <div class="main-footer" id="kontak">
         <div class="footer-atas">
             <div class="footer-bg">

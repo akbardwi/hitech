@@ -2183,6 +2183,7 @@ body.showLoginForm .popup {
 	height: auto;
 	margin: auto;
 	margin-top: 5px;
+  padding-bottom: 1rem!important;
 
 }
 .footer-email-phone ul{
@@ -2205,7 +2206,7 @@ body.showLoginForm .popup {
 	padding-right: 5px;
 }
 .footer-email-phone ul li a:hover{
-	color: #ff6a00;
+	color: #37517e;
 }
 .footer-email-phone ul li a:hover i{
 	color: #333;
