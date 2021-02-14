@@ -1911,11 +1911,10 @@ section {
   .tulisan{
     /* padding-right: 30%; */
     width: 100%;
-    font-size:96px;
+    font-size:98px;
     text-align: center;
     align-items: center;
-    left: 1000px;
-    padding-left: 280px;
+    justify-content: center;
   }
 }
 
@@ -2142,6 +2141,9 @@ body.showLoginForm .popup {
   background-color: #37517e;
   color: #fff;
 }
+.cstm{
+	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+}
 .main-footer{
 	width: 100%;
 	/* padding: 20px 0px 10px 0px; */
@@ -2353,7 +2355,7 @@ body.showLoginForm .popup {
   cursor: pointer;
 }
 .accordion-item-header::after {
-  content: "\2B9F";
+  content: "\25BC";
   font-size: 2rem;
   position: absolute;
   right: 1rem;
@@ -2377,4 +2379,23 @@ body.showLoginForm .popup {
   html {
     font-size: 14px;
   }
+}
+.cstmbt{
+  background: none;
+  color: #ccc;
+  width: 240px;
+  height: 80px;
+  border: 1px solid #338033;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: .6s;
+  overflow: hidden;
+}
+.btn-register {
+  color: white;
+  font-weight: 500;
+  background-color: #0077b5;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 50px;
 }

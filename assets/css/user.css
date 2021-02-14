@@ -250,9 +250,11 @@ h6 span{
 	-ms-flex-pack: center;
 	text-align: center;
 	border: none;
-	background-color: #102770;
+	background-color: #0077b5;
 	color: #fff;
 	box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
+	border: 0;
+	border-radius: 50px;
 }
 /* .buttn:active,
 .buttn:focus{  
@@ -265,6 +267,7 @@ h6 span{
 	color: #ffeba7;
 	box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 } */
+
   
   
   
