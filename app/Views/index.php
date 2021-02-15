@@ -9,20 +9,20 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/logo-navbar.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="<?= base_url(); ?>/assets/img/logo-navbar.png" rel="icon">
+    <!-- <link href="<?= base_url(); ?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
@@ -30,21 +30,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>/assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link href="assets/css/user.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/custom-input.css">
+        <link href="<?= base_url(); ?>/assets/css/user.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/custom-input.css">
 </head>
 
 <body>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
-            <a href="index.html" class="logo mr-auto"><img src="assets/img/logo-white.png" alt="" class="img-fluid"></a>
+            <a href="index.html" class="logo mr-auto"><img src="<?= base_url(); ?>/assets/img/logo-white.png" alt="" class="img-fluid"></a>
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="<?= base_url(); ?>">Home</a></li>
                 <li class="drop-down"><a href="#event">Event</a>
                     <ul>
                         <li><a href="#sf">Software Fair</a></li>
@@ -75,7 +75,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="assets/img/hero-img.png" class="img-fluid animated" alt="" />
+                    <img src="<?= base_url(); ?>/assets/img/hero-img.png" class="img-fluid animated" alt="" />
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
         <!-- ======= event lisi ======= -->
         <div class="menu">
             <section class="card" data-aos="fade-left" id="sf">
-                <img src="assets/img/sf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150">
+                <img src="<?= base_url(); ?>/assets/img/sf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150">
                 <div>
                     <h3><strong>Software Fair</strong></h3>
                     <p>
@@ -125,7 +125,7 @@
                 </div>         
             </section>
             <section class="card" data-aos="fade-left"id="hf">
-                <img src="assets/img/hf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
+                <img src="<?= base_url(); ?>/assets/img/hf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
                 <div>
                     <h3><strong>Hardware Fair</strong></h3>
                     <p>
@@ -153,7 +153,7 @@
                 </div>
             </section>      
             <section class="card" data-aos="fade-right"id="ot">
-                <img src="assets/img/ot-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
+                <img src="<?= base_url(); ?>/assets/img/ot-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
                 <div>
                     <h3><strong>Open Talk</strong></h3>
                     <p>
@@ -469,7 +469,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="assets/img/comingsoon.png" class="img-fluid" alt=""></div>
+                            <div class="pic"><img src="<?= base_url(); ?>/assets/img/comingsoon.png" class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Coming Soon</h4>
                                 <span>lorem</span>
@@ -485,7 +485,7 @@
                     </div>
                     <div class="col-lg-6 mt-4 mt-lg-0">
                         <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="pic"><img src="assets/img/comingsoon.png" class="img-fluid" alt=""></div>
+                            <div class="pic"><img src="<?= base_url(); ?>/assets/img/comingsoon.png" class="img-fluid" alt=""></div>
                             <div class="member-info">
                                 <h4>Coming Soon</h4>
                                 <span>lorem</span>
@@ -618,22 +618,22 @@
 
 <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 <div id="preloader">
-    <img class="image" src="assets/img/logo-navbar.png">
+    <img class="image" src="<?= base_url(); ?>/assets/img/logo-navbar.png">
 </div>
 
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/venobox/venobox.min.js"></script>
-<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
+<script src="<?= base_url(); ?>/assets/vendor/jquery/jquery.min.js"></script>
+<script src="<?= base_url(); ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?= base_url(); ?>/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="<?= base_url(); ?>/assets/vendor/php-email-form/validate.js"></script>
+<script src="<?= base_url(); ?>/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="<?= base_url(); ?>/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="<?= base_url(); ?>/assets/vendor/venobox/venobox.min.js"></script>
+<script src="<?= base_url(); ?>/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="<?= base_url(); ?>/assets/vendor/aos/aos.js"></script>
 
 
 
-<script src="assets/js/main.js"></script>
+<script src="<?= base_url(); ?>/assets/js/main.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init()
