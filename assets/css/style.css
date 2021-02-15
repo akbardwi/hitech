@@ -2152,6 +2152,7 @@ body.showLoginForm .popup {
 	outline: none;
 
 }
+
 @media (max-width:700px){
   .input-form{
     width: 300px;
@@ -2169,6 +2170,7 @@ body.showLoginForm .popup {
   
   }
 }
+
 .cstmbg{
   background-color: #37517e;
   color: #fff;

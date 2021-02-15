@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="assets/css/user.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom-input.css">
 </head>
 
 <body>
@@ -194,38 +195,86 @@
                                 </div>
                             </div>
                         <div class="modal-body">
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Nama Aplikasi" required>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Judul Aplikasi</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">layers</i>
+                                </label>
                             </div>
-                            <form>
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <input class="input-form-row" type="text" placeholder="Masukan Nama Ketua" required>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <input class="input-form-row" type="text" placeholder="Masukan Nim Ketua" required>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <input class="input-form-row" type="text" placeholder="Masukan Nama Anggota" required>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <input class="input-form-row" type="text" placeholder="Masukan Nim Anggota" required>
+                           <div class="row">
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">Nama Ketua</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">person</i>
+                                        </label>
                                     </div>
                                 </div>
-                            </form>
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Link Gdrive" required>
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">NIM Ketua</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">image_aspect_ratio</i>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Nomor Whatsapp" required>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">Nama Anggota</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">people</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">NIM Anggota</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">image_aspect_ratio</i>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Email" required>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Link Google Drive</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">insert_link</i>
+                                </label>
+                            </div>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Nomor Whatsapp</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">phone_android</i>
+                                </label>
+                            </div>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Email</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">email</i>
+                                </label>
                             </div>
                         </div>
                         <div class="modal-footer cstmbg">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Register</button>
+                            <button type="button" class="btn btn-primary ">Register</button>
                         </div>
                     </div>
                 </div>
@@ -243,31 +292,81 @@
                         </div>
                         
                         <div class="modal-body">
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Judul Alat" required>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Judul Alat</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">layers</i>
+                                </label>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <input class="input-form-row" type="text" placeholder="Masukan Nama Ketua" required>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">Nama Ketua</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">person</i>
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <input class="input-form-row" type="text" placeholder="Masukan Nim Ketua" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input class="input-form-row" type="text" placeholder="Masukan Nama Anggota" required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input class="input-form-row" type="text" placeholder="Masukan Nim Anggota" required>
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">NIM Ketua</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">image_aspect_ratio</i>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Link Gdrive" required>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">Nama Anggota</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">people</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">NIM Anggota</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">image_aspect_ratio</i>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Nomor Whatsapp" required>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Link Google Drive</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">insert_link</i>
+                                </label>
                             </div>
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Email" required>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Nomor Whatsapp</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">phone_android</i>
+                                </label>
+                            </div>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Email</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">email</i>
+                                </label>
                             </div>
                         </div>
                         <div class="modal-footer cstmbg">
@@ -305,27 +404,53 @@
                             </div>
                         </div>
                         <div class="modal-body">
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Nama" required>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Masukkan Nama</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">person</i>
+                                </label>
                             </div>
-                            <div id="mahasiswa">
-                                <form>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <input class="input-form-row" type="text" placeholder="Masukan Asal Kampus" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <input class="input-form-row" type="text" placeholder="Masukan Nim" required>
-                                        </div>
+                            <div class="row" id="mahasiswa">
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">Asal Kampus</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">school</i>
+                                        </label>
                                     </div>
-                                </form>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input required>
+                                            <span class="omrs-input-label">NIM</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">image_aspect_ratio</i>
+                                        </label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Nomor Whatsapp" required>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Nomor Whatsapp</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">phone_android</i>
+                                </label>
                             </div>
-                            <div class="form-group">
-                                <input class="input-form" type="text" placeholder="Masukan Email" required>
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input required>
+                                    <span class="omrs-input-label">Email</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">email</i>
+                                </label>
                             </div>
+                        </div>
                         </div>
                         <div class="modal-footer cstmbg">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
