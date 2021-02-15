@@ -95,6 +95,33 @@
         <!-- envent -->
         <!-- ======= event lisi ======= -->
         <div class="menu">
+            <?php
+            $inputs_sf = session()->getFlashdata('inputs_sf');
+            $error_sf = session()->getFlashdata('error_sf');
+            $errors_sf = session()->getFlashdata('errors_sf');
+            $success_sf = session()->getFlashdata('success_sf');
+            if(!empty($errors_sf)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                <?php foreach ($errors_sf as $errors_sf) : ?>
+                    <li><?= esc($errors_sf) ?></li>
+                <?php endforeach ?>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($error_sf)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    <li><?= esc($error_sf) ?></li>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($success_sf)){ ?>
+            <div class="alert alert-success" role="alert">
+                <?= esc($success_sf) ?><br />
+            </div>
+                <br />
+            <?php } ?>
             <section class="card" data-aos="fade-left" id="sf">
                 <img src="<?= base_url(); ?>/assets/img/sf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150">
                 <div>
@@ -174,108 +201,119 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="row justify-content-between">
+                        <form action="<?= base_url("auth/register_sf"); ?>" method="post">
+                            <?= csrf_field(); ?>
+                            <div class="row justify-content-between">
                                 <div class="col-4 mb-3">
                                     <p class="radio-label text-center">Kategori Aplikasi</p>
                                 </div>
                                 <br>
                                 <div class="col text-right">
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="web" name="category" class="custom-control-input">
+                                        <input type="radio" id="web" value="Web" name="category" class="custom-control-input" <?php if(isset($inputs_sf['category']) and $inputs_sf['category'] == "Web"){ echo "checked"; } ?>>
                                         <label class="custom-control-label" for="web">Web</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="mobile" name="category" class="custom-control-input">
+                                        <input type="radio" id="mobile" value="Mobile" name="category" class="custom-control-input" <?php if(isset($inputs_sf['category']) and $inputs_sf['category'] == "Mobile"){ echo "checked"; } ?>>
                                         <label class="custom-control-label" for="mobile">Mobile</label>
                                     </div>
                                     <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="game" name="category" class="custom-control-input">
+                                        <input type="radio" id="game" value="Game" name="category" class="custom-control-input" <?php if(isset($inputs_sf['category']) and $inputs_sf['category'] == "Game"){ echo "checked"; } ?>>
                                         <label class="custom-control-label" for="game">Game</label>
                                     </div>
                                 </div>
                             </div>
-                        <div class="modal-body">
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Judul Aplikasi</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">layers</i>
-                                </label>
-                            </div>
-                           <div class="row">
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">Nama Ketua</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">person</i>
-                                        </label>
+                            <div class="modal-body">
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_app']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Judul Aplikasi</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">layers</i>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input name="nama_ketua" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_ketua']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Nama Ketua</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">person</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input name="nim_ketua" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nim_ketua']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">NIM Ketua</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">image_aspect_ratio</i>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">NIM Ketua</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">image_aspect_ratio</i>
-                                        </label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Nama Anggota</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">people</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">NIM Anggota</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">image_aspect_ratio</i>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">Nama Anggota</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">people</i>
-                                        </label>
-                                    </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input name="kampus" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['kampus']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Asal Kampus</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">school</i>
+                                    </label>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">NIM Anggota</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">image_aspect_ratio</i>
-                                        </label>
-                                    </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input name="link" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['link']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Link Google Drive</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">insert_link</i>
+                                    </label>
+                                </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input name="wa" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['wa']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Nomor Whatsapp</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">phone_android</i>
+                                    </label>
+                                </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input name="email" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['email']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Email</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">email</i>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Link Google Drive</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">insert_link</i>
-                                </label>
+                            <div class="modal-footer cstmbg">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Register</button>
                             </div>
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Nomor Whatsapp</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">phone_android</i>
-                                </label>
-                            </div>
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Email</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">email</i>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="modal-footer cstmbg">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary ">Register</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div> 
@@ -509,60 +547,60 @@
         <div class="section-title"data-aos="fade-up">
             <h2>Pengunjung</h2>
         </div>
-            <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100">
             <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                    <h6 class="mb-0 pb-3">
-                    <span>Log In </span>
-                    <span>Sign Up</span>
-                    </h6>
-                    <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-                    <label for="reg-log"></label>
-                    <div class="card-3d-wrap mx-auto">
+                <h6 class="mb-0 pb-3">
+                <span>Log In </span>
+                <span>Sign Up</span>
+                </h6>
+                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                <label for="reg-log"></label>
+                <div class="card-3d-wrap mx-auto">
                     <div class="card-3d-wrapper">
                         <div class="card-front">
-                        <div class="center-wrap">
-                            <div class="section text-center">
-                            <h4 class="mb-4 pb-3">Log In</h4>
-                            <div class="form-group">
-                                <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                                <i class="input-icon uil uil-at"></i>
-                            </div>  
-                            <div class="form-group mt-2">
-                                <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                                <i class="input-icon uil uil-lock-alt"></i>
+                            <div class="center-wrap">
+                                <div class="section text-center">
+                                    <h4 class="mb-4 pb-3">Log In</h4>
+                                    <div class="form-group">
+                                        <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                        <i class="input-icon uil uil-at"></i>
+                                    </div>  
+                                    <div class="form-group mt-2">
+                                        <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                        <i class="input-icon uil uil-lock-alt"></i>
+                                    </div>
+                                    <a href="#" class="buttn mt-4">submit</a>
+                                    <p class="mb-0 mt-4 text-center">
+                                    <a href="#0" class="link">Forgot your password?</a>
+                                    </p>
+                                </div>
                             </div>
-                            <a href="#" class="buttn mt-4">submit</a>
-                                <p class="mb-0 mt-4 text-center">
-                                <a href="#0" class="link">Forgot your password?</a>
-                                </p>
-                            </div>
-                        </div>
                         </div>
         
                         <div class="card-back" id="signup">
-                        <div class="center-wrap">
-                            <div class="section text-center">
-                            <h4 class="mb-4 pb-3">Sign Up</h4>
-                            <div class="form-group">
-                                <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
-                                <i class="input-icon uil uil-user"></i>
-                            </div>  
-                            <div class="form-group mt-2">
-                                <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                                <i class="input-icon uil uil-at"></i>
-                            </div>  
-                            <div class="form-group mt-2">
-                                <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                                <i class="input-icon uil uil-lock-alt"></i>
-                            </div>
-                            <a href="#" class="buttn mt-4">submit</a>
+                            <div class="center-wrap">
+                                <div class="section text-center">
+                                    <h4 class="mb-4 pb-3">Sign Up</h4>
+                                    <div class="form-group">
+                                        <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
+                                        <i class="input-icon uil uil-user"></i>
+                                    </div>  
+                                    <div class="form-group mt-2">
+                                        <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+                                        <i class="input-icon uil uil-at"></i>
+                                    </div>  
+                                    <div class="form-group mt-2">
+                                        <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+                                        <i class="input-icon uil uil-lock-alt"></i>
+                                    </div>
+                                    <a href="#" class="buttn mt-4">submit</a>
+                                </div>
                             </div>
                         </div>
-                        </div>
                     </div>
-                    </div>
+                </div>
             </div>
-            </div>
+        </div>
     </div>
     <div class="main-footer" id="kontak">
         <div class="footer-atas">
@@ -608,7 +646,7 @@
         </div>
         <div class="container footer-bottom clearfix">
             <div class="copyright">
-                &copy; Copyright <strong><span>HMTI</span></strong>.
+                &copy; Copyright <?= date("Y"); ?> <strong><span>HMTI</span></strong>.
             </div>
             <div class="credits">
                 Designed by <a href="#">S.A.M</a>
