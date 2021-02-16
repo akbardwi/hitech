@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2021 at 02:27 PM
+-- Generation Time: Feb 16, 2021 at 04:23 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `hitech`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hf`
+--
+
+CREATE TABLE `hf` (
+  `id` int(255) NOT NULL,
+  `judul_alat` text NOT NULL,
+  `nama_ketua` text NOT NULL,
+  `nim_ketua` text NOT NULL,
+  `nama_anggota` text NOT NULL,
+  `nim_anggota` text NOT NULL,
+  `kampus` text NOT NULL,
+  `link` text NOT NULL,
+  `wa` text NOT NULL,
+  `email` text NOT NULL,
+  `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -47,6 +67,12 @@ CREATE TABLE `sf` (
 --
 
 --
+-- Indexes for table `hf`
+--
+ALTER TABLE `hf`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sf`
 --
 ALTER TABLE `sf`
@@ -55,6 +81,12 @@ ALTER TABLE `sf`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `hf`
+--
+ALTER TABLE `hf`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `sf`

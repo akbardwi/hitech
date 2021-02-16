@@ -120,7 +120,7 @@
             <div class="alert alert-success" role="alert">
                 <?= esc($success_sf) ?><br />
             </div>
-                <br />
+            <br />
             <?php } ?>
             <section class="card" data-aos="fade-left" id="sf">
                 <img src="<?= base_url(); ?>/assets/img/sf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150">
@@ -151,7 +151,34 @@
                     </button>
                 </div>         
             </section>
-            <section class="card" data-aos="fade-left"id="hf">
+            <?php
+            $inputs_hf = session()->getFlashdata('inputs_hf');
+            $error_hf = session()->getFlashdata('error_hf');
+            $errors_hf = session()->getFlashdata('errors_hf');
+            $success_hf = session()->getFlashdata('success_hf');
+            if(!empty($errors_hf)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                <?php foreach ($errors_hf as $errors_hf) : ?>
+                    <li><?= esc($errors_hf) ?></li>
+                <?php endforeach ?>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($error_hf)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    <li><?= esc($error_hf) ?></li>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($success_hf)){ ?>
+            <div class="alert alert-success" role="alert">
+                <?= esc($success_hf) ?><br />
+            </div>
+            <br />
+            <?php } ?>
+            <section class="card" data-aos="fade-left" id="hf">
                 <img src="<?= base_url(); ?>/assets/img/hf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
                 <div>
                     <h3><strong>Hardware Fair</strong></h3>
@@ -226,7 +253,7 @@
                             <div class="modal-body">
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_app']; ?>" <?php } ?> required>
+                                        <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_app']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Judul Aplikasi</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">layers</i>
@@ -236,7 +263,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_ketua" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_ketua']; ?>" <?php } ?> required>
+                                                <input type="text" name="nama_ketua" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_ketua']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">Nama Ketua</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">person</i>
@@ -246,7 +273,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_ketua" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nim_ketua']; ?>" <?php } ?> required>
+                                                <input type="text" name="nim_ketua" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_ketua']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">NIM Ketua</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
@@ -258,7 +285,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
+                                                <input type="text" name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">Nama Anggota</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">people</i>
@@ -268,7 +295,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
+                                                <input type="text" name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">NIM Anggota</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
@@ -278,7 +305,7 @@
                                 </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input type="text" name="kampus" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['kampus']; ?>" <?php } ?> required>
+                                        <input type="text" name="kampus" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['kampus']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Asal Kampus</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">school</i>
@@ -286,7 +313,7 @@
                                 </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input type="text" name="link" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['link']; ?>" <?php } ?> required>
+                                        <input type="text" name="link" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['link']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Link Google Drive</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">insert_link</i>
@@ -294,7 +321,7 @@
                                 </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input type="number" name="wa" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['wa']; ?>" <?php } ?> required>
+                                        <input type="number" name="wa" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['wa']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Nomor Whatsapp</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">phone_android</i>
@@ -302,7 +329,7 @@
                                 </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input type="text" name="email" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['email']; ?>" <?php } ?> required>
+                                        <input type="email" name="email" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['email']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Email</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">email</i>
@@ -328,89 +355,99 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        
-                        <div class="modal-body">
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Judul Alat</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">layers</i>
-                                </label>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">Nama Ketua</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">person</i>
-                                        </label>
+                        <form action="<?= base_url("auth/register_hf"); ?>" method="post">
+                            <div class="modal-body">
+                                <?= csrf_field(); ?>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="text" name="judul_alat" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['judul_alat']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Judul Alat</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">layers</i>
+                                    </label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nama_ketua_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_ketua_hf']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Nama Ketua</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">person</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nim_ketua_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_ketua_hf']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">NIM Ketua</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">image_aspect_ratio</i>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">NIM Ketua</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">image_aspect_ratio</i>
-                                        </label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nama_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota_hf']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Nama Anggota</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">people</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nim_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota_hf']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">NIM Anggota</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">image_aspect_ratio</i>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">Nama Anggota</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">people</i>
-                                        </label>
-                                    </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="text" name="kampus_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['kampus_hf']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Asal Kampus</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">school</i>
+                                    </label>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">NIM Anggota</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">image_aspect_ratio</i>
-                                        </label>
-                                    </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="text" name="link_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['link_hf']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Link Google Drive</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">insert_link</i>
+                                    </label>
+                                </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="number" name="wa_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['wa_hf']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Nomor Whatsapp</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">phone_android</i>
+                                    </label>
+                                </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="email" name="email_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['email_hf']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Email</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">email</i>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Link Google Drive</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">insert_link</i>
-                                </label>
+                            <div class="modal-footer cstmbg">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Register</button>
                             </div>
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Nomor Whatsapp</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">phone_android</i>
-                                </label>
-                            </div>
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Email</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">email</i>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="modal-footer cstmbg">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Register</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div> 
