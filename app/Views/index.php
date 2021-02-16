@@ -226,7 +226,7 @@
                             <div class="modal-body">
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_app']; ?>" <?php } ?> required>
+                                        <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_app']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Judul Aplikasi</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">layers</i>
@@ -236,7 +236,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input name="nama_ketua" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_ketua']; ?>" <?php } ?> required>
+                                                <input type="text" name="nama_ketua" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_ketua']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">Nama Ketua</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">person</i>
@@ -246,7 +246,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input name="nim_ketua" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nim_ketua']; ?>" <?php } ?> required>
+                                                <input type="text" name="nim_ketua" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nim_ketua']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">NIM Ketua</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
@@ -258,7 +258,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
+                                                <input type="text" name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">Nama Anggota</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">people</i>
@@ -268,7 +268,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
+                                                <input type="text" name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
                                                 <span class="omrs-input-label">NIM Anggota</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
@@ -278,7 +278,7 @@
                                 </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input name="kampus" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['kampus']; ?>" <?php } ?> required>
+                                        <input type="text" name="kampus" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['kampus']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Asal Kampus</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">school</i>
@@ -286,7 +286,7 @@
                                 </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input name="link" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['link']; ?>" <?php } ?> required>
+                                        <input type="text" name="link" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['link']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Link Google Drive</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">insert_link</i>
@@ -294,7 +294,7 @@
                                 </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input name="wa" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['wa']; ?>" <?php } ?> required>
+                                        <input type="number" name="wa" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['wa']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Nomor Whatsapp</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">phone_android</i>
@@ -302,7 +302,7 @@
                                 </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input name="email" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['email']; ?>" <?php } ?> required>
+                                        <input type="text" name="email" <?php if(isset($inputs_sf)){ ?> value="<?php echo $inputs_sf['email']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Email</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">email</i>
