@@ -158,4 +158,70 @@ class Validation
 			'valid_email'	=> 'Masukkan Email yang valid'
 		]
 	];
+
+	//Validasi Daftar OT
+	public $otMhs = [
+		'kategori'		=> 'required',
+		'nama'			=> 'required',
+		'kampus'		=> 'required',
+		'nim'			=> 'required',
+		'wa'			=> [
+			'required',
+			'is_natural'
+		],
+		'email'			=> [
+			'required',
+			'valid_email'
+		],
+	];	 
+	public $otMhs_errors = [
+		'kategori'		=> [
+			'required'      => 'Kategori wajib diisi'
+		],
+		'nama' 			=> [
+			'required'      => 'Nama wajib diisi'
+		],
+		'kampus' 		=> [
+			'required'      => 'Asal Kampus wajib diisi'
+		],
+		'nim' 			=> [
+			'required'      => 'NIM wajib diisi'
+		],
+		'wa'			=> [
+			'required'		=> 'No. Wa wajib diisi',
+			'is_natural'	=> 'No. Wa hanya bisa diisi bilangan bulat'
+		],
+		'email'			=> [
+			'required'		=> 'Email wajib diisi',
+			'valid_email'	=> 'Masukkan Email yang valid'
+		]
+	];
+	public $otUmum = [
+		'kategori'		=> 'required',
+		'nama'			=> 'required',
+		'wa'			=> [
+			'required',
+			'is_natural'
+		],
+		'email'			=> [
+			'required',
+			'valid_email'
+		],
+	];	 
+	public $otUmum_errors = [
+		'kategori'		=> [
+			'required'      => 'Kategori wajib diisi'
+		],
+		'nama' 			=> [
+			'required'      => 'Nama wajib diisi'
+		],
+		'wa'			=> [
+			'required'		=> 'No. Wa wajib diisi',
+			'is_natural'	=> 'No. Wa hanya bisa diisi bilangan bulat'
+		],
+		'email'			=> [
+			'required'		=> 'Email wajib diisi',
+			'valid_email'	=> 'Masukkan Email yang valid'
+		]
+	];
 }

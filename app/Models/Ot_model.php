@@ -2,17 +2,13 @@
 
 use CodeIgniter\Model;
 
-class Sf_model extends Model{
-    protected $table 		= 'sf';
+class Ot_model extends Model{
+    protected $table 		= 'ot';
 	protected $primaryKey 	= 'id';
-    protected $allowedFields = ['kat_app', 
-                                'nama_app', 
-                                'nama_ketua',
-                                'nim_ketua',
-                                'nama_anggota',
-                                'nim_anggota',
+    protected $allowedFields = ['kategori',
+                                'nama',
 								'kampus',
-                                'link_gdrive',
+                                'nim',
                                 'wa',
                                 'email'];
 

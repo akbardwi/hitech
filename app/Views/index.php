@@ -151,6 +151,7 @@
                     </button>
                 </div>         
             </section>
+
             <?php
             $inputs_hf = session()->getFlashdata('inputs_hf');
             $error_hf = session()->getFlashdata('error_hf');
@@ -205,7 +206,35 @@
                         Register
                     </button>
                 </div>
-            </section>      
+            </section>
+
+            <?php
+            $inputs_ot = session()->getFlashdata('inputs_ot');
+            $error_ot = session()->getFlashdata('error_ot');
+            $errors_ot = session()->getFlashdata('errors_ot');
+            $success_ot = session()->getFlashdata('success_ot');
+            if(!empty($errors_ot)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                <?php foreach ($errors_ot as $errors_ot) : ?>
+                    <li><?= esc($errors_ot) ?></li>
+                <?php endforeach ?>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($error_ot)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    <li><?= esc($error_ot) ?></li>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($success_ot)){ ?>
+            <div class="alert alert-success" role="alert">
+                <?= esc($success_ot) ?><br />
+            </div>
+            <br />
+            <?php } ?>      
             <section class="card" data-aos="fade-right"id="ot">
                 <img src="<?= base_url(); ?>/assets/img/ot-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
                 <div>
@@ -218,6 +247,7 @@
                     </button>
                 </div>
             </section>
+
             <!-- Modal SF -->
             <div class="modal fade" id="sfModal" tabindex="-1" aria-labelledby="sfModalLabel" aria-hidden="true" style="z-index: 9999999;">
                 <div class="modal-dialog">
@@ -344,8 +374,8 @@
                     </div>
                 </div>
             </div> 
-            <!-- Modal HF -->
 
+            <!-- Modal HF -->
             <div class="modal fade" id="hfModal" tabindex="-1" aria-labelledby="hfModalLabel" aria-hidden="true"style="z-index: 9999999;">
                 <div class="modal-dialog">
                     <div class="modal-content cstm">
@@ -451,6 +481,7 @@
                     </div>
                 </div>
             </div> 
+
             <!-- Modal OT -->
             <div class="modal fade" id="otModal" tabindex="-1" aria-labelledby="otModalLabel" aria-hidden="true"style="z-index: 9999999;">
                 <div class="modal-dialog">
@@ -461,76 +492,78 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <div class="row justify-content-between">
-                            <div class="col-4 mb-3">
-                                <p class="radio-label">Kategori Peserta</p>
-                            </div>
-                            <div class="col text-right">
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="radioMhs" name="otCategory"
-                                        class="custom-control-input">
-                                    <label class="custom-control-label" for="radioMhs">Mahasiswa</label>
+                        <form action="<?= base_url('auth/register_ot'); ?>" method="post">
+                            <?= csrf_field(); ?>
+                            <div class="row justify-content-between">
+                                <div class="col-4 mb-3">
+                                    <p class="radio-label">Kategori Peserta</p>
                                 </div>
-                                <div class="custom-control custom-radio custom-control-inline">
-                                    <input type="radio" id="radioUmum" name="otCategory"
-                                        class="custom-control-input">
-                                    <label class="custom-control-label" for="radioUmum">Umum</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-body">
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Masukkan Nama</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">person</i>
-                                </label>
-                            </div>
-                            <div class="row" id="mahasiswa">
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">Asal Kampus</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">school</i>
-                                        </label>
+                                <div class="col text-right">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="radioMhs" value="Mahasiswa" name="otCategory"
+                                            class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Mahasiswa"){ echo "checked"; } ?>>
+                                        <label class="custom-control-label" for="radioMhs">Mahasiswa</label>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="omrs-input-group">
-                                        <label class="omrs-input-underlined">
-                                            <input required>
-                                            <span class="omrs-input-label">NIM</span>
-                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                            <i class="material-icons">image_aspect_ratio</i>
-                                        </label>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="radioUmum" value="Umum" name="otCategory"
+                                            class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Umum"){ echo "checked"; } ?>>
+                                        <label class="custom-control-label" for="radioUmum">Umum</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Nomor Whatsapp</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">phone_android</i>
-                                </label>
+                            <div class="modal-body">
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="text" name="nama_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nama_ot']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Masukkan Nama</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">person</i>
+                                    </label>
+                                </div>
+                                <div class="row" id="mahasiswa">
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="kampus_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['kampus_ot']; ?>" <?php } ?>>
+                                                <span class="omrs-input-label">Asal Kampus</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">school</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nim_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nim_ot']; ?>" <?php } ?>>
+                                                <span class="omrs-input-label">NIM</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">image_aspect_ratio</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="number" name="wa_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['wa_ot']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Nomor Whatsapp</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">phone_android</i>
+                                    </label>
+                                </div>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="email" name="email_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['email_ot']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Email</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">email</i>
+                                    </label>
+                                </div>
                             </div>
-                            <div class="omrs-input-group">
-                                <label class="omrs-input-underlined">
-                                    <input required>
-                                    <span class="omrs-input-label">Email</span>
-                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                    <i class="material-icons">email</i>
-                                </label>
+                            <div class="modal-footer cstmbg">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Register</button>
                             </div>
-                        </div>
-                        </div>
-                        <div class="modal-footer cstmbg">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Register</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>        

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2021 at 04:23 AM
+-- Generation Time: Feb 16, 2021 at 06:10 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -44,6 +44,23 @@ CREATE TABLE `hf` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ot`
+--
+
+CREATE TABLE `ot` (
+  `id` int(255) NOT NULL,
+  `kategori` text NOT NULL,
+  `nama` text NOT NULL,
+  `kampus` text NOT NULL,
+  `nim` text NOT NULL,
+  `wa` text NOT NULL,
+  `email` text NOT NULL,
+  `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sf`
 --
 
@@ -73,6 +90,12 @@ ALTER TABLE `hf`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `ot`
+--
+ALTER TABLE `ot`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sf`
 --
 ALTER TABLE `sf`
@@ -86,6 +109,12 @@ ALTER TABLE `sf`
 -- AUTO_INCREMENT for table `hf`
 --
 ALTER TABLE `hf`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `ot`
+--
+ALTER TABLE `ot`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --

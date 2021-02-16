@@ -30,7 +30,7 @@ class Hf_model extends Model{
 		return $query->countAllResults();
     }
     
-    //Cek NISN
+    //Cek Email
     public function check_email($email){
         $this->select("*");
         $this->where(['email' => $email]);
