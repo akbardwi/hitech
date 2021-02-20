@@ -143,9 +143,9 @@
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Aplikasi</h6>
                                 <h6>• Foto lengkap aplikasi</h6>
-                                <h6>• logo tim (jika ada)</h6>
-                                <h6>• Deskripsi aplikasi</h6>
-                                <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via emai</h6>
+                                <h6>• Logo tim (jika ada)</h6>
+                                <h6>• Deskripsi software</h6>
+                                <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via email / Whatsapp</h6>
                             </div>
                           </div>
                         </div>
@@ -197,11 +197,15 @@
                           </div>
                           <div class="accordion-item-body">
                             <div class="accordion-item-body-content">
-                                <p>Pertama, membuat akun Kartu Prakerja dengan cara :</p>
-                                <p>1.Kunjungi situs resmi Kartu Prakerja di www.prakerja.go.id.</p>
-                                <p>2.Pilih menu “Daftar Sekarang”.</p>
-                                <p>3.Lalu, memasukkan nama lengkap, alamat email dan password.</p>
-                                <p>4.Mengecek email untuk konfirmasi akun, setelah verifikasi berhasil, kembali ke website.</p>          
+                                <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
+                                <h6>2.Isi form pendaftaran dengan baik</h6>
+                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan : NAMATIM_NamaHardware(event yang diikuti). Contoh : TECH_Smartlock(Hardware Fair) yang diperlukan ke drive perwakilan tim,kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                <h6>4.Untuk Berkas yang di Perlukan :</h6>
+                                <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri</h6>
+                                <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi</h6>
+                                <h6>• Logo tim (jika ada)</h6>
+                                <h6>• Deskripsi hardware</h6>
+                                <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via email / Whatsapp</h6>          
                             </div>
                           </div>
                         </div>

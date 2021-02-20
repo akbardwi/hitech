@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2021 at 06:10 AM
+-- Generation Time: Feb 20, 2021 at 10:30 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -34,6 +34,8 @@ CREATE TABLE `hf` (
   `nim_ketua` text NOT NULL,
   `nama_anggota` text NOT NULL,
   `nim_anggota` text NOT NULL,
+  `nama_anggota2` text DEFAULT NULL,
+  `nim_anggota2` text DEFAULT NULL,
   `kampus` text NOT NULL,
   `link` text NOT NULL,
   `wa` text NOT NULL,
@@ -72,6 +74,8 @@ CREATE TABLE `sf` (
   `nim_ketua` text NOT NULL,
   `nama_anggota` text NOT NULL,
   `nim_anggota` text NOT NULL,
+  `nama_anggota2` text DEFAULT NULL,
+  `nim_anggota2` text DEFAULT NULL,
   `kampus` text NOT NULL,
   `link_gdrive` text NOT NULL,
   `wa` text NOT NULL,
