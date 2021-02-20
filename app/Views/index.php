@@ -137,11 +137,15 @@
                           </div>
                           <div class="accordion-item-body">
                             <div class="accordion-item-body-content">
-                                <p>Pertama, membuat akun Kartu Prakerja dengan cara :</p>
-                                <p>1.Kunjungi situs resmi Kartu Prakerja di www.prakerja.go.id.</p>
-                                <p>2.Pilih menu “Daftar Sekarang”.</p>
-                                <p>3.Lalu, memasukkan nama lengkap, alamat email dan password.</p>
-                                <p>4.Mengecek email untuk konfirmasi akun, setelah verifikasi berhasil, kembali ke website.</p>          
+                                <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
+                                <h6>2.Isi form pendaftaran dengan baik</h6>
+                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan : NAMATIM_NamaAplikasi(event) contoh TECH_Shopee(Sofware Fair) yang diperlukan ke drive perwakilan tim,kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                <h6>4.Untuk Berkas yang di Perlukan :</h6>
+                                <h6>• Video Penjelasan serta cara kerja Aplikasi</h6>
+                                <h6>• Foto lengkap aplikasi</h6>
+                                <h6>• logo tim (jika ada)</h6>
+                                <h6>• Deskripsi aplikasi</h6>
+                                <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via emai</h6>
                             </div>
                           </div>
                         </div>
@@ -316,7 +320,7 @@
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
                                                 <input type="text" name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">Nama Anggota</span>
+                                                <span class="omrs-input-label">Nama Anggota 1</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">people</i>
                                             </label>
@@ -326,7 +330,27 @@
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
                                                 <input type="text" name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">NIM Anggota</span>
+                                                <span class="omrs-input-label">NIM Anggota 1</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">image_aspect_ratio</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Nama Anggota 2</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">people</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">NIM Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
                                             </label>
@@ -423,7 +447,7 @@
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
                                                 <input type="text" name="nama_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota_hf']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">Nama Anggota</span>
+                                                <span class="omrs-input-label">Nama Anggota 1</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">people</i>
                                             </label>
@@ -433,7 +457,27 @@
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
                                                 <input type="text" name="nim_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota_hf']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">NIM Anggota</span>
+                                                <span class="omrs-input-label">NIM Anggota 1</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">image_aspect_ratio</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nama_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota_hf']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">Nama Anggota 2</span>
+                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                <i class="material-icons">people</i>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="omrs-input-group">
+                                            <label class="omrs-input-underlined">
+                                                <input type="text" name="nim_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota_hf']; ?>" <?php } ?> required>
+                                                <span class="omrs-input-label">NIM Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
                                             </label>
@@ -708,15 +752,16 @@
         </div>
         <div class="footer-social-icons">
             <ul>
-                <li><a href="#" target="_blank"> <i class="fa fa-facebook"></i></a></li>
-                <li><a href="#" target="_blank"> <i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/hmti.udinus/" target="_blank"> <i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/hmtiudinus?lang=id" target="_blank"> <i class="fa fa-twitter"></i></a></li>
                 <li><a href="#" target="_blank"> <i class="fa fa-envelope"></i></a></li>
-                <li><a href="#" target="_blank"> <i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://instagram.com/hmtiudinus" target="_blank"> <i class="fa fa-instagram"></i></a></li>
             </ul>
         </div>
         <div class="container footer-bottom clearfix">
+        <hr style="width:50%;border-color:#FFF;height:1px; margin:auto; align:center;"><br/>
             <div class="copyright">
-                &copy; Copyright <?= date("Y"); ?> <strong><span>HMTI</span></strong>.
+                &copy; Copyright <?= date("Y"); ?> <a href="https://hmtiudinus.org/"><strong><span style="color:white;">HMTI</span></strong>.</a>
             </div>
             <div class="credits">
                 Designed by <a href="#">S.A.M</a>
