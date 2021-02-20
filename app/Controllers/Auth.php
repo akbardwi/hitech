@@ -24,6 +24,8 @@ class Auth extends BaseController{
             $nim_ketua = filter_var($this->request->getVar('nim_ketua'), FILTER_SANITIZE_STRING);
             $nama_anggota = filter_var($this->request->getVar('nama_anggota'), FILTER_SANITIZE_STRING);
             $nim_anggota = filter_var($this->request->getVar('nim_anggota'), FILTER_SANITIZE_STRING);
+            $nama_anggota2 = filter_var($this->request->getVar('nama_anggota2'), FILTER_SANITIZE_STRING);
+            $nim_anggota2 = filter_var($this->request->getVar('nim_anggota2'), FILTER_SANITIZE_STRING);
             $kampus = filter_var($this->request->getVar('kampus'), FILTER_SANITIZE_STRING);
             $link = filter_var($this->request->getVar('link'), FILTER_SANITIZE_STRING);
             $wa = filter_var($this->request->getVar('wa'), FILTER_SANITIZE_NUMBER_INT);
@@ -45,6 +47,8 @@ class Auth extends BaseController{
                         'nim_ketua'     => $nim_ketua,
                         'nama_anggota'  => $nama_anggota,
                         'nim_anggota'   => $nim_anggota,
+                        'nama_anggota2' => $nama_anggota2,
+                        'nim_anggota2'  => $nim_anggota2,
                         'kampus'        => $kampus,
                         'link'          => $link,
                         'wa'            => $wa,
@@ -89,6 +93,8 @@ class Auth extends BaseController{
             $nim_ketua = filter_var($this->request->getVar('nim_ketua_hf'), FILTER_SANITIZE_STRING);
             $nama_anggota = filter_var($this->request->getVar('nama_anggota_hf'), FILTER_SANITIZE_STRING);
             $nim_anggota = filter_var($this->request->getVar('nim_anggota_hf'), FILTER_SANITIZE_STRING);
+            $nama_anggota2 = filter_var($this->request->getVar('nama_anggota2_hf'), FILTER_SANITIZE_STRING);
+            $nim_anggota2 = filter_var($this->request->getVar('nim_anggota2_hf'), FILTER_SANITIZE_STRING);
             $kampus = filter_var($this->request->getVar('kampus_hf'), FILTER_SANITIZE_STRING);
             $link = filter_var($this->request->getVar('link_hf'), FILTER_SANITIZE_STRING);
             $wa = filter_var($this->request->getVar('wa_hf'), FILTER_SANITIZE_NUMBER_INT);
@@ -109,6 +115,8 @@ class Auth extends BaseController{
                         'nim_ketua'     => $nim_ketua,
                         'nama_anggota'  => $nama_anggota,
                         'nim_anggota'   => $nim_anggota,
+                        'nama_anggota2'  => $nama_anggota2,
+                        'nim_anggota2'   => $nim_anggota2,
                         'kampus'        => $kampus,
                         'link'          => $link,
                         'wa'            => $wa,

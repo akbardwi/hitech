@@ -339,7 +339,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
+                                                <input type="text" name="nama_anggota2" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota2']; ?>" <?php } ?>>
                                                 <span class="omrs-input-label">Nama Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">people</i>
@@ -349,7 +349,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
+                                                <input type="text" name="nim_anggota2" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota2']; ?>" <?php } ?>>
                                                 <span class="omrs-input-label">NIM Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
@@ -466,7 +466,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota_hf']; ?>" <?php } ?> required>
+                                                <input type="text" name="nama_anggota2_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota2_hf']; ?>" <?php } ?>>
                                                 <span class="omrs-input-label">Nama Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">people</i>
@@ -476,7 +476,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota_hf']; ?>" <?php } ?> required>
+                                                <input type="text" name="nim_anggota2_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota2_hf']; ?>" <?php } ?>>
                                                 <span class="omrs-input-label">NIM Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
