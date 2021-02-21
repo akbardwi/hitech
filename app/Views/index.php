@@ -731,8 +731,8 @@
                 </div> -->
                 <div class="footer-email-phone">
                     <ul>
-                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px;"></i>08532968373(Raka)</a></li>
-                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px;"></i>085712702685(Anam)</a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08532968373 (Raka)</a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085712702685 (Anam)</a></li>
                     </ul>
                 </div>
             </div>
