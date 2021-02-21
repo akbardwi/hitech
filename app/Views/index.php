@@ -23,9 +23,8 @@
     <link href="<?= base_url(); ?>/assets/vendor/venobox/venobox.css" rel="stylesheet">
     <link href="<?= base_url(); ?>/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="<?= base_url(); ?>/assets/vendor/SCSS/_card.scss">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -85,7 +84,7 @@
         <path fill="#37517e" fill-opacity="1" d="M0,224L34.3,234.7C68.6,245,137,267,206,277.3C274.3,288,343,288,411,277.3C480,267,549,245,617,202.7C685.7,160,754,96,823,69.3C891.4,43,960,53,1029,85.3C1097.1,117,1166,171,1234,176C1302.9,181,1371,139,1406,117.3L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z" style="border: none;"></path>
     </svg><!-- End Hero -->
     <br/>
-    <main id="main" >
+    <main id="main">
         <section id="event" class="about">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
@@ -95,7 +94,7 @@
         </section>
         <!-- envent -->
         <!-- ======= event lisi ======= -->
-        <div class="menu section-bg">
+        <div class="menu">
             <?php
             $inputs_sf = session()->getFlashdata('inputs_sf');
             $error_sf = session()->getFlashdata('error_sf');
@@ -123,143 +122,139 @@
             </div>
             <br />
             <?php } ?>
-            <div class="container">
-                <section class="card" data-aos="fade-left" id="sf">
-                    <img src="<?= base_url(); ?>/assets/img/sf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150">
-                    <div>
-                        <h3><strong>Software Fair</strong></h3>
-                        <p>
-                        Pameran aplikasi yang menampilkan aplikasi-aplikasi karya mahasiswa. 
-                        Pameran ini akan menampilkan aplikasi Web, Mobile, Game dan Desktop.
-                        </p>
-                        <div class="accordion">
-                            <div class="accordion-item">
-                            <div class="accordion-item-header">
-                                Tata Cara Mendaftar
+            <section class="card" data-aos="fade-left" id="sf">
+                <img src="<?= base_url(); ?>/assets/img/sf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150">
+                <div>
+                    <h3><strong>Software Fair</strong></h3>
+                    <p>
+                    Pameran aplikasi yang menampilkan aplikasi-aplikasi karya mahasiswa. 
+                    Pameran ini akan menampilkan aplikasi Web, Mobile, Game dan Desktop.
+                    </p>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                          <div class="accordion-item-header">
+                            Tata Cara Mendaftar
+                          </div>
+                          <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
+                                <h6>2.Isi form pendaftaran dengan baik</h6>
+                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan : NAMATIM_NamaAplikasi(event) contoh TECH_Shopee(Sofware Fair) yang diperlukan ke drive perwakilan tim,kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                <h6>4.Untuk Berkas yang di Perlukan :</h6>
+                                <h6>• Video Penjelasan serta cara kerja Aplikasi</h6>
+                                <h6>• Foto lengkap aplikasi</h6>
+                                <h6>• Logo tim (jika ada)</h6>
+                                <h6>• Deskripsi software</h6>
+                                <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via email / Whatsapp</h6>
                             </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
-                                    <h6>2.Isi form pendaftaran dengan baik</h6>
-                                    <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan : NAMATIM_NamaSoftware(event yang diikuti).
-                                    Contoh : TECH_Shopee(Sofware Fair) yang diperlukan ke drive perwakilan tim,kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
-                                    <h6>4.Untuk Berkas yang di Perlukan :</h6>
-                                    <h6>• Video Penjelasan serta cara kerja Aplikasi</h6>
-                                    <h6>• Foto / Screenshoot lengkap Software</h6>
-                                    <h6>• logo tim (jika ada)</h6>
-                                    <h6>• Deskripsi Software</h6>
-                                    <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via email / Whatsapp</h6>
-                                </div>
-                            </div>
-                            </div>
+                          </div>
                         </div>
-                        <button type="button" class="btn btn-primary btn-register"  data-toggle="modal" data-target="#sfModal">
-                            Register
-                        </button>
-                    </div>         
-                </section>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-register"  data-toggle="modal" data-target="#sfModal">
+                        Register
+                    </button>
+                </div>         
+            </section>
 
-                <?php
-                $inputs_hf = session()->getFlashdata('inputs_hf');
-                $error_hf = session()->getFlashdata('error_hf');
-                $errors_hf = session()->getFlashdata('errors_hf');
-                $success_hf = session()->getFlashdata('success_hf');
-                if(!empty($errors_hf)){ ?>
-                <div class="alert alert-danger" role="alert">
-                    <ul>
-                    <?php foreach ($errors_hf as $errors_hf) : ?>
-                        <li><?= esc($errors_hf) ?></li>
-                    <?php endforeach ?>
-                    </ul>
-                </div>
-                <br />
-                <?php } if(!empty($error_hf)){ ?>
-                <div class="alert alert-danger" role="alert">
-                    <ul>
-                        <li><?= esc($error_hf) ?></li>
-                    </ul>
-                </div>
-                <br />
-                <?php } if(!empty($success_hf)){ ?>
-                <div class="alert alert-success" role="alert">
-                    <?= esc($success_hf) ?><br />
-                </div>
-                <br />
-                <?php } ?>
-                <section class="card" data-aos="fade-left" id="hf">
-                    <img src="<?= base_url(); ?>/assets/img/hf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
-                    <div>
-                        <h3><strong>Hardware Fair</strong></h3>
-                        <p>
-                        Pameran teknologi tentang Hardware yang akan menampilkan karya dari mahasiswa seperti IoT dan sebagainya.
-                        </p>
-                        <div class="accordion">
-                            <div class="accordion-item">
-                            <div class="accordion-item-header">
-                                Tata Cara Mendaftar
+            <?php
+            $inputs_hf = session()->getFlashdata('inputs_hf');
+            $error_hf = session()->getFlashdata('error_hf');
+            $errors_hf = session()->getFlashdata('errors_hf');
+            $success_hf = session()->getFlashdata('success_hf');
+            if(!empty($errors_hf)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                <?php foreach ($errors_hf as $errors_hf) : ?>
+                    <li><?= esc($errors_hf) ?></li>
+                <?php endforeach ?>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($error_hf)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    <li><?= esc($error_hf) ?></li>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($success_hf)){ ?>
+            <div class="alert alert-success" role="alert">
+                <?= esc($success_hf) ?><br />
+            </div>
+            <br />
+            <?php } ?>
+            <section class="card" data-aos="fade-left" id="hf">
+                <img src="<?= base_url(); ?>/assets/img/hf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
+                <div>
+                    <h3><strong>Hardware Fair</strong></h3>
+                    <p>
+                    Pameran teknologi tentang Hardware yang akan menampilkan karya dari mahasiswa seperti IoT dan sebagainya.
+                    </p>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                          <div class="accordion-item-header">
+                            Tata Cara Mendaftar
+                          </div>
+                          <div class="accordion-item-body">
+                            <div class="accordion-item-body-content">
+                                <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
+                                <h6>2.Isi form pendaftaran dengan baik</h6>
+                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan : NAMATIM_NamaHardware(event yang diikuti). Contoh : TECH_Smartlock(Hardware Fair) yang diperlukan ke drive perwakilan tim,kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                <h6>4.Untuk Berkas yang di Perlukan :</h6>
+                                <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri</h6>
+                                <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi</h6>
+                                <h6>• Logo tim (jika ada)</h6>
+                                <h6>• Deskripsi hardware</h6>
+                                <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via email / Whatsapp</h6>          
                             </div>
-                            <div class="accordion-item-body">
-                                <div class="accordion-item-body-content">
-                                    <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
-                                    <h6>2.Isi form pendaftaran dengan baik</h6>
-                                    <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan : NAMATIM_NamaHardware(event yang diikuti).
-                                    Contoh : TECH_Smartlock(Hardware Fair) yang diperlukan ke drive perwakilan tim,kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
-                                    <h6>4.Untuk Berkas yang di Perlukan :</h6>
-                                    <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri</h6>
-                                    <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi</h6>
-                                    <h6>• logo tim (jika ada)</h6>
-                                    <h6>• Deskripsi Hardware</h6>
-                                    <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via email / Whatsapp</h6>         
-                                </div>
-                            </div>
-                            </div>
+                          </div>
                         </div>
-                        <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#hfModal">
-                            Register
-                        </button>
                     </div>
-                </section>
+                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#hfModal">
+                        Register
+                    </button>
+                </div>
+            </section>
 
-                <?php
-                $inputs_ot = session()->getFlashdata('inputs_ot');
-                $error_ot = session()->getFlashdata('error_ot');
-                $errors_ot = session()->getFlashdata('errors_ot');
-                $success_ot = session()->getFlashdata('success_ot');
-                if(!empty($errors_ot)){ ?>
-                <div class="alert alert-danger" role="alert">
-                    <ul>
-                    <?php foreach ($errors_ot as $errors_ot) : ?>
-                        <li><?= esc($errors_ot) ?></li>
-                    <?php endforeach ?>
-                    </ul>
+            <?php
+            $inputs_ot = session()->getFlashdata('inputs_ot');
+            $error_ot = session()->getFlashdata('error_ot');
+            $errors_ot = session()->getFlashdata('errors_ot');
+            $success_ot = session()->getFlashdata('success_ot');
+            if(!empty($errors_ot)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                <?php foreach ($errors_ot as $errors_ot) : ?>
+                    <li><?= esc($errors_ot) ?></li>
+                <?php endforeach ?>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($error_ot)){ ?>
+            <div class="alert alert-danger" role="alert">
+                <ul>
+                    <li><?= esc($error_ot) ?></li>
+                </ul>
+            </div>
+            <br />
+            <?php } if(!empty($success_ot)){ ?>
+            <div class="alert alert-success" role="alert">
+                <?= esc($success_ot) ?><br />
+            </div>
+            <br />
+            <?php } ?>      
+            <section class="card" data-aos="fade-right"id="ot">
+                <img src="<?= base_url(); ?>/assets/img/ot-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
+                <div>
+                    <h3><strong>Open Talk</strong></h3>
+                    <p>
+                    Di sesi Open Talk ini ada menghadirkan beberapa Pemateri yang nantinya akan membahas tentang persoalan
+                    </p>
+                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
+                        Register
+                    </button>
                 </div>
-                <br />
-                <?php } if(!empty($error_ot)){ ?>
-                <div class="alert alert-danger" role="alert">
-                    <ul>
-                        <li><?= esc($error_ot) ?></li>
-                    </ul>
-                </div>
-                <br />
-                <?php } if(!empty($success_ot)){ ?>
-                <div class="alert alert-success" role="alert">
-                    <?= esc($success_ot) ?><br />
-                </div>
-                <br />
-                <?php } ?>      
-                <section class="card" data-aos="fade-right"id="ot">
-                    <img src="<?= base_url(); ?>/assets/img/ot-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
-                    <div>
-                        <h3><strong>Open Talk</strong></h3>
-                        <p>
-                        Di sesi Open Talk ini ada menghadirkan beberapa Pemateri yang nantinya akan membahas tentang persoalan
-                        </p>
-                        <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
-                            Register
-                        </button>
-                    </div>
-                </section>
-                </div>
+            </section>
 
             <!-- Modal SF -->
             <div class="modal fade" id="sfModal" tabindex="-1" aria-labelledby="sfModalLabel" aria-hidden="true" style="z-index: 9999999;">
@@ -348,7 +343,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
+                                                <input type="text" name="nama_anggota2" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota2']; ?>" <?php } ?>>
                                                 <span class="omrs-input-label">Nama Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">people</i>
@@ -358,7 +353,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
+                                                <input type="text" name="nim_anggota2" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota2']; ?>" <?php } ?>>
                                                 <span class="omrs-input-label">NIM Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
@@ -475,7 +470,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota_hf']; ?>" <?php } ?> required>
+                                                <input type="text" name="nama_anggota2_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota2_hf']; ?>" <?php } ?>>
                                                 <span class="omrs-input-label">Nama Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">people</i>
@@ -485,7 +480,7 @@
                                     <div class="col-md-6">
                                         <div class="omrs-input-group">
                                             <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota_hf']; ?>" <?php } ?> required>
+                                                <input type="text" name="nim_anggota2_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota2_hf']; ?>" <?php } ?>>
                                                 <span class="omrs-input-label">NIM Anggota 2</span>
                                                 <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                                 <i class="material-icons">image_aspect_ratio</i>
@@ -736,8 +731,8 @@
                 </div> -->
                 <div class="footer-email-phone">
                     <ul>
-                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: #fff;"></i>08532968373(Raka)</a></li>
-                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: #fff;"></i>085712702685(Anam)</a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px;"></i>08532968373(Raka)</a></li>
+                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px;"></i>085712702685(Anam)</a></li>
                     </ul>
                 </div>
             </div>
@@ -746,7 +741,7 @@
     <!-- ======= Footer ======= -->
     <div class="custom-shape-divider-top-1612437875">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z " class="shape-fill" style="fill:#37517e; "></path>
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z " class="shape-fill" style="fill:#37517e;"></path>
         </svg>
     </div>
     <footer id="footer">

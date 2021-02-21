@@ -11,6 +11,8 @@ class Sf_model extends Model{
                                 'nim_ketua',
                                 'nama_anggota',
                                 'nim_anggota',
+								'nama_anggota2',
+                                'nim_anggota2',
 								'kampus',
                                 'link_gdrive',
                                 'wa',
