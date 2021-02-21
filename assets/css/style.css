@@ -5,6 +5,10 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  background-image: url('../img/bg.png');
+  background-size: cover;
+  /* background-repeat: repeat;
+  z-index: 9; */
 }
 
 a {
@@ -566,7 +570,7 @@ section {
 }
 
 .section-bg {
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .section-title {
@@ -581,7 +585,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #37517e;
+  color: #ffff;
 }
 
 .section-title h2::before {
@@ -601,7 +605,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #47b2e4;
+  background: #fff;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -1885,14 +1889,27 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
-  background: #fff;
-  border: none;
+  /* background: #000; */
+  background-color: transparent;
   margin-bottom: 2rem;
 }
-  
+
+
 .card h3 {
   margin-bottom: 2rem;
+  color: #fff;
 }
+.card p{
+  color: #fff;
+}
+.card > div {
+  padding: 2rem;
+}
+
+.card:nth-child(even) img {
+  order: 2;
+}
+
 
 @media(max-height:400px){
   .card img {
@@ -2185,8 +2202,9 @@ body.showLoginForm .popup {
 .footer-bg{
 	width: 100%;
 	height: auto;
-	background-color: #fff;
+	/* background-color: #fff; */
 	text-align: center;
+  color: #fff;
 }
 .footer-address{
 	width: 100%;
@@ -2220,6 +2238,7 @@ body.showLoginForm .popup {
 	margin: auto;
 	margin-top: 5px;
   padding-bottom: 1rem!important;
+  color: #fff;
 
 }
 .footer-email-phone ul{
@@ -2236,6 +2255,7 @@ body.showLoginForm .popup {
 	font-weight:600;
 	font-size: 18px;
 	padding-left: 20px;
+  color: #fff;
 }
 .footer-email-phone ul li a i{
 	color: #000;
