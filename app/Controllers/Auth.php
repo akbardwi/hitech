@@ -6,6 +6,7 @@ namespace App\Controllers;
 use App\Models\Sf_model;
 use App\Models\Hf_model;
 use App\Models\Ot_model;
+use App\Models\Visitor_model;
 //End Load Model
 
 class Auth extends BaseController{
@@ -220,6 +221,66 @@ class Auth extends BaseController{
                 session()->setFlashdata('inputs_ot', $this->request->getPost());
                 session()->setFlashdata('error_ot', 'Mohon maaf, kuota pendaftaran sudah penuh.');
                 return redirect()->to(base_url()."/#ot");
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
+	}
+
+    //Registrasi Pengunjung
+    public function register(){
+		$method = $_SERVER["REQUEST_METHOD"];
+        if($method == "POST"){
+            $nama = filter_var($this->request->getVar('reg_name'), FILTER_SANITIZE_STRING);
+            $email = filter_var($this->request->getVar('reg_email'), FILTER_SANITIZE_EMAIL);
+            $pass = filter_var($this->request->getVar('reg_pass'), FILTER_SANITIZE_STRING);
+
+            $model 		= new Visitor_model();
+            $check_email= $model->check_email($email);
+            $db      	= \Config\Database::connect();
+            $visitor  	= $db->table('visitor');
+            if($visitor->countAllResults() < 200){
+                if($check_email){
+                    session()->setFlashdata('error_visitor', 'Email sudah terdaftar');
+                    // mengembalikan nilai input yang sudah dimasukan sebelumnya
+                    session()->setFlashdata('inputs_visitor', $this->request->getPost());
+                    return redirect()->to(base_url()."/#pengunjung");
+                } else {
+                    $visitor = [
+                        'nama'          => $nama,
+                        'email'         => $email,
+                        'pass'          => $pass
+                    ];
+                    
+                    if($this->form_validation->run($visitor, "visitor") == FALSE){
+                        // mengembalikan nilai input yang sudah dimasukan sebelumnya
+                        session()->setFlashdata('inputs_visitor', $this->request->getPost());
+                        // memberikan pesan error pada saat input data
+                        session()->setFlashdata('errors_visitor', $this->form_validation->getErrors());
+                        return redirect()->to(base_url()."/#pengunjung");
+                    } else {
+                        $batas = strtotime(date("26-02-2021 10:00:00"));
+                        $sekarang = strtotime(date("d-m-Y H:i:s"));
+                        $data = [
+                            'fullname'      => $nama,
+                            'email'         => $email,
+                            'password'      => password_hash($pass, PASSWORD_DEFAULT)
+                        ];
+                        if($batas >= $sekarang){
+                            $model->tambah($data);
+							session()->setFlashdata('success_visitor', 'Terima kasih telah mendaftar sebagai pengunjung. Nantikan informasi dari kami yang akan dikirim ke email Anda.');
+							return redirect()->to(base_url()."/#pengunjung");                       
+                        } else {
+                            session()->setFlashdata('inputs_visitor', $this->request->getPost());
+                            session()->setFlashdata('error_visitor', 'Mohon maaf, waktu pendaftaran sudah ditutup.');
+                            return redirect()->to(base_url()."/#pengunjung");
+                        }
+                    }
+                }
+            } else {
+                session()->setFlashdata('inputs_visitor', $this->request->getPost());
+                session()->setFlashdata('error_visitor', 'Mohon maaf, kuota pendaftaran sudah penuh.');
+                return redirect()->to(base_url()."/#pengunjung");
             }
         } else {
             return redirect()->to(base_url());

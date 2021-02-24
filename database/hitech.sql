@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2021 at 10:30 AM
+-- Generation Time: Feb 24, 2021 at 06:06 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -84,6 +84,34 @@ CREATE TABLE `sf` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `sf`
+--
+
+INSERT INTO `sf` (`id`, `kat_app`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link_gdrive`, `wa`, `email`, `tgl_daftar`) VALUES
+(1, '', 'Asa', 'ADS', '156422', 'ASa', '63', '', '', 'Udinus', '', '08', 'akbar.dwi14@gmail.com', '2021-02-24 03:20:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visitor`
+--
+
+CREATE TABLE `visitor` (
+  `id` int(255) NOT NULL,
+  `fullname` text NOT NULL,
+  `email` text NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `registered` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `visitor`
+--
+
+INSERT INTO `visitor` (`id`, `fullname`, `email`, `password`, `registered`) VALUES
+(1, 'Akbar Syahputra', 'akbar.dwi14@gmail.com', '$2y$10$imbO9wc/jGuyCsSaJczV0edYsP1.bEvic09Ml298vSNHd1lmevqMG', '2021-02-24 04:51:45');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -106,6 +134,12 @@ ALTER TABLE `sf`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `visitor`
+--
+ALTER TABLE `visitor`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -125,7 +159,13 @@ ALTER TABLE `ot`
 -- AUTO_INCREMENT for table `sf`
 --
 ALTER TABLE `sf`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `visitor`
+--
+ALTER TABLE `visitor`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

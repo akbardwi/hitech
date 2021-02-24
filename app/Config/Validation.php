@@ -224,4 +224,26 @@ class Validation
 			'valid_email'	=> 'Masukkan Email yang valid'
 		]
 	];
+
+	// Validasi Daftar Pengunjung
+	public $visitor = [
+		'nama'			=> 'required',
+		'email'			=> [
+			'required',
+			'valid_email'
+		],
+		'pass'			=> 'required',
+	];	 
+	public $visitor_errors = [
+		'nama' 			=> [
+			'required'      => 'Nama wajib diisi'
+		],
+		'email'			=> [
+			'required'		=> 'Email wajib diisi',
+			'valid_email'	=> 'Masukkan Email yang valid'
+		],
+		'pass' 			=> [
+			'required'      => 'Password wajib diisi'
+		],
+	];
 }

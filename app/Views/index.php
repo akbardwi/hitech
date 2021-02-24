@@ -690,6 +690,7 @@
                                     <a href="#" class="buttn mt-4">submit</a>
                                     <p class="mb-0 mt-4 text-center">
                                     <a href="#0" class="link">Forgot your password?</a>
+                                    <a href="#0" class="link">Login Developer</a>
                                     </p>
                                 </div>
                             </div>
@@ -698,20 +699,50 @@
                         <div class="card-back" id="signup">
                             <div class="center-wrap">
                                 <div class="section text-center">
-                                    <h4 class="mb-4 pb-3">Sign Up</h4>
-                                    <div class="form-group">
-                                        <input type="text" name="logname" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
-                                        <i class="input-icon uil uil-user"></i>
-                                    </div>  
-                                    <div class="form-group mt-2">
-                                        <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                                        <i class="input-icon uil uil-at"></i>
-                                    </div>  
-                                    <div class="form-group mt-2">
-                                        <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                                        <i class="input-icon uil uil-lock-alt"></i>
-                                    </div>
-                                    <a href="#" class="buttn mt-4">submit</a>
+                                    <form action="<?= base_url("auth/register"); ?>" method="post">
+                                        <h4 class="mb-4 pb-3">Sign Up</h4> 
+                                        <?php
+                                        $inputs_visitor = session()->getFlashdata('inputs_visitor');
+                                        $error_visitor = session()->getFlashdata('error_visitor');
+                                        $errors_visitor = session()->getFlashdata('errors_visitor');
+                                        $success_visitor = session()->getFlashdata('success_visitor');
+                                        if(!empty($errors_visitor)){ ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <ul>
+                                            <?php foreach ($errors_visitor as $errors_visitor) : ?>
+                                                <li><?= esc($errors_visitor) ?></li>
+                                            <?php endforeach ?>
+                                            </ul>
+                                        </div>
+                                        <br />
+                                        <?php } if(!empty($error_visitor)){ ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <ul>
+                                                <li><?= esc($error_visitor) ?></li>
+                                            </ul>
+                                        </div>
+                                        <br />
+                                        <?php } if(!empty($success_visitor)){ ?>
+                                        <div class="alert alert-success" role="alert">
+                                            <?= esc($success_visitor) ?><br />
+                                        </div>
+                                        <br />
+                                        <?php } ?> 
+                                        <?= csrf_field(); ?>
+                                        <div class="form-group">
+                                            <input type="text" name="reg_name" class="form-style" placeholder="Your Full Name" id="reg_name" autocomplete="off" required>
+                                            <i class="input-icon uil uil-user"></i>
+                                        </div>  
+                                        <div class="form-group mt-2">
+                                            <input type="email" name="reg_email" class="form-style" placeholder="Your Email" id="reg_email" autocomplete="off" required>
+                                            <i class="input-icon uil uil-at"></i>
+                                        </div>  
+                                        <div class="form-group mt-2">
+                                            <input type="password" name="reg_pass" class="form-style" placeholder="Your Password" id="reg_pass" autocomplete="off" required>
+                                            <i class="input-icon uil uil-lock-alt"></i>
+                                        </div>
+                                        <button type="submit" class="buttn mt-4">Submit</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
