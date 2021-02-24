@@ -81,7 +81,7 @@
         </div>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
-        <path fill="#37517e" fill-opacity="1" d="M0,224L34.3,234.7C68.6,245,137,267,206,277.3C274.3,288,343,288,411,277.3C480,267,549,245,617,202.7C685.7,160,754,96,823,69.3C891.4,43,960,53,1029,85.3C1097.1,117,1166,171,1234,176C1302.9,181,1371,139,1406,117.3L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z" style="border: none;"></path>
+        <path fill="#245191" fill-opacity="1" d="M0,224L34.3,234.7C68.6,245,137,267,206,277.3C274.3,288,343,288,411,277.3C480,267,549,245,617,202.7C685.7,160,754,96,823,69.3C891.4,43,960,53,1029,85.3C1097.1,117,1166,171,1234,176C1302.9,181,1371,139,1406,117.3L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z" style="border: none;"></path>
     </svg><!-- End Hero -->
     <br/>
     <main id="main">
@@ -123,7 +123,7 @@
             <br />
             <?php } ?>
             <section class="card" data-aos="fade-left" id="sf">
-                <img src="<?= base_url(); ?>/assets/img/sf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150">
+                <img src="<?= base_url(); ?>/assets/img/sf.png" alt="" data-aos="zoom-in" data-aos-delay="150">
                 <div>
                     <h3><strong>Software Fair</strong></h3>
                     <p>
@@ -184,7 +184,7 @@
             <br />
             <?php } ?>
             <section class="card" data-aos="fade-left" id="hf">
-                <img src="<?= base_url(); ?>/assets/img/hf-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
+                <img src="<?= base_url(); ?>/assets/img/hf.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
                 <div>
                     <h3><strong>Hardware Fair</strong></h3>
                     <p>
@@ -617,40 +617,40 @@
             </div>        
         </div>
         <!-- ======= end event list ======= -->
-        <section id="pembicara" class="team section-bg">
+        <section id="pembicara" class="team-section">
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Pembicara</h2>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="pic"><img src="<?= base_url(); ?>/assets/img/comingsoon.png" class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Coming Soon</h4>
-                                <span>lorem</span>
-                                <p>lorem</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                    <div class="team-items">
+                        <div class="item" data-aos="zoom-in" data-aos-delay="100">
+                            <img src="<?= base_url(); ?>/assets/img/comingsoon.png" class="img-fluid" alt="">
+                            <div class="inner">
+                                <div class="info">
+                                    <h5>COMING SOON</h5>
+                                    <p>Lorem</p>
+                                    <div class="social-links">
+                                        <a href=""><span class="fa fa-facebook"></span></a>
+                                        <a href=""><span class="fa fa-twitter"></span></a>
+                                        <a href=""><span class="fa fa-linkedin"></span></a>
+                                        <a href=""><span class="fa fa-youtube"></span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6 mt-4 mt-lg-0">
-                        <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="pic"><img src="<?= base_url(); ?>/assets/img/comingsoon.png" class="img-fluid" alt=""></div>
-                            <div class="member-info">
-                                <h4>Coming Soon</h4>
-                                <span>lorem</span>
-                                <p>lorem</p>
-                                <div class="social">
-                                    <a href=""><i class="ri-twitter-fill"></i></a>
-                                    <a href=""><i class="ri-facebook-fill"></i></a>
-                                    <a href=""><i class="ri-instagram-fill"></i></a>
-                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                        <div class="item" data-aos="zoom-in" data-aos-delay="100">
+                            <img src="<?= base_url(); ?>/assets/img/comingsoon.png" class="img-fluid" alt="">
+                            <div class="inner">
+                                <div class="info">
+                                    <h5>COMING SOON</h5>
+                                    <p>lorem</p>
+                                    <div class="social-links">
+                                        <a href=""><span class="fa fa-facebook"></span></a>
+                                        <a href=""><span class="fa fa-twitter"></span></a>
+                                        <a href=""><span class="fa fa-linkedin"></span></a>
+                                        <a href=""><span class="fa fa-youtube"></span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -772,7 +772,7 @@
     <!-- ======= Footer ======= -->
     <div class="custom-shape-divider-top-1612437875">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z " class="shape-fill" style="fill:#37517e;"></path>
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z " class="shape-fill" style="fill:#245191;"></path>
         </svg>
     </div>
     <footer id="footer">
