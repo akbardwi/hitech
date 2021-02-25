@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2021 at 06:06 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.1
+-- Waktu pembuatan: 25 Feb 2021 pada 12.51
+-- Versi server: 10.4.17-MariaDB
+-- Versi PHP: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hf`
+-- Struktur dari tabel `hf`
 --
 
 CREATE TABLE `hf` (
@@ -46,7 +46,7 @@ CREATE TABLE `hf` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ot`
+-- Struktur dari tabel `ot`
 --
 
 CREATE TABLE `ot` (
@@ -63,7 +63,7 @@ CREATE TABLE `ot` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sf`
+-- Struktur dari tabel `sf`
 --
 
 CREATE TABLE `sf` (
@@ -84,7 +84,7 @@ CREATE TABLE `sf` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `sf`
+-- Dumping data untuk tabel `sf`
 --
 
 INSERT INTO `sf` (`id`, `kat_app`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link_gdrive`, `wa`, `email`, `tgl_daftar`) VALUES
@@ -93,7 +93,7 @@ INSERT INTO `sf` (`id`, `kat_app`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `visitor`
+-- Struktur dari tabel `visitor`
 --
 
 CREATE TABLE `visitor` (
@@ -101,68 +101,70 @@ CREATE TABLE `visitor` (
   `fullname` text NOT NULL,
   `email` text NOT NULL,
   `password` varchar(255) NOT NULL,
+  `status` int(2) NOT NULL,
+  `verif_code` varchar(255) NOT NULL,
   `registered` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `visitor`
+-- Dumping data untuk tabel `visitor`
 --
 
-INSERT INTO `visitor` (`id`, `fullname`, `email`, `password`, `registered`) VALUES
-(1, 'Akbar Syahputra', 'akbar.dwi14@gmail.com', '$2y$10$imbO9wc/jGuyCsSaJczV0edYsP1.bEvic09Ml298vSNHd1lmevqMG', '2021-02-24 04:51:45');
+INSERT INTO `visitor` (`id`, `fullname`, `email`, `password`, `status`, `verif_code`, `registered`) VALUES
+(1, 'Akbar Dwi Syahputra', 'akbar.dwi14@gmail.com', '$2y$10$ZkJwXOAlmg9vB/bmKfH0h.YHPpKZawZ65Hql7VS1vTuLX/apbPqeG', 1, '', '2021-02-25 10:58:50');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `hf`
+-- Indeks untuk tabel `hf`
 --
 ALTER TABLE `hf`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ot`
+-- Indeks untuk tabel `ot`
 --
 ALTER TABLE `ot`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sf`
+-- Indeks untuk tabel `sf`
 --
 ALTER TABLE `sf`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `visitor`
+-- Indeks untuk tabel `visitor`
 --
 ALTER TABLE `visitor`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `hf`
+-- AUTO_INCREMENT untuk tabel `hf`
 --
 ALTER TABLE `hf`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `ot`
+-- AUTO_INCREMENT untuk tabel `ot`
 --
 ALTER TABLE `ot`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `sf`
+-- AUTO_INCREMENT untuk tabel `sf`
 --
 ALTER TABLE `sf`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `visitor`
+-- AUTO_INCREMENT untuk tabel `visitor`
 --
 ALTER TABLE `visitor`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
