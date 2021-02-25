@@ -261,15 +261,30 @@ class Auth extends BaseController{
                     } else {
                         $batas = strtotime(date("26-02-2021 10:00:00"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
-                        $data = [
-                            'fullname'      => $nama,
-                            'email'         => $email,
-                            'password'      => password_hash($pass, PASSWORD_DEFAULT)
-                        ];
                         if($batas >= $sekarang){
-                            $model->tambah($data);
-							session()->setFlashdata('success_visitor', 'Terima kasih telah mendaftar sebagai pengunjung. Nantikan informasi dari kami yang akan dikirim ke email Anda.');
-							return redirect()->to(base_url()."/#pengunjung");                       
+                            $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
+                            $kode = substr(str_shuffle($karakter), 0, 25);
+                            $email_smtp = \Config\Services::email();
+                            $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
+                            $email_smtp->setTo("$email");
+                            $email_smtp->setSubject("Verifikasi Akun Pengunjung HI TECH 2021");
+                            $email_smtp->setMessage('Terima kasih telah mendaftar sebagai pengunjung HI TECH 2021. Silahkan verifikasi akun Anda dengan klik <a href="'.base_url("verification-email/$kode").'">disini</a>&nbsp;atau bisa copy paste link berikut: '.base_url("verification-email/$kode"));
+                            $kirim = $email_smtp->send();
+                            if($kirim){
+                                $data = [
+                                    'fullname'      => $nama,
+                                    'email'         => $email,
+                                    'password'      => password_hash($pass, PASSWORD_DEFAULT),
+                                    'status'        => 0,
+                                    'verif_code'    => $kode
+                                ];
+                                $model->tambah($data);
+                                session()->setFlashdata('success_visitor', 'Terima kasih telah mendaftar sebagai pengunjung. Nantikan informasi dari kami yang akan dikirim ke email Anda.');
+                                return redirect()->to(base_url()."/#pengunjung");   
+                            } else {
+                                session()->setFlashdata('error_visitor', 'Gagal, silahkan coba lagi.');
+                                return redirect()->to(base_url()."/#pengunjung"); 
+                            }                                                
                         } else {
                             session()->setFlashdata('inputs_visitor', $this->request->getPost());
                             session()->setFlashdata('error_visitor', 'Mohon maaf, waktu pendaftaran sudah ditutup.');
@@ -310,8 +325,13 @@ class Auth extends BaseController{
                 $check_user = $model->check_email($email);
                 if($check_user){
                     if(password_verify($pass, $check_user['password'])){
-                        session()->set('user_email',$check_user['email']);
-                        return redirect()->to(base_url("users/dashboard"));
+                        if($check_user['status'] == 0){
+                            session()->setFlashdata('error_visitors', 'Cek email untuk verifikasi dahulu.');
+                            return redirect()->to(base_url()."/#pengunjung");
+                        } else {
+                            session()->set('user_email',$check_user['email']);
+                            return redirect()->to(base_url("users/dashboard"));
+                        }
                     } else {
                         session()->setFlashdata('inputs_visitors', $this->request->getPost());
                         session()->setFlashdata('error_visitors', 'Password salah.');
@@ -325,6 +345,26 @@ class Auth extends BaseController{
             }
         } else {
             return redirect()->to(base_url());
+        }
+    }
+
+    // Verifikasi Email Pengunjung
+    public function verification_email($code){
+        $model 		= new Visitor_model();
+        $data_user  = $model->check_code($code);
+        $db      	= \Config\Database::connect();
+        $visitor  	= $db->table('visitor');
+
+        if(count($data_user) > 0){
+            $email = $data_user['email'];
+            $query = $db->query("UPDATE visitor SET status = '1', verif_code = '' WHERE email = '$email'");
+            if($query){
+                session()->setFlashdata('success_visitors', 'Email berhasil diverifikasi.');
+                return redirect()->to(base_url()."/#pengunjung"); 
+            } else {
+                session()->setFlashdata('error_visitors', 'Email gagal diverifikasi.');
+                return redirect()->to(base_url()."/#pengunjung");
+            }
         }
     }
 }

@@ -7,7 +7,9 @@ class Visitor_model extends Model{
 	protected $primaryKey 	= 'id';
     protected $allowedFields = ['fullname',
                                 'email',
-                                'password'];
+                                'password',
+								'status',
+								'verif_code'];
 
     // Listing
 	public function listing(){
@@ -28,6 +30,14 @@ class Visitor_model extends Model{
     public function check_email($email){
         $this->select("*");
         $this->where(['email' => $email]);
+        $query = $this->get();
+		return $query->getRowArray();
+    }
+
+	//Cek Kode
+    public function check_code($code){
+        $this->select("*");
+        $this->where(['verif_code' => $code]);
         $query = $this->get();
 		return $query->getRowArray();
     }
