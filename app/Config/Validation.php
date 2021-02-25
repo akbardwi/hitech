@@ -225,7 +225,7 @@ class Validation
 		]
 	];
 
-	// Validasi Daftar Pengunjung
+	// Validasi Registrasi Pengunjung
 	public $visitor = [
 		'nama'			=> 'required',
 		'email'			=> [
@@ -238,6 +238,24 @@ class Validation
 		'nama' 			=> [
 			'required'      => 'Nama wajib diisi'
 		],
+		'email'			=> [
+			'required'		=> 'Email wajib diisi',
+			'valid_email'	=> 'Masukkan Email yang valid'
+		],
+		'pass' 			=> [
+			'required'      => 'Password wajib diisi'
+		],
+	];
+
+	// Validasi Login Pengunjung
+	public $login_visitor = [
+		'email'			=> [
+			'required',
+			'valid_email'
+		],
+		'pass'			=> 'required',
+	];	 
+	public $login_visitor_errors = [
 		'email'			=> [
 			'required'		=> 'Email wajib diisi',
 			'valid_email'	=> 'Masukkan Email yang valid'

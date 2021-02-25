@@ -286,4 +286,45 @@ class Auth extends BaseController{
             return redirect()->to(base_url());
         }
 	}
+
+    //Proses Login Visitor
+    public function login(){
+        $method = $_SERVER["REQUEST_METHOD"];
+        if($method == "POST"){
+            $email = filter_var($this->request->getVar('logemail'), FILTER_SANITIZE_EMAIL);
+            $pass = filter_var($this->request->getVar('logpass'), FILTER_SANITIZE_STRING);
+
+            $visitor = [
+                'email'         => $email,
+                'pass'          => $pass
+            ];
+            
+            if($this->form_validation->run($visitor, "login_visitor") == FALSE){
+                // mengembalikan nilai input yang sudah dimasukan sebelumnya
+                session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                // memberikan pesan error pada saat input data
+                session()->setFlashdata('errors_visitors', $this->form_validation->getErrors());
+                return redirect()->to(base_url()."/#pengunjung");
+            } else {
+                $model 		= new Visitor_model();
+                $check_user = $model->check_email($email);
+                if($check_user){
+                    if(password_verify($pass, $check_user['password'])){
+                        session()->set('user_email',$check_user['email']);
+                        return redirect()->to(base_url("users/dashboard"));
+                    } else {
+                        session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                        session()->setFlashdata('error_visitors', 'Password salah.');
+                        return redirect()->to(base_url()."/#pengunjung");
+                    }
+                } else {
+                    session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                    session()->setFlashdata('error_visitors', 'Email tidak ditemukan.');
+                    return redirect()->to(base_url()."/#pengunjung");
+                }
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
+    }
 }

@@ -678,18 +678,48 @@
                         <div class="card-front">
                             <div class="center-wrap">
                                 <div class="section text-center">
-                                    <h4 class="mb-4 pb-3">Log In</h4>
-                                    <div class="form-group">
-                                        <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
-                                        <i class="input-icon uil uil-at"></i>
-                                    </div>  
-                                    <div class="form-group mt-2">
-                                        <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
-                                        <i class="input-icon uil uil-lock-alt"></i>
-                                    </div>
-                                    <a href="#" class="buttn mt-4">submit</a>
+                                    <form action="<?= base_url("auth/login"); ?>" method="post">
+                                        <h4 class="mb-4 pb-3">Log In</h4>
+                                        <?php
+                                        $inputs_visitors = session()->getFlashdata('inputs_visitors');
+                                        $error_visitors = session()->getFlashdata('error_visitors');
+                                        $errors_visitors = session()->getFlashdata('errors_visitors');
+                                        $success_visitors = session()->getFlashdata('success_visitors');
+                                        if(!empty($errors_visitors)){ ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <ul>
+                                            <?php foreach ($errors_visitors as $errors_visitors) : ?>
+                                                <li><?= esc($errors_visitors) ?></li>
+                                            <?php endforeach ?>
+                                            </ul>
+                                        </div>
+                                        <br />
+                                        <?php } if(!empty($error_visitors)){ ?>
+                                        <div class="alert alert-danger" role="alert">
+                                            <ul>
+                                                <li><?= esc($error_visitors) ?></li>
+                                            </ul>
+                                        </div>
+                                        <br />
+                                        <?php } if(!empty($success_visitors)){ ?>
+                                        <div class="alert alert-success" role="alert">
+                                            <?= esc($success_visitors) ?><br />
+                                        </div>
+                                        <br />
+                                        <?php } ?>
+                                        <?= csrf_field(); ?>
+                                        <div class="form-group">
+                                            <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required>
+                                            <i class="input-icon uil uil-at"></i>
+                                        </div>  
+                                        <div class="form-group mt-2">
+                                            <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" required>
+                                            <i class="input-icon uil uil-lock-alt"></i>
+                                        </div>
+                                        <button type="submit" class="buttn mt-4">Submit</button>
+                                    </form>
                                     <p class="mb-0 mt-4 text-center">
-                                    <a href="#0" class="link">Forgot your password?</a>
+                                    <a href="#0" class="link">Forgot your password?</a><br />
                                     <a href="#0" class="link">Login Developer</a>
                                     </p>
                                 </div>
