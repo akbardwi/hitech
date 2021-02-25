@@ -54,14 +54,14 @@ class Email extends BaseConfig
 	 *
 	 * @var string
 	 */
-	public $SMTPUser = "hmti@orma.dinus.ac.id";
+	public $SMTPUser = "";
 
 	/**
 	 * SMTP Password
 	 *
 	 * @var string
 	 */
-	public $SMTPPass = "68508307ae45cfc26a925cffd766677e";
+	public $SMTPPass = "";
 
 	/**
 	 * SMTP Port
