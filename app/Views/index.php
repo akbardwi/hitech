@@ -81,9 +81,9 @@
         </div>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
-        <path fill="#b2d2eb" fill-opacity="1" d="M0,224L34.3,234.7C68.6,245,137,267,206,277.3C274.3,288,343,288,411,277.3C480,267,549,245,617,202.7C685.7,160,754,96,823,69.3C891.4,43,960,53,1029,85.3C1097.1,117,1166,171,1234,176C1302.9,181,1371,139,1406,117.3L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z" style="border: none;"></path>
+        <path fill="#84cdee" fill-opacity="1" d="M0,224L34.3,234.7C68.6,245,137,267,206,277.3C274.3,288,343,288,411,277.3C480,267,549,245,617,202.7C685.7,160,754,96,823,69.3C891.4,43,960,53,1029,85.3C1097.1,117,1166,171,1234,176C1302.9,181,1371,139,1406,117.3L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z" style="border: none;"></path>
     </svg><!-- End Hero -->
-    <br/>
+    <!-- <br/> -->
     <main id="main">
         <section id="event" class="about">
             <div class="container" data-aos="fade-up">
@@ -123,13 +123,13 @@
             <br />
             <?php } ?>
             <section class="card" data-aos="fade-left" id="sf">
-                <img src="<?= base_url(); ?>/assets/img/sf.png" alt="" data-aos="zoom-in" data-aos-delay="150">
+                <img src="<?= base_url(); ?>/assets/img/sf.png" alt="" data-aos="zoom-in" data-aos-delay="150" class="img-fluid animated">
                 <div>
                     <h3><strong>Software Fair</strong></h3>
-                    <p>
+                    <h6>
                     Pameran aplikasi yang menampilkan aplikasi-aplikasi karya mahasiswa. 
                     Pameran ini akan menampilkan aplikasi Web, Mobile, Game dan Desktop.
-                    </p>
+                    </h6>
                     <div class="accordion">
                         <div class="accordion-item">
                           <div class="accordion-item-header">
@@ -139,7 +139,7 @@
                             <div class="accordion-item-body-content">
                                 <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
                                 <h6>2.Isi form pendaftaran dengan baik</h6>
-                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan : NAMATIM_NamaAplikasi(event) contoh TECH_Shopee(Sofware Fair) yang diperlukan ke drive perwakilan tim,kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :</h6> <h6><strong>NAMATIM_NamaAplikasi(event) contoh TECH_Shopee(Sofware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Aplikasi</h6>
                                 <h6>• Foto lengkap aplikasi</h6>
@@ -184,12 +184,12 @@
             <br />
             <?php } ?>
             <section class="card" data-aos="fade-left" id="hf">
-                <img src="<?= base_url(); ?>/assets/img/hf.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
+                <img src="<?= base_url(); ?>/assets/img/hf.png" alt="" data-aos="zoom-in" data-aos-delay="150" class="img-fluid animated"/>
                 <div>
                     <h3><strong>Hardware Fair</strong></h3>
-                    <p>
+                    <h6>
                     Pameran teknologi tentang Hardware yang akan menampilkan karya dari mahasiswa seperti IoT dan sebagainya.
-                    </p>
+                    </h6>
                     <div class="accordion">
                         <div class="accordion-item">
                           <div class="accordion-item-header">
@@ -199,7 +199,8 @@
                             <div class="accordion-item-body-content">
                                 <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
                                 <h6>2.Isi form pendaftaran dengan baik</h6>
-                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan : NAMATIM_NamaHardware(event yang diikuti). Contoh : TECH_Smartlock(Hardware Fair) yang diperlukan ke drive perwakilan tim,kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :</h6>
+                                <h6><strong>NAMATIM_NamaHardware(event yang diikuti). Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri</h6>
                                 <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi</h6>
@@ -244,12 +245,12 @@
             <br />
             <?php } ?>      
             <section class="card" data-aos="fade-right"id="ot">
-                <img src="<?= base_url(); ?>/assets/img/ot-logo.png" alt="" data-aos="zoom-in" data-aos-delay="150"/>
+                <img src="<?= base_url(); ?>/assets/img/Opentalk.png" alt="" data-aos="zoom-in" data-aos-delay="150" class="img-fluid animated"/>
                 <div>
                     <h3><strong>Open Talk</strong></h3>
-                    <p>
+                    <h6>
                     Di sesi Open Talk ini ada menghadirkan beberapa Pemateri yang nantinya akan membahas tentang persoalan
-                    </p>
+                    </h6>
                     <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
                         Register
                     </button>
@@ -625,7 +626,7 @@
                 <div class="row">
                     <div class="team-items">
                         <div class="item" data-aos="zoom-in" data-aos-delay="100">
-                            <img src="<?= base_url(); ?>/assets/img/comingsoon.png" class="img-fluid" alt="">
+                            <img src="<?= base_url(); ?>/assets/img/comingsoon1.png" class="img-fluid" alt="">
                             <div class="inner">
                                 <div class="info">
                                     <h5>COMING SOON</h5>
@@ -640,7 +641,7 @@
                             </div>
                         </div>
                         <div class="item" data-aos="zoom-in" data-aos-delay="100">
-                            <img src="<?= base_url(); ?>/assets/img/comingsoon.png" class="img-fluid" alt="">
+                            <img src="<?= base_url(); ?>/assets/img/comingsoon1.png" class="img-fluid" alt="">
                             <div class="inner">
                                 <div class="info">
                                     <h5>COMING SOON</h5>
@@ -660,119 +661,119 @@
         </section>
         <br>
         <br>
-    </main>
-    <div id="pengunjung">
-        <div class="section-title"data-aos="fade-up">
-            <h2>Pengunjung</h2>
-        </div>
-        <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100">
-            <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                <h6 class="mb-0 pb-3">
-                <span>Log In </span>
-                <span>Sign Up</span>
-                </h6>
-                <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-                <label for="reg-log"></label>
-                <div class="card-3d-wrap mx-auto">
-                    <div class="card-3d-wrapper">
-                        <div class="card-front">
-                            <div class="center-wrap">
-                                <div class="section text-center">
-                                    <form action="<?= base_url("auth/login"); ?>" method="post">
-                                        <h4 class="mb-4 pb-3">Log In</h4>
-                                        <?php
-                                        $inputs_visitors = session()->getFlashdata('inputs_visitors');
-                                        $error_visitors = session()->getFlashdata('error_visitors');
-                                        $errors_visitors = session()->getFlashdata('errors_visitors');
-                                        $success_visitors = session()->getFlashdata('success_visitors');
-                                        if(!empty($errors_visitors)){ ?>
-                                        <div class="alert alert-danger" role="alert">
-                                            <ul>
-                                            <?php foreach ($errors_visitors as $errors_visitors) : ?>
-                                                <li><?= esc($errors_visitors) ?></li>
-                                            <?php endforeach ?>
-                                            </ul>
-                                        </div>
-                                        <br />
-                                        <?php } if(!empty($error_visitors)){ ?>
-                                        <div class="alert alert-danger" role="alert">
-                                            <ul>
-                                                <li><?= esc($error_visitors) ?></li>
-                                            </ul>
-                                        </div>
-                                        <br />
-                                        <?php } if(!empty($success_visitors)){ ?>
-                                        <div class="alert alert-success" role="alert">
-                                            <?= esc($success_visitors) ?><br />
-                                        </div>
-                                        <br />
-                                        <?php } ?>
-                                        <?= csrf_field(); ?>
-                                        <div class="form-group">
-                                            <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required>
-                                            <i class="input-icon uil uil-at"></i>
-                                        </div>  
-                                        <div class="form-group mt-2">
-                                            <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" required>
-                                            <i class="input-icon uil uil-lock-alt"></i>
-                                        </div>
-                                        <button type="submit" class="buttn mt-4">Submit</button>
-                                    </form>
-                                    <p class="mb-0 mt-4 text-center">
-                                    <a href="#0" class="link">Forgot your password?</a><br />
-                                    <a href="#0" class="link">Login Developer</a>
-                                    </p>
+        <div id="pengunjung">
+            <div class="section-title"data-aos="fade-up">
+                <h2>Pengunjung</h2>
+            </div>
+            <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100">
+                <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                    <h6 class="mb-0 pb-3">
+                    <span>Log In </span>
+                    <span>Sign Up</span>
+                    </h6>
+                    <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                    <label for="reg-log"></label>
+                    <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+                            <div class="card-front">
+                                <div class="center-wrap">
+                                    <div class="section text-center">
+                                        <form action="<?= base_url("auth/login"); ?>" method="post">
+                                            <h4 class="mb-4 pb-3">Log In</h4>
+                                            <?php
+                                            $inputs_visitors = session()->getFlashdata('inputs_visitors');
+                                            $error_visitors = session()->getFlashdata('error_visitors');
+                                            $errors_visitors = session()->getFlashdata('errors_visitors');
+                                            $success_visitors = session()->getFlashdata('success_visitors');
+                                            if(!empty($errors_visitors)){ ?>
+                                            <div class="alert alert-danger" role="alert">
+                                                <ul>
+                                                <?php foreach ($errors_visitors as $errors_visitors) : ?>
+                                                    <li><?= esc($errors_visitors) ?></li>
+                                                <?php endforeach ?>
+                                                </ul>
+                                            </div>
+                                            <br />
+                                            <?php } if(!empty($error_visitors)){ ?>
+                                            <div class="alert alert-danger" role="alert">
+                                                <ul>
+                                                    <li><?= esc($error_visitors) ?></li>
+                                                </ul>
+                                            </div>
+                                            <br />
+                                            <?php } if(!empty($success_visitors)){ ?>
+                                            <div class="alert alert-success" role="alert">
+                                                <?= esc($success_visitors) ?><br />
+                                            </div>
+                                            <br />
+                                            <?php } ?>
+                                            <?= csrf_field(); ?>
+                                            <div class="form-group">
+                                                <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required>
+                                                <i class="input-icon uil uil-at"></i>
+                                            </div>  
+                                            <div class="form-group mt-2">
+                                                <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" required>
+                                                <i class="input-icon uil uil-lock-alt"></i>
+                                            </div>
+                                            <button type="submit" class="buttn mt-4">Submit</button>
+                                        </form>
+                                        <p class="mb-0 mt-4 text-center">
+                                        <a href="#0" class="link">Forgot your password?</a><br />
+                                        <a href="#0" class="link">Login Developer</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-        
-                        <div class="card-back" id="signup">
-                            <div class="center-wrap">
-                                <div class="section text-center">
-                                    <form action="<?= base_url("auth/register"); ?>" method="post">
-                                        <h4 class="mb-4 pb-3">Sign Up</h4> 
-                                        <?php
-                                        $inputs_visitor = session()->getFlashdata('inputs_visitor');
-                                        $error_visitor = session()->getFlashdata('error_visitor');
-                                        $errors_visitor = session()->getFlashdata('errors_visitor');
-                                        $success_visitor = session()->getFlashdata('success_visitor');
-                                        if(!empty($errors_visitor)){ ?>
-                                        <div class="alert alert-danger" role="alert">
-                                            <ul>
-                                            <?php foreach ($errors_visitor as $errors_visitor) : ?>
-                                                <li><?= esc($errors_visitor) ?></li>
-                                            <?php endforeach ?>
-                                            </ul>
-                                        </div>
-                                        <br />
-                                        <?php } if(!empty($error_visitor)){ ?>
-                                        <div class="alert alert-danger" role="alert">
-                                            <ul>
-                                                <li><?= esc($error_visitor) ?></li>
-                                            </ul>
-                                        </div>
-                                        <br />
-                                        <?php } if(!empty($success_visitor)){ ?>
-                                        <div class="alert alert-success" role="alert">
-                                            <?= esc($success_visitor) ?><br />
-                                        </div>
-                                        <br />
-                                        <?php } ?> 
-                                        <?= csrf_field(); ?>
-                                        <div class="form-group">
-                                            <input type="text" name="reg_name" class="form-style" placeholder="Your Full Name" id="reg_name" autocomplete="off" required>
-                                            <i class="input-icon uil uil-user"></i>
-                                        </div>  
-                                        <div class="form-group mt-2">
-                                            <input type="email" name="reg_email" class="form-style" placeholder="Your Email" id="reg_email" autocomplete="off" required>
-                                            <i class="input-icon uil uil-at"></i>
-                                        </div>  
-                                        <div class="form-group mt-2">
-                                            <input type="password" name="reg_pass" class="form-style" placeholder="Your Password" id="reg_pass" autocomplete="off" required>
-                                            <i class="input-icon uil uil-lock-alt"></i>
-                                        </div>
-                                        <button type="submit" class="buttn mt-4">Submit</button>
-                                    </form>
+            
+                            <div class="card-back" id="signup">
+                                <div class="center-wrap">
+                                    <div class="section text-center">
+                                        <form action="<?= base_url("auth/register"); ?>" method="post">
+                                            <h4 class="mb-4 pb-3">Sign Up</h4> 
+                                            <?php
+                                            $inputs_visitor = session()->getFlashdata('inputs_visitor');
+                                            $error_visitor = session()->getFlashdata('error_visitor');
+                                            $errors_visitor = session()->getFlashdata('errors_visitor');
+                                            $success_visitor = session()->getFlashdata('success_visitor');
+                                            if(!empty($errors_visitor)){ ?>
+                                            <div class="alert alert-danger" role="alert">
+                                                <ul>
+                                                <?php foreach ($errors_visitor as $errors_visitor) : ?>
+                                                    <li><?= esc($errors_visitor) ?></li>
+                                                <?php endforeach ?>
+                                                </ul>
+                                            </div>
+                                            <br />
+                                            <?php } if(!empty($error_visitor)){ ?>
+                                            <div class="alert alert-danger" role="alert">
+                                                <ul>
+                                                    <li><?= esc($error_visitor) ?></li>
+                                                </ul>
+                                            </div>
+                                            <br />
+                                            <?php } if(!empty($success_visitor)){ ?>
+                                            <div class="alert alert-success" role="alert">
+                                                <?= esc($success_visitor) ?><br />
+                                            </div>
+                                            <br />
+                                            <?php } ?> 
+                                            <?= csrf_field(); ?>
+                                            <div class="form-group">
+                                                <input type="text" name="reg_name" class="form-style" placeholder="Your Full Name" id="reg_name" autocomplete="off" required>
+                                                <i class="input-icon uil uil-user"></i>
+                                            </div>  
+                                            <div class="form-group mt-2">
+                                                <input type="email" name="reg_email" class="form-style" placeholder="Your Email" id="reg_email" autocomplete="off" required>
+                                                <i class="input-icon uil uil-at"></i>
+                                            </div>  
+                                            <div class="form-group mt-2">
+                                                <input type="password" name="reg_pass" class="form-style" placeholder="Your Password" id="reg_pass" autocomplete="off" required>
+                                                <i class="input-icon uil uil-lock-alt"></i>
+                                            </div>
+                                            <button type="submit" class="buttn mt-4">Submit</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -780,29 +781,29 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="main-footer" id="kontak">
-        <div class="footer-atas">
-            <div class="footer-bg">
-                <h3 style="padding-top: 5px;">For Contact Person</h3>
-                <!-- <div class="footer-email-phone">
-                    <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Raka)</p></td>
-                    <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Anam)</p></td>
-                    
-                </div> -->
-                <div class="footer-email-phone">
-                    <ul>
-                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08532968373 (Raka)</a></li>
-                        <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085712702685 (Anam)</a></li>
-                    </ul>
+        <div class="main-footer" id="kontak">
+            <div class="footer-atas">
+                <div class="footer-bg">
+                    <h3 style="padding-top: 5px;">For Contact Person</h3>
+                    <!-- <div class="footer-email-phone">
+                        <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Raka)</p></td>
+                        <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Anam)</p></td>
+                        
+                    </div> -->
+                    <div class="footer-email-phone">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08532968373 (Raka)</a></li>
+                            <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085712702685 (Anam)</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <!-- ======= Footer ======= -->
     <div class="custom-shape-divider-top-1612437875">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z " class="shape-fill" style="fill:#245191;"></path>
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z " class="shape-fill" style="fill:#84cdee;"></path>
         </svg>
     </div>
     <footer id="footer">

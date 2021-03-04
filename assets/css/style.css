@@ -2,15 +2,27 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif;
-  color: #444444;
-  background-image: url('../img/awan.jpg');
-  background-size: cover;
-  /* background-repeat: repeat;
-  z-index: 9; */
+@media (min-width:900px){
+  body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    background-image: url('../img/Artboard1bghitech1250x3500edited.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* z-index: 9; */
+  }
 }
+@media (max-width:900px){
+  body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    background-image: url('../img/test1.png');
+    background-size: cover;
 
+    background-repeat: no-repeat;
+    /* z-index: 9; */
+  }
+}
 a {
   color: #47b2e4;
 }
@@ -142,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled, #header.header-inner-pages {
-  background:#b2d2eb;
+  background:#84cdee;
 }
 #header.header-scrolled, #header.header-inner-pages {
   width: 100%;
@@ -419,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background: #b2d2eb;
+  background: #84cdee;
 }
 #hero .wave {
   display: inline-block; 
@@ -494,7 +506,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991px) {
   #hero {
-    height: 115vh;
+    height: 125vh;
     text-align: center;
   }
   #hero .animated {
@@ -1739,7 +1751,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   font-size: 14px;
-  background: #245191;
+  background: #84cdee;
 }
 
 #footer .footer-newsletter {
@@ -1930,8 +1942,11 @@ section {
   /* background: #000; */
   background-color: transparent;
   margin-bottom: 2rem;
+  border: none;
 }
-
+.card .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
 
 .card h3 {
   margin-bottom: 2rem;
@@ -1939,6 +1954,10 @@ section {
 }
 .card p{
   color: #fff;
+}
+.card h6{
+  color: #fff;
+  font-size: 1.2em;
 }
 .card > div {
   padding: 2rem;
@@ -2465,6 +2484,12 @@ body.showLoginForm .popup {
   line-height: 1.5rem;
   border-top: 1px solid;
   border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+  color: #000;
+}
+.accordion-item-body-content h6{
+  color: #000;
+  font-size: 0.85em;
+
 }
 
 @media(max-width:767px) {
