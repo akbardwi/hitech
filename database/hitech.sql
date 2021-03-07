@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Mar 2021 pada 03.15
+-- Waktu pembuatan: 07 Mar 2021 pada 03.27
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -40,6 +40,7 @@ CREATE TABLE `hf` (
   `link` text NOT NULL,
   `wa` text NOT NULL,
   `email` text NOT NULL,
+  `verif_code` text NOT NULL,
   `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
