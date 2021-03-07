@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Feb 2021 pada 12.51
+-- Waktu pembuatan: 07 Mar 2021 pada 03.15
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -53,8 +53,8 @@ CREATE TABLE `ot` (
   `id` int(255) NOT NULL,
   `kategori` text NOT NULL,
   `nama` text NOT NULL,
-  `kampus` text NOT NULL,
-  `nim` text NOT NULL,
+  `kampus` text DEFAULT NULL,
+  `nim` text DEFAULT NULL,
   `wa` text NOT NULL,
   `email` text NOT NULL,
   `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
@@ -68,7 +68,7 @@ CREATE TABLE `ot` (
 
 CREATE TABLE `sf` (
   `id` int(255) NOT NULL,
-  `kat_app` text NOT NULL,
+  `category` text NOT NULL,
   `nama_app` text NOT NULL,
   `nama_ketua` text NOT NULL,
   `nim_ketua` text NOT NULL,
@@ -77,9 +77,10 @@ CREATE TABLE `sf` (
   `nama_anggota2` text DEFAULT NULL,
   `nim_anggota2` text DEFAULT NULL,
   `kampus` text NOT NULL,
-  `link_gdrive` text NOT NULL,
+  `link` text NOT NULL,
   `wa` text NOT NULL,
   `email` text NOT NULL,
+  `verif_code` text NOT NULL,
   `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -87,8 +88,8 @@ CREATE TABLE `sf` (
 -- Dumping data untuk tabel `sf`
 --
 
-INSERT INTO `sf` (`id`, `kat_app`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link_gdrive`, `wa`, `email`, `tgl_daftar`) VALUES
-(1, '', 'Asa', 'ADS', '156422', 'ASa', '63', '', '', 'Udinus', '', '08', 'akbar.dwi14@gmail.com', '2021-02-24 03:20:25');
+INSERT INTO `sf` (`id`, `category`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link`, `wa`, `email`, `verif_code`, `tgl_daftar`) VALUES
+(1, 'Web', 'Sekolah Digital', 'Akbar Dwi Syahputra', 'A11.2019.12217', 'Ahmad', 'A11.2019.12221', '', '', 'Udinus', 'https://drive.google.com/drive/folders/1fgDKpdflu5xR_AgZZUnzvNuShujF18q6', '085326629159', 'akbar.dwi14@gmail.com', '', '2021-03-07 02:06:49');
 
 -- --------------------------------------------------------
 

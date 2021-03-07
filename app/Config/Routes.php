@@ -34,6 +34,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('verification-email/(:any)', 'Auth::verification_email/$1');
+$routes->get('autologin/(:any)/(:any)', 'Auth::autoLoginDev/$1/$2');
 
 /*
  * --------------------------------------------------------------------

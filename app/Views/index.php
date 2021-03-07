@@ -150,7 +150,7 @@
                           </div>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary btn-register"  data-toggle="modal" data-target="#sfModal">
+                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#sfModal">
                         Register
                     </button>
                 </div>         
@@ -660,6 +660,52 @@
             </div>
         </section>
         <br>
+        <!-- Modal Login Developer -->
+        <div class="modal fade" id="logDevModal" tabindex="-1" aria-labelledby="logDevModalLabel" aria-hidden="true"style="z-index: 9999999;">
+            <div class="modal-dialog">
+                <div class="modal-content cstm">
+                    <div class="modal-header cstmbg">
+                        <h5 class="modal-title w-100 text-center position-absolute" id="logDevModalLabel">Login Developer</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="<?= base_url("auth/loginDev"); ?>" method="post">
+                        <?= csrf_field(); ?>
+                        <div class="row justify-content-between">
+                            <div class="col-4 mb-3">
+                                <p class="radio-label text-center">Developer</p>
+                            </div>
+                            <br>
+                            <div class="col text-right">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="sfDev" value="sfDev" name="category" class="custom-control-input">
+                                    <label class="custom-control-label" for="sfDev">Software Fair</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="hfDev" value="hfDev" name="category" class="custom-control-input">
+                                    <label class="custom-control-label" for="hfDev">Hardware Fair</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input type="email" name="emailDev" required>
+                                    <span class="omrs-input-label">Email</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">email</i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer cstmbg">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
         <br>
         <div id="pengunjung">
             <div class="section-title"data-aos="fade-up">
@@ -720,7 +766,7 @@
                                         </form>
                                         <p class="mb-0 mt-4 text-center">
                                         <a href="#0" class="link">Forgot your password?</a><br />
-                                        <a href="#0" class="link">Login Developer</a>
+                                        <a href="#0" class="link" data-toggle="modal" data-target="#logDevModal">Login Developer</a>
                                         </p>
                                     </div>
                                 </div>

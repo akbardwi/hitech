@@ -264,4 +264,22 @@ class Validation
 			'required'      => 'Password wajib diisi'
 		],
 	];
+
+	// Validasi Request Token Login Developer
+	public $login_dev = [		
+		'catDev'		=> 'required',
+		'email'			=> [
+			'required',
+			'valid_email'
+		],
+	];	 
+	public $login_dev_errors = [
+		'catDev' 		=> [
+			'required'      => 'Kategori Developer wajib diisi'
+		],
+		'email'			=> [
+			'required'		=> 'Email wajib diisi',
+			'valid_email'	=> 'Masukkan Email yang valid'
+		],
+	];
 }

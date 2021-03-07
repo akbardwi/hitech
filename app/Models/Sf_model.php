@@ -5,7 +5,7 @@ use CodeIgniter\Model;
 class Sf_model extends Model{
     protected $table 		= 'sf';
 	protected $primaryKey 	= 'id';
-    protected $allowedFields = ['kat_app', 
+    protected $allowedFields = ['category', 
                                 'nama_app', 
                                 'nama_ketua',
                                 'nim_ketua',
@@ -14,7 +14,7 @@ class Sf_model extends Model{
 								'nama_anggota2',
                                 'nim_anggota2',
 								'kampus',
-                                'link_gdrive',
+                                'link',
                                 'wa',
                                 'email'];
 
@@ -37,6 +37,14 @@ class Sf_model extends Model{
     public function check_email($email){
         $this->select("*");
         $this->where(['email' => $email]);
+        $query = $this->get();
+		return $query->getRowArray();
+    }
+
+	//Cek Email
+    public function check_login($kode){
+        $this->select("*");
+        $this->where(['verif_code' => $kode]);
         $query = $this->get();
 		return $query->getRowArray();
     }

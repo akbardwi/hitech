@@ -62,7 +62,7 @@ class Auth extends BaseController{
                         session()->setFlashdata('errors_sf', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#sf");
                     } else {
-                        $batas = strtotime(date("26-02-2021 10:00:00"));
+                        $batas = strtotime(date("26-02-2022 10:00:00"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             $model->tambah($sf);
@@ -130,7 +130,7 @@ class Auth extends BaseController{
                         session()->setFlashdata('errors_hf', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#hf");
                     } else {
-                        $batas = strtotime(date("26-02-2021 10:00:00"));
+                        $batas = strtotime(date("26-02-2022 10:00:00"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             $model->tambah($hf);
@@ -204,7 +204,7 @@ class Auth extends BaseController{
                         session()->setFlashdata('errors_ot', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#ot");
                     } else {
-                        $batas = strtotime(date("26-02-2021 10:00:00"));
+                        $batas = strtotime(date("26-02-2022 10:00:00"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             $model->tambah($ot);
@@ -330,6 +330,8 @@ class Auth extends BaseController{
                             return redirect()->to(base_url()."/#pengunjung");
                         } else {
                             session()->set('user_email',$check_user['email']);
+                            session()->set('cat_dev','visitor');
+                            session()->set('user_type','visitor');
                             return redirect()->to(base_url("users/dashboard"));
                         }
                     } else {
@@ -365,6 +367,118 @@ class Auth extends BaseController{
                 session()->setFlashdata('error_visitors', 'Email gagal diverifikasi.');
                 return redirect()->to(base_url()."/#pengunjung");
             }
+        }
+    }
+
+    //Request Token Login Developer
+    public function loginDev(){
+        $method = $_SERVER["REQUEST_METHOD"];
+        if($method == "POST"){
+            $catDev = filter_var($this->request->getVar('category'), FILTER_SANITIZE_STRING);
+            $email = filter_var($this->request->getVar('emailDev'), FILTER_SANITIZE_EMAIL);
+
+            $dev = [
+                'catDev'        => $catDev,
+                'email'         => $email
+            ];
+            
+            if($this->form_validation->run($dev, "login_dev") == FALSE){
+                // mengembalikan nilai input yang sudah dimasukan sebelumnya
+                session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                // memberikan pesan error pada saat input data
+                session()->setFlashdata('errors_visitors', $this->form_validation->getErrors());
+                return redirect()->to(base_url()."/#pengunjung");
+            } else {
+                $modelSF 	= new Sf_model();
+                $modelHF 	= new Hf_model();
+                $db      	= \Config\Database::connect();
+                if($catDev == "sfDev"){
+                    $check_user = $modelSF->check_email($email);
+                    if($check_user){
+                        $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
+                        $kode = substr(str_shuffle($karakter), 0, 30);
+                        $email_smtp = \Config\Services::email();
+                        $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
+                        $email_smtp->setTo("$email");
+                        $email_smtp->setSubject("Login Developer HI TECH 2021");
+                        $email_smtp->setMessage('Hai, Developer. <br /> Silahkan klik <a href="'.base_url("autologin/sf/$kode").'">disini</a>&nbsp; untuk login atau bisa copy paste link berikut: '.base_url("autologin/sf/$kode"));
+                        $kirim = $email_smtp->send();
+                        if($kirim){
+                            $query = $db->query("UPDATE sf SET verif_code = '$kode' WHERE email = '$email'");
+                            if($query){
+                                session()->setFlashdata('success_visitors', 'Silahkan cek email untuk login.');
+                                return redirect()->to(base_url()."/#pengunjung");
+                            } else {
+                                session()->setFlashdata('error_visitors', 'Gagal update kode, silahkan coba lagi.');
+                                return redirect()->to(base_url()."/#pengunjung");
+                            }
+                        } else {
+                            session()->setFlashdata('error_visitors', 'Email gagal dikirim, silahkan coba lagi.');
+                            return redirect()->to(base_url()."/#pengunjung");
+                        }
+                    } else {
+                        session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                        session()->setFlashdata('error_visitors', 'Email tidak ditemukan.');
+                        return redirect()->to(base_url()."/#pengunjung");
+                    }
+                } else {
+                    $check_user = $modelHF->check_email($email);
+                    if($check_user){
+                        $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
+                        $kode = substr(str_shuffle($karakter), 0, 30);
+                        $email_smtp = \Config\Services::email();
+                        $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
+                        $email_smtp->setTo("$email");
+                        $email_smtp->setSubject("Login Developer HI TECH 2021");
+                        $email_smtp->setMessage('Hai, Developer. <br /> Silahkan klik <a href="'.base_url("autologin/hf/$kode").'">disini</a>&nbsp; untuk login atau bisa copy paste link berikut: '.base_url("autologin/hf/$kode"));
+                        $kirim = $email_smtp->send();
+                        if($kirim){
+                            $query = $db->query("UPDATE hf SET verif_code = '$kode' WHERE email = '$email'");
+                            if($query){
+                                session()->setFlashdata('success_visitors', 'Silahkan cek email untuk login.');
+                                return redirect()->to(base_url()."/#pengunjung");
+                            } else {
+                                session()->setFlashdata('error_visitors', 'Gagal update kode, silahkan coba lagi.');
+                                return redirect()->to(base_url()."/#pengunjung");
+                            }
+                        } else {
+                            session()->setFlashdata('error_visitors', 'Email gagal dikirim, silahkan coba lagi.');
+                            return redirect()->to(base_url()."/#pengunjung");
+                        }
+                    } else {
+                        session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                        session()->setFlashdata('error_visitors', 'Email tidak ditemukan.');
+                        return redirect()->to(base_url()."/#pengunjung");
+                    }
+                }
+            }
+        } else {
+            return redirect()->to(base_url());
+        }
+    }
+
+    //Proses Auto Login Developer
+    public function autoLoginDev($type, $kode){
+        if($type == "sf"){
+            $db      	= \Config\Database::connect();
+            $model      = new Sf_model();
+            $dataUser   = $model->check_login($kode);
+            $query = $db->query("UPDATE sf SET verif_code = '' WHERE verif_code = '$kode'");
+            session()->set('user_email',$dataUser['email']);
+            session()->set('cat_dev','sf');
+            session()->set('user_type','developer');
+            return redirect()->to(base_url("users/dashboard"));
+        } else if($type == "hf"){
+            $db      	= \Config\Database::connect();
+            $model      = new Sf_model();
+            $dataUser   = $model->check_login($kode);
+            $query = $db->query("UPDATE hf SET verif_code = '' WHERE verif_code = '$kode'");
+            session()->set('user_email',$dataUser['email']);
+            session()->set('cat_dev','hf');
+            session()->set('user_type','developer');
+            return redirect()->to(base_url("users/dashboard"));
+        } else {
+            return redirect()->to(base_url());
         }
     }
 }
