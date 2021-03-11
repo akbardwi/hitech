@@ -66,11 +66,7 @@
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
                     <h1>Hi-Technology</h1>
-<<<<<<< HEAD
                     <h2><strong style="color: white;">Hi-Technology</strong> merupakan festival pameran IT tahunan yang diselanggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro. Hi Technology pada tahun ini bertemakan "<strong style="color: white;">Unlimited Creativity with Technology</strong>". Hi Technology memiliki serangkaian acara yaitu Software Fair, Hardware Fair, dan Open Talkshow.</h2>
-=======
-                    <h2><strong style="color: black;">Hi-Technology</strong> merupakan festival pameran IT tahunan yang diselanggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro. Hi Technology pada tahun ini bertemakan "<strong style="color: black;">Unlimited Creativity with Technology</strong>". Hi Technology memiliki serangkaian acara yaitu Software Fair, Hardware Fair, dan Open Talkshow.</h2>
->>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
                     <div class="d-lg-flex">
                         <a href="#event" class="btn-get-started scrollto">Get Started</a>
                         <a href="https://www.youtube.com/watch?v=NuMf5J-BI_w" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
@@ -83,11 +79,7 @@
         </div>
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" >
-<<<<<<< HEAD
         <path fill="#77D0EE" fill-opacity="1" d="M0,224L34.3,234.7C68.6,245,137,267,206,277.3C274.3,288,343,288,411,277.3C480,267,549,245,617,202.7C685.7,160,754,96,823,69.3C891.4,43,960,53,1029,85.3C1097.1,117,1166,171,1234,176C1302.9,181,1371,139,1406,117.3L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z" style="border: none;"></path>
-=======
-        <path fill="#fff" fill-opacity="1" d="M0,224L34.3,234.7C68.6,245,137,267,206,277.3C274.3,288,343,288,411,277.3C480,267,549,245,617,202.7C685.7,160,754,96,823,69.3C891.4,43,960,53,1029,85.3C1097.1,117,1166,171,1234,176C1302.9,181,1371,139,1406,117.3L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z" style="border: none;"></path>
->>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
     </svg><!-- End Hero -->
     <!-- <br/> -->
     <main id="main">
@@ -896,11 +888,7 @@
     <!-- ======= Footer ======= -->
     <div class="custom-shape-divider-top-1612437875">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-<<<<<<< HEAD
             <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z " class="shape-fill" style="fill:#77D0EE;"></path>
-=======
-            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z " class="shape-fill" style="fill:#fff;"></path>
->>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
         </svg>
     </div>
     <footer id="footer">
@@ -922,13 +910,9 @@
             </ul>
         </div>
         <div class="container footer-bottom clearfix">
-<<<<<<< HEAD
         <hr style="width:50%;border-color:#fff;height:1px; margin:auto; align:center;"><br/>
-=======
-        <hr style="width:50%;border-color:#000;height:1px; margin:auto; align:center;"><br/>
->>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
             <div class="copyright">
-                &copy; Copyright <?= date("Y"); ?> <a href="https://hmtiudinus.org/"><strong><span style="color:black;">HMTI</span></strong>.</a>
+                &copy; Copyright <?= date("Y"); ?> <a href="https://hmtiudinus.org/"><strong><span style="color:white;">HMTI</span></strong>.</a>
             </div>
             <div class="credits">
                 Designed by <a href="#">S.A.M</a>
