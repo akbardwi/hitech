@@ -41,7 +41,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
-            <a href="index.html" class="logo mr-auto"><img src="<?= base_url(); ?>/assets/img/logo-white.png" alt="" class="img-fluid"></a>
+            <a href="index.html" class="logo mr-auto"><img src="<?= base_url(); ?>/assets/img/logo.png" alt="" class="img-fluid"></a>
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                 <li class="active"><a href="<?= base_url(); ?>">Home</a></li>
@@ -883,9 +883,9 @@
 
 <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 <div id="preloader">
-    <img class="image" src="<?= base_url(); ?>/assets/img/logo-navbar.png">
+    <img class="image" src="<?= base_url(); ?>/assets/img/logotokbsr.png">
+    <img class="image2" src="<?= base_url(); ?>/assets/img/tulisant.png">
 </div>
-
 <script src="<?= base_url(); ?>/assets/vendor/jquery/jquery.min.js"></script>
 <script src="<?= base_url(); ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= base_url(); ?>/assets/vendor/jquery.easing/jquery.easing.min.js"></script>

@@ -6,7 +6,7 @@
   body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
-    background-image: url('../img/Artboard1bghitech1250x3500edited.png');
+    background-image: url('../img/bgweb1.png');
     background-size: cover;
     background-repeat: no-repeat;
     /* z-index: 9; */
@@ -16,7 +16,7 @@
   body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
-    background-image: url('../img/test1.png');
+    background-image: url('../img/test2.png');
     background-size: cover;
 
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #37517e;
+  background: #84cdee;
 }
 
 /* #preloader:before {
@@ -84,18 +84,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 .image {
   position: fixed;
-  content: "";
-  position: fixed;
+  /* content: "";
+  position: fixed; */
   top: calc(50% - 50px);
   left: calc(50% - 50px);
-/*  border: 6px solid #37517e;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
-  border-radius: 50%;*/
-  width: 90px;
-  height: 90px;
+ border: 6px solid #84cdee;
+  /* border-top-color: #fff; */
+  /* border-bottom-color: #fff; */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
   -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
+  background: none;
+}
+.image2{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: fadeIn 1s infinite alternate;
+  padding-top: 190px;
+}
+@media (max-width:700px){
+  .image2{
+    width: 100%;
+  }
+}
+@keyframes fadeIn { 
+  from { opacity: 0; } 
 }
 @-webkit-keyframes spin {
   0% {
@@ -1098,7 +1117,7 @@ section {
 .team-section{
 	/* background-color:#009688; */
 	min-height: 100vh;
-	padding:70px 15px 30px;
+	padding:0px 15px 30px;
 }
 
 .container{
