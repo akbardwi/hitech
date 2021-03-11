@@ -48,7 +48,15 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
+<<<<<<< HEAD
   background: #77D0EE;
+=======
+<<<<<<< HEAD
+  background: #84cdee;
+=======
+  background: #fff;
+>>>>>>> c7e407ae4209158ab2114f5fee4a5f54ab203037
+>>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
 }
 
 /* #preloader:before {
@@ -89,7 +97,15 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed; */
   top: calc(50% - 50px);
   left: calc(50% - 50px);
+<<<<<<< HEAD
  border: 6px solid #77D0EE;
+=======
+<<<<<<< HEAD
+ border: 6px solid #84cdee;
+=======
+ border: 6px solid #fff;
+>>>>>>> c7e407ae4209158ab2114f5fee4a5f54ab203037
+>>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
   /* border-top-color: #fff; */
   /* border-bottom-color: #fff; */
   border-radius: 50%;
@@ -174,7 +190,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header.header-scrolled, #header.header-inner-pages {
+<<<<<<< HEAD
   background:#77D0EE;
+=======
+  background:#fff;
+>>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
 }
 #header.header-scrolled, #header.header-inner-pages {
   width: 100%;
@@ -223,7 +243,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
-  color: #fff;
+  color: #000;
   transition: 0.3s;
   font-size: 15px;
   letter-spacing: 0.5px;
@@ -452,7 +472,11 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 80vh;
+<<<<<<< HEAD
   background: #77D0EE;
+=======
+  background: #fff;
+>>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
 }
 #hero .wave {
   display: inline-block; 
@@ -471,11 +495,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #fff;
+  color: #000;
 }
 
 #hero h2 {
-  color: rgba(255, 255, 255, 0.6);
+  color: #000;
   margin-bottom: 50px;
   font-size: 24px;
 }
@@ -1119,7 +1143,11 @@ section {
 .team-section{
 	/* background-color:#009688; */
 	min-height: 100vh;
+<<<<<<< HEAD
 	/* padding:70px 15px 30px; */
+=======
+	padding:0px 15px 30px;
+>>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
 }
 
 .container{
@@ -1772,7 +1800,11 @@ section {
 --------------------------------------------------------------*/
 #footer {
   font-size: 14px;
+<<<<<<< HEAD
   background: #77D0EE;
+=======
+  background: #fff;
+>>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
 }
 
 #footer .footer-newsletter {
@@ -1932,7 +1964,11 @@ section {
 #footer .copyright {
   float: center;
   text-align: center;
+<<<<<<< HEAD
   color: #fff;
+=======
+  color: #000;
+>>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
 }
 
 #footer .credits {
@@ -2049,7 +2085,7 @@ section {
 #thanos text {
   fill: transparent;
   stroke-width: 2px;
-  stroke: #fff;
+  stroke: #000;
   stroke-dasharray: 850;
   stroke-dashoffset: 0;
   font-family: arial;
@@ -2077,7 +2113,7 @@ section {
   }
   100% {
       stroke-dashoffset: 1700;
-      fill: #fff;
+      fill: #000;
   }
 }
 .popup-overlay {
@@ -2293,7 +2329,7 @@ body.showLoginForm .popup {
 }
 .footer-address h1{
 	font-family: Arial, Helvetica, sans-serif;
-	color: #fff;
+	color: #000;
 	text-align: center;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -2301,7 +2337,11 @@ body.showLoginForm .popup {
 	line-height: 1.5;
 }
 .footer-address h1 span{
+<<<<<<< HEAD
 	color: #ffff;
+=======
+	color: #000;
+>>>>>>> f3b9ae50de03b654c9a54b8138d35097dec72ce7
 }
 .footer-address h2{
 	font-family: Arial, Helvetica, sans-serif;
@@ -2368,7 +2408,7 @@ body.showLoginForm .popup {
 }
 .footer-social-icons ul li a{
 	font-size: 20px;
-	color: #fff;
+	color: #000;
 	line-height: 30px;
 	display: block;
 }
