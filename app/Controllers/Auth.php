@@ -212,6 +212,8 @@ class Auth extends BaseController{
                         $ot = [
                             'kategori'      => $otCategory,
                             'nama'          => $nama_ot,
+                            'kampus'        => "",
+                            'nim'           => "",
                             'wa'            => $wa_ot,
                             'email'         => $email_ot
                         ];

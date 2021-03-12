@@ -11,7 +11,7 @@
                 <?php } ?>
             </div>
             <div class="details">
-                <h2><?= $dev['nama_app']; ?></h2><br>
+                <h2><?= $dev['judul_alat']; ?></h2><br>
                 <button href="javascript:void(0)" class="btn-vote" id="button-a" data-id="<?= $dev['id']; ?>">VOTE</button>
             </div>
         </div>
