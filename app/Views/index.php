@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="<?= base_url(); ?>/assets/img/hero-img.png" class="img-fluid animated" alt="" />
+                    <img src="<?= base_url(); ?>/assets/img/ICON-HITECH-2021.png" class="img-fluid animated" alt="" />
                 </div>
             </div>
         </div>
@@ -282,7 +282,7 @@
                 <div>
                     <h3><strong>Open Talk</strong></h3>
                     <h6>
-                    Di sesi Open Talk ini ada menghadirkan beberapa Pemateri yang nantinya akan membahas tentang persoalan
+                    Di sesi Open Talk ini akan menghadirkan beberapa pemateri yang nantinya mengulas tentang persoalan yang berkaitan dengan teknologi/ IT
                     </h6>
                     <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
                         Register
@@ -923,7 +923,7 @@
 <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 <div id="preloader">
     <img class="image" src="<?= base_url(); ?>/assets/img/logotokbsr.png">
-    <img class="image2" src="<?= base_url(); ?>/assets/img/tulisant.png">
+    <!--<img class="image2" src="<?= base_url(); ?>/assets/img/tulisant.png">-->
 </div>
 <script src="<?= base_url(); ?>/assets/vendor/jquery/jquery.min.js"></script>
 <script src="<?= base_url(); ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

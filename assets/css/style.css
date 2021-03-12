@@ -342,8 +342,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  top: 40px;
-  right: 1px;
+  top: 22px;
+  right: -8px;
   z-index: 9998;
   border: 0;
   background: none;
@@ -354,6 +354,24 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   text-align: right;
 }
+@media only screen and (min-device-width: 300px) and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.5)  {
+    .mobile-nav-toggle {
+        position: fixed;
+        top: 22px;
+        right: -8px;
+        z-index: 9998;
+        border: 0;
+        background: none;
+        font-size: 24px;
+        transition: all 0.4s;
+        outline: none !important;
+        line-height: 1;
+        cursor: pointer;
+        text-align: right;
+    }
+}
+  
 
 .mobile-nav-toggle i {
   color: #fff;
@@ -524,7 +542,10 @@ h1, h2, h3, h4, h5, h6 {
 #hero .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
-
+#hero .hero-img img {
+  width: 100%;
+  height: 90%;
+}
 @media (max-width: 991px) {
   #hero {
     height: 125vh;
@@ -538,7 +559,10 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
   #hero .hero-img img {
-    width: 50%;
+    width: 100%;
+  }
+  #hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
   }
 }
 
@@ -553,13 +577,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
   #hero .hero-img img {
-    width: 70%;
+    width: 100%;
+  }
+  #hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
   }
 }
 
 @media (max-width: 575px) {
   #hero .hero-img img {
-    width: 80%;
+    width: 100%;
   }
   #hero .btn-get-started {
     font-size: 16px;
@@ -573,6 +600,9 @@ h1, h2, h3, h4, h5, h6 {
   #hero .btn-watch-video i {
     font-size: 32px;
     top: 7px;
+  }
+  #hero .animated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
   }
 }
 
@@ -1119,7 +1149,7 @@ section {
 .team-section{
 	/* background-color:#009688; */
 	min-height: 100vh;
-	/* padding:70px 15px 30px; */
+	 padding:0px 15px 0px; 
 }
 
 .container{
@@ -1163,13 +1193,14 @@ section {
  flex-basis: calc(25% - 30px);
  max-width: calc(25% - 30px);
  transition: all .5s ease;
- margin-bottom: 120px;
+ margin-bottom: 20px;
 }
 .team-section .team-items .item img{
 	display: block;
 	width: 100%;
-  height: 100%;
-	border-radius: 8px;
+  height: 80%;
+	border-radius: 8%;
+	padding:10px;
 }
 
 .team-section .team-items .item .inner{
@@ -1963,7 +1994,7 @@ section {
   grid-gap: 2rem;
   /* background: #000; */
   background-color: transparent;
-  margin-bottom: 2rem;
+  /*margin-bottom: 0.5rem;*/
   border: none;
 }
 .card .animated {
@@ -1979,7 +2010,8 @@ section {
 }
 .card h6{
   color: #fff;
-  font-size: 1.2em;
+  font-size: 1.1em;
+    /*padding-bottom: 10px;*/
 }
 .card > div {
   padding: 2rem;
@@ -2035,15 +2067,38 @@ section {
   }
 }
 
-@media (max-width: 700px){
-  .tulisan{
-    /* padding-right: 30%; */
-    width: 100%;
-    font-size:104px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
+@media only screen and (min-device-width: 300px) and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.1) {
+    .tulisan{
+      /* padding-right: 30%; */
+      width: 100%;
+      font-size:96px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+}
+@media only screen and (min-device-width: 300px) and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 2.2) {
+    .tulisan{
+      /* padding-right: 30%; */
+      width: 100%;
+      font-size:104px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+}
+@media only screen and (min-device-width: 300px) and (max-device-width: 812px) 
+  and (-webkit-device-pixel-ratio: 18:9) {
+    .tulisan{
+      /* padding-right: 30%; */
+      width: 100%;
+      font-size:104px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
 }
 
 #thanos text {
