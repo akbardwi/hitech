@@ -69,7 +69,7 @@ class Auth extends BaseController{
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Developer HI TECH 2021");
-                            $email_smtp->setMessage("<div>Halo, $nama_ketua</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>"));
+                            $email_smtp->setMessage("<div>Halo, $nama_ketua</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($sf);
@@ -148,7 +148,7 @@ class Auth extends BaseController{
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Developer HI TECH 2021");
-                            $email_smtp->setMessage("<div>Halo, $nama_ketua</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>"));
+                            $email_smtp->setMessage("<div>Halo, $nama_ketua</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($hf);
@@ -233,7 +233,7 @@ class Auth extends BaseController{
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email_ot");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Open Talk HI TECH 2021");
-                            $email_smtp->setMessage("<div>Halo, $nama_ot</div><div><br /></div><div>Terimakasih telah mendaftar Open Talk di acara Hi-technology. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/JrFMLbsC23pLR19QLFy2AJ</div><div><br /></div><div>Salam, Hi-technology 2021</div>"));
+                            $email_smtp->setMessage("<div>Halo, $nama_ot</div><div><br /></div><div>Terimakasih telah mendaftar Open Talk di acara Hi-technology. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/JrFMLbsC23pLR19QLFy2AJ</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($ot);
@@ -400,7 +400,7 @@ class Auth extends BaseController{
                 $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                 $email_smtp->setTo("$email");
                 $email_smtp->setSubject("Konfirmasi Pendaftaran Pengunjung HI TECH 2021");
-                $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai pengunjung di acara Hi-technology. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/HH0P9ffhJd51Vmb8hoGdIZ</div><div><br /></div><div>Salam, Hi-technology 2021</div>"));
+                $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai pengunjung di acara Hi-technology. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/HH0P9ffhJd51Vmb8hoGdIZ</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
                 $kirim = $email_smtp->send();
                 session()->setFlashdata('success_visitors', 'Email berhasil diverifikasi.');
                 return redirect()->to(base_url()."/#pengunjung"); 
