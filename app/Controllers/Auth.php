@@ -62,7 +62,7 @@ class Auth extends BaseController{
                         session()->setFlashdata('errors_sf', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#sf");
                     } else {
-                        $batas = strtotime(date("26-02-2022 10:00:00"));
+                        $batas = strtotime(date("29-03-2021 23:59:59"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             $email_smtp = \Config\Services::email();
@@ -141,7 +141,7 @@ class Auth extends BaseController{
                         session()->setFlashdata('errors_hf', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#hf");
                     } else {
-                        $batas = strtotime(date("26-02-2022 10:00:00"));
+                        $batas = strtotime(date("29-03-2021 23:59:59"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             $email_smtp = \Config\Services::email();
@@ -226,7 +226,7 @@ class Auth extends BaseController{
                         session()->setFlashdata('errors_ot', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#ot");
                     } else {
-                        $batas = strtotime(date("26-02-2022 10:00:00"));
+                        $batas = strtotime(date("29-03-2021 23:59:59"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             $email_smtp = \Config\Services::email();
@@ -292,7 +292,7 @@ class Auth extends BaseController{
                         session()->setFlashdata('errors_visitors', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#pengunjung");
                     } else {
-                        $batas = strtotime(date("26-02-2021 10:00:00"));
+                        $batas = strtotime(date("29-03-2021 23:59:59"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
