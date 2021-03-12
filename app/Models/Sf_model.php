@@ -16,7 +16,9 @@ class Sf_model extends Model{
 								'kampus',
                                 'link',
                                 'wa',
-                                'email'];
+                                'email',
+								'logo',
+								'suara'];
 
     // Listing
 	public function listing(){

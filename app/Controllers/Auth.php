@@ -309,6 +309,7 @@ class Auth extends BaseController{
                                     'email'         => $email,
                                     'password'      => password_hash($pass, PASSWORD_DEFAULT),
                                     'status'        => 0,
+                                    'vote'          => 0,
                                     'verif_code'    => $kode
                                 ];
                                 
