@@ -81,7 +81,7 @@ class Users extends BaseController{
 				return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
 			}
 
-			$vote = [				
+			$data = [				
 				'dev'				=> $type_dev,
 				'id_dev'			=> $id_dev,
 				'email_visitor'		=> $email,
@@ -89,7 +89,7 @@ class Users extends BaseController{
 				'pesan'				=> $pesan
 			];
 			
-			if($this->form_validation->run($vote, 'vote') == FALSE){
+			if($this->form_validation->run($data, 'vote') == FALSE){
 				// mengembalikan nilai input yang sudah dimasukan sebelumnya
 				session()->setFlashdata('inputs_vote', $this->request->getPost());
 				// memberikan pesan error pada saat input data
@@ -97,12 +97,17 @@ class Users extends BaseController{
 				return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
 			} else {
 				$model = new Vote_model();
-				$model->tambah($vote);
+				$model->tambah($data);
 				
-				$db      	= \Config\Database::connect();
-        		$visitor  	= $db->table('visitor');
+				$db = \Config\Database::connect();
+				if($type_dev == "sf"){
+					$vote = $db->query("UPDATE sf SET suara = suara+1 WHERE id = '$id_dev'");
+				} else {
+					$vote = $db->query("UPDATE hf SET suara = suara+1 WHERE id = '$id_dev'");
+				}
+
 				$query = $db->query("UPDATE visitor SET vote = '1' WHERE email = '$email'");
-				if($query){
+				if($query and $vote){
 					session()->setFlashdata('success_vote', "Terima kasih telah memberikan suara Anda untuk developer");
 					return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
 				} else {
