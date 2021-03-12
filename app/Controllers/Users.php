@@ -7,6 +7,7 @@ use App\Models\Sf_model;
 use App\Models\Hf_model;
 use App\Models\Ot_model;
 use App\Models\Visitor_model;
+use App\Models\Vote_model;
 //End Load Model
 
 class Users extends BaseController{
@@ -19,6 +20,7 @@ class Users extends BaseController{
 		return redirect()->to(base_url('users/dashboard'));
 	}
 
+	// Halaman Dashboard Users
     public function dashboard(){
         $config = null;
 		$session = \Config\Services::session($config);
@@ -42,9 +44,9 @@ class Users extends BaseController{
 				$check_login['fullname'] = $check_login['nama_ketua'];
 			}
 		}
-        // $web = new Web_model();
+        
 		$data = [
-			'title'				=> 'Halaman Dashboard',
+			'title'				=> 'Dashboard',
 			'dashboard'			=> TRUE,
 			'user_login'		=> $check_login
 		];
@@ -54,8 +56,122 @@ class Users extends BaseController{
 		render_page('vote/layout','footer', $data);
     }
 
+	// Fungsi Logout
     public function logout(){
         session()->destroy();
         return redirect()->to(base_url());
     }
+
+	// Proses Voting
+	public function vote(){
+		$method = $_SERVER['REQUEST_METHOD'];
+		if($method == "POST"){
+			$id_dev = filter_var($this->request->getVar('id'), FILTER_SANITIZE_STRING);
+            $type_dev = filter_var($this->request->getVar('dev'), FILTER_SANITIZE_STRING);
+            $email = filter_var($this->request->getVar('email'), FILTER_SANITIZE_EMAIL);
+            $kesan = filter_var($this->request->getVar('kesan'), FILTER_SANITIZE_STRING);
+            $pesan = filter_var($this->request->getVar('pesan'), FILTER_SANITIZE_STRING);
+
+			session()->setFlashdata('sweetalert', TRUE);
+
+			$modelVisitor = new Visitor_model();
+			$dataUser = $modelVisitor->check_email($email);
+			if($dataUser['vote'] == 1){
+				session()->setFlashdata('error_vote', "Anda sudah memberikan vote untuk developer");
+				return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
+			}
+
+			$vote = [				
+				'dev'				=> $type_dev,
+				'id_dev'			=> $id_dev,
+				'email_visitor'		=> $email,
+				'kesan'				=> $kesan,
+				'pesan'				=> $pesan
+			];
+			
+			if($this->form_validation->run($vote, 'vote') == FALSE){
+				// mengembalikan nilai input yang sudah dimasukan sebelumnya
+				session()->setFlashdata('inputs_vote', $this->request->getPost());
+				// memberikan pesan error pada saat input data
+				session()->setFlashdata('errors_vote', $this->form_validation->getErrors());
+				return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
+			} else {
+				$model = new Vote_model();
+				$model->tambah($vote);
+				
+				$db      	= \Config\Database::connect();
+        		$visitor  	= $db->table('visitor');
+				$query = $db->query("UPDATE visitor SET vote = '1' WHERE email = '$email'");
+				if($query){
+					session()->setFlashdata('success_vote', "Terima kasih telah memberikan suara Anda untuk developer");
+					return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
+				} else {
+					session()->setFlashdata('error_vote', "Vote bermasalah, silahkan hubungi panitia");
+					return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
+				}
+			}
+		} else {
+			return redirect()->to(base_url("users/dashboard"));
+		}
+	}
+
+	// Halaman Vote Software Fair
+	public function sf(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelSF = new Sf_model();
+		if(session()->get('user_type') == "visitor"){
+			$check_login = $modelUser->check_email($session->get('user_email'));
+		} else {
+			return redirect()->to(base_url("users/dashboard"));
+		}
+        
+		$data = [
+			'title'				=> 'Vote Software Fair',
+			'dashboard'			=> TRUE,
+			'developer'			=> $modelSF->listing(),
+			'user_login'		=> $check_login
+		];
+		
+		render_page('vote/layout','header', $data);
+		render_content('vote','sf', $data);
+		render_page('vote/layout','footer', $data);
+	}
+
+	// Halaman Vote Software Fair
+	public function hf(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelHF = new Hf_model();
+		if(session()->get('user_type') == "visitor"){
+			$check_login = $modelUser->check_email($session->get('user_email'));
+		} else {
+			return redirect()->to(base_url("users/dashboard"));
+		}
+        
+		$data = [
+			'title'				=> 'Vote Hardware Fair',
+			'dashboard'			=> TRUE,
+			'developer'			=> $modelHF->listing(),
+			'user_login'		=> $check_login
+		];
+		
+		render_page('vote/layout','header', $data);
+		render_content('vote','hf', $data);
+		render_page('vote/layout','footer', $data);
+	}
 }

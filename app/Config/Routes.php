@@ -35,6 +35,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('verification-email/(:any)', 'Auth::verification_email/$1');
 $routes->get('autologin/(:any)/(:any)', 'Auth::autoLoginDev/$1/$2');
+$routes->get('users/software-fair', 'Users::sf');
+$routes->get('users/hardware-fair', 'Users::hf');
 
 /*
  * --------------------------------------------------------------------

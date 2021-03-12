@@ -282,4 +282,18 @@ class Validation
 			'valid_email'	=> 'Masukkan Email yang valid'
 		],
 	];
+
+	// Validasi Request Token Login Developer
+	public $vote = [		
+		'kesan'			=> 'required',
+		'pesan'			=> 'required',
+	];	 
+	public $vote_errors = [
+		'kesan' 		=> [
+			'required'      => 'Kesan wajib diisi'
+		],
+		'pesan'			=> [
+			'required'		=> 'Pesan wajib diisi'
+		],
+	];
 }
