@@ -274,9 +274,9 @@ class Auth extends BaseController{
             $visitor  	= $db->table('visitor');
             if($visitor->countAllResults() < 200){
                 if($check_email){
-                    session()->setFlashdata('error_visitor', 'Email sudah terdaftar');
+                    session()->setFlashdata('error_visitors', 'Email sudah terdaftar');
                     // mengembalikan nilai input yang sudah dimasukan sebelumnya
-                    session()->setFlashdata('inputs_visitor', $this->request->getPost());
+                    session()->setFlashdata('inputs_visitors', $this->request->getPost());
                     return redirect()->to(base_url()."/#pengunjung");
                 } else {
                     $visitor = [
@@ -287,9 +287,9 @@ class Auth extends BaseController{
                     
                     if($this->form_validation->run($visitor, "visitor") == FALSE){
                         // mengembalikan nilai input yang sudah dimasukan sebelumnya
-                        session()->setFlashdata('inputs_visitor', $this->request->getPost());
+                        session()->setFlashdata('inputs_visitors', $this->request->getPost());
                         // memberikan pesan error pada saat input data
-                        session()->setFlashdata('errors_visitor', $this->form_validation->getErrors());
+                        session()->setFlashdata('errors_visitors', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#pengunjung");
                     } else {
                         $batas = strtotime(date("26-02-2021 10:00:00"));
@@ -313,22 +313,22 @@ class Auth extends BaseController{
                                 ];
                                 
                                 $model->tambah($data);
-                                session()->setFlashdata('success_visitor', 'Terima kasih telah mendaftar sebagai pengunjung. Nantikan informasi dari kami yang akan dikirim ke email Anda.');
+                                session()->setFlashdata('success_visitors', 'Terima kasih telah mendaftar sebagai pengunjung. Nantikan informasi dari kami yang akan dikirim ke email Anda.');
                                 return redirect()->to(base_url()."/#pengunjung");
                             } else {
-                                session()->setFlashdata('error_visitor', 'Gagal, silahkan coba lagi.');
+                                session()->setFlashdata('error_visitors', 'Gagal, silahkan coba lagi.');
                                 return redirect()->to(base_url()."/#pengunjung"); 
                             }                                                
                         } else {
-                            session()->setFlashdata('inputs_visitor', $this->request->getPost());
-                            session()->setFlashdata('error_visitor', 'Mohon maaf, waktu pendaftaran sudah ditutup.');
+                            session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                            session()->setFlashdata('error_visitors', 'Mohon maaf, waktu pendaftaran sudah ditutup.');
                             return redirect()->to(base_url()."/#pengunjung");
                         }
                     }
                 }
             } else {
-                session()->setFlashdata('inputs_visitor', $this->request->getPost());
-                session()->setFlashdata('error_visitor', 'Mohon maaf, kuota pendaftaran sudah penuh.');
+                session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                session()->setFlashdata('error_visitors', 'Mohon maaf, kuota pendaftaran sudah penuh.');
                 return redirect()->to(base_url()."/#pengunjung");
             }
         } else {
