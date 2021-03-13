@@ -39,13 +39,12 @@ main {
   transition: width 600ms ease;
   overflow: scroll;
   z-index: 2;
-  padding-right: 20px;
 }
 
 .navbar-nav {
   list-style: none;
   padding: 0;
-  margin: -15;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,10 +54,7 @@ main {
 .nav-item {
   width: 100%;
 }
-.navbar-nav .nav-link {
-  padding-right: 10;
-  padding-left: 0;
-}
+
 .nav-item:last-child {
   margin-top: auto;
 }
@@ -276,23 +272,23 @@ main {
   transform: rotate(20deg);
   box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }*/
-.card:hover:after {
+/* .card:hover:after {
   transform: rotate(10deg);
   box-shadow: 0 2px 20px rgba(0,0,0,.2);
-}
+} */
 .card .imgBox {
   position: absolute;
   top: 10px;
   left: 10px;
-  bottom: 10px;
+  bottom: 80px;
   right: 10px;
   background: #222;
   transition: 0.5s;
   z-index: 1;
 }
-.card:hover .imgBox {
+/* .card:hover .imgBox {
   bottom: 80px;
-}
+} */
 .card .imgBox img {
   position: absolute;
   top: 0;
@@ -316,16 +312,6 @@ main {
   font-size: 20px;
   color: #000;
   text-transform: uppercase;
-}
-
-.card .details .btn-vote{
-  margin-top: -20px;
-  color:#fff;
-  background-color:#0077b5;
-  font-weight: 500;
-  padding: 2px 20px;
-  border-radius: 12px;
-  
 }
 .card .details h2 span {
   font-weight: 500;
@@ -456,4 +442,131 @@ h3{
   main{
     padding-bottom: 120px;
   }
+}
+.head{
+  display: flex;
+  background-color: #2C2C2C;
+  padding: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.authors{
+  flex: 15%;
+
+}
+@media (max-width:900px){
+  .authors{
+    padding-right: 10px;
+    flex: 10%;
+    
+  }
+}
+.content{
+  flex: 90%;
+}
+
+.body{
+  display: flex;
+  background-color: #131415;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.body .authors .username{
+  font-size: 20px;
+}
+
+.body .authors img{
+  max-width: 50px;
+  max-height: 80px;
+}
+.body .content{
+  color: #fff;
+}
+.body .authors{
+  color: #fff;
+}
+.body .content .comment button{
+  border:none;
+  padding:10px;
+  font-weight: bolder;
+  box-shadow: 4px 6px #fff;
+  cursor: pointer;
+  float: right;
+}
+
+/* comment section */
+.comment-area{
+  margin-bottom:50px;
+}
+
+.comment-area textarea{
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  margin-block: 10px;
+}
+
+.comment-area input{
+  float: right;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.comment-area input:hover{
+  border: solid 1px #000000;
+}
+.hide{
+  display: none;
+}
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+@media(max-width: 700px){
+  .rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    display: contents;
+    padding-right: 30px;
+  }
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+@media(max-width: 700px){
+  .rate:not(:checked) > label {
+    float: left;
+  }
+}
+.rate:not(:checked) > label:before {
+  content: '\f179';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
 }

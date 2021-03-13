@@ -136,7 +136,8 @@
                             <div class="accordion-item-body-content">
                                 <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
                                 <h6>2.Isi form pendaftaran dengan baik</h6>
-                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :</h6> <h6><strong>NAMATIM_NamaAplikasi(event) contoh TECH_Shopee(Sofware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :    
+                                </h6> <h6><strong>NAMATIM_NamaAplikasi(event). <br>contoh TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Aplikasi</h6>
                                 <h6>• Foto lengkap aplikasi</h6>
@@ -215,7 +216,7 @@
                                 <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
                                 <h6>2.Isi form pendaftaran dengan baik</h6>
                                 <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :</h6>
-                                <h6><strong>NAMATIM_NamaHardware(event yang diikuti). Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                <h6><strong>NAMATIM_NamaHardware(event yang diikuti).<br> Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri</h6>
                                 <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi</h6>
@@ -323,6 +324,14 @@
                                 </div>
                             </div>
                             <div class="modal-body">
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_app']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Nama Tim</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">groups</i>
+                                    </label>
+                                </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
                                         <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_app']; ?>" <?php } ?> required>
@@ -450,6 +459,14 @@
                         <form action="<?= base_url("auth/register_hf"); ?>" method="post">
                             <div class="modal-body">
                                 <?= csrf_field(); ?>
+                                <div class="omrs-input-group">
+                                    <label class="omrs-input-underlined">
+                                        <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_app']; ?>" <?php } ?> required>
+                                        <span class="omrs-input-label">Nama Tim</span>
+                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                        <i class="material-icons">groups</i>
+                                    </label>
+                                </div>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
                                         <input type="text" name="judul_alat" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['judul_alat']; ?>" <?php } ?> required>
@@ -741,7 +758,7 @@
         </div>
         <br>
         <div id="pengunjung">
-            <div class="section-title"data-aos="fade-up">
+            <div class="section-title cstm"data-aos="fade-up">
                 <h2>Pengunjung</h2>
             </div>
             <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100">
@@ -895,7 +912,7 @@
         <div class="animate">
             <!-- SVG Code -->
             <svg version="1.1" id="thanos" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 800 300" enable-background="new 0 0 800 300" xml:space="preserve">
-                <text transform="matrix(1 0 0 1 4.2921 210.0535)" font-size="210" class="tulisan">HI TECHNOLOGY</text>
+                <text transform="matrix(1 0 0 1 4.2921 210.0535)" font-size="104" class="tulisan">HI TECHNOLOGY</text>
             </svg>
         </div>
         <div class="footer-address">
