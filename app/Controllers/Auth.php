@@ -20,6 +20,7 @@ class Auth extends BaseController{
 		$method = $_SERVER["REQUEST_METHOD"];
         if($method == "POST"){
             $category = filter_var($this->request->getVar('category'), FILTER_SANITIZE_STRING);
+            $tim = filter_var($this->request->getVar('tim'), FILTER_SANITIZE_STRING);
             $nama_app = filter_var($this->request->getVar('nama_app'), FILTER_SANITIZE_STRING);
             $nama_ketua = filter_var($this->request->getVar('nama_ketua'), FILTER_SANITIZE_STRING);
             $nim_ketua = filter_var($this->request->getVar('nim_ketua'), FILTER_SANITIZE_STRING);
@@ -42,6 +43,7 @@ class Auth extends BaseController{
                     return redirect()->to(base_url()."/#sf");
                 } else {
                     $sf = [
+                        'tim'           => $tim,
                         'category'      => $category,
                         'nama_app'      => $nama_app,
                         'nama_ketua'    => $nama_ketua,
@@ -69,7 +71,7 @@ class Auth extends BaseController{
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Developer HI TECH 2021");
-                            $email_smtp->setMessage("<div>Halo, $nama_ketua</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
+                            $email_smtp->setMessage("<div>Halo, Tim $tim</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($sf);
@@ -100,6 +102,7 @@ class Auth extends BaseController{
     public function register_hf(){
 		$method = $_SERVER["REQUEST_METHOD"];
         if($method == "POST"){
+            $tim = filter_var($this->request->getVar('tim_hf'), FILTER_SANITIZE_STRING);
             $judul_alat = filter_var($this->request->getVar('judul_alat'), FILTER_SANITIZE_STRING);
             $nama_ketua = filter_var($this->request->getVar('nama_ketua_hf'), FILTER_SANITIZE_STRING);
             $nim_ketua = filter_var($this->request->getVar('nim_ketua_hf'), FILTER_SANITIZE_STRING);
@@ -122,6 +125,7 @@ class Auth extends BaseController{
                     return redirect()->to(base_url()."/#hf");
                 } else {
                     $hf = [
+                        'tim'           => $tim,
                         'judul_alat'    => $judul_alat,
                         'nama_ketua'    => $nama_ketua,
                         'nim_ketua'     => $nim_ketua,
@@ -148,7 +152,7 @@ class Auth extends BaseController{
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Developer HI TECH 2021");
-                            $email_smtp->setMessage("<div>Halo, $nama_ketua</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
+                            $email_smtp->setMessage("<div>Halo, Tim $tim</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($hf);

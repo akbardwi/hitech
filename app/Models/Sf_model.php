@@ -5,7 +5,8 @@ use CodeIgniter\Model;
 class Sf_model extends Model{
     protected $table 		= 'sf';
 	protected $primaryKey 	= 'id';
-    protected $allowedFields = ['category', 
+    protected $allowedFields = ['tim',
+								'category', 
                                 'nama_app', 
                                 'nama_ketua',
                                 'nim_ketua',

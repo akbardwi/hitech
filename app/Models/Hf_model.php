@@ -5,7 +5,8 @@ use CodeIgniter\Model;
 class Hf_model extends Model{
     protected $table 		= 'hf';
 	protected $primaryKey 	= 'id';
-    protected $allowedFields = ['judul_alat',
+    protected $allowedFields = ['tim',
+								'judul_alat',
                                 'nama_ketua',
                                 'nim_ketua',
                                 'nama_anggota',

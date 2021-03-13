@@ -326,7 +326,7 @@
                             <div class="modal-body">
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_app']; ?>" <?php } ?> required>
+                                        <input type="text" name="tim" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['tim']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Nama Tim</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">groups</i>
@@ -461,7 +461,7 @@
                                 <?= csrf_field(); ?>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_app']; ?>" <?php } ?> required>
+                                        <input type="text" name="tim_hf" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['tim_hf']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Nama Tim</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">groups</i>

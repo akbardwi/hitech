@@ -57,6 +57,7 @@ class Validation
 	
 	//Validasi Daftar SF
 	public $sf = [
+		'tim'			=> 'required',
 		'category' 		=> 'required',
 		'nama_app'		=> 'required',
 		'nama_ketua'	=> 'required',
@@ -75,6 +76,9 @@ class Validation
 		],
 	];	 
 	public $sf_errors = [
+		'tim' 		=> [
+			'required'      => 'Nama Tim wajib diisi'
+		],
 		'category' 		=> [
 			'required'      => 'Kategori wajib diisi'
 		],
@@ -111,6 +115,7 @@ class Validation
 
 	//Validasi Daftar HF
 	public $hf = [
+		'tim'			=> 'required',
 		'judul_alat'	=> 'required',
 		'nama_ketua'	=> 'required',
 		'nim_ketua'		=> 'required',
@@ -128,6 +133,9 @@ class Validation
 		],
 	];	 
 	public $hf_errors = [
+		'tim' 		=> [
+			'required'      => 'Nama Tim wajib diisi'
+		],
 		'judul_alat'	=> [
 			'required'      => 'Judul Alat wajib diisi'
 		],

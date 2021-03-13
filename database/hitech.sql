@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Mar 2021 pada 08.52
+-- Waktu pembuatan: 13 Mar 2021 pada 05.44
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `hf` (
   `id` int(255) NOT NULL,
+  `tim` text NOT NULL,
   `judul_alat` text NOT NULL,
   `nama_ketua` text NOT NULL,
   `nim_ketua` text NOT NULL,
@@ -71,6 +72,7 @@ CREATE TABLE `ot` (
 
 CREATE TABLE `sf` (
   `id` int(255) NOT NULL,
+  `tim` text NOT NULL,
   `category` text NOT NULL,
   `nama_app` text NOT NULL,
   `nama_ketua` text NOT NULL,
@@ -93,8 +95,8 @@ CREATE TABLE `sf` (
 -- Dumping data untuk tabel `sf`
 --
 
-INSERT INTO `sf` (`id`, `category`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link`, `wa`, `email`, `logo`, `suara`, `verif_code`, `tgl_daftar`) VALUES
-(1, 'Web', 'Sekolah Digital', 'Akbar Dwi Syahputra', 'A11.2019.12217', 'Ahmad', 'A11.2019.12221', '', '', 'Udinus', 'https://drive.google.com/drive/folders/1fgDKpdflu5xR_AgZZUnzvNuShujF18q6', '085326629159', 'akbar.dwi14@gmail.com', 'sd.png', 0, '', '2021-03-12 07:50:44');
+INSERT INTO `sf` (`id`, `tim`, `category`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link`, `wa`, `email`, `logo`, `suara`, `verif_code`, `tgl_daftar`) VALUES
+(1, '', 'Web', 'Sekolah Digital', 'Akbar Dwi Syahputra', 'A11.2019.12217', 'Ahmad', 'A11.2019.12221', '', '', 'Udinus', 'https://drive.google.com/drive/folders/1fgDKpdflu5xR_AgZZUnzvNuShujF18q6', '085326629159', 'akbar.dwi14@gmail.com', 'sd.png', 1, '', '2021-03-12 07:56:46');
 
 -- --------------------------------------------------------
 
@@ -118,7 +120,7 @@ CREATE TABLE `visitor` (
 --
 
 INSERT INTO `visitor` (`id`, `fullname`, `email`, `password`, `status`, `vote`, `verif_code`, `registered`) VALUES
-(1, 'Akbar Dwi Syahputra', 'akbar.dwi14@gmail.com', '$2y$10$ZkJwXOAlmg9vB/bmKfH0h.YHPpKZawZ65Hql7VS1vTuLX/apbPqeG', 1, 0, '', '2021-03-12 04:33:04');
+(1, 'Akbar Dwi Syahputra', 'akbar.dwi14@gmail.com', '$2y$10$ZkJwXOAlmg9vB/bmKfH0h.YHPpKZawZ65Hql7VS1vTuLX/apbPqeG', 1, 1, '', '2021-03-12 04:33:04');
 
 -- --------------------------------------------------------
 
@@ -135,6 +137,13 @@ CREATE TABLE `vote` (
   `pesan` text NOT NULL,
   `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `vote`
+--
+
+INSERT INTO `vote` (`id`, `dev`, `id_dev`, `email_visitor`, `kesan`, `pesan`, `last_update`) VALUES
+(1, 'sf', 1, 'akbar.dwi14@gmail.com', 'a', 'a', '2021-03-12 07:56:45');
 
 --
 -- Indexes for dumped tables
@@ -202,7 +211,7 @@ ALTER TABLE `visitor`
 -- AUTO_INCREMENT untuk tabel `vote`
 --
 ALTER TABLE `vote`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
