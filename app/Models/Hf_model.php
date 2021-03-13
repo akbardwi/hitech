@@ -26,6 +26,14 @@ class Hf_model extends Model{
 		$query = $this->get();
 		return $query->getResultArray();
 	}
+
+	// Quick Count
+	public function qc(){
+		$this->select('*');
+		$this->orderBy("suara", "DESC");
+		$query = $this->get();
+		return $query->getResultArray();
+	}
 	
 	// Count
 	public function hitung(){

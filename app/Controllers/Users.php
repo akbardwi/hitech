@@ -179,4 +179,32 @@ class Users extends BaseController{
 		render_content('vote','hf', $data);
 		render_page('vote/layout','footer', $data);
 	}
+
+	// Halaman Quick Count
+	public function qc(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelHF = new Hf_model();
+		$modelSF = new Sf_model();
+        $check_login = $modelUser->check_email($session->get('user_email'));
+
+		$data = [
+			'title'				=> 'Quick Count Developer',
+			'dashboard'			=> TRUE,
+			'sf'				=> $modelSF->qc(),
+			'hf'				=> $modelHF->qc(),
+			'user_login'		=> $check_login
+		];
+		
+		render_page('vote/layout','header', $data);
+		render_content('vote','qc', $data);
+		render_page('vote/layout','footer', $data);
+	}
 }
