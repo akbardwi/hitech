@@ -11,7 +11,7 @@
                     <div class="carousel-cell">
                         <h3><?= $sf['nama_app']; ?></h3>
                         <h3>Total vote : <?= $sf['suara']; ?></h3>
-                        <hr>
+                        <hr >
                         <?php if (file_exists("/assets/berkas/sf/".$sf['logo'])) { ?>
                         <img src="<?= base_url("assets/berkas/sf/".$sf['logo']); ?>" alt="srt">
                         <?php } else { ?>
