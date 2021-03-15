@@ -69,7 +69,8 @@
                     <h2><strong style="color: white;">Hi-Technology</strong> merupakan festival pameran IT tahunan yang diselanggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro. Hi Technology pada tahun ini bertemakan "<strong style="color: white;">Unlimited Creativity with Technology</strong>". Hi Technology memiliki serangkaian acara yaitu Software Fair, Hardware Fair, dan Open Talkshow.</h2>
                     <div class="d-lg-flex">
                         <a href="#event" class="btn-get-started scrollto">Get Started</a>
-                        <a href="https://www.youtube.com/watch?v=NuMf5J-BI_w" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
+                        <a href="#" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
