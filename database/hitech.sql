@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Mar 2021 pada 05.44
+-- Waktu pembuatan: 15 Mar 2021 pada 07.30
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -43,6 +43,7 @@ CREATE TABLE `hf` (
   `email` text NOT NULL,
   `logo` text NOT NULL,
   `suara` int(255) NOT NULL,
+  `bayar` int(2) NOT NULL,
   `verif_code` text NOT NULL,
   `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -87,6 +88,7 @@ CREATE TABLE `sf` (
   `email` text NOT NULL,
   `logo` text DEFAULT NULL,
   `suara` int(255) NOT NULL,
+  `bayar` int(2) NOT NULL,
   `verif_code` text NOT NULL,
   `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -95,8 +97,8 @@ CREATE TABLE `sf` (
 -- Dumping data untuk tabel `sf`
 --
 
-INSERT INTO `sf` (`id`, `tim`, `category`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link`, `wa`, `email`, `logo`, `suara`, `verif_code`, `tgl_daftar`) VALUES
-(1, '', 'Web', 'Sekolah Digital', 'Akbar Dwi Syahputra', 'A11.2019.12217', 'Ahmad', 'A11.2019.12221', '', '', 'Udinus', 'https://drive.google.com/drive/folders/1fgDKpdflu5xR_AgZZUnzvNuShujF18q6', '085326629159', 'akbar.dwi14@gmail.com', 'sd.png', 1, '', '2021-03-12 07:56:46');
+INSERT INTO `sf` (`id`, `tim`, `category`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link`, `wa`, `email`, `logo`, `suara`, `bayar`, `verif_code`, `tgl_daftar`) VALUES
+(1, '', 'Web', 'Sekolah Digital', 'Akbar Dwi Syahputra', 'A11.2019.12217', 'Ahmad', 'A11.2019.12221', '', '', 'Udinus', 'https://drive.google.com/drive/folders/1fgDKpdflu5xR_AgZZUnzvNuShujF18q6', '085326629159', 'akbar.dwi14@gmail.com', 'sd.png', 1, 0, '', '2021-03-12 07:56:46');
 
 -- --------------------------------------------------------
 

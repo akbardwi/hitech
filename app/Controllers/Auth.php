@@ -443,6 +443,10 @@ class Auth extends BaseController{
                 if($catDev == "sfDev"){
                     $check_user = $modelSF->check_email($email);
                     if($check_user){
+                        if($check_user['bayar'] == 0){
+                            session()->setFlashdata('error_visitors', 'Dimohon untuk menyelesaikan administrasi terlebih dahulu.');
+                            return redirect()->to(base_url()."/#pengunjung");
+                        }
                         $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
                         $kode = substr(str_shuffle($karakter), 0, 30);
                         $email_smtp = \Config\Services::email();
