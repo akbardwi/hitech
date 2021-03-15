@@ -75,7 +75,7 @@ class Auth extends BaseController{
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($sf);
-                                session()->setFlashdata('success_sf', 'Terima kasih telah mendaftar Software Fair. Nantikan informasi dari kami yang akan dikirim ke email Anda.');
+                                session()->setFlashdata('success_sf', 'Terima kasih telah mendaftar Software Fair.  Silahkan cek inbox/spam pada email Anda untuk informasil lebih lanjut.');
                                 return redirect()->to(base_url()."/#sf");
                             } else {
                                 session()->setFlashdata('error_sf', 'Pendaftaran gagal, silahkan hubungi panitia.');
@@ -156,7 +156,7 @@ class Auth extends BaseController{
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($hf);
-                                session()->setFlashdata('success_hf', 'Terima kasih telah mendaftar Hardware Fair. Nantikan informasi dari kami yang akan dikirim ke email Anda.');
+                                session()->setFlashdata('success_hf', 'Terima kasih telah mendaftar Hardware Fair.  Silahkan cek inbox/spam pada email Anda untuk informasil lebih lanjut.');
                                 return redirect()->to(base_url()."/#hf");
                             } else {
                                 session()->setFlashdata('error_hf', 'Pendaftaran gagal, silahkan hubungi panitia.');
@@ -243,7 +243,7 @@ class Auth extends BaseController{
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($ot);
-                                session()->setFlashdata('success_ot', 'Terima kasih telah mendaftar Open Talk. Nantikan informasi dari kami yang akan dikirim ke email Anda.');
+                                session()->setFlashdata('success_ot', 'Terima kasih telah mendaftar Open Talk.  Silahkan cek inbox/spam pada email Anda untuk informasil lebih lanjut.');
                                 return redirect()->to(base_url()."/#ot");
                             } else {
                                 session()->setFlashdata('error_ot', 'Pendaftaran gagal, silahkan hubungi panitia.');
@@ -320,7 +320,7 @@ class Auth extends BaseController{
                                 ];
                                 
                                 $model->tambah($data);
-                                session()->setFlashdata('success_visitors', 'Terima kasih telah mendaftar sebagai pengunjung. Nantikan informasi dari kami yang akan dikirim ke email Anda.');
+                                session()->setFlashdata('success_visitors', 'Terima kasih telah mendaftar sebagai pengunjung. Silahkan cek inbox/spam pada email Anda untuk informasil lebih lanjut.');
                                 return redirect()->to(base_url()."/#pengunjung");
                             } else {
                                 session()->setFlashdata('error_visitors', 'Gagal, silahkan coba lagi.');
