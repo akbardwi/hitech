@@ -41,7 +41,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
-            <a href="index.html" class="logo mr-auto"><img src="<?= base_url(); ?>/assets/img/logo.png" alt="" class="img-fluid"></a>
+            <a href="index.php" class="logo mr-auto"><img src="<?= base_url(); ?>/assets/img/shadowrakkepotong.png" alt="" class="img-fluid"></a>
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                 <li class="active"><a href="<?= base_url(); ?>">Home</a></li>
@@ -69,8 +69,8 @@
                     <h2><strong style="color: white;">Hi-Technology</strong> merupakan festival pameran IT tahunan yang diselanggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro. Hi Technology pada tahun ini bertemakan "<strong style="color: white;">Unlimited Creativity with Technology</strong>". Hi Technology memiliki serangkaian acara yaitu Software Fair, Hardware Fair, dan Open Talkshow.</h2>
                     <div class="d-lg-flex">
                         <a href="#event" class="btn-get-started scrollto">Get Started</a>
-                        <a href="#" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i>
-                        </a>
+                        <button type="button" class="btn btn-watch-video" data-toggle="modal" data-target="#myModal"> Watch Video <i class="icofont-play-alt-2"></i>
+                        </button>
                     </div>
                 </div>
                 <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
@@ -83,6 +83,23 @@
         <path fill="#77D0EE" fill-opacity="1" d="M0,224L34.3,234.7C68.6,245,137,267,206,277.3C274.3,288,343,288,411,277.3C480,267,549,245,617,202.7C685.7,160,754,96,823,69.3C891.4,43,960,53,1029,85.3C1097.1,117,1166,171,1234,176C1302.9,181,1371,139,1406,117.3L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z" style="border: none;"></path>
     </svg><!-- End Hero -->
     <!-- <br/> -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+                        
+                            <!-- Modal content-->
+            <div class="modal-content cstm1">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video controls="true" class="embed-responsive-item ">
+                        <source src="<?= base_url(); ?>/assets/img/teaser.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal"> Tutup </button>
+                </div>
+            </div>
+                        
+        </div>
+    </div>
     <main id="main">
         <section id="event" class="about">
             <div class="container" data-aos="fade-up">
@@ -138,13 +155,14 @@
                                 <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
                                 <h6>2.Isi form pendaftaran dengan baik</h6>
                                 <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :    
-                                </h6> <h6><strong>NAMATIM_NamaAplikasi(event). <br>contoh TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti). <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Aplikasi</h6>
                                 <h6>• Foto lengkap aplikasi</h6>
                                 <h6>• Logo tim (jika ada)</h6>
                                 <h6>• Deskripsi software</h6>
-                                <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via email / Whatsapp</h6>
+                                <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
+                                <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                             </div>
                           </div>
                         </div>
@@ -157,9 +175,11 @@
                           <div class="accordion-item-body">
                             <div class="accordion-item-body-content">
                                 <h6>1.Setelah melakukan pendaftaran/registrasi melalui web,</br>
-                                tim developer dapat melakukan pembayaran melalui</h6>
-                                <h6><strong>No Rekening : xxxxx (A.n Raka(BRI))</strong></h6>
-                                <h6>2.Untuk konfirmasi pembayaran silahkan menghubungi cp di bawah ini. :</h6>
+                                tim developer dapat melakukan pembayaran agar bisa login kedalam sistem melalui</h6>
+                                <h6><strong>No Rekening : xxxxx (A.n Raka Apritama)</strong></h6>
+                                <h6><strong>Bank.              : BRI</strong></h6>
+                                <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
+                                <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
                                 <h6>• 085712702685 (Anam)</h6>
                                 <h6>• 08532968373 (Raka)</h6>
                                 <h6>3.Pantau info selanjutnya akan dihubungi via email / Whatsapp</h6>
@@ -223,7 +243,8 @@
                                 <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi</h6>
                                 <h6>• Logo tim (jika ada)</h6>
                                 <h6>• Deskripsi hardware</h6>
-                                <h6>5.Setelah mendaftar info selanjutnya akan dihubungi via email / Whatsapp</h6>          
+                                <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
+                                <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
                             </div>
                           </div>
                         </div>
