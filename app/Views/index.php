@@ -41,7 +41,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
-            <a href="index.php" class="logo mr-auto"><img src="<?= base_url(); ?>/assets/img/shadowrakkepotong.png" alt="" class="img-fluid"></a>
+            <a href="index.php" class="logo mr-auto"><img src="<?= base_url(); ?>/assets/img/fixpalingbaruu.png" alt="" class="img-fluid"></a>
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                 <li class="active"><a href="<?= base_url(); ?>">Home</a></li>
@@ -158,8 +158,10 @@
                                 </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti). <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Aplikasi</h6>
+                                <h6>• Power Point Mengenai Software tersebut</h6>
                                 <h6>• Foto lengkap aplikasi</h6>
                                 <h6>• Logo tim (jika ada)</h6>
+                                <h6>• Logo instansi</h6>
                                 <h6>• Deskripsi software</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                 <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
@@ -240,8 +242,10 @@
                                 <h6><strong>NAMATIM_NamaHardware(event yang diikuti).<br> Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri</h6>
+                                <h6>• Power Point mengenai Hardware tersebut </h6>
                                 <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi</h6>
                                 <h6>• Logo tim (jika ada)</h6>
+                                <h6>• Logo instansi</h6>
                                 <h6>• Deskripsi hardware</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                 <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
@@ -961,7 +965,7 @@
 
 <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 <div id="preloader">
-    <img class="image" src="<?= base_url(); ?>/assets/img/logotokbsr.png">
+    <img class="image" src="<?= base_url(); ?>/assets/img/logo1.png">
     <!--<img class="image2" src="<?= base_url(); ?>/assets/img/tulisant.png">-->
 </div>
 <script src="<?= base_url(); ?>/assets/vendor/jquery/jquery.min.js"></script>
