@@ -179,7 +179,7 @@
                                 <h6>1.Setelah melakukan pendaftaran/registrasi melalui web,</br>
                                 tim developer dapat melakukan pembayaran agar bisa login kedalam sistem melalui</h6>
                                 <h6><strong>No Rekening : xxxxx (A.n Raka Apritama)</strong></h6>
-                                <h6><strong>Bank.              : BRI</strong></h6>
+                                <h6><strong>Bank              : BRI</strong></h6>
                                 <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
                                 <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
                                 <h6>• 085712702685 (Anam)</h6>
@@ -261,9 +261,11 @@
                           <div class="accordion-item-body">
                             <div class="accordion-item-body-content">
                                 <h6>1.Setelah melakukan pendaftaran/registrasi melalui web,</br>
-                                tim developer dapat melakukan pembayaran melalui</h6>
-                                <h6><strong>No Rekening : xxxxx (A.n Raka(BRI))</strong></h6>
-                                <h6>2.Untuk konfirmasi pembayaran silahkan menghubungi cp di bawah ini. :</h6>
+                                tim developer dapat melakukan pembayaran agar bisa login kedalam sistem melalui</h6>
+                                <h6><strong>No Rekening : xxxxx (A.n Raka Apritama)</strong></h6>
+                                <h6><strong>Bank              : BRI</strong></h6>
+                                <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
+                                <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
                                 <h6>• 085712702685 (Anam)</h6>
                                 <h6>• 08532968373 (Raka)</h6>
                                 <h6>3.Pantau info selanjutnya akan dihubungi via email / Whatsapp</h6>
