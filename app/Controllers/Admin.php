@@ -85,8 +85,8 @@ class Admin extends BaseController{
 			'user_login'		=> $check_login
 		];
 		
-		render_page('vote/layout','header', $data);
+		render_page('admin/layout','header', $data);
 		render_content('vote','qc', $data);
-		render_page('vote/layout','footer', $data);
+		render_page('admin/layout','footer', $data);
     }
 }
