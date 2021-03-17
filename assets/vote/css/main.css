@@ -1,0 +1,279 @@
+html,body{
+	font-family: 'Lato', 'Helvetica Neue', 'Helvetica', Helvetica, Arial,sans-serif;
+}
+.blue-dark-bg {
+	color: #fff;
+}
+
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    display: flex;
+    background: #2d2d2d;
+    border: 5px solid #67a05f;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    font-size: 12px;
+}
+
+.text-line-none{
+	text-decoration: none !important;
+}
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 2;
+    background-color: #243238;
+}
+.home-intro {
+    text-align: center;
+    position: absolute;
+    top: 8%;
+    margin-top: -50px;
+    margin-left: -100px;
+    display: inline-block;
+    width: 100%;
+}
+@media only screen and (max-width: 900px)
+{
+    .home-intro {
+        text-align: center;
+        position: absolute;
+        top: 8%;
+        margin-top: -50px;
+        margin-left: -15px;
+        display: inline-block;
+        width: 100%;
+    }
+}
+.home-intro h1 {
+    margin-bottom: 25px;
+}
+@media only screen and (max-width: 600px) {
+    .home-intro h1 {
+		font-size: 30px;
+	}
+}
+.intro-btn-group {
+    text-align: center;
+	list-style: none;
+	padding: 0;
+}
+
+.intro-btn-group li {
+    margin: 15px auto
+}
+
+@media only screen and (min-width: 600px) {
+    .intro-btn-group li {
+        display:inline-block;
+        margin: 0 6px
+    }
+}
+
+@supports(grid-area: auto) {
+    .intro-btn-group {
+        display:-ms-grid;
+        display: grid;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        grid-gap: 10px;
+        -ms-grid-columns: (250px)[auto-fit];
+        grid-template-columns: repeat(auto-fit,250px);
+        position: relative;
+        z-index: 1;
+    }
+
+    .intro-btn-group li {
+        margin: 0
+    }
+
+    .intro-btn-group .btn {
+        padding-right: 0;
+        padding-left: 0
+    }
+}
+
+
+
+.intro-img {
+    max-width: 656px;
+    margin: 0 auto;
+    margin-top: -50px;
+}
+
+.intro-intro-img-wrapper {
+    position: relative;
+    height: 0;
+    padding-bottom: 45.43%
+}
+
+.intro-intro-img-wrapper svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.height-vh{
+	min-height: 100vh;
+}
+
+.home-demo {
+    background-color: #009688;
+    color: #ffffff;
+}
+
+.home-demo .content {
+    margin: auto;
+    padding: 20px 20px 35px;
+}
+
+.home-demo h2 {
+    font-size: 36px;
+    margin: 20px auto 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.home-demo p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.home-demo hr {
+    background: #ffffff;
+    border: 0;
+    height: 1px;
+    margin: 40px 0;
+}
+
+.home-demo.home-odd {
+    background-color: #fff;
+    color: #616161;
+    min-height: 100vh;
+}
+.home-demo.home-odd h2 {
+    color: #616161;
+}
+.home-demo.home-odd hr {
+    background: #B0BEC5;
+}
+
+
+
+
+.settings {
+    display: block;
+    font-weight: bold;
+}
+
+.settings>span {
+    display: block;
+    color: #E3F2FD;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+.settings a:not(.btn) {
+    color: #004D40;
+}
+.settings >span>span {
+    display: inline-block;
+    font-weight: bold;
+    color: #ffffff;
+    margin-right: 5px;
+}
+.settings >span:nth-child(4),
+.settings >span:nth-child(5) {
+    font-weight: normal;
+    font-size: 15px;
+    color: #ffffff;
+    font-style: italic;
+}
+
+
+
+.settings-example {
+    padding: 0;
+    border: 4px solid #fff;
+    margin-top: 20px;
+}
+
+.settings-example>h4 {
+    background-color: #fff;
+    color: #2d2d2d;
+    text-align: center;
+    margin: 0;
+    padding: 8px 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.settings-example>pre {
+    margin: 0;
+    border: 0;
+}
+
+.tempaltes-list .card{
+	border: 0;
+	border-radius: 0;
+}
+
+.tempaltes-list img.card-img-top {
+    border: 2px solid #ccc;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 0;
+}
+
+/* ====== Footer ====== */
+.footer {
+  background: #243238;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 15px 0;
+}
+.footer a {
+  color: #40babd;
+}
+.footer .fa-heart {
+  color: #EA5395;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

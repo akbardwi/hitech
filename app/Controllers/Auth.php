@@ -7,6 +7,7 @@ use App\Models\Sf_model;
 use App\Models\Hf_model;
 use App\Models\Ot_model;
 use App\Models\Visitor_model;
+use App\Models\Admin_model;
 //End Load Model
 
 class Auth extends BaseController{
@@ -531,6 +532,47 @@ class Auth extends BaseController{
             return redirect()->to(base_url("users/dashboard"));
         } else {
             return redirect()->to(base_url());
+        }
+    }
+
+    // Proses Login Admin
+    public function loginAdm(){
+        $method = $_SERVER['REQUEST_METHOD'];
+        if($method == "POST"){
+            $username = filter_var($this->request->getVar('username'), FILTER_SANITIZE_STRING);
+            $password = filter_var($this->request->getVar('password'), FILTER_SANITIZE_STRING);
+            
+            $login = [
+                'username'  => $username,
+                'password'  => $password
+            ];
+
+            if($this->form_validation->run($login, "login_admin") == FALSE){
+                // mengembalikan nilai input yang sudah dimasukan sebelumnya
+                session()->setFlashdata('inputs', $this->request->getPost());
+                // memberikan pesan error pada saat input data
+                session()->setFlashdata('errors', $this->form_validation->getErrors());
+                return redirect()->to(base_url("admin/login"));
+            } else {
+                $model      = new Admin_model();
+                $check_user = $model->check_username($username);
+                if($check_user){
+                    if(password_verify($password, $check_user['password'])){
+                        session()->set('user_email',$check_user['username']);
+                        session()->set('cat_dev','admin');
+                        session()->set('user_type','admin');
+                        return redirect()->to(base_url("admin/dashboard"));
+                    } else {
+                        session()->setFlashdata('error', 'Password salah.');
+                        return redirect()->to(base_url("admin/login"));
+                    }
+                } else {
+                    session()->setFlashdata('error', 'User tidak ditemukan.');
+                    return redirect()->to(base_url("admin/login"));
+                }
+            }
+        } else {
+            return redirect()->to(base_url("admin/login"));
         }
     }
 }
