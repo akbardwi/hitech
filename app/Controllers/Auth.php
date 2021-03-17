@@ -35,10 +35,15 @@ class Auth extends BaseController{
             $email = filter_var($this->request->getVar('email'), FILTER_SANITIZE_EMAIL);
 
             $model 		= new Sf_model();
+            $modelHF	= new Hf_model();
             $check_email= $model->check_email($email);
             $db      	= \Config\Database::connect();
             $sf  	    = $db->table('sf');
-            if($sf->countAllResults() < 15){
+            $userSF     = count($model->listing());
+            $userHF     = count($modelHF->listing());
+            $jml        = $userSF+$userHF;
+            // if($sf->countAllResults() < 15){
+            if($jml < 15){
                 if($check_email){
                     session()->setFlashdata('error_sf', 'Email sudah terdaftar');
                     return redirect()->to(base_url()."/#sf");
@@ -117,10 +122,15 @@ class Auth extends BaseController{
             $email = filter_var($this->request->getVar('email_hf'), FILTER_SANITIZE_EMAIL);
 
             $model 		= new Hf_model();
+            $modelSF	= new Sf_model();
             $check_email= $model->check_email($email);
             $db      	= \Config\Database::connect();
             $hf  	    = $db->table('hf');
-            if($hf->countAllResults() < 15){
+            $userSF     = count($modelSF->listing());
+            $userHF     = count($model->listing());
+            $jml        = $userSF+$userHF;
+            // if($hf->countAllResults() < 15){
+            if($jml < 15){
                 if($check_email){
                     session()->setFlashdata('error_hf', 'Email sudah terdaftar');
                     return redirect()->to(base_url()."/#hf");
@@ -195,7 +205,7 @@ class Auth extends BaseController{
             $check_email= $model->check_email($email_ot);
             $db      	= \Config\Database::connect();
             $ot  	    = $db->table('ot');
-            if($ot->countAllResults() < 100){
+            if($ot->countAllResults() < 200){
                 if($check_email){
                     session()->setFlashdata('error_ot', 'Email sudah terdaftar');
                     // mengembalikan nilai input yang sudah dimasukan sebelumnya
@@ -279,7 +289,7 @@ class Auth extends BaseController{
             $check_email= $model->check_email($email);
             $db      	= \Config\Database::connect();
             $visitor  	= $db->table('visitor');
-            if($visitor->countAllResults() < 200){
+            if($visitor->countAllResults() < 300){
                 if($check_email){
                     session()->setFlashdata('error_visitors', 'Email sudah terdaftar');
                     // mengembalikan nilai input yang sudah dimasukan sebelumnya
