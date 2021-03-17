@@ -2617,3 +2617,63 @@ body.showLoginForm .popup {
   border: 0;
   border-radius: 50px;
 }
+.tab {
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  justify-content: center;
+  align-items: center;
+  background: #fbfbfb;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  font-weight: 500;
+  background-color: #0077b5;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 50px;
+}
+
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background: #31a9e1;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background: #209dd8;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

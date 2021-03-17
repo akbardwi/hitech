@@ -157,12 +157,12 @@
                                 <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :    
                                 </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti). <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
-                                <h6>• Video Penjelasan serta cara kerja Aplikasi</h6>
+                                <h6>• Video Penjelasan serta cara kerja Aplikasi </br>(format : 720p atau 1080p landscape)</h6>
                                 <h6>• Power Point Mengenai Software tersebut</h6>
-                                <h6>• Foto lengkap aplikasi</h6>
-                                <h6>• Logo tim (jika ada)</h6>
-                                <h6>• Logo instansi</h6>
-                                <h6>• Deskripsi software</h6>
+                                <h6>• Foto lengkap aplikasi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                <h6>• Deskripsi software </br>(format : word atau pdf)</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                 <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                             </div>
@@ -191,6 +191,9 @@
                     </div>
                     <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#sfModal">
                         Register
+                    </button>
+                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#logDevModal">
+                        Login
                     </button>
                 </div>         
             </section>
@@ -241,12 +244,12 @@
                                 <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :</h6>
                                 <h6><strong>NAMATIM_NamaHardware(event yang diikuti).<br> Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
-                                <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri</h6>
+                                <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri </br>(format : 720p atau 1080p landscape)</h6>
                                 <h6>• Power Point mengenai Hardware tersebut </h6>
-                                <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi</h6>
-                                <h6>• Logo tim (jika ada)</h6>
-                                <h6>• Logo instansi</h6>
-                                <h6>• Deskripsi hardware</h6>
+                                <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                <h6>• Deskripsi hardware </br>(format : word atau pdf)</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                 <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
                             </div>
@@ -275,6 +278,9 @@
                     </div>
                     <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#hfModal">
                         Register
+                    </button>
+                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#logDevModal">
+                        Login
                     </button>
                 </div>
             </section>
@@ -789,122 +795,170 @@
             <div class="section-title cstm"data-aos="fade-up">
                 <h2>Pengunjung</h2>
             </div>
-            <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100">
-                <div class="section pb-5 pt-5 pt-sm-2 text-center">
-                    <h6 class="mb-0 pb-3">
-                    <span>Log In </span>
-                    <span>Sign Up</span>
-                    </h6>
-                    <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
-                    <label for="reg-log"></label>
-                    <div class="card-3d-wrap mx-auto">
-                        <div class="card-3d-wrapper">
-                            <div class="card-front">
-                                <div class="center-wrap">
-                                    <div class="section text-center">
-                                        <form action="<?= base_url("auth/login"); ?>" method="post">
-                                            <h4 class="mb-4 pb-3">Log In</h4>
-                                            <?php
-                                            $inputs_visitors = session()->getFlashdata('inputs_visitors');
-                                            $error_visitors = session()->getFlashdata('error_visitors');
-                                            $errors_visitors = session()->getFlashdata('errors_visitors');
-                                            $success_visitors = session()->getFlashdata('success_visitors');
-                                            if(!empty($errors_visitors)){ ?>
-                                            <div class="alert alert-danger" role="alert">
-                                                <ul>
-                                                <?php foreach ($errors_visitors as $errors_visitors) : ?>
-                                                    <li><?= esc($errors_visitors) ?></li>
-                                                <?php endforeach ?>
-                                                </ul>
-                                            </div>
-                                            <br />
-                                            <?php } if(!empty($error_visitors)){ ?>
-                                            <div class="alert alert-danger" role="alert">
-                                                <ul>
-                                                    <li><?= esc($error_visitors) ?></li>
-                                                </ul>
-                                            </div>
-                                            <br />
-                                            <?php } if(!empty($success_visitors)){ ?>
-                                            <div class="alert alert-success" role="alert">
-                                                <?= esc($success_visitors) ?><br />
-                                            </div>
-                                            <br />
-                                            <?php } ?>
-                                            <?= csrf_field(); ?>
-                                            <div class="form-group">
-                                                <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required>
-                                                <i class="input-icon uil uil-at"></i>
-                                            </div>  
-                                            <div class="form-group mt-2">
-                                                <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" required>
-                                                <i class="input-icon uil uil-lock-alt"></i>
-                                            </div>
-                                            <button type="submit" class="buttn mt-4">Submit</button>
-                                        </form>
-                                        <p class="mb-0 mt-4 text-center">
-                                        <a href="#0" class="link">Forgot your password?</a><br />
-                                        <a href="#0" class="link" data-toggle="modal" data-target="#logDevModal">Login Developer</a>
-                                        </p>
+            <div class="tab" data-aos="fade-up">
+                <button class="tablinks" onclick="openCity(event, 'home')">Home</button>
+                <button class="tablinks" onclick="openCity(event, 'guide')">Guide</button>
+            </div>
+            <div id="home" class="tabcontent" style="display: block;">
+                <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100" >
+                    <div class="section pb-5 pt-5 pt-sm-2 text-center">
+                        <h6 class="mb-0 pb-3">
+                        <span>Log In </span>
+                        <span>Sign Up</span>
+                        </h6>
+                        <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+                        <label for="reg-log"></label>
+                        <div class="card-3d-wrap mx-auto">
+                            <div class="card-3d-wrapper">
+                                <div class="card-front">
+                                    <div class="center-wrap">
+                                        <div class="section text-center">
+                                            <form action="<?= base_url("auth/login"); ?>" method="post">
+                                                <h4 class="mb-4 pb-3">Log In</h4>
+                                                <?php
+                                                $inputs_visitors = session()->getFlashdata('inputs_visitors');
+                                                $error_visitors = session()->getFlashdata('error_visitors');
+                                                $errors_visitors = session()->getFlashdata('errors_visitors');
+                                                $success_visitors = session()->getFlashdata('success_visitors');
+                                                if(!empty($errors_visitors)){ ?>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <ul>
+                                                    <?php foreach ($errors_visitors as $errors_visitors) : ?>
+                                                        <li><?= esc($errors_visitors) ?></li>
+                                                    <?php endforeach ?>
+                                                    </ul>
+                                                </div>
+                                                <br />
+                                                <?php } if(!empty($error_visitors)){ ?>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <ul>
+                                                        <li><?= esc($error_visitors) ?></li>
+                                                    </ul>
+                                                </div>
+                                                <br />
+                                                <?php } if(!empty($success_visitors)){ ?>
+                                                <div class="alert alert-success" role="alert">
+                                                    <?= esc($success_visitors) ?><br />
+                                                </div>
+                                                <br />
+                                                <?php } ?>
+                                                <?= csrf_field(); ?>
+                                                <div class="form-group">
+                                                    <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off" required>
+                                                    <i class="input-icon uil uil-at"></i>
+                                                </div>  
+                                                <div class="form-group mt-2">
+                                                    <input type="password" name="logpass" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off" required>
+                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                </div>
+                                                <button type="submit" class="buttn mt-4">Submit</button>
+                                            </form>
+                                            <p class="mb-0 mt-4 text-center">
+                                            <a href="#0" class="link">Forgot your password?</a><br />
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-            
-                            <div class="card-back" id="signup">
-                                <div class="center-wrap">
-                                    <div class="section text-center">
-                                        <form action="<?= base_url("auth/register"); ?>" method="post">
-                                            <h4 class="mb-4 pb-3">Sign Up</h4> 
-                                            <?php
-                                            $inputs_visitor = session()->getFlashdata('inputs_visitor');
-                                            $error_visitor = session()->getFlashdata('error_visitor');
-                                            $errors_visitor = session()->getFlashdata('errors_visitor');
-                                            $success_visitor = session()->getFlashdata('success_visitor');
-                                            if(!empty($errors_visitor)){ ?>
-                                            <div class="alert alert-danger" role="alert">
-                                                <ul>
-                                                <?php foreach ($errors_visitor as $errors_visitor) : ?>
-                                                    <li><?= esc($errors_visitor) ?></li>
-                                                <?php endforeach ?>
-                                                </ul>
-                                            </div>
-                                            <br />
-                                            <?php } if(!empty($error_visitor)){ ?>
-                                            <div class="alert alert-danger" role="alert">
-                                                <ul>
-                                                    <li><?= esc($error_visitor) ?></li>
-                                                </ul>
-                                            </div>
-                                            <br />
-                                            <?php } if(!empty($success_visitor)){ ?>
-                                            <div class="alert alert-success" role="alert">
-                                                <?= esc($success_visitor) ?><br />
-                                            </div>
-                                            <br />
-                                            <?php } ?> 
-                                            <?= csrf_field(); ?>
-                                            <div class="form-group">
-                                                <input type="text" name="reg_name" class="form-style" placeholder="Your Full Name" id="reg_name" autocomplete="off" required>
-                                                <i class="input-icon uil uil-user"></i>
-                                            </div>  
-                                            <div class="form-group mt-2">
-                                                <input type="email" name="reg_email" class="form-style" placeholder="Your Email" id="reg_email" autocomplete="off" required>
-                                                <i class="input-icon uil uil-at"></i>
-                                            </div>  
-                                            <div class="form-group mt-2">
-                                                <input type="password" name="reg_pass" class="form-style" placeholder="Your Password" id="reg_pass" autocomplete="off" required>
-                                                <i class="input-icon uil uil-lock-alt"></i>
-                                            </div>
-                                            <button type="submit" class="buttn mt-4">Submit</button>
-                                        </form>
+                
+                                <div class="card-back" id="signup">
+                                    <div class="center-wrap">
+                                        <div class="section text-center">
+                                            <form action="<?= base_url("auth/register"); ?>" method="post">
+                                                <h4 class="mb-4 pb-3">Sign Up</h4> 
+                                                <?php
+                                                $inputs_visitor = session()->getFlashdata('inputs_visitor');
+                                                $error_visitor = session()->getFlashdata('error_visitor');
+                                                $errors_visitor = session()->getFlashdata('errors_visitor');
+                                                $success_visitor = session()->getFlashdata('success_visitor');
+                                                if(!empty($errors_visitor)){ ?>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <ul>
+                                                    <?php foreach ($errors_visitor as $errors_visitor) : ?>
+                                                        <li><?= esc($errors_visitor) ?></li>
+                                                    <?php endforeach ?>
+                                                    </ul>
+                                                </div>
+                                                <br />
+                                                <?php } if(!empty($error_visitor)){ ?>
+                                                <div class="alert alert-danger" role="alert">
+                                                    <ul>
+                                                        <li><?= esc($error_visitor) ?></li>
+                                                    </ul>
+                                                </div>
+                                                <br />
+                                                <?php } if(!empty($success_visitor)){ ?>
+                                                <div class="alert alert-success" role="alert">
+                                                    <?= esc($success_visitor) ?><br />
+                                                </div>
+                                                <br />
+                                                <?php } ?> 
+                                                <?= csrf_field(); ?>
+                                                <div class="form-group">
+                                                    <input type="text" name="reg_name" class="form-style" placeholder="Your Full Name" id="reg_name" autocomplete="off" required>
+                                                    <i class="input-icon uil uil-user"></i>
+                                                </div>  
+                                                <div class="form-group mt-2">
+                                                    <input type="email" name="reg_email" class="form-style" placeholder="Your Email" id="reg_email" autocomplete="off" required>
+                                                    <i class="input-icon uil uil-at"></i>
+                                                </div>  
+                                                <div class="form-group mt-2">
+                                                    <input type="password" name="reg_pass" class="form-style" placeholder="Your Password" id="reg_pass" autocomplete="off" required>
+                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                </div>
+                                                <button type="submit" class="buttn mt-4">Submit</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="main-footer" id="kontak">
+                <div class="footer-atas">
+                    <div class="footer-bg">
+                        <h3 style="padding-top: 5px;">For Contact Person</h3>
+                        <!-- <div class="footer-email-phone">
+                            <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Raka)</p></td>
+                            <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Anam)</p></td>
+                            
+                        </div> -->
+                        <div class="footer-email-phone">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08532968373 (Raka)</a></li>
+                                <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085712702685 (Anam)</a></li>
+                            </ul>
+                        </div>
+                        <h3 style="padding-top: 2px;">For Sponsorship</h3>
+                        <div class="footer-email-phone">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08112917060 (Aci)</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id="guide" class="tabcontent"  style="display: none;"data-aos="zoom-in" data-aos-delay="100" >
+                <h6 class="mb-0 pb-3">
+                    <h1 style="text-align:center; color:#fff">Guide Pengunjung</h1>
+                </h6>
+                <div class="card-3d-wrap mx-auto">
+                    <div class="card-3d-wrapper">
+                        <div class="card-front">
+                            <div class="center-wrap">
+                                <div class="section text-center">
+                                    <h5>Sebagai pengunjung nantinya didalam Artsteps kita akan diarahkan oleh pemandu mengujungi stand-stand dari software fair dan hardware fair.</h5> <br>
+                                    <h5>Selain itu kita juga bisa masuk kedalam sistem dengan cara login pada tombol menu ini yang didalamnya kita dapat melakukan voting terhadap developer yang kita anggap terbaik,</h5></br>
+                                    <h5> melakukan interaksi dengan developer pada forum, serta menyelesaikan challenge agar nantinya mendapat hadiah</h5> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <div>
             </div>
         </div>
+
         <div class="main-footer" id="kontak">
             <div class="footer-atas">
                 <div class="footer-bg">
