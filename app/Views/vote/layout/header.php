@@ -1,16 +1,152 @@
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= $title; ?> - Hi Tech 2021</title>
-    <script defer src="<?= base_url(); ?>/assets/vote/js/theme.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="<?= base_url(); ?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style.css" />
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/animate.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0.11/dist/flickity.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+<head>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title><?= $title; ?> - HI TECH 2021</title>
+	<script defer src="<?= base_url(); ?>/assets/vote/js/theme.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style2.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style3.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/animate.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/bootstrap.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/prism.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/sweetalert2.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/dist/superwheel.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/main.css">
+	<link href="https://fonts.googleapis.com/cssfdf4.css?family=Lato:400,400i,700,700i" rel="stylesheet">
+	<script src="<?= base_url(); ?>/assets/vote/js/jquery-3.3.1.js"></script>
+	<script src="<?= base_url(); ?>/assets/vote/js/bootstrap.bundle.js"></script>
+	<script src="<?= base_url(); ?>/assets/vote/dist/superwheel.js"></script>
+	<script src="<?= base_url(); ?>/assets/vote/js/prism.js" data-manual></script>
+	<script src="<?= base_url(); ?>/assets/vote/js/sweetalert2.min.js" data-manual></script>
+	<script src="<?= base_url(); ?>/assets/vote/js/main1.js"></script>
+	<script defer src="<?= base_url(); ?>/assets/vote/js/theme.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/animate.css">
+	<script>
+	jQuery(document).ready(function($){
+		
+		$('.wheel').superWheel({
+			slices: [
+				{
+					text    : '20% OFF',
+					message : 'You win 20% off',
+					background   : '#364C62',
+					value     : 1
+				},{
+					text    : 'No luck',
+					message : 'You have No luck today',
+					background   : '#9575CD',
+					value     : 0
+				},{
+					text    : '30% OFF',
+					message : 'You win 30% off',
+					background   : '#E67E22',
+					value     : 1
+				},{
+					value      : 'd',
+					text    : 'Lose',
+					message : 'You Lose :(',
+					background   : '#E74C3C',
+					win     : 0
+				},{
+					text    : '40% OFF',
+					message : 'You win 40% off',
+					background   : '#2196F3',
+					color : '#fff',
+					value     : 1
+				},{
+					text    : 'Nothing',
+					message : 'You get Nothing :(',
+					background   : '#95A5A6',
+					value     : 0
+				},{
+					text    : 'No luck',
+					message : 'You have No luck today',
+					background   : '#9575CD',
+					value     : 0
+				}
+			],
+			
+			
+			//======================================
+			//======================================
+			//=======    Wheel Parameters    =======
+			//======================================
+			//======================================
+			text : {
+				color: '#fff',
+				offset : 8,
+				letterSpacing: 0,
+				orientation: 'v',
+				arc: true
+			},
+			
+			slice : {
+				background : "#333",
+			},
+			
+			line:{
+				width : 6,
+				color : "#fefefe",
+			},
+			
+			outer : {
+				width : 10,
+				color : "#fefefe",
+			},
+			
+			inner : {
+				width : 8,
+				color : "#fefefe",
+			},
+			
+			width: 500,
+			duration: 8000,
+			
+		});
+		
+		var tick = new Audio('<?= base_url(); ?>/assets/vote/media/tick.mp3');
+		
+		
+		$(document).on('click','.spin-to-win',function(e){
+			e.preventDefault();
+			$('.wheel').superWheel('start','value',Math.floor(Math.random() * 2));
+			$(this).prop('disabled',true);
+		});
+		
+		$('.wheel').superWheel('onStart',function(results){
+			$('.spin-to-win').text('Spinning...');
+		});
+		
+		
+		$('.wheel').superWheel('onStep',function(results){
+			if (typeof tick.currentTime !== 'undefined')
+				tick.currentTime = 0;
+			tick.play();
+		});
+		
+		$('.wheel').superWheel('onComplete',function(results){
+			
+			if(results.value === 1){
+				swal({
+					type: 'success',
+					title: "Congratulations!", 
+					html: results.message+' <br><br><b>Discount : [ '+ results.discount+ ' ]</b>'
+				});
+			}else{
+				swal("Oops!", results.message, "error");
+			}
+			$('.spin-to-win:disabled').prop('disabled',false).text('Spin to win');
+		});
+		
+		
+	});
+	</script>
 </head>
 
 <body>
@@ -68,6 +204,12 @@
                 <a href="<?= base_url('users/quick-count'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Quick Count</spam>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= base_url('users/wheel-of-fortune'); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Wheel Of Fortune</spam>
                 </a>
             </li>
             <li class="nav-item">

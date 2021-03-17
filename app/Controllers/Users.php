@@ -207,4 +207,30 @@ class Users extends BaseController{
 		render_content('vote','qc', $data);
 		render_page('vote/layout','footer', $data);
 	}
+
+	// Halaman Wheel Of Fortune
+	public function wof(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelHF = new Hf_model();
+		$modelSF = new Sf_model();
+        $check_login = $modelUser->check_email($session->get('user_email'));
+
+		$data = [
+			'title'				=> 'Wheel Of Fortune',
+			'dashboard'			=> TRUE,
+			'user_login'		=> $check_login
+		];
+		
+		render_page('vote/layout','header', $data);
+		render_content('vote','wof', $data);
+		render_page('vote/layout','footer', $data);
+	}
 }

@@ -38,6 +38,7 @@ $routes->get('autologin/(:any)/(:any)', 'Auth::autoLoginDev/$1/$2');
 $routes->get('users/software-fair', 'Users::sf');
 $routes->get('users/hardware-fair', 'Users::hf');
 $routes->get('users/quick-count', 'Users::qc');
+$routes->get('users/wheel-of-fortune', 'Users::wof');
 
 /*
  * --------------------------------------------------------------------
