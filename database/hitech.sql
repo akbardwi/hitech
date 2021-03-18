@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Mar 2021 pada 07.30
+-- Waktu pembuatan: 18 Mar 2021 pada 10.42
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `hitech`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` text NOT NULL,
+  `password` text NOT NULL,
+  `nama` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`, `nama`) VALUES
+(1, 'admin', '$2y$10$qszQk1BTfRi0mS/Refc8Xup18Bo6Toq.t9lQ81008VN6T2NqHhKze', 'Administrator');
 
 -- --------------------------------------------------------
 
@@ -93,13 +113,6 @@ CREATE TABLE `sf` (
   `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data untuk tabel `sf`
---
-
-INSERT INTO `sf` (`id`, `tim`, `category`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link`, `wa`, `email`, `logo`, `suara`, `bayar`, `verif_code`, `tgl_daftar`) VALUES
-(1, '', 'Web', 'Sekolah Digital', 'Akbar Dwi Syahputra', 'A11.2019.12217', 'Ahmad', 'A11.2019.12221', '', '', 'Udinus', 'https://drive.google.com/drive/folders/1fgDKpdflu5xR_AgZZUnzvNuShujF18q6', '085326629159', 'akbar.dwi14@gmail.com', 'sd.png', 1, 0, '', '2021-03-12 07:56:46');
-
 -- --------------------------------------------------------
 
 --
@@ -116,13 +129,6 @@ CREATE TABLE `visitor` (
   `verif_code` varchar(255) NOT NULL,
   `registered` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `visitor`
---
-
-INSERT INTO `visitor` (`id`, `fullname`, `email`, `password`, `status`, `vote`, `verif_code`, `registered`) VALUES
-(1, 'Akbar Dwi Syahputra', 'akbar.dwi14@gmail.com', '$2y$10$ZkJwXOAlmg9vB/bmKfH0h.YHPpKZawZ65Hql7VS1vTuLX/apbPqeG', 1, 1, '', '2021-03-12 04:33:04');
 
 -- --------------------------------------------------------
 
@@ -141,15 +147,14 @@ CREATE TABLE `vote` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `vote`
---
-
-INSERT INTO `vote` (`id`, `dev`, `id_dev`, `email_visitor`, `kesan`, `pesan`, `last_update`) VALUES
-(1, 'sf', 1, 'akbar.dwi14@gmail.com', 'a', 'a', '2021-03-12 07:56:45');
-
---
 -- Indexes for dumped tables
 --
+
+--
+-- Indeks untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `hf`
@@ -186,6 +191,12 @@ ALTER TABLE `vote`
 --
 
 --
+-- AUTO_INCREMENT untuk tabel `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT untuk tabel `hf`
 --
 ALTER TABLE `hf`
@@ -201,19 +212,19 @@ ALTER TABLE `ot`
 -- AUTO_INCREMENT untuk tabel `sf`
 --
 ALTER TABLE `sf`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `visitor`
 --
 ALTER TABLE `visitor`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `vote`
 --
 ALTER TABLE `vote`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
