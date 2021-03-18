@@ -533,7 +533,7 @@ class Auth extends BaseController{
             return redirect()->to(base_url("users/dashboard"));
         } else if($type == "hf"){
             $db      	= \Config\Database::connect();
-            $model      = new Sf_model();
+            $model      = new Hf_model();
             $dataUser   = $model->check_login($kode);
             $query = $db->query("UPDATE hf SET verif_code = '' WHERE verif_code = '$kode'");
             session()->set('user_email',$dataUser['email']);

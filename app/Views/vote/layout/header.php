@@ -200,12 +200,12 @@
                 </a>
             </li>
             <?php } ?>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="<?= base_url('users/quick-count'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Quick Count</spam>
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a href="<?= base_url('users/wheel-of-fortune'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>

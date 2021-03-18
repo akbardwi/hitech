@@ -2,15 +2,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= $title; ?> - Hi Tech 2021</title>
     <script defer src="<?= base_url(); ?>/assets/vote/js/theme.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="<?= base_url(); ?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style.css" />
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/animate.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2.0.11/dist/flickity.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style2.css" />
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style3.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/animate.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/bootstrap.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/prism.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/sweetalert2.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/dist/superwheel.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/main.css">
+	<link href="https://fonts.googleapis.com/cssfdf4.css?family=Lato:400,400i,700,700i" rel="stylesheet">
+	<script src="<?= base_url(); ?>/assets/vote/js/jquery-3.3.1.js"></script>
+	<script src="<?= base_url(); ?>/assets/vote/js/bootstrap.bundle.js"></script>
+	<script src="<?= base_url(); ?>/assets/vote/dist/superwheel.js"></script>
+	<script src="<?= base_url(); ?>/assets/vote/js/prism.js" data-manual></script>
+	<script src="<?= base_url(); ?>/assets/vote/js/sweetalert2.min.js" data-manual></script>
+	<script src="<?= base_url(); ?>/assets/vote/js/main1.js"></script>
+	<script defer src="<?= base_url(); ?>/assets/vote/js/theme.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/animate.css">
 </head>
 
 <body>
@@ -64,6 +78,12 @@
                 </a>
             </li>
             <?php } ?>
+            <li class="nav-item">
+                <a href="<?= base_url('admin/peserta'); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Daftar Peserta</spam>
+                </a>
+            </li>
             <li class="nav-item">
                 <a href="<?= base_url('admin/quickcount'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>

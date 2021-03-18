@@ -4,7 +4,7 @@
         <?php foreach($developer as $dev){ ?>
         <div class="card">
             <div class="imgBox">
-                <?php if (file_exists("/assets/berkas/sf/".$dev['logo'])) { ?>
+                <?php if (file_exists("assets/berkas/sf/".$dev['logo'])) { ?>
                 <img src="<?= base_url("assets/berkas/sf/".$dev['logo']); ?>" alt="srt">
                 <?php } else { ?>
                 <img src="<?= base_url("assets/vote/img/comingsoon.png"); ?>" alt="srt">

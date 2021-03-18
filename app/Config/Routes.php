@@ -39,6 +39,10 @@ $routes->get('users/software-fair', 'Users::sf');
 $routes->get('users/hardware-fair', 'Users::hf');
 $routes->get('users/quick-count', 'Users::qc');
 $routes->get('users/wheel-of-fortune', 'Users::wof');
+$routes->get('admin/peserta/software-fair', 'Admin::sf');
+$routes->get('admin/peserta/hardware-fair', 'Admin::hf');
+$routes->get('admin/peserta/open-talk', 'Admin::ot');
+$routes->get('admin/peserta/pengunjung', 'Admin::pengunjung');
 
 /*
  * --------------------------------------------------------------------

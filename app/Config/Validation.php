@@ -318,4 +318,18 @@ class Validation
 			'required'      => 'Password wajib diisi'
 		],
 	];
+
+	// Validasi Upload Logo
+	public $upload_logo = [
+		'logo'	 	=> [
+			'uploaded[logo]',
+			'mime_in[logo,image/jpg,image/jpeg,image/gif,image/png]',
+		],
+	];	 
+	public $upload_logo_errors = [
+		'logo' 			=> [
+			'uploaded'			=> 'Wajib upload logo',
+			'mime_in'			=> 'Hanya menerima gambar dengan format .jpeg, .jpg, .png, .gif',
+		],
+	];
 }
