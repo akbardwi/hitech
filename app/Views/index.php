@@ -154,7 +154,7 @@
                             <div class="accordion-item-body-content">
                                 <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
                                 <h6>2.Isi form pendaftaran dengan baik</h6>
-                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :    
+                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :    
                                 </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti). <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Aplikasi </br>(format : 720p atau 1080p landscape)</h6>
@@ -241,7 +241,7 @@
                             <div class="accordion-item-body-content">
                                 <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
                                 <h6>2.Isi form pendaftaran dengan baik</h6>
-                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas" kedalam satu folder dengan format penamaan :</h6>
+                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :</h6>
                                 <h6><strong>NAMATIM_NamaHardware(event yang diikuti).<br> Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri </br>(format : 720p atau 1080p landscape)</h6>
