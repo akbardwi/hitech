@@ -409,7 +409,7 @@ class Auth extends BaseController{
         $db      	= \Config\Database::connect();
         $visitor  	= $db->table('visitor');
 
-        if(count($data_user) > 0){
+        if($data_user){
             $email  = $data_user['email'];
             $nama   = $data_user['fullname'];
             $query = $db->query("UPDATE visitor SET status = '1', verif_code = '' WHERE email = '$email'");
@@ -426,6 +426,9 @@ class Auth extends BaseController{
                 session()->setFlashdata('error_visitors', 'Email gagal diverifikasi.');
                 return redirect()->to(base_url()."/#pengunjung");
             }
+        } else {
+            session()->setFlashdata('error_visitors', 'Kode verifikasi tidak ditemukan/sudah dipakai.');
+            return redirect()->to(base_url()."/#pengunjung");
         }
     }
 
