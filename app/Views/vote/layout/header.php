@@ -186,7 +186,7 @@
                     <spam>Home</spam>
                 </a>
             </li>
-            <?php if(session()->get('user_type') == "visitor"){?>
+            <?php if(session()->get('user_type') == "visitor" and (strtotime(date("03-04-2021 08:00:00")) < strtotime(date("d-m-Y H:i:s")))){?>
             <li class="nav-item">
                 <a href="<?= base_url('users/software-fair'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
@@ -205,13 +205,13 @@
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Quick Count</spam>
                 </a>
-            </li> -->
+            </li>
             <li class="nav-item">
                 <a href="<?= base_url('users/wheel-of-fortune'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Wheel Of Fortune</spam>
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a href="<?= base_url('users/logout'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
