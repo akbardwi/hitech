@@ -796,7 +796,7 @@
                 <h2>Pengunjung</h2>
             </div>
             <div class="tab" data-aos="fade-up">
-                <button class="tablinks" onclick="openCity(event, 'guide')">InStructions</button>
+                <button class="tablinks" onclick="openCity(event, 'guide')">Instructions</button>
                 <button class="tablinks" onclick="openCity(event, 'form')">Form</button>
             </div>
             <div id="form" class="tabcontent">
@@ -948,9 +948,9 @@
                         <div class="card-front">
                             <div class="center-wrap">
                                 <div class="section text-center">
-                                    <h5>Pengunjung nantinya akan diarahkan oleh pemandu untuk mengujungi semua stand dari software fair dan hardware fair menggunakan platform Artsteps.</h5> <br>
-                                    <h5>Untuk melakukan voting terhadap tim developer, dapat dilakukan dengan cara login pada tombol form yang ada pada website “Hitechnology“ kemudian pengunjung akan diarahkan ke web sistem untuk voting.</h5></br>
-                                    <h5> Didalam web tersebut, pengunjung juga dapat melakukan interaksi dengan tiap developer pada forum yang disediakan, serta dapat menyelesaikan challenge yang pastinya akan ada hadiah/reward bagi pemenang challenge.</h5> 
+                                    <h6>Pengunjung nantinya akan diarahkan oleh pemandu untuk mengujungi semua stand dari software fair dan hardware fair menggunakan platform Artsteps.</h6> <br>
+                                    <h6>Untuk melakukan voting terhadap tim developer, dapat dilakukan dengan cara login pada tombol form yang ada pada website “Hitechnology“ kemudian pengunjung akan diarahkan ke web sistem untuk voting.</h6></br>
+                                    <h6> Didalam web tersebut, pengunjung juga dapat melakukan interaksi dengan tiap developer pada forum yang disediakan, serta dapat menyelesaikan challenge yang pastinya akan ada hadiah/reward bagi pemenang challenge.</h6> 
                                 </div>
                             </div>
                         </div>

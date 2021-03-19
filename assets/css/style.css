@@ -2690,3 +2690,8 @@ body.showLoginForm .popup {
   from {opacity: 0;}
   to {opacity: 1;}
 }
+@media(min-width:343px){
+  .section  h6{
+    font-size: 1.2rem;
+  }
+}
