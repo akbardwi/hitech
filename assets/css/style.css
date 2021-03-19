@@ -6,7 +6,7 @@
   body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
-    background-image: url('../img/bg1.png');
+    background-image: url('../img/bg1new.png');
     background-size: cover;
     background-repeat: no-repeat;
     /* z-index: 9; */
@@ -2363,6 +2363,11 @@ body.showLoginForm .popup {
 	text-align: center;
   color: #fff;
 }
+@media(min-width:900px){
+  .footer-bg h3{
+    padding-top: 100px;
+  }
+}
 .footer-address{
 	width: 100%;
 	height: auto;
@@ -2647,7 +2652,9 @@ body.showLoginForm .popup {
   border: 0;
   border-radius: 50px;
 }
-
+.tablinks{
+  width: 150px;
+}
 
 /* Change background color of buttons on hover */
 .tab button:hover {

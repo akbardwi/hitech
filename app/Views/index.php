@@ -178,7 +178,7 @@
                             <div class="accordion-item-body-content">
                                 <h6>1.Setelah melakukan pendaftaran/registrasi melalui web,</br>
                                 tim developer dapat melakukan pembayaran agar bisa login kedalam sistem melalui</h6>
-                                <h6><strong>No Rekening : xxxxx (A.n Raka Apritama)</strong></h6>
+                                <h6><strong>No Rekening : 006801066219504 (A.n Raka Apritama)</strong></h6>
                                 <h6><strong>Bank              : BRI</strong></h6>
                                 <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
                                 <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
@@ -265,7 +265,7 @@
                             <div class="accordion-item-body-content">
                                 <h6>1.Setelah melakukan pendaftaran/registrasi melalui web,</br>
                                 tim developer dapat melakukan pembayaran agar bisa login kedalam sistem melalui</h6>
-                                <h6><strong>No Rekening : xxxxx (A.n Raka Apritama)</strong></h6>
+                                <h6><strong>No Rekening : 006801066219504 (A.n Raka Apritama)</strong></h6>
                                 <h6><strong>Bank              : BRI</strong></h6>
                                 <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
                                 <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
@@ -796,10 +796,10 @@
                 <h2>Pengunjung</h2>
             </div>
             <div class="tab" data-aos="fade-up">
-                <button class="tablinks" onclick="openCity(event, 'home')">Home</button>
-                <button class="tablinks" onclick="openCity(event, 'guide')">Guide</button>
+                <button class="tablinks" onclick="openCity(event, 'guide')">Intructions</button>
+                <button class="tablinks" onclick="openCity(event, 'home')">Form</button>
             </div>
-            <div id="home" class="tabcontent" style="display: block;">
+            <div id="home" class="tabcontent">
                 <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100" >
                     <div class="section pb-5 pt-5 pt-sm-2 text-center">
                         <h6 class="mb-0 pb-3">
@@ -914,7 +914,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main-footer" id="kontak">
+                <div class="main-footer">
                 <div class="footer-atas">
                     <div class="footer-bg">
                         <h3 style="padding-top: 5px;">For Contact Person</h3>
@@ -939,9 +939,9 @@
                 </div>
             </div>
             </div>
-            <div id="guide" class="tabcontent"  style="display: none;"data-aos="zoom-in" data-aos-delay="100" >
+            <div id="guide" class="tabcontent"  style="display: block;"data-aos="zoom-in" data-aos-delay="100" >
                 <h6 class="mb-0 pb-3">
-                    <h1 style="text-align:center; color:#fff">Guide Pengunjung</h1>
+                    <h1 style="text-align:center; color:#fff">Instruksi Pengunjung</h1>
                 </h6>
                 <div class="card-3d-wrap mx-auto">
                     <div class="card-3d-wrapper">
@@ -949,7 +949,7 @@
                             <div class="center-wrap">
                                 <div class="section text-center">
                                     <h5>Sebagai pengunjung nantinya didalam Artsteps kita akan diarahkan oleh pemandu mengujungi stand-stand dari software fair dan hardware fair.</h5> <br>
-                                    <h5>Selain itu kita juga bisa masuk kedalam sistem dengan cara login pada tombol menu ini yang didalamnya kita dapat melakukan voting terhadap developer yang kita anggap terbaik,</h5></br>
+                                    <h5>Selain itu kita juga bisa masuk kedalam sistem dengan cara login dan registrasi pada tombol form  yang didalamnya kita dapat melakukan voting terhadap developer yang kita anggap terbaik,</h5></br>
                                     <h5> melakukan interaksi dengan developer pada forum, serta menyelesaikan challenge agar nantinya mendapat hadiah</h5> 
                                 </div>
                             </div>
@@ -962,7 +962,7 @@
         <div class="main-footer" id="kontak">
             <div class="footer-atas">
                 <div class="footer-bg">
-                    <h3 style="padding-top: 5px;">For Contact Person</h3>
+                    <h3>For Contact Person</h3>
                     <!-- <div class="footer-email-phone">
                         <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Raka)</p></td>
                         <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Anam)</p></td>
@@ -1012,9 +1012,6 @@
         <hr style="width:50%;border-color:#fff;height:1px; margin:auto; align:center;"><br/>
             <div class="copyright">
                 &copy; Copyright <?= date("Y"); ?> <a href="https://hmtiudinus.org/"><strong><span style="color:white;">HMTI</span></strong>.</a>
-            </div>
-            <div class="credits">
-                Designed by <a href="#">S.A.M</a>
             </div>
         </div>
     </footer><!-- End Footer -->
