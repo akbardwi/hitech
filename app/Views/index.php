@@ -796,10 +796,10 @@
                 <h2>Pengunjung</h2>
             </div>
             <div class="tab" data-aos="fade-up">
-                <button class="tablinks" onclick="openCity(event, 'home')">Home</button>
-                <button class="tablinks" onclick="openCity(event, 'guide')">Guide</button>
+                <button class="tablinks" onclick="openCity(event, 'guide')">Intructions</button>
+                <button class="tablinks" onclick="openCity(event, 'home')">Form</button>
             </div>
-            <div id="home" class="tabcontent" style="display: block;">
+            <div id="home" class="tabcontent">
                 <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100" >
                     <div class="section pb-5 pt-5 pt-sm-2 text-center">
                         <h6 class="mb-0 pb-3">
@@ -914,7 +914,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main-footer" id="kontak">
+                <div class="main-footer">
                 <div class="footer-atas">
                     <div class="footer-bg">
                         <h3 style="padding-top: 5px;">For Contact Person</h3>
@@ -939,9 +939,9 @@
                 </div>
             </div>
             </div>
-            <div id="guide" class="tabcontent"  style="display: none;"data-aos="zoom-in" data-aos-delay="100" >
+            <div id="guide" class="tabcontent"  style="display: block;"data-aos="zoom-in" data-aos-delay="100" >
                 <h6 class="mb-0 pb-3">
-                    <h1 style="text-align:center; color:#fff">Guide Pengunjung</h1>
+                    <h1 style="text-align:center; color:#fff">Instruksi Pengunjung</h1>
                 </h6>
                 <div class="card-3d-wrap mx-auto">
                     <div class="card-3d-wrapper">
@@ -949,7 +949,7 @@
                             <div class="center-wrap">
                                 <div class="section text-center">
                                     <h5>Sebagai pengunjung nantinya didalam Artsteps kita akan diarahkan oleh pemandu mengujungi stand-stand dari software fair dan hardware fair.</h5> <br>
-                                    <h5>Selain itu kita juga bisa masuk kedalam sistem dengan cara login pada tombol menu ini yang didalamnya kita dapat melakukan voting terhadap developer yang kita anggap terbaik,</h5></br>
+                                    <h5>Selain itu kita juga bisa masuk kedalam sistem dengan cara login dan register pada tombol form  yang didalamnya kita dapat melakukan voting terhadap developer yang kita anggap terbaik,</h5></br>
                                     <h5> melakukan interaksi dengan developer pada forum, serta menyelesaikan challenge agar nantinya mendapat hadiah</h5> 
                                 </div>
                             </div>

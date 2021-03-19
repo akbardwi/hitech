@@ -2647,7 +2647,9 @@ body.showLoginForm .popup {
   border: 0;
   border-radius: 50px;
 }
-
+.tablinks{
+  width: 150px;
+}
 
 /* Change background color of buttons on hover */
 .tab button:hover {
