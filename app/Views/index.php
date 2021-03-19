@@ -796,10 +796,10 @@
                 <h2>Pengunjung</h2>
             </div>
             <div class="tab" data-aos="fade-up">
-                <button class="tablinks" onclick="openCity(event, 'guide')">Instructions</button>
                 <button class="tablinks" onclick="openCity(event, 'form')">Form</button>
+                <button class="tablinks" onclick="openCity(event, 'guide')">Instructions</button>
             </div>
-            <div id="form" class="tabcontent">
+            <div id="form" class="tabcontent" style="display: block;">
                 <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100" >
                     <div class="section pb-5 pt-5 pt-sm-2 text-center">
                         <h6 class="mb-0 pb-3">
@@ -808,6 +808,8 @@
                         </h6>
                         <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
                         <label for="reg-log"></label>
+                        <br>
+                        <h5 style="color:white;">Silahkan Baca instruksi pada menu "Instructions", untuk informasi pengunjung</h5>
                         <div class="card-3d-wrap mx-auto">
                             <div class="card-3d-wrapper">
                                 <div class="card-front">
@@ -939,7 +941,7 @@
                 </div>
             </div>
             </div>
-            <div id="guide" class="tabcontent"  style="display: block;"data-aos="zoom-in" data-aos-delay="100" >
+            <div id="guide" class="tabcontent"  data-aos="zoom-in" data-aos-delay="100" >
                 <h6 class="mb-0 pb-3">
                     <h1 style="text-align:center; color:#fff">Instruksi Pengunjung</h1>
                 </h6>
