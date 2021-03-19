@@ -796,10 +796,10 @@
                 <h2>Pengunjung</h2>
             </div>
             <div class="tab" data-aos="fade-up">
-                <button class="tablinks" onclick="openCity(event, 'guide')">Instructions</button>
-                <button class="tablinks" onclick="openCity(event, 'home')">Form</button>
+                <button class="tablinks" onclick="openCity(event, 'guide')">Intructions</button>
+                <button class="tablinks" onclick="openCity(event, 'form')">Form</button>
             </div>
-            <div id="home" class="tabcontent">
+            <div id="form" class="tabcontent">
                 <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100" >
                     <div class="section pb-5 pt-5 pt-sm-2 text-center">
                         <h6 class="mb-0 pb-3">
@@ -948,9 +948,9 @@
                         <div class="card-front">
                             <div class="center-wrap">
                                 <div class="section text-center">
-                                    <h5>Sebagai pengunjung nantinya didalam Artsteps kita akan diarahkan oleh pemandu mengujungi stand-stand dari software fair dan hardware fair.</h5> <br>
-                                    <h5>Selain itu kita juga bisa masuk kedalam sistem dengan cara login dan registrasi pada tombol form  yang didalamnya kita dapat melakukan voting terhadap developer yang kita anggap terbaik,</h5></br>
-                                    <h5> melakukan interaksi dengan developer pada forum, serta menyelesaikan challenge agar nantinya mendapat hadiah</h5> 
+                                    <h5>Pengunjung nantinya akan diarahkan oleh pemandu untuk mengujungi semua stand dari software fair dan hardware fair menggunakan platform Artsteps.</h5> <br>
+                                    <h5>Untuk melakukan voting terhadap tim developer, dapat dilakukan dengan cara login pada tombol form yang ada pada website “Hitechnology“ kemudian pengunjung akan diarahkan ke web sistem untuk voting.</h5></br>
+                                    <h5> Didalam web tersebut, pengunjung juga dapat melakukan interaksi dengan tiap developer pada forum yang disediakan, serta dapat menyelesaikan challenge yang pastinya akan ada hadiah/reward bagi pemenang challenge.</h5> 
                                 </div>
                             </div>
                         </div>
