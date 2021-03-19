@@ -949,7 +949,7 @@
                             <div class="center-wrap">
                                 <div class="section text-center">
                                     <h5>Sebagai pengunjung nantinya didalam Artsteps kita akan diarahkan oleh pemandu mengujungi stand-stand dari software fair dan hardware fair.</h5> <br>
-                                    <h5>Selain itu kita juga bisa masuk kedalam sistem dengan cara login dan register pada tombol form  yang didalamnya kita dapat melakukan voting terhadap developer yang kita anggap terbaik,</h5></br>
+                                    <h5>Selain itu kita juga bisa masuk kedalam sistem dengan cara login dan registrasi pada tombol form  yang didalamnya kita dapat melakukan voting terhadap developer yang kita anggap terbaik,</h5></br>
                                     <h5> melakukan interaksi dengan developer pada forum, serta menyelesaikan challenge agar nantinya mendapat hadiah</h5> 
                                 </div>
                             </div>
@@ -962,7 +962,7 @@
         <div class="main-footer" id="kontak">
             <div class="footer-atas">
                 <div class="footer-bg">
-                    <h3 style="padding-top: 5px;">For Contact Person</h3>
+                    <h3>For Contact Person</h3>
                     <!-- <div class="footer-email-phone">
                         <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Raka)</p></td>
                         <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Anam)</p></td>
@@ -1012,9 +1012,6 @@
         <hr style="width:50%;border-color:#fff;height:1px; margin:auto; align:center;"><br/>
             <div class="copyright">
                 &copy; Copyright <?= date("Y"); ?> <a href="https://hmtiudinus.org/"><strong><span style="color:white;">HMTI</span></strong>.</a>
-            </div>
-            <div class="credits">
-                Designed by <a href="#">S.A.M</a>
             </div>
         </div>
     </footer><!-- End Footer -->
