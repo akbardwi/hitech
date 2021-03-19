@@ -549,7 +549,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 991px) {
   #hero {
-    height: 125vh;
+    height: 130vh;
     text-align: center;
   }
   #hero .animated {
@@ -1162,9 +1162,15 @@ section {
 
 .team-section{
 	/* background-color:#009688; */
-	 padding:0px 15px 0px; 
+	 padding:0px 25px 0px; 
 }
-
+@media only screen and (device-width: 375px) and (device-height: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.1) {
+    .team-section{
+      /* background-color:#009688; */
+       padding:0px 20px 0px; 
+    }
+}
 .container{
 	max-width: 1170px;
 	margin:auto;
@@ -2354,7 +2360,7 @@ body.showLoginForm .popup {
 }
 .main-footer{
 	width: 100%;
-	/* padding: 20px 0px 10px 0px; */
+	padding: 20px 1px 10px 1px;
 }
 .footer-bg{
 	width: 100%;
