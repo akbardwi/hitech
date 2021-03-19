@@ -796,7 +796,7 @@
                 <h2>Pengunjung</h2>
             </div>
             <div class="tab" data-aos="fade-up">
-                <button class="tablinks" onclick="openCity(event, 'guide')">Intructions</button>
+                <button class="tablinks" onclick="openCity(event, 'guide')">Instructions</button>
                 <button class="tablinks" onclick="openCity(event, 'home')">Form</button>
             </div>
             <div id="home" class="tabcontent">
