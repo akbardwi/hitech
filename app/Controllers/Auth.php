@@ -446,10 +446,18 @@ class Auth extends BaseController{
             
             if($this->form_validation->run($dev, "login_dev") == FALSE){
                 // mengembalikan nilai input yang sudah dimasukan sebelumnya
-                session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                // session()->setFlashdata('inputs_visitors', $this->request->getPost());
                 // memberikan pesan error pada saat input data
-                session()->setFlashdata('errors_visitors', $this->form_validation->getErrors());
-                return redirect()->to(base_url()."/#pengunjung");
+                if($catDev == "sfDev"){
+                    session()->setFlashdata('errors_sf', $this->form_validation->getErrors());
+                    return redirect()->to(base_url()."/#sf");
+                } else if($catDev == "hfDev"){
+                    session()->setFlashdata('errors_hf', $this->form_validation->getErrors());
+                    return redirect()->to(base_url()."/#hf");
+                } else {
+                    session()->setFlashdata('errors_sf', $this->form_validation->getErrors());
+                    return redirect()->to(base_url()."/#sf");
+                }
             } else {
                 $modelSF 	= new Sf_model();
                 $modelHF 	= new Hf_model();
@@ -458,8 +466,8 @@ class Auth extends BaseController{
                     $check_user = $modelSF->check_email($email);
                     if($check_user){
                         if($check_user['bayar'] == 0){
-                            session()->setFlashdata('error_visitors', 'Dimohon untuk menyelesaikan administrasi terlebih dahulu.');
-                            return redirect()->to(base_url()."/#pengunjung");
+                            session()->setFlashdata('error_sf', 'Dimohon untuk menyelesaikan administrasi terlebih dahulu.');
+                            return redirect()->to(base_url()."/#sf");
                         }
                         $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
                         $kode = substr(str_shuffle($karakter), 0, 30);
@@ -472,20 +480,20 @@ class Auth extends BaseController{
                         if($kirim){
                             $query = $db->query("UPDATE sf SET verif_code = '$kode' WHERE email = '$email'");
                             if($query){
-                                session()->setFlashdata('success_visitors', 'Silahkan cek email untuk login.');
-                                return redirect()->to(base_url()."/#pengunjung");
+                                session()->setFlashdata('success_sf', 'Silahkan cek email untuk login.');
+                                return redirect()->to(base_url()."/#sf");
                             } else {
-                                session()->setFlashdata('error_visitors', 'Gagal update kode, silahkan coba lagi.');
-                                return redirect()->to(base_url()."/#pengunjung");
+                                session()->setFlashdata('error_sf', 'Gagal update kode, silahkan coba lagi.');
+                                return redirect()->to(base_url()."/#sf");
                             }
                         } else {
-                            session()->setFlashdata('error_visitors', 'Email gagal dikirim, silahkan coba lagi.');
-                            return redirect()->to(base_url()."/#pengunjung");
+                            session()->setFlashdata('error_sf', 'Email gagal dikirim, silahkan coba lagi.');
+                            return redirect()->to(base_url()."/#sf");
                         }
                     } else {
-                        session()->setFlashdata('inputs_visitors', $this->request->getPost());
-                        session()->setFlashdata('error_visitors', 'Email tidak ditemukan.');
-                        return redirect()->to(base_url()."/#pengunjung");
+                        // session()->setFlashdata('inputs_sf', $this->request->getPost());
+                        session()->setFlashdata('error_sf', 'Email tidak ditemukan.');
+                        return redirect()->to(base_url()."/#sf");
                     }
                 } else {
                     $check_user = $modelHF->check_email($email);
@@ -501,20 +509,20 @@ class Auth extends BaseController{
                         if($kirim){
                             $query = $db->query("UPDATE hf SET verif_code = '$kode' WHERE email = '$email'");
                             if($query){
-                                session()->setFlashdata('success_visitors', 'Silahkan cek email untuk login.');
-                                return redirect()->to(base_url()."/#pengunjung");
+                                session()->setFlashdata('success_hf', 'Silahkan cek email untuk login.');
+                                return redirect()->to(base_url()."/#hf");
                             } else {
-                                session()->setFlashdata('error_visitors', 'Gagal update kode, silahkan coba lagi.');
-                                return redirect()->to(base_url()."/#pengunjung");
+                                session()->setFlashdata('error_hf', 'Gagal update kode, silahkan coba lagi.');
+                                return redirect()->to(base_url()."/#hf");
                             }
                         } else {
-                            session()->setFlashdata('error_visitors', 'Email gagal dikirim, silahkan coba lagi.');
-                            return redirect()->to(base_url()."/#pengunjung");
+                            session()->setFlashdata('error_hf', 'Email gagal dikirim, silahkan coba lagi.');
+                            return redirect()->to(base_url()."/#hf");
                         }
                     } else {
-                        session()->setFlashdata('inputs_visitors', $this->request->getPost());
-                        session()->setFlashdata('error_visitors', 'Email tidak ditemukan.');
-                        return redirect()->to(base_url()."/#pengunjung");
+                        // session()->setFlashdata('inputs_hf', $this->request->getPost());
+                        session()->setFlashdata('error_hf', 'Email tidak ditemukan.');
+                        return redirect()->to(base_url()."/#hf");
                     }
                 }
             }

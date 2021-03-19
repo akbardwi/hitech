@@ -854,7 +854,7 @@
                                                 <button type="submit" class="buttn mt-4">Submit</button>
                                             </form>
                                             <p class="mb-0 mt-4 text-center">
-                                            <a href="#0" class="link">Forgot your password?</a><br />
+                                            <!-- <a href="#0" class="link">Forgot your password?</a><br /> -->
                                             </p>
                                         </div>
                                     </div>
