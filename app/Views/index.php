@@ -714,7 +714,7 @@
                             <div class="inner">
                                 <div class="info">
                                     <h5>COMING SOON</h5>
-                                    <p>Lorem</p>
+                                    <!-- <p>Lorem</p> -->
                                     <div class="social-links">
                                         <a href=""><span class="fa fa-facebook"></span></a>
                                         <a href=""><span class="fa fa-twitter"></span></a>
@@ -729,7 +729,7 @@
                             <div class="inner">
                                 <div class="info">
                                     <h5>COMING SOON</h5>
-                                    <p>lorem</p>
+                                    <!-- <p>lorem</p> -->
                                     <div class="social-links">
                                         <a href=""><span class="fa fa-facebook"></span></a>
                                         <a href=""><span class="fa fa-twitter"></span></a>
@@ -916,7 +916,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="main-footer">
+                <div class="main-footer" id="kontak">
                 <div class="footer-atas">
                     <div class="footer-bg">
                         <h3 style="padding-top: 5px;">For Contact Person</h3>
