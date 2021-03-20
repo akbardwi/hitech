@@ -382,7 +382,7 @@ class Auth extends BaseController{
                             return redirect()->to(base_url()."/#pengunjung");
                         } else {
                             if(strtotime(date("29-03-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
-                                session()->setFlashdata('error_visitors', 'Mohon maaf, sistem bisa dibuka mulai 29 Maret 2021.');
+                                session()->setFlashdata('error_visitors', 'Mohon maaf, sistem belum bisa dibuka.');
                                 return redirect()->to(base_url()."/#pengunjung");
                             }
                             session()->set('user_email',$check_user['email']);
@@ -475,7 +475,7 @@ class Auth extends BaseController{
                         }
 
                         if(strtotime(date("29-03-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
-                            session()->setFlashdata('error_sf', 'Mohon maaf, sistem bisa dibuka mulai 29 Maret 2021.');
+                            session()->setFlashdata('error_sf', 'Mohon maaf, sistem belum bisa dibuka.');
                             return redirect()->to(base_url()."/#sf");
                         }
                         $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
@@ -512,7 +512,7 @@ class Auth extends BaseController{
                             return redirect()->to(base_url()."/#hf");
                         }
                         if(strtotime(date("29-03-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
-                            session()->setFlashdata('error_hf', 'Mohon maaf, sistem bisa dibuka mulai 29 Maret 2021.');
+                            session()->setFlashdata('error_hf', 'Mohon maaf, sistem belum bisa dibuka.');
                             return redirect()->to(base_url()."/#hf");
                         }
                         $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
