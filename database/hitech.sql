@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 18 Mar 2021 pada 10.42
--- Versi server: 10.4.17-MariaDB
--- Versi PHP: 8.0.0
+-- Generation Time: Mar 20, 2021 at 01:45 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `nama`) VALUES
@@ -44,7 +44,25 @@ INSERT INTO `admin` (`id`, `username`, `password`, `nama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `hf`
+-- Table structure for table `forum`
+--
+
+CREATE TABLE `forum` (
+  `id` int(255) NOT NULL,
+  `id_dev` int(255) NOT NULL,
+  `id_visitor` int(255) NOT NULL,
+  `type_dev` text NOT NULL,
+  `reply_to` int(255) NOT NULL,
+  `text` text NOT NULL,
+  `coin` int(255) NOT NULL,
+  `point` int(255) NOT NULL,
+  `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hf`
 --
 
 CREATE TABLE `hf` (
@@ -71,7 +89,7 @@ CREATE TABLE `hf` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `ot`
+-- Table structure for table `ot`
 --
 
 CREATE TABLE `ot` (
@@ -88,7 +106,7 @@ CREATE TABLE `ot` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `sf`
+-- Table structure for table `sf`
 --
 
 CREATE TABLE `sf` (
@@ -113,10 +131,17 @@ CREATE TABLE `sf` (
   `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `sf`
+--
+
+INSERT INTO `sf` (`id`, `tim`, `category`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link`, `wa`, `email`, `logo`, `suara`, `bayar`, `verif_code`, `tgl_daftar`) VALUES
+(1, 'PasDev', 'Web', 'Webtun', 'Aku', 'Kepo si :v', '', '', NULL, NULL, '', '', '', '', NULL, 0, 0, '', '2021-03-19 08:45:33');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `visitor`
+-- Table structure for table `visitor`
 --
 
 CREATE TABLE `visitor` (
@@ -130,10 +155,17 @@ CREATE TABLE `visitor` (
   `registered` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `visitor`
+--
+
+INSERT INTO `visitor` (`id`, `fullname`, `email`, `password`, `status`, `vote`, `verif_code`, `registered`) VALUES
+(1, 'Akbar Dwi', 'akbar.dwi14@gmail.com', '$2y$10$jDyjZbvhguAs3sIQDtV93OT23mKeVHwPfI82QSX1MWnNwoS87jOzu', 1, 0, '', '2021-03-18 09:44:06');
+
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `vote`
+-- Table structure for table `vote`
 --
 
 CREATE TABLE `vote` (
@@ -151,77 +183,89 @@ CREATE TABLE `vote` (
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `hf`
+-- Indexes for table `forum`
+--
+ALTER TABLE `forum`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `hf`
 --
 ALTER TABLE `hf`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `ot`
+-- Indexes for table `ot`
 --
 ALTER TABLE `ot`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `sf`
+-- Indexes for table `sf`
 --
 ALTER TABLE `sf`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `visitor`
+-- Indexes for table `visitor`
 --
 ALTER TABLE `visitor`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `vote`
+-- Indexes for table `vote`
 --
 ALTER TABLE `vote`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `hf`
+-- AUTO_INCREMENT for table `forum`
+--
+ALTER TABLE `forum`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `hf`
 --
 ALTER TABLE `hf`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `ot`
+-- AUTO_INCREMENT for table `ot`
 --
 ALTER TABLE `ot`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `sf`
+-- AUTO_INCREMENT for table `sf`
 --
 ALTER TABLE `sf`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `visitor`
+-- AUTO_INCREMENT for table `visitor`
 --
 ALTER TABLE `visitor`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `vote`
+-- AUTO_INCREMENT for table `vote`
 --
 ALTER TABLE `vote`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
