@@ -497,11 +497,11 @@ class Auth extends BaseController{
                     }
                 } else {
                     $check_user = $modelHF->check_email($email);
-                    if($check_user['bayar'] == 0){
-                        session()->setFlashdata('error_hf', 'Dimohon untuk menyelesaikan administrasi terlebih dahulu.');
-                        return redirect()->to(base_url()."/#hf");
-                    }
                     if($check_user){
+                        if($check_user['bayar'] == 0){
+                            session()->setFlashdata('error_hf', 'Dimohon untuk menyelesaikan administrasi terlebih dahulu.');
+                            return redirect()->to(base_url()."/#hf");
+                        }
                         $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
                         $kode = substr(str_shuffle($karakter), 0, 30);
                         $email_smtp = \Config\Services::email();
