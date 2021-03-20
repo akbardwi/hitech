@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style1.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style2.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style3.css" />
 	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/animate.css">
@@ -186,7 +187,7 @@
                     <spam>Home</spam>
                 </a>
             </li>
-            <?php if(session()->get('user_type') == "visitor" and (strtotime(date("03-04-2021 08:00:00")) < strtotime(date("d-m-Y H:i:s")))){?>
+            <?php if(session()->get('user_type') == "visitor" and (strtotime(date("03-04-2020 08:00:00")) < strtotime(date("d-m-Y H:i:s")))){?>
             <li class="nav-item">
                 <a href="<?= base_url('users/software-fair'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
@@ -197,6 +198,12 @@
                 <a href="<?= base_url('users/hardware-fair'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Hardware Fair</spam>
+                </a>
+            </li>
+			<li class="nav-item">
+                <a href="<?= base_url('users/forum'); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Forum</spam>
                 </a>
             </li>
             <?php } ?>

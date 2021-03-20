@@ -78,7 +78,7 @@ class Users extends BaseController{
 			$dataUser = $modelVisitor->check_email($email);
 			if($dataUser['vote'] == 1){
 				session()->setFlashdata('error_vote', "Anda sudah memberikan vote untuk developer");
-				return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
+				return redirect()->to($_SERVER['HTTP_REFERER']);
 			}
 
 			$data = [				
@@ -94,7 +94,7 @@ class Users extends BaseController{
 				session()->setFlashdata('inputs_vote', $this->request->getPost());
 				// memberikan pesan error pada saat input data
 				session()->setFlashdata('errors_vote', $this->form_validation->getErrors());
-				return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
+				return redirect()->to($_SERVER['HTTP_REFERER']);
 			} else {
 				$model = new Vote_model();
 				$model->tambah($data);
@@ -109,10 +109,10 @@ class Users extends BaseController{
 				$query = $db->query("UPDATE visitor SET vote = '1' WHERE email = '$email'");
 				if($query and $vote){
 					session()->setFlashdata('success_vote', "Terima kasih telah memberikan suara Anda untuk developer");
-					return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
+					return redirect()->to($_SERVER['HTTP_REFERER']);
 				} else {
 					session()->setFlashdata('error_vote', "Vote bermasalah, silahkan hubungi panitia");
-					return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
+					return redirect()->to($_SERVER['HTTP_REFERER']);
 				}
 			}
 		} else {
@@ -231,6 +231,68 @@ class Users extends BaseController{
 		
 		render_page('vote/layout','header', $data);
 		render_content('vote','wof', $data);
+		render_page('vote/layout','footer', $data);
+	}
+
+	// Halaman List Forum
+	public function fr(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelHF = new Hf_model();
+		$modelSF = new Sf_model();
+        $check_login = $modelUser->check_email($session->get('user_email'));
+
+		$data = [
+			'title'				=> 'Forum Developer',
+			'sf'				=> $modelSF->listing(),
+			'hf'				=> $modelHF->listing(),
+			'dashboard'			=> TRUE,
+			'user_login'		=> $check_login
+		];
+		
+		render_page('vote/layout','header', $data);
+		render_content('vote','qna', $data);
+		render_page('vote/layout','footer', $data);
+	}
+
+	//Halaman Forum Diskusi
+	public function forum($type, $id_dev){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelHF = new Hf_model();
+		$modelSF = new Sf_model();
+
+		$check_login = $modelUser->check_email($session->get('user_email'));
+		if($type == "software-fair"){
+			$dev = $modelSF->read($id_dev);
+			$dev['app'] = $dev['nama_app'];
+		} else {
+			$dev = $modelHF->read($id_dev);
+			$dev['app'] = $dev['nama_app'];
+		}
+		$data = [
+			'title'				=> 'Forum Developer',
+			'dev'				=> $dev,
+			'dashboard'			=> TRUE,
+			'user_login'		=> $check_login
+		];
+		
+		render_page('vote/layout','header', $data);
+		render_content('vote','forum', $data);
 		render_page('vote/layout','footer', $data);
 	}
 }
