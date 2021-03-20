@@ -537,20 +537,30 @@ class Auth extends BaseController{
             $db      	= \Config\Database::connect();
             $model      = new Sf_model();
             $dataUser   = $model->check_login($kode);
-            $query = $db->query("UPDATE sf SET verif_code = '' WHERE verif_code = '$kode'");
-            session()->set('user_email',$dataUser['email']);
-            session()->set('cat_dev','sf');
-            session()->set('user_type','developer');
-            return redirect()->to(base_url("users/dashboard"));
+            if($dataUser){
+                $query = $db->query("UPDATE sf SET verif_code = '' WHERE verif_code = '$kode'");
+                session()->set('user_email',$dataUser['email']);
+                session()->set('cat_dev','sf');
+                session()->set('user_type','developer');
+                return redirect()->to(base_url("users/dashboard"));
+            } else {
+                session()->setFlashdata('error_sf', 'Link login tidak valid, silahkan coba lagi.');
+                return redirect()->to(base_url()."/#sf");
+            }            
         } else if($type == "hf"){
             $db      	= \Config\Database::connect();
             $model      = new Hf_model();
             $dataUser   = $model->check_login($kode);
-            $query = $db->query("UPDATE hf SET verif_code = '' WHERE verif_code = '$kode'");
-            session()->set('user_email',$dataUser['email']);
-            session()->set('cat_dev','hf');
-            session()->set('user_type','developer');
-            return redirect()->to(base_url("users/dashboard"));
+            if($dataUser){
+                $query = $db->query("UPDATE hf SET verif_code = '' WHERE verif_code = '$kode'");
+                session()->set('user_email',$dataUser['email']);
+                session()->set('cat_dev','hf');
+                session()->set('user_type','developer');
+                return redirect()->to(base_url("users/dashboard"));
+            } else {
+                session()->setFlashdata('error_hf', 'Link login tidak valid, silahkan coba lagi.');
+                return redirect()->to(base_url()."/#hf");
+            }  
         } else {
             return redirect()->to(base_url());
         }
