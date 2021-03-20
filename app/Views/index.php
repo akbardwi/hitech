@@ -41,7 +41,7 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center">
-            <a href="index.php" class="logo mr-auto"><img src="<?= base_url(); ?>/assets/img/fixpalingbaruu.png" alt="" class="img-fluid"></a>
+            <a href="<?= base_url(); ?>" class="logo mr-auto"><img src="<?= base_url(); ?>/assets/img/fixpalingbaruu.png" alt="" class="img-fluid"></a>
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                 <li class="active"><a href="<?= base_url(); ?>">Home</a></li>
