@@ -1162,19 +1162,19 @@ section {
 
 .team-section{
 	/* background-color:#009688; */
-	 padding:0px 0px 0px; 
+	 padding:0px 25px 0px; 
 }
 @media only screen and (device-width: 375px) and (device-height: 667px)
   and (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.1) {
     .team-section{
       /* background-color:#009688; */
-       padding:0px 10px 0px; 
+       padding:0px 0px 0px; 
     }
 }
 @media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3){
   .team-section{
     /* background-color:#009688; */
-     padding:0px 5px 0px; 
+     padding:0px 35px 0px; 
   }
 }
 
