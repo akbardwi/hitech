@@ -77,7 +77,7 @@ class Auth extends BaseController{
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Developer HI TECH 2021");
-                            $email_smtp->setMessage("<div>Halo, Tim $tim</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
+                            $email_smtp->setMessage("<div>Halo, Tim $tim</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer software fair di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($sf);
@@ -163,7 +163,7 @@ class Auth extends BaseController{
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Developer HI TECH 2021");
-                            $email_smtp->setMessage("<div>Halo, Tim $tim</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
+                            $email_smtp->setMessage("<div>Halo, Tim $tim</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer hardware fair di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Salam, Hi-technology 2021</div>");
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($hf);
@@ -381,6 +381,10 @@ class Auth extends BaseController{
                             session()->setFlashdata('error_visitors', 'Silahkan cek inbox/spam email untuk verifikasi terlebih dahulu.');
                             return redirect()->to(base_url()."/#pengunjung");
                         } else {
+                            if(strtotime(date("29-03-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
+                                session()->setFlashdata('error_visitors', 'Mohon maaf, sistem bisa dibuka mulai 29 Maret 2021.');
+                                return redirect()->to(base_url()."/#pengunjung");
+                            }
                             session()->set('user_email',$check_user['email']);
                             session()->set('cat_dev','visitor');
                             session()->set('user_type','visitor');
@@ -469,6 +473,11 @@ class Auth extends BaseController{
                             session()->setFlashdata('error_sf', 'Dimohon untuk menyelesaikan administrasi terlebih dahulu.');
                             return redirect()->to(base_url()."/#sf");
                         }
+
+                        if(strtotime(date("29-03-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
+                            session()->setFlashdata('error_sf', 'Mohon maaf, sistem bisa dibuka mulai 29 Maret 2021.');
+                            return redirect()->to(base_url()."/#sf");
+                        }
                         $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
                         $kode = substr(str_shuffle($karakter), 0, 30);
                         $email_smtp = \Config\Services::email();
@@ -500,6 +509,10 @@ class Auth extends BaseController{
                     if($check_user){
                         if($check_user['bayar'] == 0){
                             session()->setFlashdata('error_hf', 'Dimohon untuk menyelesaikan administrasi terlebih dahulu.');
+                            return redirect()->to(base_url()."/#hf");
+                        }
+                        if(strtotime(date("29-03-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
+                            session()->setFlashdata('error_hf', 'Mohon maaf, sistem bisa dibuka mulai 29 Maret 2021.');
                             return redirect()->to(base_url()."/#hf");
                         }
                         $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
