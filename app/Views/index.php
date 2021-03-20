@@ -495,7 +495,7 @@
                                 <?= csrf_field(); ?>
                                 <div class="omrs-input-group">
                                     <label class="omrs-input-underlined">
-                                        <input type="text" name="tim_hf" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['tim_hf']; ?>" <?php } ?> required>
+                                        <input type="text" name="tim_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['tim_hf']; ?>" <?php } ?> required>
                                         <span class="omrs-input-label">Nama Tim</span>
                                         <!-- <span class="omrs-input-helper">Pesan Error</span> -->
                                         <i class="material-icons">groups</i>
