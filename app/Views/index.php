@@ -66,7 +66,7 @@
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
                     <h1>Hi-Technology</h1>
-                    <h2><strong style="color: white;">Hi-Technology</strong> merupakan festival pameran IT tahunan yang diselanggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro. Hi Technology pada tahun ini bertemakan "<strong style="color: white;">Unlimited Creativity with Technology</strong>". Hi Technology memiliki serangkaian acara yaitu Software Fair, Hardware Fair, dan Open Talkshow.</h2>
+                    <h2>merupakan festival pameran IT tahunan yang diselanggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro.Acara tersebut pada tahun ini bertemakan "<strong style="color: white;">Unlimited Creativity with Technology</strong>".dan memiliki beberapa serangkaian sub acara seperti Software Fair, Hardware Fair, dan Open Talk</h2>
                     <div class="d-lg-flex">
                         <a href="#event" class="btn-get-started scrollto">Get Started</a>
                         <button type="button" class="btn btn-watch-video" data-toggle="modal" data-target="#myModal"> Watch Video <i class="icofont-play-alt-2"></i>
@@ -143,7 +143,7 @@
                 <div>
                     <h3><strong>Software Fair</strong></h3>
                     <h6>
-                    Pameran aplikasi yang menampilkan produk aplikasi karya mahasiswa. Pameran ini mencangkup produk aplikasi Web, Mobile, Game dan Desktop.
+                    Merupakan pameran software yang menampilkan aplikasi hasil dari karya para mahasiswa. Untuk aplikasi yang dipamerkan sendiri mencakup Web, Mobile, Game, serta Desktop.
                     </h6>
                     <div class="accordion">
                         <div class="accordion-item">
@@ -230,7 +230,7 @@
                 <div>
                     <h3><strong>Hardware Fair</strong></h3>
                     <h6>
-                    Pameran teknologi yang menampilkan karya dari mahasiswa tentang produk yang berkaitan dengan Hardware seperti IoT dan sebagainya.
+                    Merupakan pameran hardware yang menampilkan beberapa teknologi dari karya para mahasiswa seperti IoT dan sebagainya.
                     </h6>
                     <div class="accordion">
                         <div class="accordion-item">
@@ -317,7 +317,7 @@
                 <div>
                     <h3><strong>Open Talk</strong></h3>
                     <h6>
-                    Di sesi Open Talk ini akan menghadirkan beberapa pemateri yang nantinya mengulas tentang persoalan yang berkaitan dengan teknologi/ IT
+                    Pada sesi Open Talk para pembicara yang keren , Nantinya akan mengulas tentang "Software Development"
                     </h6>
                     <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
                         Register
@@ -809,7 +809,7 @@
                         <input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
                         <label for="reg-log"></label>
                         <br>
-                        <h5 style="color:white;">Silahkan Baca instruksi pada menu "Instructions", untuk informasi pengunjung</h5>
+                        <h5 style="color:white;">Silahkan dapat membaca instruksi pada menu "Instructions" untuk informasi pengunjung</h5>
                         <div class="card-3d-wrap mx-auto">
                             <div class="card-3d-wrapper">
                                 <div class="card-front">
@@ -919,7 +919,7 @@
                 <div class="main-footer" id="kontak">
                 <div class="footer-atas">
                     <div class="footer-bg">
-                        <h3 style="padding-top: 5px;">For Contact Person</h3>
+                        <h3 style="padding-top: 5px;">Contact Person</h3>
                         <!-- <div class="footer-email-phone">
                             <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Raka)</p></td>
                             <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Anam)</p></td>
@@ -927,14 +927,14 @@
                         </div> -->
                         <div class="footer-email-phone">
                             <ul>
-                                <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08532968373 (Raka)</a></li>
-                                <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085712702685 (Anam)</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=628532968373"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08532968373 (Raka)</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=6285712702685"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085712702685 (Anam)</a></li>
                             </ul>
                         </div>
-                        <h3 style="padding-top: 2px;">For Sponsorship</h3>
+                        <h3 style="padding-top: 2px;">Sponsorship</h3>
                         <div class="footer-email-phone">
                             <ul>
-                                <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08112917060 (Aci)</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=628112912917060"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08112917060 (Aci)</a></li>
                             </ul>
                         </div>
                     </div>
@@ -950,8 +950,8 @@
                         <div class="card-front">
                             <div class="center-wrap">
                                 <div class="section text-center">
-                                    <h6>Pengunjung nantinya akan diarahkan oleh pemandu untuk mengujungi semua stand dari software fair dan hardware fair menggunakan platform Artsteps.</h6> <br>
-                                    <h6>Untuk melakukan voting terhadap tim developer, dapat dilakukan dengan cara login pada tombol form yang ada pada website “Hitechnology“ kemudian pengunjung akan diarahkan ke web sistem untuk voting.</h6></br>
+                                    <h6>Para Pengunjung akan diarahkan oleh pemandu untuk mengujungi semua stand dari software fair dan hardware fair menggunakan platform <strong>Artsteps</strong>.</h6> <br>
+                                    <h6>Untuk melakukan voting terhadap tim developer, dapat dilakukan dengan cara login pada tombol form yang ada pada website <strong>Hi-Technology</strong> kemudian pengunjung akan diarahkan ke web sistem untuk voting.</h6></br>
                                     <h6> Didalam web tersebut, pengunjung juga dapat melakukan interaksi dengan tiap developer pada forum yang disediakan, serta dapat menyelesaikan challenge yang pastinya akan ada hadiah/reward bagi pemenang challenge.</h6> 
                                 </div>
                             </div>
@@ -964,7 +964,7 @@
         <div class="main-footer" id="kontak">
             <div class="footer-atas">
                 <div class="footer-bg">
-                    <h3>For Contact Person</h3>
+                    <h3>Contact Person</h3>
                     <!-- <div class="footer-email-phone">
                         <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Raka)</p></td>
                         <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Anam)</p></td>
@@ -976,7 +976,7 @@
                             <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085712702685 (Anam)</a></li>
                         </ul>
                     </div>
-                    <h3 style="padding-top: 2px;">For Sponsorship</h3>
+                    <h3 style="padding-top: 2px;">Sponsorship</h3>
                     <div class="footer-email-phone">
                         <ul>
                             <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08112917060 (Aci)</a></li>

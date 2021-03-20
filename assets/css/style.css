@@ -493,7 +493,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h2 {
-  color: rgba(255, 255, 255, 0.6);
+  color: #fafafa;
   margin-bottom: 50px;
   font-size: 24px;
 }
@@ -2437,7 +2437,7 @@ body.showLoginForm .popup {
 	padding-right: 5px;
 }
 .footer-email-phone ul li a:hover{
-	color: #37517e;
+	color: #ffff;
 }
 .footer-email-phone ul li a:hover i{
 	color: #333;
