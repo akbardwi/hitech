@@ -160,12 +160,13 @@
                                 <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                 <h6>• Video Penjelasan serta cara kerja Aplikasi </br>(format : 720p atau 1080p landscape)</h6>
                                 <h6>• Power Point Mengenai Software tersebut</h6>
-                                <h6>• Foto lengkap aplikasi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                <h6>• Foto / screenshoot lengkap aplikasi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
                                 <h6>• Foto anggota tim </br>(format  : jpg/png/gif </h6>
-                                <h6>• Deskripsi software </br>(format : word atau pdf)</h6>
+                                <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
+                                <h6>• Deskripsi software</br> (berisi nama tim dan informasi anggota ,nama software /aplikasi,deskripsi software / aplikasi secara singkat, slogan produk, fitur, keunggulan) </br>(format : word atau pdf)</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                 <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                             </div>
@@ -254,7 +255,8 @@
                                 <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
                                 <h6>• Foto anggota tim </br>(format  : jpg/png/gif </h6>
-                                <h6>• Deskripsi hardware </br>(format : word atau pdf)</h6>
+                                <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
+                                <h6>• Deskripsi hardware </br>(berisi nama tim dan informasi anggota ,nama Hardware /alat, deskripsi hardware / alat secara singkat, slogan produk, fitur, keunggulan)</br>(format : word atau pdf)</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                 <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
                             </div>
