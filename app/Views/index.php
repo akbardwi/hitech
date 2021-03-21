@@ -66,7 +66,8 @@
             <div class="row">
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
                     <h1>Hi-Technology</h1>
-                    <h2>merupakan festival pameran IT tahunan yang diselanggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro.Acara tersebut pada tahun ini bertemakan "<strong style="color: white;">Unlimited Creativity with Technology</strong>".dan memiliki beberapa serangkaian sub acara seperti Software Fair, Hardware Fair, dan Open Talk</h2>
+                    <h2>Festival Pameran IT tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro dengan menghadirkan 3 rangkaian acara yaitu Software Fair, Hardware Fair, dan Open Talk.
+                    Tahun ini kami kembali hadir dengan dengan mengusung konsep virtual bertemakan <strong>"Keep Creative and Productive With Technology"</strong>.</h2>
                     <div class="d-lg-flex">
                         <a href="#event" class="btn-get-started scrollto">Get Started</a>
                         <button type="button" class="btn btn-watch-video" data-toggle="modal" data-target="#myModal"> Watch Video <i class="icofont-play-alt-2"></i>
