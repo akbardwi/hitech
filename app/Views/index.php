@@ -934,8 +934,8 @@
                         </div> -->
                         <div class="footer-email-phone">
                             <ul>
-                                <li><a href="https://api.whatsapp.com/send?phone=628532968373"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08532968373 (Raka)</a></li>
-                                <li><a href="https://api.whatsapp.com/send?phone=6285712702685"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085712702685 (Anam)</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085329683273 (Raka)</a></li>
+                                <li><a href="https://api.whatsapp.com/send?phone=6285158799141"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085158799141 (Anam)</a></li>
                             </ul>
                         </div>
                         <h3 style="padding-top: 2px;">Sponsorship</h3>
@@ -979,14 +979,14 @@
                     </div> -->
                     <div class="footer-email-phone">
                         <ul>
-                            <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08532968373 (Raka)</a></li>
-                            <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085712702685 (Anam)</a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085329683273 (Raka)</a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=6285158799141"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085158799141 (Anam)</a></li>
                         </ul>
                     </div>
                     <h3 style="padding-top: 2px;">Sponsorship</h3>
                     <div class="footer-email-phone">
                         <ul>
-                            <li><a href="#"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08112917060 (Aci)</a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=628112912917060"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08112917060 (Aci)</a></li>
                         </ul>
                     </div>
                 </div>
