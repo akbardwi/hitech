@@ -144,7 +144,7 @@
                 <div>
                     <h3><strong>Software Fair</strong></h3>
                     <h6>
-                    Merupakan pameran software yang menampilkan aplikasi hasil dari karya para mahasiswa. Untuk aplikasi yang dipamerkan sendiri mencakup Web, Mobile, Game, serta Desktop.
+                    Pameran software karya mahasiswa berupa Web, Mobile, Game, serta Desktop.
                     </h6>
                     <div class="accordion">
                         <div class="accordion-item">
@@ -163,6 +163,8 @@
                                 <h6>• Foto lengkap aplikasi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
+                                <h6>• Foto anggota tim </br>(format  : jpg/png/gif </h6>
                                 <h6>• Deskripsi software </br>(format : word atau pdf)</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                 <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
@@ -231,7 +233,7 @@
                 <div>
                     <h3><strong>Hardware Fair</strong></h3>
                     <h6>
-                    Merupakan pameran hardware yang menampilkan beberapa teknologi dari karya para mahasiswa seperti IoT dan sebagainya.
+                    Pameran hardware karya mahasiswa yang menampilkan teknologi seperti IoT dan AI.
                     </h6>
                     <div class="accordion">
                         <div class="accordion-item">
@@ -250,6 +252,8 @@
                                 <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
+                                <h6>• Foto anggota tim </br>(format  : jpg/png/gif </h6>
                                 <h6>• Deskripsi hardware </br>(format : word atau pdf)</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                 <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
@@ -318,7 +322,7 @@
                 <div>
                     <h3><strong>Open Talk</strong></h3>
                     <h6>
-                    Pada sesi Open Talk para pembicara yang keren , Nantinya akan mengulas tentang "Software Development"
+                    Talkshow ringan dengan menghadirkan dua pembicara keren yang akan membahas seputar "Software Development".
                     </h6>
                     <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
                         Register
