@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2021 at 01:45 PM
+-- Generation Time: Mar 21, 2021 at 07:56 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -52,12 +52,28 @@ CREATE TABLE `forum` (
   `id_dev` int(255) NOT NULL,
   `id_visitor` int(255) NOT NULL,
   `type_dev` text NOT NULL,
+  `nama` text NOT NULL,
+  `type_user` text NOT NULL,
   `reply_to` int(255) NOT NULL,
-  `text` text NOT NULL,
-  `coin` int(255) NOT NULL,
+  `comment` text NOT NULL,
+  `rate` int(255) NOT NULL,
   `point` int(255) NOT NULL,
   `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `forum`
+--
+
+INSERT INTO `forum` (`id`, `id_dev`, `id_visitor`, `type_dev`, `nama`, `type_user`, `reply_to`, `comment`, `rate`, `point`, `last_update`) VALUES
+(1, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 0, 'Test Comment', 0, 0, '2021-03-21 06:08:54'),
+(2, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 0, 'Halo\r\n\r\nasas', 0, 0, '2021-03-21 06:08:54'),
+(3, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 2, 'Reply Halo', 0, 0, '2021-03-21 06:08:54'),
+(4, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 0, 'AA', 0, 0, '2021-03-21 06:08:54'),
+(5, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 0, 'Aasasasa', 0, 0, '2021-03-21 06:08:54'),
+(6, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 1, 'Test Masuk', 1, 3, '2021-03-21 06:16:23'),
+(7, 1, 0, 'sf', 'PasDev', 'developer', 3, 'Halo juga', 0, 0, '2021-03-21 05:03:57'),
+(8, 1, 0, 'sf', 'PasDev', 'developer', 0, 'Test Comment Dev', 0, 0, '2021-03-21 05:03:05');
 
 -- --------------------------------------------------------
 
@@ -136,7 +152,7 @@ CREATE TABLE `sf` (
 --
 
 INSERT INTO `sf` (`id`, `tim`, `category`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link`, `wa`, `email`, `logo`, `suara`, `bayar`, `verif_code`, `tgl_daftar`) VALUES
-(1, 'PasDev', 'Web', 'Webtun', 'Aku', 'Kepo si :v', '', '', NULL, NULL, '', '', '', '', NULL, 0, 0, '', '2021-03-19 08:45:33');
+(1, 'PasDev', 'Web', 'Webtun', 'Aku', 'Kepo si :v', '', '', NULL, NULL, '', '', '', 'akbar.dwi14@gmail.com', NULL, 0, 0, '', '2021-03-21 04:56:57');
 
 -- --------------------------------------------------------
 
@@ -151,6 +167,7 @@ CREATE TABLE `visitor` (
   `password` varchar(255) NOT NULL,
   `status` int(2) NOT NULL,
   `vote` int(2) NOT NULL DEFAULT 0,
+  `point` int(255) NOT NULL,
   `verif_code` varchar(255) NOT NULL,
   `registered` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -159,8 +176,8 @@ CREATE TABLE `visitor` (
 -- Dumping data for table `visitor`
 --
 
-INSERT INTO `visitor` (`id`, `fullname`, `email`, `password`, `status`, `vote`, `verif_code`, `registered`) VALUES
-(1, 'Akbar Dwi', 'akbar.dwi14@gmail.com', '$2y$10$jDyjZbvhguAs3sIQDtV93OT23mKeVHwPfI82QSX1MWnNwoS87jOzu', 1, 0, '', '2021-03-18 09:44:06');
+INSERT INTO `visitor` (`id`, `fullname`, `email`, `password`, `status`, `vote`, `point`, `verif_code`, `registered`) VALUES
+(1, 'Akbar Dwi', 'akbar.dwi14@gmail.com', '$2y$10$jDyjZbvhguAs3sIQDtV93OT23mKeVHwPfI82QSX1MWnNwoS87jOzu', 1, 0, 3, '', '2021-03-18 09:44:06');
 
 -- --------------------------------------------------------
 
@@ -238,7 +255,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `forum`
 --
 ALTER TABLE `forum`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `hf`
