@@ -8,6 +8,7 @@ use App\Models\Hf_model;
 use App\Models\Ot_model;
 use App\Models\Visitor_model;
 use App\Models\Vote_model;
+use App\Models\Forum_model;
 //End Load Model
 
 class Users extends BaseController{
@@ -106,7 +107,7 @@ class Users extends BaseController{
 					$vote = $db->query("UPDATE hf SET suara = suara+1 WHERE id = '$id_dev'");
 				}
 
-				$query = $db->query("UPDATE visitor SET vote = '1' WHERE email = '$email'");
+				$query = $db->query("UPDATE visitor SET vote = '1', point=point+1 WHERE email = '$email'");
 				if($query and $vote){
 					session()->setFlashdata('success_vote', "Terima kasih telah memberikan suara Anda untuk developer");
 					return redirect()->to($_SERVER['HTTP_REFERER']);
@@ -275,18 +276,22 @@ class Users extends BaseController{
 		$modelUser = new Visitor_model();
 		$modelHF = new Hf_model();
 		$modelSF = new Sf_model();
+		$modelForum = new Forum_model();
 
 		$check_login = $modelUser->check_email($session->get('user_email'));
 		if($type == "software-fair"){
 			$dev = $modelSF->read($id_dev);
 			$dev['app'] = $dev['nama_app'];
+			$dev['type'] = "sf";
 		} else {
 			$dev = $modelHF->read($id_dev);
 			$dev['app'] = $dev['nama_app'];
+			$dev['type'] = "hf";
 		}
 		$data = [
 			'title'				=> 'Forum Developer',
 			'dev'				=> $dev,
+			'forum'				=> $modelForum->listing($id_dev),
 			'dashboard'			=> TRUE,
 			'user_login'		=> $check_login
 		];
@@ -294,5 +299,86 @@ class Users extends BaseController{
 		render_page('vote/layout','header', $data);
 		render_content('vote','forum', $data);
 		render_page('vote/layout','footer', $data);
+	}
+
+	// Submit Comment
+	public function post_comment(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to($_SERVER['HTTP_REFERER']);
+		}
+		// End proteksi
+
+		$method = $_SERVER['REQUEST_METHOD'];
+		if($method == "POST"){
+			$id_dev = filter_var($this->request->getVar('id_dev'), FILTER_SANITIZE_STRING);
+			$id_visitor = filter_var($this->request->getVar('id_visitor'), FILTER_SANITIZE_STRING);
+			$type_dev = filter_var($this->request->getVar('type_dev'), FILTER_SANITIZE_STRING);
+			$reply_to = filter_var($this->request->getVar('reply_to'), FILTER_SANITIZE_STRING);
+			$comment = filter_var($this->request->getVar('comment'), FILTER_SANITIZE_STRING);
+			$nama = filter_var($this->request->getVar('nama'), FILTER_SANITIZE_STRING);
+			$data = [				
+				'id_dev'			=> $id_dev,
+				'id_visitor'		=> $id_visitor,
+				'type_dev'			=> $type_dev,
+				'nama'				=> $nama,
+				'type_user'			=> session()->get('user_type'),
+				'reply_to'			=> $reply_to,
+				'comment'			=> $comment
+			];
+			if($this->form_validation->run($data, 'comment') == FALSE){
+				// mengembalikan nilai input yang sudah dimasukan sebelumnya
+				session()->setFlashdata('inputs', $this->request->getPost());
+				// memberikan pesan error pada saat input data
+				session()->setFlashdata('errors', $this->form_validation->getErrors());
+				return redirect()->to($_SERVER['HTTP_REFERER']);
+			} else {
+				$model = new Forum_model();
+				$model->tambah($data);
+				session()->setFlashdata('success', "Komentar berhasil disimpan.");
+				return redirect()->to($_SERVER['HTTP_REFERER']);
+			}
+		} else {
+			return redirect()->to(base_url("users/dashboard"));
+		}
+	}
+
+	// Rating koin komentar pengunjung
+	public function rate(){
+		$method = $_SERVER['REQUEST_METHOD'];
+		if($method == "POST"){
+			$id = filter_var($this->request->getVar('id'), FILTER_SANITIZE_NUMBER_INT);
+			$id_visitor = filter_var($this->request->getVar('id_visitor'), FILTER_SANITIZE_NUMBER_INT);
+			$quantity = filter_var($this->request->getVar('quantity'), FILTER_SANITIZE_NUMBER_INT);
+			$data = ['quantity' => $quantity];
+			if($this->form_validation->run($data, 'rate') == FALSE){
+				// mengembalikan nilai input yang sudah dimasukan sebelumnya
+				session()->setFlashdata('inputs', $this->request->getPost());
+				// memberikan pesan error pada saat input data
+				session()->setFlashdata('errors', $this->form_validation->getErrors());
+				return redirect()->to($_SERVER['HTTP_REFERER']);
+			} else {
+				if($quantity > 0 or $quantity <= 5){
+					$db = \Config\Database::connect();
+					$rate = $db->query("UPDATE forum SET rate = 1, point = point+$quantity WHERE id = '$id'");
+					$user = $db->query("UPDATE visitor SET point = point+$quantity WHERE id = '$id_visitor'");
+					if($rate and $user){
+						session()->setFlashdata('success', "Terima kasih telah memberikan point ke pengunjung.");
+						return redirect()->to($_SERVER['HTTP_REFERER']);
+					} else {
+						session()->setFlashdata('error', "Gagal memberikan point.");
+						return redirect()->to($_SERVER['HTTP_REFERER']);
+					}
+				} else {
+					session()->setFlashdata('error', "Masukkan point 1-5.");
+					return redirect()->to($_SERVER['HTTP_REFERER']);
+				}
+			}
+		} else {
+			return redirect()->to(base_url("users/forum"));
+		}
 	}
 }

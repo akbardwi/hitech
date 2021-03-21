@@ -10,6 +10,7 @@ class Visitor_model extends Model{
                                 'password',
 								'status',
 								'vote',
+								'point',
 								'verif_code'];
 
     // Listing

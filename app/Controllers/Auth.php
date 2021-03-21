@@ -254,7 +254,7 @@ class Auth extends BaseController{
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($ot);
-                                session()->setFlashdata('success_ot', 'Terima kasih telah mendaftar Open Talk.  Silahkan cek inbox/spam pada email Anda untuk informasil lebih lanjut.');
+                                session()->setFlashdata('success_ot', 'Terima kasih telah mendaftar Open Talk.  Silahkan cek inbox/spam pada email Anda untuk informasi lebih lanjut.');
                                 return redirect()->to(base_url()."/#ot");
                             } else {
                                 session()->setFlashdata('error_ot', 'Pendaftaran gagal, silahkan hubungi panitia.');
@@ -327,6 +327,7 @@ class Auth extends BaseController{
                                     'password'      => password_hash($pass, PASSWORD_DEFAULT),
                                     'status'        => 0,
                                     'vote'          => 0,
+                                    'point'          => 0,
                                     'verif_code'    => $kode
                                 ];
                                 

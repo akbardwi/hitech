@@ -8,15 +8,17 @@ class Forum_model extends Model{
     protected $allowedFields = ['id_dev',
 								'id_visitor', 
                                 'type_dev', 
+                                'nama',
+                                'type_user',
                                 'reply_to',
-                                'text',
-                                'coin',
+                                'comment',
+                                'rate',
                                 'point'];
 
     // Listing
-	public function listing(){
+	public function listing($id){
 		$this->select('*');
-		$this->orderBy("id", "DESC");
+		$this->where(['id_dev' => $id]);
 		$query = $this->get();
 		return $query->getResultArray();
 	}

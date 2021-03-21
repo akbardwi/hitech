@@ -40,8 +40,9 @@ function showComment(){
 }
 
 //Reply
-function showReply(){
-  var replyArea = document.getElementById("reply-area");
+function showReply(id){
+  var replyArea = document.getElementById("reply-area-"+id);
+  // document.getElementById("reply_to").value = id;
   replyArea.classList.remove("hide");
 }
 const submitForm = document.querySelector('.add');

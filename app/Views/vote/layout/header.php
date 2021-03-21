@@ -200,13 +200,13 @@
                     <spam>Hardware Fair</spam>
                 </a>
             </li>
+            <?php } ?>
 			<li class="nav-item">
                 <a href="<?= base_url('users/forum'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Forum</spam>
                 </a>
             </li>
-            <?php } ?>
             <!-- <li class="nav-item">
                 <a href="<?= base_url('users/quick-count'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>

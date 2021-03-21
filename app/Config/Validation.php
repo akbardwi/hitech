@@ -332,4 +332,28 @@ class Validation
 			'mime_in'			=> 'Hanya menerima gambar dengan format .jpeg, .jpg, .png, .gif',
 		],
 	];
+
+	// Validasi Comment Forum
+	public $comment = [
+		'comment'	 	=> 'required',
+	];	 
+	public $comment_errors = [
+		'comment' 			=> [
+			'required'		=> 'Komentar wajib di isi',
+		],
+	];
+
+	// Validasi Rating
+	public $rate = [
+		'quantity'	 	=> [
+			'required',
+			'numeric'
+		],
+	];	 
+	public $rate_errors = [
+		'quantity' 			=> [
+			'required'		=> 'Nilai point wajib di isi',
+			'numeric'		=> 'Point hanya bisa di isi angka 1-5'
+		],
+	];
 }
