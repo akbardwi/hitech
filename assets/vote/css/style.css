@@ -155,11 +155,12 @@ main {
 }
 
 /* Large screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 700px) {
   .navbar {
     top: 0;
     width: 6rem;
     height: 100vh;
+    padding-left: 0px;
   }
 
   .navbar:hover {

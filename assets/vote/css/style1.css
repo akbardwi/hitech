@@ -502,7 +502,7 @@ h3{
 }
 
 .comment-area textarea{
-  width: 100%;
+  width: 120%;
   min-height: 100px;
   padding: 10px;
   margin-block: 10px;
@@ -525,14 +525,16 @@ h3{
   float: left;
   height: 46px;
   padding: 0 10px;
+  display: flex;
 }
-@media(max-width: 700px){
+@media(max-width: 800px){
   .rate {
     float: left;
     height: 46px;
     padding: 0 10px;
     display: contents;
     padding-right: 30px;
+    display: flex;
   }
 }
 .rate:not(:checked) > input {
