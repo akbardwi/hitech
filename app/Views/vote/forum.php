@@ -69,7 +69,7 @@
         <div class="comments-container" id="comment-<?= $data['id']; ?>">
             <div class="body">
                 <div class="authors">
-                    <div class="username"style="color: white;"><?= $data['nama']; ?></div>
+                    <div class="username"style="color: white;"><?= $data['nama']; ?> <span class="badge badge-<?php if($data['type_user'] == "developer"){ echo "success"; } else { echo "primary"; } ?>"><?= $data['type_user']; ?></span></div>
                     <br/>
                     <img src="<?= base_url("assets/vote/img/avatar.jpg"); ?>" alt="">
                     <div>Points:</div>
@@ -99,6 +99,7 @@
                     </div>
                 </div>
                 <div class="content">
+                    <br>
                     <?php if($data['reply_to'] != 0){ ?>
                         Reply to: <a href="#comment-<?= $data['reply_to']; ?>">Comment #<?= $data['reply_to']; ?></a>
                     <?php } ?>
