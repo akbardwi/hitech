@@ -9,6 +9,7 @@ use App\Models\Ot_model;
 use App\Models\Visitor_model;
 use App\Models\Vote_model;
 use App\Models\Admin_model;
+use App\Models\Forum_model;
 //End Load Model
 
 class Admin extends BaseController{
@@ -368,5 +369,71 @@ class Admin extends BaseController{
 		} else {
 			return redirect()->to(base_url($_SERVER['HTTP_REFERER']));
 		}
+	}
+
+	// Halaman List Forum
+	public function fr(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelHF = new Hf_model();
+		$modelSF = new Sf_model();
+        $check_login = $modelUser->check_email($session->get('user_email'));
+
+		$data = [
+			'title'				=> 'Forum Developer',
+			'sf'				=> $modelSF->listing(),
+			'hf'				=> $modelHF->listing(),
+			'dashboard'			=> TRUE,
+			'user_login'		=> $check_login
+		];
+		
+		render_page('admin/layout','header', $data);
+		render_content('admin','qna', $data);
+		render_page('admin/layout','footer', $data);
+	}
+
+	//Halaman Forum Diskusi
+	public function forum($type, $id_dev){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelHF = new Hf_model();
+		$modelSF = new Sf_model();
+		$modelForum = new Forum_model();
+
+		$check_login = $modelUser->check_email($session->get('user_email'));
+		if($type == "software-fair"){
+			$dev = $modelSF->read($id_dev);
+			$dev['app'] = $dev['nama_app'];
+			$dev['type'] = "sf";
+		} else {
+			$dev = $modelHF->read($id_dev);
+			$dev['app'] = $dev['judul_alat'];
+			$dev['type'] = "hf";
+		}
+		$data = [
+			'title'				=> 'Forum Developer',
+			'dev'				=> $dev,
+			'forum'				=> $modelForum->listing($id_dev, $dev['type']),
+			'dashboard'			=> TRUE,
+			'user_login'		=> $check_login
+		];
+		
+		render_page('admin/layout','header', $data);
+		render_content('admin','forum', $data);
+		render_page('admin/layout','footer', $data);
 	}
 }

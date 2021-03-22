@@ -1,11 +1,14 @@
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?= $title; ?> - Hi Tech 2021</title>
-    <script defer src="<?= base_url(); ?>/assets/vote/js/theme.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title><?= $title; ?> - HI TECH 2021</title>
+	<script defer src="<?= base_url(); ?>/assets/vote/js/theme.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/fixedheader/3.1.7/css/fixedHeader.bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style.css" />
+	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style1.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style2.css" />
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/style3.css" />
 	<link rel="stylesheet" href="<?= base_url(); ?>/assets/vote/css/animate.css">
@@ -88,6 +91,12 @@
                 <a href="<?= base_url('admin/quickcount'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Quick Count</spam>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= base_url('admin/forum'); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Forum</spam>
                 </a>
             </li>
             <li class="nav-item">
