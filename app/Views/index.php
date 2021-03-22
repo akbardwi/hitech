@@ -164,7 +164,7 @@
                                 <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
-                                <h6>• Foto anggota tim </br>(format  : jpg/png/gif </h6>
+                                <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
                                 <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
                                 <h6>• Deskripsi software</br> (berisi nama tim dan informasi anggota ,nama software /aplikasi,deskripsi software / aplikasi secara singkat, slogan produk, fitur, keunggulan) </br>(format : word atau pdf)</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
@@ -188,7 +188,7 @@
                                 <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
                                 <h6>• 085712702685 (Anam)</h6>
                                 <h6>• 08532968373 (Raka)</h6>
-                                <h6>3.Pantau info selanjutnya akan dihubungi via email / Whatsapp</h6>
+                                <h6>3.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                             </div>
                           </div>
                         </div>
@@ -254,7 +254,7 @@
                                 <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                 <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
-                                <h6>• Foto anggota tim </br>(format  : jpg/png/gif </h6>
+                                <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
                                 <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
                                 <h6>• Deskripsi hardware </br>(berisi nama tim dan informasi anggota ,nama Hardware /alat, deskripsi hardware / alat secara singkat, slogan produk, fitur, keunggulan)</br>(format : word atau pdf)</h6>
                                 <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
@@ -278,7 +278,7 @@
                                 <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
                                 <h6>• 085712702685 (Anam)</h6>
                                 <h6>• 08532968373 (Raka)</h6>
-                                <h6>3.Pantau info selanjutnya akan dihubungi via email / Whatsapp</h6>
+                                <h6>3.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                             </div>
                           </div>
                         </div>
@@ -324,7 +324,7 @@
                 <div>
                     <h3><strong>Open Talk</strong></h3>
                     <h6>
-                    Talkshow ringan dengan menghadirkan dua pembicara keren yang akan membahas seputar "Software Development".
+                    Talkshow dengan menghadirkan dua pembicara keren yang akan membahas seputar "Software Development".
                     </h6>
                     <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
                         Register
