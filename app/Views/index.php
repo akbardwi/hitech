@@ -923,30 +923,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="main-footer" id="kontak">
-                <div class="footer-atas">
-                    <div class="footer-bg">
-                        <h3 style="padding-top: 5px;">Contact Person</h3>
-                        <!-- <div class="footer-email-phone">
-                            <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Raka)</p></td>
-                            <td><p><i class="fa fa-whatsapp" style="font-size:25px; padding: 5px;"></i>(Anam)</p></td>
-                            
-                        </div> -->
-                        <div class="footer-email-phone">
-                            <ul>
-                                <li><a href="https://api.whatsapp.com/send?phone=6285329683273"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085329683273 (Raka)</a></li>
-                                <li><a href="https://api.whatsapp.com/send?phone=6285158799141"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>085158799141 (Anam)</a></li>
-                            </ul>
-                        </div>
-                        <h3 style="padding-top: 2px;">Sponsorship</h3>
-                        <div class="footer-email-phone">
-                            <ul>
-                                <li><a href="https://api.whatsapp.com/send?phone=628112912917060"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08112917060 (Aci)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
             </div>
             <div id="guide" class="tabcontent"  data-aos="zoom-in" data-aos-delay="100" >
                 <h6 class="mb-0 pb-3">
