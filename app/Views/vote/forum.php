@@ -91,9 +91,7 @@
                         </form>
                         <?php } else { 
                             for($a=0; $a<$data['point']; $a++){ ?>
-                            <td>
                                 <img src="<?= base_url("assets/vote/img/logo1.png"); ?>" style="width: 30px; height: 30px;">
-                            </td>
                         <?php } 
                         }?>
                     </div>
