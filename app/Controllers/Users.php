@@ -285,13 +285,13 @@ class Users extends BaseController{
 			$dev['type'] = "sf";
 		} else {
 			$dev = $modelHF->read($id_dev);
-			$dev['app'] = $dev['nama_app'];
+			$dev['app'] = $dev['judul_alat'];
 			$dev['type'] = "hf";
 		}
 		$data = [
 			'title'				=> 'Forum Developer',
 			'dev'				=> $dev,
-			'forum'				=> $modelForum->listing($id_dev),
+			'forum'				=> $modelForum->listing($id_dev, $dev['type']),
 			'dashboard'			=> TRUE,
 			'user_login'		=> $check_login
 		];
