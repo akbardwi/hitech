@@ -16,9 +16,9 @@ class Forum_model extends Model{
                                 'point'];
 
     // Listing
-	public function listing($id){
+	public function listing($id, $type){
 		$this->select('*');
-		$this->where(['id_dev' => $id]);
+		$this->where(['id_dev' => $id, 'type_dev' => $type]);
 		$query = $this->get();
 		return $query->getResultArray();
 	}
