@@ -108,606 +108,606 @@
                     <h2>EVENT</h2>
                 </div>
             </div>
-        </section>
-        <!-- envent -->
-        <!-- ======= event lisi ======= -->
-        <div class="menu">
-            <?php
-            $inputs_sf = session()->getFlashdata('inputs_sf');
-            $error_sf = session()->getFlashdata('error_sf');
-            $errors_sf = session()->getFlashdata('errors_sf');
-            $success_sf = session()->getFlashdata('success_sf');
-            if(!empty($errors_sf)){ ?>
-            <div class="alert alert-danger" role="alert">
-                <ul>
-                <?php foreach ($errors_sf as $errors_sf) : ?>
-                    <li><?= esc($errors_sf) ?></li>
-                <?php endforeach ?>
-                </ul>
-            </div>
-            <br />
-            <?php } if(!empty($error_sf)){ ?>
-            <div class="alert alert-danger" role="alert">
-                <ul>
-                    <li><?= esc($error_sf) ?></li>
-                </ul>
-            </div>
-            <br />
-            <?php } if(!empty($success_sf)){ ?>
-            <div class="alert alert-success" role="alert">
-                <?= esc($success_sf) ?><br />
-            </div>
-            <br />
-            <?php } ?>
-            <section class="card" data-aos="fade-left" id="sf">
-                <img src="<?= base_url(); ?>/assets/img/sf.png" alt="" data-aos="zoom-in" data-aos-delay="150" class="img-fluid animated">
-                <div>
-                    <h3><strong>Software Fair</strong></h3>
-                    <h6>
-                    Pameran software karya mahasiswa berupa Web, Mobile, Game, serta Desktop.
-                    </h6>
-                    <div class="accordion">
-                        <div class="accordion-item">
-                          <div class="accordion-item-header">
-                            Tata Cara Mendaftar
-                          </div>
-                          <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
-                                <h6>2.Isi form pendaftaran dengan baik</h6>
-                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :    
-                                </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti). <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
-                                <h6>4.Untuk Berkas yang di Perlukan :</h6>
-                                <h6>• Video Penjelasan serta cara kerja Aplikasi </br>(format : 720p atau 1080p landscape)</h6>
-                                <h6>• Power Point Mengenai Software tersebut</h6>
-                                <h6>• Foto / screenshoot lengkap aplikasi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
-                                <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
-                                <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
-                                <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
-                                <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
-                                <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
-                                <h6>• Deskripsi software</br> (berisi nama tim dan informasi anggota ,nama software /aplikasi,deskripsi software / aplikasi secara singkat, slogan produk, fitur, keunggulan) </br>(format : word atau pdf)</h6>
-                                <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
-                                <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <div class="accordion-item">
-                          <div class="accordion-item-header">
-                            Tata Cara Pembayaran
-                          </div>
-                          <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                <h6>1.Setelah melakukan pendaftaran/registrasi melalui web,</br>
-                                tim developer dapat melakukan pembayaran agar bisa login kedalam sistem melalui</h6>
-                                <h6><strong>No Rekening : 006801066219504 (A.n Raka Apritama)</strong></h6>
-                                <h6><strong>Bank              : BRI</strong></h6>
-                                <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
-                                <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
-                                <h6>• 085712702685 (Anam)</h6>
-                                <h6>• 08532968373 (Raka)</h6>
-                                <h6>3.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#sfModal">
-                        Register
-                    </button>
-                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#logDevModal">
-                        Login
-                    </button>
-                </div>         
-            </section>
-
-            <?php
-            $inputs_hf = session()->getFlashdata('inputs_hf');
-            $error_hf = session()->getFlashdata('error_hf');
-            $errors_hf = session()->getFlashdata('errors_hf');
-            $success_hf = session()->getFlashdata('success_hf');
-            if(!empty($errors_hf)){ ?>
-            <div class="alert alert-danger" role="alert">
-                <ul>
-                <?php foreach ($errors_hf as $errors_hf) : ?>
-                    <li><?= esc($errors_hf) ?></li>
-                <?php endforeach ?>
-                </ul>
-            </div>
-            <br />
-            <?php } if(!empty($error_hf)){ ?>
-            <div class="alert alert-danger" role="alert">
-                <ul>
-                    <li><?= esc($error_hf) ?></li>
-                </ul>
-            </div>
-            <br />
-            <?php } if(!empty($success_hf)){ ?>
-            <div class="alert alert-success" role="alert">
-                <?= esc($success_hf) ?><br />
-            </div>
-            <br />
-            <?php } ?>
-            <section class="card" data-aos="fade-left" id="hf">
-                <img src="<?= base_url(); ?>/assets/img/hf.png" alt="" data-aos="zoom-in" data-aos-delay="150" class="img-fluid animated"/>
-                <div>
-                    <h3><strong>Hardware Fair</strong></h3>
-                    <h6>
-                    Pameran hardware karya mahasiswa yang menampilkan teknologi seperti IoT dan AI.
-                    </h6>
-                    <div class="accordion">
-                        <div class="accordion-item">
-                          <div class="accordion-item-header">
-                            Tata Cara Mendaftar
-                          </div>
-                          <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
-                                <h6>2.Isi form pendaftaran dengan baik</h6>
-                                <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :</h6>
-                                <h6><strong>NAMATIM_NamaHardware(event yang diikuti).<br> Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
-                                <h6>4.Untuk Berkas yang di Perlukan :</h6>
-                                <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri </br>(format : 720p atau 1080p landscape)</h6>
-                                <h6>• Power Point mengenai Hardware tersebut </h6>
-                                <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
-                                <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
-                                <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
-                                <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
-                                <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
-                                <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
-                                <h6>• Deskripsi hardware </br>(berisi nama tim dan informasi anggota ,nama Hardware /alat, deskripsi hardware / alat secara singkat, slogan produk, fitur, keunggulan)</br>(format : word atau pdf)</h6>
-                                <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
-                                <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <div class="accordion-item">
-                          <div class="accordion-item-header">
-                            Tata Cara Pembayaran
-                          </div>
-                          <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                <h6>1.Setelah melakukan pendaftaran/registrasi melalui web,</br>
-                                tim developer dapat melakukan pembayaran agar bisa login kedalam sistem melalui</h6>
-                                <h6><strong>No Rekening : 006801066219504 (A.n Raka Apritama)</strong></h6>
-                                <h6><strong>Bank              : BRI</strong></h6>
-                                <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
-                                <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
-                                <h6>• 085712702685 (Anam)</h6>
-                                <h6>• 08532968373 (Raka)</h6>
-                                <h6>3.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#hfModal">
-                        Register
-                    </button>
-                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#logDevModal">
-                        Login
-                    </button>
+            <!-- envent -->
+            <!-- ======= event lisi ======= -->
+            <div class="menu">
+                <?php
+                $inputs_sf = session()->getFlashdata('inputs_sf');
+                $error_sf = session()->getFlashdata('error_sf');
+                $errors_sf = session()->getFlashdata('errors_sf');
+                $success_sf = session()->getFlashdata('success_sf');
+                if(!empty($errors_sf)){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                    <?php foreach ($errors_sf as $errors_sf) : ?>
+                        <li><?= esc($errors_sf) ?></li>
+                    <?php endforeach ?>
+                    </ul>
                 </div>
-            </section>
-
-            <?php
-            $inputs_ot = session()->getFlashdata('inputs_ot');
-            $error_ot = session()->getFlashdata('error_ot');
-            $errors_ot = session()->getFlashdata('errors_ot');
-            $success_ot = session()->getFlashdata('success_ot');
-            if(!empty($errors_ot)){ ?>
-            <div class="alert alert-danger" role="alert">
-                <ul>
-                <?php foreach ($errors_ot as $errors_ot) : ?>
-                    <li><?= esc($errors_ot) ?></li>
-                <?php endforeach ?>
-                </ul>
-            </div>
-            <br />
-            <?php } if(!empty($error_ot)){ ?>
-            <div class="alert alert-danger" role="alert">
-                <ul>
-                    <li><?= esc($error_ot) ?></li>
-                </ul>
-            </div>
-            <br />
-            <?php } if(!empty($success_ot)){ ?>
-            <div class="alert alert-success" role="alert">
-                <?= esc($success_ot) ?><br />
-            </div>
-            <br />
-            <?php } ?>      
-            <section class="card" data-aos="fade-right"id="ot">
-                <img src="<?= base_url(); ?>/assets/img/Opentalk.png" alt="" data-aos="zoom-in" data-aos-delay="150" class="img-fluid animated"/>
-                <div>
-                    <h3><strong>Open Talk</strong></h3>
-                    <h6>
-                    Talkshow dengan menghadirkan dua pembicara keren yang akan membahas seputar "Software Development".
-                    </h6>
-                    <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
-                        Register
-                    </button>
+                <br />
+                <?php } if(!empty($error_sf)){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                        <li><?= esc($error_sf) ?></li>
+                    </ul>
                 </div>
-            </section>
-
-            <!-- Modal SF -->
-            <div class="modal fade" id="sfModal" tabindex="-1" aria-labelledby="sfModalLabel" aria-hidden="true" style="z-index: 9999999;">
-                <div class="modal-dialog">
-                    <div class="modal-content cstm">
-                        <div class="modal-header cstmbg">
-                            <h5 class="modal-title w-100 text-center position-absolute" id="sfModalLabel" >Software Fair Registration</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                <br />
+                <?php } if(!empty($success_sf)){ ?>
+                <div class="alert alert-success" role="alert">
+                    <?= esc($success_sf) ?><br />
+                </div>
+                <br />
+                <?php } ?>
+                <section class="card" data-aos="fade-left" id="sf">
+                    <img src="<?= base_url(); ?>/assets/img/sf.png" alt="" data-aos="zoom-in" data-aos-delay="150" class="img-fluid animated">
+                    <div>
+                        <h3><strong>Software Fair</strong></h3>
+                        <h6>
+                        Pameran software karya mahasiswa berupa Web, Mobile, Game, serta Desktop.
+                        </h6>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                            <div class="accordion-item-header">
+                                Tata Cara Mendaftar
+                            </div>
+                            <div class="accordion-item-body">
+                                <div class="accordion-item-body-content">
+                                    <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
+                                    <h6>2.Isi form pendaftaran dengan baik</h6>
+                                    <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :    
+                                    </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti). <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                    <h6>4.Untuk Berkas yang di Perlukan :</h6>
+                                    <h6>• Video Penjelasan serta cara kerja Aplikasi </br>(format : 720p atau 1080p landscape)</h6>
+                                    <h6>• Power Point Mengenai Software tersebut</h6>
+                                    <h6>• Foto / screenshoot lengkap aplikasi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                    <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                    <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                    <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
+                                    <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
+                                    <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
+                                    <h6>• Deskripsi software</br> (berisi nama tim dan informasi anggota ,nama software /aplikasi,deskripsi software / aplikasi secara singkat, slogan produk, fitur, keunggulan) </br>(format : word atau pdf)</h6>
+                                    <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
+                                    <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        <form action="<?= base_url("auth/register_sf"); ?>" method="post">
-                            <?= csrf_field(); ?>
-                            <div class="row justify-content-between">
-                                <div class="col-4 mb-3">
-                                    <p class="radio-label text-center">Kategori Aplikasi</p>
-                                </div>
-                                <br>
-                                <div class="col text-right">
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="web" value="Web" name="category" class="custom-control-input" <?php if(isset($inputs_sf['category']) and $inputs_sf['category'] == "Web"){ echo "checked"; } ?>>
-                                        <label class="custom-control-label" for="web">Web</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="mobile" value="Mobile" name="category" class="custom-control-input" <?php if(isset($inputs_sf['category']) and $inputs_sf['category'] == "Mobile"){ echo "checked"; } ?>>
-                                        <label class="custom-control-label" for="mobile">Mobile</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="game" value="Game" name="category" class="custom-control-input" <?php if(isset($inputs_sf['category']) and $inputs_sf['category'] == "Game"){ echo "checked"; } ?>>
-                                        <label class="custom-control-label" for="game">Game</label>
-                                    </div>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                            <div class="accordion-item-header">
+                                Tata Cara Pembayaran
+                            </div>
+                            <div class="accordion-item-body">
+                                <div class="accordion-item-body-content">
+                                    <h6>1.Setelah melakukan pendaftaran/registrasi melalui web,</br>
+                                    tim developer dapat melakukan pembayaran agar bisa login kedalam sistem melalui</h6>
+                                    <h6><strong>No Rekening : 006801066219504 (A.n Raka Apritama)</strong></h6>
+                                    <h6><strong>Bank              : BRI</strong></h6>
+                                    <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
+                                    <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
+                                    <h6>• 085712702685 (Anam)</h6>
+                                    <h6>• 08532968373 (Raka)</h6>
+                                    <h6>3.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                                 </div>
                             </div>
-                            <div class="modal-body">
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="text" name="tim" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['tim']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Nama Tim</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">groups</i>
-                                    </label>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_app']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Judul Aplikasi</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">layers</i>
-                                    </label>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_ketua" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_ketua']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">Nama Ketua</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">person</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_ketua" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_ketua']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">NIM Ketua</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">image_aspect_ratio</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">Nama Anggota 1</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">people</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">NIM Anggota 1</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">image_aspect_ratio</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_anggota2" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota2']; ?>" <?php } ?>>
-                                                <span class="omrs-input-label">Nama Anggota 2</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">people</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_anggota2" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota2']; ?>" <?php } ?>>
-                                                <span class="omrs-input-label">NIM Anggota 2</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">image_aspect_ratio</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="text" name="kampus" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['kampus']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Asal Kampus</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">school</i>
-                                    </label>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="text" name="link" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['link']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Link Google Drive</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">insert_link</i>
-                                    </label>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="number" name="wa" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['wa']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Nomor Whatsapp</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">phone_android</i>
-                                    </label>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="email" name="email" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['email']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Email</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">email</i>
-                                    </label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#sfModal">
+                            Register
+                        </button>
+                        <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#logDevModal">
+                            Login
+                        </button>
+                    </div>         
+                </section>
+
+                <?php
+                $inputs_hf = session()->getFlashdata('inputs_hf');
+                $error_hf = session()->getFlashdata('error_hf');
+                $errors_hf = session()->getFlashdata('errors_hf');
+                $success_hf = session()->getFlashdata('success_hf');
+                if(!empty($errors_hf)){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                    <?php foreach ($errors_hf as $errors_hf) : ?>
+                        <li><?= esc($errors_hf) ?></li>
+                    <?php endforeach ?>
+                    </ul>
+                </div>
+                <br />
+                <?php } if(!empty($error_hf)){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                        <li><?= esc($error_hf) ?></li>
+                    </ul>
+                </div>
+                <br />
+                <?php } if(!empty($success_hf)){ ?>
+                <div class="alert alert-success" role="alert">
+                    <?= esc($success_hf) ?><br />
+                </div>
+                <br />
+                <?php } ?>
+                <section class="card" data-aos="fade-left" id="hf">
+                    <img src="<?= base_url(); ?>/assets/img/hf.png" alt="" data-aos="zoom-in" data-aos-delay="150" class="img-fluid animated"/>
+                    <div>
+                        <h3><strong>Hardware Fair</strong></h3>
+                        <h6>
+                        Pameran hardware karya mahasiswa yang menampilkan teknologi seperti IoT dan AI.
+                        </h6>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                            <div class="accordion-item-header">
+                                Tata Cara Mendaftar
+                            </div>
+                            <div class="accordion-item-body">
+                                <div class="accordion-item-body-content">
+                                    <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
+                                    <h6>2.Isi form pendaftaran dengan baik</h6>
+                                    <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :</h6>
+                                    <h6><strong>NAMATIM_NamaHardware(event yang diikuti).<br> Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                    <h6>4.Untuk Berkas yang di Perlukan :</h6>
+                                    <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri </br>(format : 720p atau 1080p landscape)</h6>
+                                    <h6>• Power Point mengenai Hardware tersebut </h6>
+                                    <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                    <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                    <h6>• Logo instansi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
+                                    <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
+                                    <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
+                                    <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
+                                    <h6>• Deskripsi hardware </br>(berisi nama tim dan informasi anggota ,nama Hardware /alat, deskripsi hardware / alat secara singkat, slogan produk, fitur, keunggulan)</br>(format : word atau pdf)</h6>
+                                    <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
+                                    <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
                                 </div>
                             </div>
-                            <div class="modal-footer cstmbg">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Register</button>
                             </div>
-                        </form>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                            <div class="accordion-item-header">
+                                Tata Cara Pembayaran
+                            </div>
+                            <div class="accordion-item-body">
+                                <div class="accordion-item-body-content">
+                                    <h6>1.Setelah melakukan pendaftaran/registrasi melalui web,</br>
+                                    tim developer dapat melakukan pembayaran agar bisa login kedalam sistem melalui</h6>
+                                    <h6><strong>No Rekening : 006801066219504 (A.n Raka Apritama)</strong></h6>
+                                    <h6><strong>Bank              : BRI</strong></h6>
+                                    <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
+                                    <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
+                                    <h6>• 085712702685 (Anam)</h6>
+                                    <h6>• 08532968373 (Raka)</h6>
+                                    <h6>3.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#hfModal">
+                            Register
+                        </button>
+                        <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#logDevModal">
+                            Login
+                        </button>
                     </div>
-                </div>
-            </div> 
+                </section>
 
-            <!-- Modal HF -->
-            <div class="modal fade" id="hfModal" tabindex="-1" aria-labelledby="hfModalLabel" aria-hidden="true"style="z-index: 9999999;">
-                <div class="modal-dialog">
-                    <div class="modal-content cstm">
-                        <div class="modal-header cstmbg">
-                            <h5 class="modal-title w-100 text-center position-absolute" id="hfModalLabel">Hardware Fair Registration</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <form action="<?= base_url("auth/register_hf"); ?>" method="post">
-                            <div class="modal-body">
+                <?php
+                $inputs_ot = session()->getFlashdata('inputs_ot');
+                $error_ot = session()->getFlashdata('error_ot');
+                $errors_ot = session()->getFlashdata('errors_ot');
+                $success_ot = session()->getFlashdata('success_ot');
+                if(!empty($errors_ot)){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                    <?php foreach ($errors_ot as $errors_ot) : ?>
+                        <li><?= esc($errors_ot) ?></li>
+                    <?php endforeach ?>
+                    </ul>
+                </div>
+                <br />
+                <?php } if(!empty($error_ot)){ ?>
+                <div class="alert alert-danger" role="alert">
+                    <ul>
+                        <li><?= esc($error_ot) ?></li>
+                    </ul>
+                </div>
+                <br />
+                <?php } if(!empty($success_ot)){ ?>
+                <div class="alert alert-success" role="alert">
+                    <?= esc($success_ot) ?><br />
+                </div>
+                <br />
+                <?php } ?>      
+                <section class="card" data-aos="fade-right"id="ot">
+                    <img src="<?= base_url(); ?>/assets/img/Opentalk.png" alt="" data-aos="zoom-in" data-aos-delay="150" class="img-fluid animated"/>
+                    <div>
+                        <h3><strong>Open Talk</strong></h3>
+                        <h6>
+                        Talkshow dengan menghadirkan dua pembicara keren yang akan membahas seputar "Software Development".
+                        </h6>
+                        <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
+                            Register
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Modal SF -->
+                <div class="modal fade" id="sfModal" tabindex="-1" aria-labelledby="sfModalLabel" aria-hidden="true" style="z-index: 9999999;">
+                    <div class="modal-dialog">
+                        <div class="modal-content cstm">
+                            <div class="modal-header cstmbg">
+                                <h5 class="modal-title w-100 text-center position-absolute" id="sfModalLabel" >Software Fair Registration</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="<?= base_url("auth/register_sf"); ?>" method="post">
                                 <?= csrf_field(); ?>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="text" name="tim_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['tim_hf']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Nama Tim</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">groups</i>
-                                    </label>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="text" name="judul_alat" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['judul_alat']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Judul Alat</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">layers</i>
-                                    </label>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_ketua_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_ketua_hf']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">Nama Ketua</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">person</i>
-                                            </label>
-                                        </div>
+                                <div class="row justify-content-between">
+                                    <div class="col-4 mb-3">
+                                        <p class="radio-label text-center">Kategori Aplikasi</p>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_ketua_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_ketua_hf']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">NIM Ketua</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">image_aspect_ratio</i>
-                                            </label>
+                                    <br>
+                                    <div class="col text-right">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="web" value="Web" name="category" class="custom-control-input" <?php if(isset($inputs_sf['category']) and $inputs_sf['category'] == "Web"){ echo "checked"; } ?>>
+                                            <label class="custom-control-label" for="web">Web</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="mobile" value="Mobile" name="category" class="custom-control-input" <?php if(isset($inputs_sf['category']) and $inputs_sf['category'] == "Mobile"){ echo "checked"; } ?>>
+                                            <label class="custom-control-label" for="mobile">Mobile</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="game" value="Game" name="category" class="custom-control-input" <?php if(isset($inputs_sf['category']) and $inputs_sf['category'] == "Game"){ echo "checked"; } ?>>
+                                            <label class="custom-control-label" for="game">Game</label>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota_hf']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">Nama Anggota 1</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">people</i>
-                                            </label>
+                                <div class="modal-body">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="text" name="tim" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['tim']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Nama Tim</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">groups</i>
+                                        </label>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="text" name="nama_app" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_app']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Judul Aplikasi</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">layers</i>
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nama_ketua" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_ketua']; ?>" <?php } ?> required>
+                                                    <span class="omrs-input-label">Nama Ketua</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">person</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nim_ketua" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_ketua']; ?>" <?php } ?> required>
+                                                    <span class="omrs-input-label">NIM Ketua</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">image_aspect_ratio</i>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota_hf']; ?>" <?php } ?> required>
-                                                <span class="omrs-input-label">NIM Anggota 1</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">image_aspect_ratio</i>
-                                            </label>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nama_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota']; ?>" <?php } ?> required>
+                                                    <span class="omrs-input-label">Nama Anggota 1</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">people</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nim_anggota" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota']; ?>" <?php } ?> required>
+                                                    <span class="omrs-input-label">NIM Anggota 1</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">image_aspect_ratio</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nama_anggota2" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nama_anggota2']; ?>" <?php } ?>>
+                                                    <span class="omrs-input-label">Nama Anggota 2</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">people</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nim_anggota2" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['nim_anggota2']; ?>" <?php } ?>>
+                                                    <span class="omrs-input-label">NIM Anggota 2</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">image_aspect_ratio</i>
+                                                </label>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nama_anggota2_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota2_hf']; ?>" <?php } ?>>
-                                                <span class="omrs-input-label">Nama Anggota 2</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">people</i>
-                                            </label>
-                                        </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="text" name="kampus" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['kampus']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Asal Kampus</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">school</i>
+                                        </label>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_anggota2_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota2_hf']; ?>" <?php } ?>>
-                                                <span class="omrs-input-label">NIM Anggota 2</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">image_aspect_ratio</i>
-                                            </label>
-                                        </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="text" name="link" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['link']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Link Google Drive</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">insert_link</i>
+                                        </label>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="number" name="wa" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['wa']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Nomor Whatsapp</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">phone_android</i>
+                                        </label>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="email" name="email" <?php if(isset($inputs_sf)){ ?> value="<?= $inputs_sf['email']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Email</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">email</i>
+                                        </label>
                                     </div>
                                 </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="text" name="kampus_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['kampus_hf']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Asal Kampus</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">school</i>
-                                    </label>
+                                <div class="modal-footer cstmbg">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Register</button>
                                 </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="text" name="link_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['link_hf']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Link Google Drive</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">insert_link</i>
-                                    </label>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="number" name="wa_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['wa_hf']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Nomor Whatsapp</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">phone_android</i>
-                                    </label>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="email" name="email_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['email_hf']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Email</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">email</i>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="modal-footer cstmbg">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Register</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div> 
-
-            <!-- Modal OT -->
-            <div class="modal fade" id="otModal" tabindex="-1" aria-labelledby="otModalLabel" aria-hidden="true"style="z-index: 9999999;">
-                <div class="modal-dialog">
-                    <div class="modal-content cstm">
-                        <div class="modal-header cstmbg">
-                            <h5 class="modal-title w-100 text-center position-absolute" id="otModalLabel">Open Talk Registration</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            </form>
                         </div>
-                        <form action="<?= base_url('auth/register_ot'); ?>" method="post">
-                            <?= csrf_field(); ?>
-                            <div class="row justify-content-between">
-                                <div class="col-4 mb-3">
-                                    <p class="radio-label">Kategori Peserta</p>
-                                </div>
-                                <div class="col text-right">
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="radioMhs" value="Mahasiswa" name="otCategory"
-                                            class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Mahasiswa"){ echo "checked"; } ?>>
-                                        <label class="custom-control-label" for="radioMhs">Mahasiswa</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="radioUmum" value="Umum" name="otCategory"
-                                            class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Umum"){ echo "checked"; } ?>>
-                                        <label class="custom-control-label" for="radioUmum">Umum</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-body">
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="text" name="nama_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nama_ot']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Masukkan Nama</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">person</i>
-                                    </label>
-                                </div>
-                                <div class="row" id="mahasiswa">
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="kampus_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['kampus_ot']; ?>" <?php } ?>>
-                                                <span class="omrs-input-label">Asal Kampus</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">school</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="omrs-input-group">
-                                            <label class="omrs-input-underlined">
-                                                <input type="text" name="nim_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nim_ot']; ?>" <?php } ?>>
-                                                <span class="omrs-input-label">NIM</span>
-                                                <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                                <i class="material-icons">image_aspect_ratio</i>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="number" name="wa_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['wa_ot']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Nomor Whatsapp</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">phone_android</i>
-                                    </label>
-                                </div>
-                                <div class="omrs-input-group">
-                                    <label class="omrs-input-underlined">
-                                        <input type="email" name="email_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['email_ot']; ?>" <?php } ?> required>
-                                        <span class="omrs-input-label">Email</span>
-                                        <!-- <span class="omrs-input-helper">Pesan Error</span> -->
-                                        <i class="material-icons">email</i>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="modal-footer cstmbg">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Register</button>
-                            </div>
-                        </form>
                     </div>
-                </div>
-            </div>        
-        </div>
+                </div> 
+
+                <!-- Modal HF -->
+                <div class="modal fade" id="hfModal" tabindex="-1" aria-labelledby="hfModalLabel" aria-hidden="true"style="z-index: 9999999;">
+                    <div class="modal-dialog">
+                        <div class="modal-content cstm">
+                            <div class="modal-header cstmbg">
+                                <h5 class="modal-title w-100 text-center position-absolute" id="hfModalLabel">Hardware Fair Registration</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="<?= base_url("auth/register_hf"); ?>" method="post">
+                                <div class="modal-body">
+                                    <?= csrf_field(); ?>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="text" name="tim_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['tim_hf']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Nama Tim</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">groups</i>
+                                        </label>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="text" name="judul_alat" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['judul_alat']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Judul Alat</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">layers</i>
+                                        </label>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nama_ketua_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_ketua_hf']; ?>" <?php } ?> required>
+                                                    <span class="omrs-input-label">Nama Ketua</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">person</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nim_ketua_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_ketua_hf']; ?>" <?php } ?> required>
+                                                    <span class="omrs-input-label">NIM Ketua</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">image_aspect_ratio</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nama_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota_hf']; ?>" <?php } ?> required>
+                                                    <span class="omrs-input-label">Nama Anggota 1</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">people</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nim_anggota_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota_hf']; ?>" <?php } ?> required>
+                                                    <span class="omrs-input-label">NIM Anggota 1</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">image_aspect_ratio</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nama_anggota2_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nama_anggota2_hf']; ?>" <?php } ?>>
+                                                    <span class="omrs-input-label">Nama Anggota 2</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">people</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nim_anggota2_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['nim_anggota2_hf']; ?>" <?php } ?>>
+                                                    <span class="omrs-input-label">NIM Anggota 2</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">image_aspect_ratio</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="text" name="kampus_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['kampus_hf']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Asal Kampus</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">school</i>
+                                        </label>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="text" name="link_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['link_hf']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Link Google Drive</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">insert_link</i>
+                                        </label>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="number" name="wa_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['wa_hf']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Nomor Whatsapp</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">phone_android</i>
+                                        </label>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="email" name="email_hf" <?php if(isset($inputs_hf)){ ?> value="<?= $inputs_hf['email_hf']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Email</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">email</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer cstmbg">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- Modal OT -->
+                <div class="modal fade" id="otModal" tabindex="-1" aria-labelledby="otModalLabel" aria-hidden="true"style="z-index: 9999999;">
+                    <div class="modal-dialog">
+                        <div class="modal-content cstm">
+                            <div class="modal-header cstmbg">
+                                <h5 class="modal-title w-100 text-center position-absolute" id="otModalLabel">Open Talk Registration</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <form action="<?= base_url('auth/register_ot'); ?>" method="post">
+                                <?= csrf_field(); ?>
+                                <div class="row justify-content-between">
+                                    <div class="col-4 mb-3">
+                                        <p class="radio-label">Kategori Peserta</p>
+                                    </div>
+                                    <div class="col text-right">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="radioMhs" value="Mahasiswa" name="otCategory"
+                                                class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Mahasiswa"){ echo "checked"; } ?>>
+                                            <label class="custom-control-label" for="radioMhs">Mahasiswa</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="radioUmum" value="Umum" name="otCategory"
+                                                class="custom-control-input" <?php if(isset($inputs_ot['otCategory']) and $inputs_ot['otCategory'] == "Umum"){ echo "checked"; } ?>>
+                                            <label class="custom-control-label" for="radioUmum">Umum</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="text" name="nama_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nama_ot']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Masukkan Nama</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">person</i>
+                                        </label>
+                                    </div>
+                                    <div class="row" id="mahasiswa">
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="kampus_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['kampus_ot']; ?>" <?php } ?>>
+                                                    <span class="omrs-input-label">Asal Kampus</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">school</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="omrs-input-group">
+                                                <label class="omrs-input-underlined">
+                                                    <input type="text" name="nim_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['nim_ot']; ?>" <?php } ?>>
+                                                    <span class="omrs-input-label">NIM</span>
+                                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                                    <i class="material-icons">image_aspect_ratio</i>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="number" name="wa_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['wa_ot']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Nomor Whatsapp</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">phone_android</i>
+                                        </label>
+                                    </div>
+                                    <div class="omrs-input-group">
+                                        <label class="omrs-input-underlined">
+                                            <input type="email" name="email_ot" <?php if(isset($inputs_ot)){ ?> value="<?= $inputs_ot['email_ot']; ?>" <?php } ?> required>
+                                            <span class="omrs-input-label">Email</span>
+                                            <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                            <i class="material-icons">email</i>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="modal-footer cstmbg">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>        
+            </div>
+        </section>
         <!-- ======= end event list ======= -->
         <section id="pembicara" class="team-section">
             <div class="container" data-aos="fade-up">
@@ -798,7 +798,7 @@
             </div>
         </div>
         <br>
-        <div id="pengunjung">
+        <section id="pengunjung">
             <div class="section-title cstm"data-aos="fade-up">
                 <h2>Pengunjung</h2>
             </div>
@@ -966,9 +966,9 @@
                     </div>
                 <div>
             </div>
-        </div>
+        </section>
 
-        <div class="main-footer" id="kontak">
+        <section class="main-footer" id="kontak">
             <div class="footer-atas">
                 <div class="footer-bg">
                     <h3>Contact Person</h3>
@@ -991,7 +991,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <!-- ======= Footer ======= -->
     <div class="custom-shape-divider-top-1612437875">
