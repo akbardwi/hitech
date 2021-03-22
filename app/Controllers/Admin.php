@@ -413,8 +413,9 @@ class Admin extends BaseController{
 		$modelHF = new Hf_model();
 		$modelSF = new Sf_model();
 		$modelForum = new Forum_model();
+		$modelAdm = new Admin_model();
 
-		$check_login = $modelUser->check_email($session->get('user_email'));
+		$check_login = $modelAdm->check_username($session->get('user_email'));
 		if($type == "software-fair"){
 			$dev = $modelSF->read($id_dev);
 			$dev['app'] = $dev['nama_app'];

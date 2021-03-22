@@ -58,6 +58,8 @@
                 <input type="hidden" name="nama" value="<?= $user_login['fullname']; ?>">
                 <?php } else if(session()->get('user_type') == "developer") { ?>
                 <input type="hidden" name="nama" value="<?= $dev['tim']; ?>">
+                <?php } else if(session()->get('user_type') == "admin") { ?>
+                <input type="hidden" name="nama" value="<?= $user_login['nama']; ?>">
                 <?php } ?>
                 <textarea name="comment" id="" placeholder="comment here ... "></textarea>
                 <input type="submit" value="submit">
@@ -69,7 +71,7 @@
         <div class="comments-container" id="comment-<?= $data['id']; ?>">
             <div class="body">
                 <div class="authors">
-                    <div class="username"style="color: white;"><?= $data['nama']; ?> <span class="badge badge-<?php if($data['type_user'] == "developer"){ echo "success"; } else { echo "primary"; } ?>"><?= $data['type_user']; ?></span></div>
+                    <div class="username"style="color: white;"><?= $data['nama']; ?> <span class="badge badge-<?php if($data['type_user'] == "developer"){ echo "success"; } else if($data['type_user'] == "visitor"){ echo "primary"; } else { echo "warning"; } ?>"><?= $data['type_user']; ?></span></div>
                     <br/>
                     <img src="<?= base_url("assets/vote/img/avatar.jpg"); ?>" alt="">
                     <div>Points:</div>
@@ -122,6 +124,8 @@
                 <input type="hidden" name="nama" value="<?= $user_login['fullname']; ?>">
                 <?php } else if(session()->get('user_type') == "developer") { ?>
                 <input type="hidden" name="nama" value="<?= $dev['tim']; ?>">
+                <?php } else if(session()->get('user_type') == "admin") { ?>
+                <input type="hidden" name="nama" value="<?= $user_login['nama']; ?>">
                 <?php } ?>
                 <input type="hidden" name="reply_to" id="reply_to" value="<?= $data['id']; ?>">
                 <textarea name="comment" id="" placeholder="reply here ... "></textarea>
