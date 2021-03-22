@@ -30,7 +30,7 @@
                 <?php } ?>
             </div>
             <div class="details">
-                <a href="forum1.html"><h2>TEAM 1<br></h2></a>
+                <a href="<?= base_url("users/forum/hardware-fair/".$hf['id']); ?>"><h2><?= $hf['tim']; ?><br></h2></a>
             </div>
         </div>
         <?php } ?>
