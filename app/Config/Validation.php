@@ -292,11 +292,11 @@ class Validation
 	];
 
 	// Validasi Request Token Login Developer
-	public $vote = [		
+	public $feedback = [		
 		'kesan'			=> 'required',
 		'pesan'			=> 'required',
 	];	 
-	public $vote_errors = [
+	public $feedback_errors = [
 		'kesan' 		=> [
 			'required'      => 'Kesan wajib diisi'
 		],
@@ -354,6 +354,16 @@ class Validation
 		'quantity' 			=> [
 			'required'		=> 'Nilai point wajib di isi',
 			'numeric'		=> 'Point hanya bisa di isi angka 1-5'
+		],
+	];
+
+	// Validasi Request Token Login Developer
+	public $vote = [		
+		'star'				=> 'required',
+	];	 
+	public $vote_errors = [
+		'star' 				=> [
+			'required'      => 'Bintang wajib diisi'
 		],
 	];
 }

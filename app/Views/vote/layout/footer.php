@@ -6,12 +6,8 @@
     <script type="text/javascript">
     // get Edit Product
     $('.btn-vote').on('click',function(){
-        const id = $(this).data('id');
-        // const dev = $(this).data('dev');
-        document.getElementById("id").value = id;
-        // document.getElementById("dev").value = dev;
         // Call Modal Detail Pendaftar
-        $('#voteModal').modal('show');
+        $('#feedbackModal').modal('show');
     });
     </script>
     <?php

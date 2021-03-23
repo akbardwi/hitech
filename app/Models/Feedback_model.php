@@ -2,29 +2,26 @@
 
 use CodeIgniter\Model;
 
-class Vote_model extends Model{
-    protected $table 		= 'vote';
+class Feedback_model extends Model{
+    protected $table 		= 'feedback';
 	protected $primaryKey 	= 'id';
-    protected $allowedFields = ['dev', 
-                                'id_dev', 
-                                'email_visitor',
-								'star'];
+    protected $allowedFields = ['email',
+								'pesan', 
+                                'kesan'];
 
     // Listing
 	public function listing(){
 		$this->select('*');
-		$this->orderBy("id", "DESC");
 		$query = $this->get();
 		return $query->getResultArray();
 	}
-
-	// Check Vote
-	public function check_vote($id_dev, $type_dev, $email_visitor){
+	
+	// Count
+	public function hitung(){
 		$this->select('*');
-		$this->where(['id_dev' => $id_dev, 'dev' => $type_dev, 'email_visitor' => $email_visitor]);
 		$query = $this->get();
-		return $query->getRowArray();
-	}
+		return $query->countAllResults();
+    }
 
 	//Tambah
 	public function tambah($data){
