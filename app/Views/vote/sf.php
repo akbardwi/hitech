@@ -1,6 +1,6 @@
 <main>
     <h1 style="text-align: center; color: #fff">SOFTWARE FAIR</h1>
-    <h3 style="text-align: center; color: #fff; padding-bottom:20px;">isi pesan & kesan lalu beri bintang nilai : 1-5 kepada semua developer yang menurut kamu bagus dan menarik</h3>
+    <h4 style="text-align: center; color: #fff; padding-bottom:20px;">isi pesan & kesan lalu beri bintang nilai : 1-5 kepada semua developer yang menurut kamu bagus dan menarik</h4>
     <div class="box">
         <?php foreach($developer as $dev){?>
             <div class="card">
@@ -19,10 +19,12 @@
                     <form action="<?= base_url("users/vote"); ?>" method="post">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="id_dev" value="<?= $dev['id']; ?>">
-                        <input type="hidden" name="dev" value="sf">
-                        <span class="fa fa-star checked" style="color:orange"></span>
-                        <input type="number" id="quantity" name="quantity" min="1" max="5" required>
-                        <button type="submit">Submit</button>
+                        <div class="rating">
+                            <input type="hidden" name="dev" value="sf">
+                            <span class="fa fa-star checked" style="color:orange"></span>
+                            <input type="number" id="quantity" name="quantity" min="1" max="5" required>
+                            <button type="submit">Submit</button>
+                        </div>
                     </form>
                     <?php } ?>
                 </div>
