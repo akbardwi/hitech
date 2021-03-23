@@ -67,7 +67,7 @@
                 <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
                     <h1>Hi-Technology</h1>
                     <h2>Festival Pameran IT tahunan yang diselenggarakan oleh Himpunan Mahasiswa Teknik Informatika Universitas Dian Nuswantoro dengan menghadirkan 3 rangkaian acara yaitu Software Fair, Hardware Fair, dan Open Talk.
-                    Tahun ini kami kembali hadir dengan dengan mengusung konsep virtual bertemakan <strong>"Keep Creative and Productive With Technology"</strong>.</h2>
+                    Tahun ini kami kembali hadir dengan mengusung konsep virtual bertemakan <strong>"Keep Creative and Productive With Technology"</strong>.</h2>
                     <div class="d-lg-flex">
                         <a href="#event" class="btn-get-started scrollto">Get Started</a>
                         <button type="button" class="btn btn-watch-video" data-toggle="modal" data-target="#myModal"> Watch Video <i class="icofont-play-alt-2"></i>
@@ -152,10 +152,10 @@
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
+                                    <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi di bawah ini</h6>
                                     <h6>2.Isi form pendaftaran dengan baik</h6>
                                     <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :    
-                                    </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti). <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                    </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti) <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                     <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                     <h6>• Video Penjelasan serta cara kerja Aplikasi </br>(format : 720p atau 1080p landscape)</h6>
                                     <h6>• Power Point Mengenai Software tersebut</h6>
@@ -165,7 +165,7 @@
                                     <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
                                     <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
                                     <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
-                                    <h6>• Deskripsi software</br> (berisi nama tim dan informasi anggota ,nama software /aplikasi,deskripsi software / aplikasi secara singkat, slogan produk, fitur, keunggulan) </br>(format : word atau pdf)</h6>
+                                    <h6>• Deskripsi software</br>berisi nama tim dan informasi anggota ,nama software /aplikasi,deskripsi software / aplikasi secara singkat, slogan produk, fitur, keunggulan</br>(format : word atau pdf)</h6>
                                     <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                     <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                                 </div>
@@ -184,9 +184,9 @@
                                     <h6><strong>No Rekening : 006801066219504 (A.n Raka Apritama)</strong></h6>
                                     <h6><strong>Bank              : BRI</strong></h6>
                                     <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
-                                    <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
-                                    <h6>• 085712702685 (Anam)</h6>
-                                    <h6>• 08532968373 (Raka)</h6>
+                                    <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini :</h6>
+                                    <h6>• 085158799141 (Anam)</h6>
+                                    <h6>• 085329683273 (Raka)</h6>
                                     <h6>3.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                                 </div>
                             </div>
@@ -242,10 +242,10 @@
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi dibawah ini</h6>
+                                    <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi di bawah ini</h6>
                                     <h6>2.Isi form pendaftaran dengan baik</h6>
                                     <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :</h6>
-                                    <h6><strong>NAMATIM_NamaHardware(event yang diikuti).<br> Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
+                                    <h6><strong>NAMATIM_NamaHardware(event yang diikuti)<br> Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                     <h6>4.Untuk Berkas yang di Perlukan :</h6>
                                     <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri </br>(format : 720p atau 1080p landscape)</h6>
                                     <h6>• Power Point mengenai Hardware tersebut </h6>
@@ -255,7 +255,7 @@
                                     <h6>• Banner </br>(format : png ukuran 595px X 1263px potrait)</h6>
                                     <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
                                     <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
-                                    <h6>• Deskripsi hardware </br>(berisi nama tim dan informasi anggota ,nama Hardware /alat, deskripsi hardware / alat secara singkat, slogan produk, fitur, keunggulan)</br>(format : word atau pdf)</h6>
+                                    <h6>• Deskripsi hardware </br>berisi nama tim dan informasi anggota ,nama Hardware /alat, deskripsi hardware / alat secara singkat, slogan produk, fitur, keunggulan</br>(format : word atau pdf)</h6>
                                     <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                     <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
                                 </div>
@@ -274,9 +274,9 @@
                                     <h6><strong>No Rekening : 006801066219504 (A.n Raka Apritama)</strong></h6>
                                     <h6><strong>Bank              : BRI</strong></h6>
                                     <h6><strong>Biaya Pendaftaran : Rp.30.000,00</strong></h6>
-                                    <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini. :</h6>
-                                    <h6>• 085712702685 (Anam)</h6>
-                                    <h6>• 08532968373 (Raka)</h6>
+                                    <h6>2.Untuk konfirmasi pembayaran sertakan bukti pembayaran dan silahkan menghubungi cp di bawah ini :</h6>
+                                    <h6>• 085158799141 (Anam)</h6>
+                                    <h6>• 085329683273 (Raka)</h6>
                                     <h6>3.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                                 </div>
                             </div>
@@ -962,7 +962,7 @@
                     <h3 style="padding-top: 2px;">Sponsorship</h3>
                     <div class="footer-email-phone">
                         <ul>
-                            <li><a href="https://api.whatsapp.com/send?phone=628112912917060"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08112917060 (Aci)</a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=628112917060"><i class="fa fa-whatsapp" style="font-size: 25px; color: white;"></i>08112917060 (Aci)</a></li>
                         </ul>
                     </div>
                 </div>
