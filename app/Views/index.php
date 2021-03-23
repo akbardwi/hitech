@@ -9,7 +9,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="<?= base_url(); ?>/assets/img/logo-navbar.png" rel="icon">
+    <link href="<?= base_url(); ?>/assets/img/logo1.png" rel="icon">
     <!-- <link href="<?= base_url(); ?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
     <!-- Google Fonts -->
