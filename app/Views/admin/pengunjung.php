@@ -63,7 +63,9 @@
                                     } ?>
                                 </td>
                             </tr>
-                            <?php } ?>
+                            <?php 
+                            $no++;
+                            } ?>
                         </tbody>
                         <tfoot>
                             <tr>

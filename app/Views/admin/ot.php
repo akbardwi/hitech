@@ -51,7 +51,9 @@
                                 <td><?= $data['nim']; ?></td>
                                 <td><?= $data['kampus']; ?></td>
                             </tr>
-                            <?php } ?>
+                            <?php 
+                            $no++;
+                            } ?>
                         </tbody>
                         <tfoot>
                             <tr>

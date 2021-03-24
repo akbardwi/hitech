@@ -65,7 +65,9 @@
                                     <a href="javascript:void(0)" data-id="<?= $data['id']; ?>" data-type="sf" class="btn btn-primary btn-bayar">HTM</a>
                                 </td>
                             </tr>
-                            <?php } ?>
+                            <?php 
+                            $no++;
+                            } ?>
                         </tbody>
                         <tfoot>
                             <tr>
