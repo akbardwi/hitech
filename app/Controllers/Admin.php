@@ -437,4 +437,33 @@ class Admin extends BaseController{
 		render_content('admin','forum', $data);
 		render_page('admin/layout','footer', $data);
 	}
+
+	//Halaman Forum Open Talk
+	public function opentalk(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelHF = new Hf_model();
+		$modelSF = new Sf_model();
+		$modelForum = new Forum_model();
+		$modelAdm = new Admin_model();
+
+		$check_login = $modelAdm->check_username($session->get('user_email'));
+		$data = [
+			'title'				=> 'Forum OpenTalk',
+			'forum'				=> $modelForum->listing(0, 'ot'),
+			'dashboard'			=> TRUE,
+			'user_login'		=> $check_login
+		];
+		
+		render_page('admin/layout','header', $data);
+		render_content('admin','forumOT', $data);
+		render_page('admin/layout','footer', $data);
+	}
 }

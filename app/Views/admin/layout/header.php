@@ -100,6 +100,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="<?= base_url('admin/opentalk'); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Forum OpenTalk</spam>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="<?= base_url('admin/logout'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Log Out</spam>    
