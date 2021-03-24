@@ -157,7 +157,7 @@
                                     <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :    
                                     </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti) <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                     <h6>4.Untuk Berkas yang di Perlukan :</h6>
-                                    <h6>• Video Penjelasan serta cara kerja Aplikasi </br>(format : 720p atau 1080p landscape)</h6>
+                                    <h6>• Video Penjelasan serta cara kerja Aplikasi </br>(format : 720p atau 1080p landscape) dikumpulkan dalam bentuk link youtube dan link disertakan pada form deskripsi software</h6>
                                     <h6>• Power Point Mengenai Software tersebut</h6>
                                     <h6>• Foto / screenshoot lengkap aplikasi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                     <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
@@ -166,6 +166,7 @@
                                     <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
                                     <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
                                     <h6>• Deskripsi software</br>berisi nama tim dan informasi anggota ,nama software /aplikasi,deskripsi software / aplikasi secara singkat, slogan produk, fitur, keunggulan</br>(format : word atau pdf)</h6>
+                                    <h6>• Untuk contoh file pemberkasan bisa diakses pada drive berikut : https://drive.google.com/drive/folders/1GFMBxBqFtbmOn2heGuFgvX6fsw0sN2QJ?usp=sharing</h6>
                                     <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                     <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                                 </div>
@@ -247,7 +248,7 @@
                                     <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :</h6>
                                     <h6><strong>NAMATIM_NamaHardware(event yang diikuti)<br> Contoh : TECH_Smartlock(Hardware Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
                                     <h6>4.Untuk Berkas yang di Perlukan :</h6>
-                                    <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri </br>(format : 720p atau 1080p landscape)</h6>
+                                    <h6>• Video Penjelasan serta cara kerja Hardware itu sendiri </br>(format : 720p atau 1080p landscape) dikumpulkan dalam bentuk link youtube dan link disertakan pada form deskripsi hardware</h6>
                                     <h6>• Power Point mengenai Hardware tersebut </h6>
                                     <h6>• Foto / Screenshoot lengkap Hardware dari berbagai sisi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
                                     <h6>• Logo tim (jika ada) </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
@@ -256,6 +257,7 @@
                                     <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
                                     <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
                                     <h6>• Deskripsi hardware </br>berisi nama tim dan informasi anggota ,nama Hardware /alat, deskripsi hardware / alat secara singkat, slogan produk, fitur, keunggulan</br>(format : word atau pdf)</h6>
+                                    <h6>• Untuk contoh file pemberkasan bisa diakses pada drive berikut : https://drive.google.com/drive/folders/1GFMBxBqFtbmOn2heGuFgvX6fsw0sN2QJ?usp=sharing</h6>
                                     <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                     <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
                                 </div>
@@ -349,6 +351,7 @@
                                 <div class="row justify-content-between">
                                     <div class="col-4 mb-3">
                                         <p class="radio-label text-center">Kategori Aplikasi</p>
+                                        <p><b>*Note</b> : kekurangan berkas bisa di upload maksimal tanggal 31 Maret 2021 pukul 12.00 WIB</p>
                                     </div>
                                     <br>
                                     <div class="col text-right">
