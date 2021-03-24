@@ -189,7 +189,7 @@ class Users extends BaseController{
 		$data = [
 			'title'				=> 'Vote Software Fair',
 			'dashboard'			=> TRUE,
-			'developer'			=> $modelSF->listing(),
+			'developer'			=> $modelSF->lunas(),
 			'vote'				=> $modelVote->listing(),
 			'user_login'		=> $check_login
 		];
@@ -211,6 +211,7 @@ class Users extends BaseController{
 		// End proteksi
 		$modelUser = new Visitor_model();
 		$modelHF = new Hf_model();
+		$modelVote = new Vote_model();
 		if(session()->get('user_type') == "visitor"){
 			$check_login = $modelUser->check_email($session->get('user_email'));
 		} else {
@@ -220,7 +221,8 @@ class Users extends BaseController{
 		$data = [
 			'title'				=> 'Vote Hardware Fair',
 			'dashboard'			=> TRUE,
-			'developer'			=> $modelHF->listing(),
+			'developer'			=> $modelHF->lunas(),
+			'vote'				=> $modelVote->listing(),
 			'user_login'		=> $check_login
 		];
 		
@@ -300,8 +302,8 @@ class Users extends BaseController{
 
 		$data = [
 			'title'				=> 'Forum Developer',
-			'sf'				=> $modelSF->listing(),
-			'hf'				=> $modelHF->listing(),
+			'sf'				=> $modelSF->lunas(),
+			'hf'				=> $modelHF->lunas(),
 			'dashboard'			=> TRUE,
 			'user_login'		=> $check_login
 		];

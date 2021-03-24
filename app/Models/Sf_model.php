@@ -29,6 +29,15 @@ class Sf_model extends Model{
 		return $query->getResultArray();
 	}
 
+	// Dev Lunas
+	public function lunas(){
+		$this->select('*');
+		$this->orderBy("id", "DESC");
+		$this->where(['bayar' => 1]);
+		$query = $this->get();
+		return $query->getResultArray();
+	}
+
 	// Quick Count
 	public function qc(){
 		$this->select('*');
