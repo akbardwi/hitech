@@ -351,8 +351,8 @@
                                 <div class="row justify-content-between">
                                     <div class="col-4 mb-3">
                                         <p class="radio-label text-center">Kategori Aplikasi</p>
-                                        <p><b>*Note</b> : kekurangan berkas bisa di upload maksimal tanggal 31 Maret 2021 pukul 12.00 WIB</p>
                                     </div>
+                                    
                                     <br>
                                     <div class="col text-right">
                                         <div class="custom-control custom-radio custom-control-inline">
@@ -368,6 +368,7 @@
                                             <label class="custom-control-label" for="game">Game</label>
                                         </div>
                                     </div>
+                                    <p style="padding-left:20px;"><b>*Note</b> : kekurangan berkas bisa di upload maksimal <br>tanggal 31 Maret 2021 pukul 12.00 WIB</p>
                                 </div>
                                 <div class="modal-body">
                                     <div class="omrs-input-group">
@@ -501,7 +502,9 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
+                                
                             </div>
+                            <p style="padding-left:20px;"><b>*Note</b> : kekurangan berkas bisa di upload maksimal <br>tanggal 31 Maret 2021 pukul 12.00 WIB</p>
                             <form action="<?= base_url("auth/register_hf"); ?>" method="post">
                                 <div class="modal-body">
                                     <?= csrf_field(); ?>
@@ -723,34 +726,12 @@
                 <div class="row">
                     <div class="team-items">
                         <div class="item" data-aos="zoom-in" data-aos-delay="100">
-                            <img src="<?= base_url(); ?>/assets/img/comingsoon1.png" class="img-fluid" alt="">
-                            <div class="inner">
-                                <div class="info">
-                                    <h5>COMING SOON</h5>
-                                    <!-- <p>Lorem</p> -->
-                                    <div class="social-links">
-                                        <a href=""><span class="fa fa-facebook"></span></a>
-                                        <a href=""><span class="fa fa-twitter"></span></a>
-                                        <a href=""><span class="fa fa-linkedin"></span></a>
-                                        <a href=""><span class="fa fa-youtube"></span></a>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="<?= base_url(); ?>/assets/img/PEMBICARA1.png" class="img-fluid" alt="">
+                            
                         </div>
                         <div class="item" data-aos="zoom-in" data-aos-delay="100">
-                            <img src="<?= base_url(); ?>/assets/img/comingsoon1.png" class="img-fluid" alt="">
-                            <div class="inner">
-                                <div class="info">
-                                    <h5>COMING SOON</h5>
-                                    <!-- <p>lorem</p> -->
-                                    <div class="social-links">
-                                        <a href=""><span class="fa fa-facebook"></span></a>
-                                        <a href=""><span class="fa fa-twitter"></span></a>
-                                        <a href=""><span class="fa fa-linkedin"></span></a>
-                                        <a href=""><span class="fa fa-youtube"></span></a>
-                                    </div>
-                                </div>
-                            </div>
+                            <img src="<?= base_url(); ?>/assets/img/PEMBICARA2.png" class="img-fluid" alt="">
+                            
                         </div>
                     </div>
                 </div>
