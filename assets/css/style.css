@@ -1241,7 +1241,7 @@ section {
   }
 }
 /* ip x/xr/ adroid */
-@media only screen and (min-device-width: 415px) and (max-device-width: 812px)  { 
+@media (max-width:700px){ 
   .team-section .team-items{
 	
     flex-basis: 100%;
