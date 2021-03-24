@@ -382,7 +382,7 @@ class Auth extends BaseController{
                             session()->setFlashdata('error_visitors', 'Silahkan cek inbox/spam email untuk verifikasi terlebih dahulu.');
                             return redirect()->to(base_url()."/#pengunjung");
                         } else {
-                            if(strtotime(date("29-03-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
+                            if(strtotime(date("03-04-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
                                 session()->setFlashdata('error_visitors', 'Mohon maaf, sistem belum bisa dibuka.');
                                 return redirect()->to(base_url()."/#pengunjung");
                             }
@@ -475,7 +475,7 @@ class Auth extends BaseController{
                             return redirect()->to(base_url()."/#sf");
                         }
 
-                        if(strtotime(date("29-03-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
+                        if(strtotime(date("03-04-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
                             session()->setFlashdata('error_sf', 'Mohon maaf, sistem belum bisa dibuka.');
                             return redirect()->to(base_url()."/#sf");
                         }
@@ -512,7 +512,7 @@ class Auth extends BaseController{
                             session()->setFlashdata('error_hf', 'Dimohon untuk menyelesaikan administrasi terlebih dahulu.');
                             return redirect()->to(base_url()."/#hf");
                         }
-                        if(strtotime(date("29-03-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
+                        if(strtotime(date("03-04-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
                             session()->setFlashdata('error_hf', 'Mohon maaf, sistem belum bisa dibuka.');
                             return redirect()->to(base_url()."/#hf");
                         }
@@ -549,8 +549,8 @@ class Auth extends BaseController{
         }
     }
 
-    //Proses Auto Login Developer
-    public function autoLoginDev($type, $kode){
+    //Proses Auto Login Developer & Open Talk
+    public function autoLogin($type, $kode){
         if($type == "sf"){
             $db      	= \Config\Database::connect();
             $model      = new Sf_model();
@@ -579,6 +579,77 @@ class Auth extends BaseController{
                 session()->setFlashdata('error_hf', 'Link login tidak valid, silahkan coba lagi.');
                 return redirect()->to(base_url()."/#hf");
             }  
+        } else if($type == "ot"){
+            $db      	= \Config\Database::connect();
+            $model      = new Ot_model();
+            $dataUser   = $model->check_login($kode);
+            if($dataUser){
+                $query = $db->query("UPDATE ot SET verif_code = '' WHERE verif_code = '$kode'");
+                session()->set('user_email',$dataUser['email']);
+                session()->set('cat_dev','ot');
+                session()->set('user_type','peserta');
+                return redirect()->to(base_url("opentalk/forum"));
+            } else {
+                session()->setFlashdata('error_ot', 'Link login tidak valid, silahkan coba lagi.');
+                return redirect()->to(base_url()."/#ot");
+            }  
+        } else {
+            return redirect()->to(base_url());
+        }
+    }
+
+    //Request Token Login Open Talk
+    public function otLogin(){
+        $method = $_SERVER["REQUEST_METHOD"];
+        if($method == "POST"){
+            $email = filter_var($this->request->getVar('emailDev'), FILTER_SANITIZE_EMAIL);
+
+            $dev = [
+                'email'         => $email
+            ];
+            
+            if($this->form_validation->run($dev, "otLogin") == FALSE){
+                // mengembalikan nilai input yang sudah dimasukan sebelumnya
+                // session()->setFlashdata('inputs_visitors', $this->request->getPost());
+                // memberikan pesan error pada saat input data
+                session()->setFlashdata('errors_ot', $this->form_validation->getErrors());
+                return redirect()->to(base_url()."/#ot");
+            } else {
+                $model 	= new Ot_model();
+                $db      	= \Config\Database::connect();
+                $check_user = $model->check_email($email);
+                if($check_user){
+                    // if(strtotime(date("03-04-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
+                    //     session()->setFlashdata('error_ot', 'Mohon maaf, sistem belum bisa dibuka.');
+                    //     return redirect()->to(base_url()."/#ot");
+                    // }
+                    $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
+                    $kode = substr(str_shuffle($karakter), 0, 30);
+                    $email_smtp = \Config\Services::email();
+                    $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
+                    $email_smtp->setTo("$email");
+                    $email_smtp->setSubject("Login Peserta Open Talk HI TECH 2021");
+                    $email_smtp->setMessage('Hai, Peserta Open Talk. <br /> Silahkan klik <a href="'.base_url("autologin/ot/$kode").'">disini</a>&nbsp; untuk login atau bisa copy paste link berikut: '.base_url("autologin/ot/$kode"));
+                    $kirim = $email_smtp->send();
+                    if($kirim){
+                        $query = $db->query("UPDATE ot SET verif_code = '$kode' WHERE email = '$email'");
+                        if($query){
+                            session()->setFlashdata('success_ot', 'Silahkan cek email untuk login.');
+                            return redirect()->to(base_url()."/#ot");
+                        } else {
+                            session()->setFlashdata('error_ot', 'Gagal update kode, silahkan coba lagi.');
+                            return redirect()->to(base_url()."/#ot");
+                        }
+                    } else {
+                        session()->setFlashdata('error_ot', 'Email gagal dikirim, silahkan coba lagi.');
+                        return redirect()->to(base_url()."/#ot");
+                    }
+                } else {
+                    // session()->setFlashdata('inputs_ot', $this->request->getPost());
+                    session()->setFlashdata('error_ot', 'Email tidak ditemukan.');
+                    return redirect()->to(base_url()."/#ot");
+                }
+            }
         } else {
             return redirect()->to(base_url());
         }

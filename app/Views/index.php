@@ -328,6 +328,9 @@
                         <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
                             Register
                         </button>
+                        <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otLoginModal">
+                            Login
+                        </button>
                     </div>
                 </section>
 
@@ -751,6 +754,7 @@
             </div>
         </section>
         <br>
+
         <!-- Modal Login Developer -->
         <div class="modal fade" id="logDevModal" tabindex="-1" aria-labelledby="logDevModalLabel" aria-hidden="true"style="z-index: 9999999;">
             <div class="modal-dialog">
@@ -779,6 +783,37 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="modal-body">
+                            <div class="omrs-input-group">
+                                <label class="omrs-input-underlined">
+                                    <input type="email" name="emailDev" required>
+                                    <span class="omrs-input-label">Email</span>
+                                    <!-- <span class="omrs-input-helper">Pesan Error</span> -->
+                                    <i class="material-icons">email</i>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer cstmbg">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Login Open Talk -->
+        <div class="modal fade" id="otLoginModal" tabindex="-1" aria-labelledby="logDevModalLabel" aria-hidden="true"style="z-index: 9999999;">
+            <div class="modal-dialog">
+                <div class="modal-content cstm">
+                    <div class="modal-header cstmbg">
+                        <h5 class="modal-title w-100 text-center position-absolute" id="logDevModalLabel">Login Open Talk</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="<?= base_url("auth/otLogin"); ?>" method="post">
+                        <?= csrf_field(); ?>
                         <div class="modal-body">
                             <div class="omrs-input-group">
                                 <label class="omrs-input-underlined">

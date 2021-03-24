@@ -35,6 +35,14 @@ class Ot_model extends Model{
 		return $query->getRowArray();
     }
 
+	//Cek Login
+    public function check_login($kode){
+        $this->select("*");
+        $this->where(['verif_code' => $kode]);
+        $query = $this->get();
+		return $query->getRowArray();
+    }
+
 	//Tambah
 	public function tambah($data){
 		$this->save($data);

@@ -357,13 +357,23 @@ class Validation
 		],
 	];
 
-	// Validasi Request Token Login Developer
+	// Validasi Rating Forum Peserta
 	public $vote = [		
 		'star'				=> 'required',
 	];	 
 	public $vote_errors = [
 		'star' 				=> [
 			'required'      => 'Bintang wajib diisi'
+		],
+	];
+
+	// Validasi Request Token Login Open Talk
+	public $otLogin = [		
+		'email'				=> 'required',
+	];	 
+	public $otLogin_errors = [
+		'email' 			=> [
+			'required'      => 'Email wajib diisi'
 		],
 	];
 }

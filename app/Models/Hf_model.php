@@ -51,7 +51,7 @@ class Hf_model extends Model{
 		return $query->getRowArray();
     }
 
-	//Cek Email
+	//Cek Login
     public function check_login($kode){
         $this->select("*");
         $this->where(['verif_code' => $kode]);

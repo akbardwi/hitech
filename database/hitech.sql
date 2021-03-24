@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2021 at 08:44 AM
+-- Generation Time: Mar 24, 2021 at 08:46 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -75,24 +75,6 @@ CREATE TABLE `forum` (
   `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `forum`
---
-
-INSERT INTO `forum` (`id`, `id_dev`, `id_visitor`, `type_dev`, `nama`, `type_user`, `reply_to`, `comment`, `rate`, `point`, `last_update`) VALUES
-(1, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 0, 'Test Comment', 0, 0, '2021-03-21 06:08:54'),
-(2, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 0, 'Halo\r\n\r\nasas', 0, 0, '2021-03-21 06:08:54'),
-(3, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 2, 'Reply Halo', 0, 0, '2021-03-21 06:08:54'),
-(4, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 0, 'AA', 0, 0, '2021-03-21 06:08:54'),
-(5, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 0, 'Aasasasa', 0, 0, '2021-03-21 06:08:54'),
-(6, 1, 1, 'sf', 'Akbar Dwi', 'visitor', 1, 'Test Masuk', 1, 3, '2021-03-21 13:55:17'),
-(7, 1, 0, 'sf', 'PasDev', 'developer', 3, 'Halo juga', 0, 0, '2021-03-21 05:03:57'),
-(8, 1, 0, 'sf', 'PasDev', 'developer', 0, 'Test Comment Dev', 0, 0, '2021-03-21 05:03:05'),
-(9, 1, 0, 'sf', '', 'admin', 8, 'Komen Admin', 0, 0, '2021-03-22 11:58:32'),
-(10, 1, 0, 'sf', '', 'admin', 0, 'Admin 1', 0, 0, '2021-03-22 11:59:01'),
-(11, 1, 0, 'sf', '', 'admin', 8, 'Reply Admin', 0, 0, '2021-03-22 12:05:05'),
-(12, 1, 0, 'sf', 'Administrator', 'admin', 0, 'Komentar Admin', 0, 0, '2021-03-22 12:06:53');
-
 -- --------------------------------------------------------
 
 --
@@ -134,6 +116,7 @@ CREATE TABLE `ot` (
   `nim` text DEFAULT NULL,
   `wa` text NOT NULL,
   `email` text NOT NULL,
+  `verif_code` text NOT NULL,
   `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -165,13 +148,6 @@ CREATE TABLE `sf` (
   `tgl_daftar` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `sf`
---
-
-INSERT INTO `sf` (`id`, `tim`, `category`, `nama_app`, `nama_ketua`, `nim_ketua`, `nama_anggota`, `nim_anggota`, `nama_anggota2`, `nim_anggota2`, `kampus`, `link`, `wa`, `email`, `logo`, `suara`, `bayar`, `verif_code`, `tgl_daftar`) VALUES
-(1, 'PasDev', 'Web', 'Webtun', 'Aku', 'Kepo si :v', '', '', NULL, NULL, '', '', '', 'akbar.dwi14@gmail.com', NULL, 0, 0, '', '2021-03-20 21:56:57');
-
 -- --------------------------------------------------------
 
 --
@@ -191,13 +167,6 @@ CREATE TABLE `visitor` (
   `registered` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `visitor`
---
-
-INSERT INTO `visitor` (`id`, `fullname`, `email`, `password`, `status`, `feedback`, `point`, `vote`, `verif_code`, `registered`) VALUES
-(1, 'Akbar Dwi', 'akbar.dwi14@gmail.com', '$2y$10$jDyjZbvhguAs3sIQDtV93OT23mKeVHwPfI82QSX1MWnNwoS87jOzu', 1, 0, 0, 0, '', '2021-03-18 09:44:06');
-
 -- --------------------------------------------------------
 
 --
@@ -212,13 +181,6 @@ CREATE TABLE `vote` (
   `star` int(255) NOT NULL,
   `last_update` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `vote`
---
-
-INSERT INTO `vote` (`id`, `dev`, `id_dev`, `email_visitor`, `star`, `last_update`) VALUES
-(1, 'sf', 1, 'akbar.dwi14@gmail.com', 3, '2021-03-23 07:42:42');
 
 --
 -- Indexes for dumped tables
@@ -292,7 +254,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `forum`
 --
 ALTER TABLE `forum`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `hf`
@@ -310,19 +272,19 @@ ALTER TABLE `ot`
 -- AUTO_INCREMENT for table `sf`
 --
 ALTER TABLE `sf`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `visitor`
 --
 ALTER TABLE `visitor`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `vote`
 --
 ALTER TABLE `vote`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
