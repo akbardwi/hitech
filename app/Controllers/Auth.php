@@ -619,10 +619,10 @@ class Auth extends BaseController{
                 $db      	= \Config\Database::connect();
                 $check_user = $model->check_email($email);
                 if($check_user){
-                    // if(strtotime(date("03-04-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
-                    //     session()->setFlashdata('error_ot', 'Mohon maaf, sistem belum bisa dibuka.');
-                    //     return redirect()->to(base_url()."/#ot");
-                    // }
+                    if(strtotime(date("03-04-2021 08:00:00")) > strtotime(date("d-m-Y H:i:s"))){
+                        session()->setFlashdata('error_ot', 'Mohon maaf, sistem belum bisa dibuka.');
+                        return redirect()->to(base_url()."/#ot");
+                    }
                     $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
                     $kode = substr(str_shuffle($karakter), 0, 30);
                     $email_smtp = \Config\Services::email();
