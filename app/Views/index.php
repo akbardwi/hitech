@@ -166,7 +166,7 @@
                                     <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
                                     <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
                                     <h6>• Deskripsi software</br>berisi nama tim dan informasi anggota ,nama software /aplikasi,deskripsi software / aplikasi secara singkat, slogan produk, fitur, keunggulan</br>(format : word atau pdf)</h6>
-                                    <h6>• Untuk contoh file pemberkasan bisa diakses pada drive berikut : https://drive.google.com/drive/folders/1GFMBxBqFtbmOn2heGuFgvX6fsw0sN2QJ?usp=sharing</h6>
+                                    <h6>• Untuk contoh file pemberkasan bisa diakses pada drive  <a href= "https://drive.google.com/drive/folders/1GFMBxBqFtbmOn2heGuFgvX6fsw0sN2QJ?usp=sharing">berikut</a></h6>
                                     <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                     <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                                 </div>
@@ -257,7 +257,7 @@
                                     <h6>• Foto anggota tim </br>(format  : jpg/png/gif) </h6>
                                     <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
                                     <h6>• Deskripsi hardware </br>berisi nama tim dan informasi anggota ,nama Hardware /alat, deskripsi hardware / alat secara singkat, slogan produk, fitur, keunggulan</br>(format : word atau pdf)</h6>
-                                    <h6>• Untuk contoh file pemberkasan bisa diakses pada drive berikut : https://drive.google.com/drive/folders/1GFMBxBqFtbmOn2heGuFgvX6fsw0sN2QJ?usp=sharing</h6>
+                                    <h6>• Untuk contoh file pemberkasan bisa diakses pada drive  <a href= "https://drive.google.com/drive/folders/1GFMBxBqFtbmOn2heGuFgvX6fsw0sN2QJ?usp=sharing">berikut</a></h6>
                                     <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
                                     <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>        
                                 </div>
