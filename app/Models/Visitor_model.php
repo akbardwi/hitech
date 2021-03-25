@@ -21,6 +21,14 @@ class Visitor_model extends Model{
 		$query = $this->get();
 		return $query->getResultArray();
 	}
+
+	// Ranking
+	public function rank(){
+		$this->select('*');
+		$this->orderBy("point", "DESC");
+		$query = $this->get();
+		return $query->getResultArray();
+	}
 	
 	// Count
 	public function hitung(){

@@ -378,7 +378,7 @@ class Admin extends BaseController{
 		// Proteksi
 		if($session->get('user_email') =="") {
 			$session->setFlashdata('error_visitors', 'Anda belum login');
-			return redirect()->to(base_url()."/#pengunjung");
+			return redirect()->to(base_url("admin/login"));
 		}
 		// End proteksi
 		$modelUser = new Visitor_model();
@@ -406,7 +406,7 @@ class Admin extends BaseController{
 		// Proteksi
 		if($session->get('user_email') =="") {
 			$session->setFlashdata('error_visitors', 'Anda belum login');
-			return redirect()->to(base_url()."/#pengunjung");
+			return redirect()->to(base_url("admin/login"));
 		}
 		// End proteksi
 		$modelUser = new Visitor_model();
@@ -445,7 +445,7 @@ class Admin extends BaseController{
 		// Proteksi
 		if($session->get('user_email') =="") {
 			$session->setFlashdata('error_visitors', 'Anda belum login');
-			return redirect()->to(base_url()."/#pengunjung");
+			return redirect()->to(base_url("admin/login"));
 		}
 		// End proteksi
 		$modelUser = new Visitor_model();
@@ -464,6 +464,63 @@ class Admin extends BaseController{
 		
 		render_page('admin/layout','header', $data);
 		render_content('admin','forumOT', $data);
+		render_page('admin/layout','footer', $data);
+	}
+
+	//Halaman Ranking Pengunjung
+	public function ranking(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url("admin/login"));
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelAdm = new Admin_model();
+
+		$check_login = $modelAdm->check_username($session->get('user_email'));
+		$data = [
+			'title'				=> 'Ranking Pengunjung',
+			'ranking'			=> $modelUser->rank(),
+			'dashboard'			=> TRUE,
+			'user_login'		=> $check_login
+		];
+		
+		render_page('admin/layout','header', $data);
+		render_content('admin','ranking', $data);
+		render_page('admin/layout','footer', $data);
+	}
+
+	//Halaman Rating Developer
+	public function rating(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url("admin/login"));
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+		$modelHF = new Hf_model();
+		$modelSF = new Sf_model();
+		$modelVote = new Vote_model();
+		$modelAdm = new Admin_model();
+
+		$check_login = $modelAdm->check_username($session->get('user_email'));
+		$data = [
+			'title'				=> 'Ranking Pengunjung',
+			'sf'				=> $modelSF->listing(),
+			'hf'				=> $modelHF->listing(),
+			'vote'				=> $modelVote->listing(),
+			'dashboard'			=> TRUE,
+			'user_login'		=> $check_login
+		];
+		
+		render_page('admin/layout','header', $data);
+		render_content('admin','rating', $data);
 		render_page('admin/layout','footer', $data);
 	}
 }

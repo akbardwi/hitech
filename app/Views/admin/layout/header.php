@@ -87,12 +87,12 @@
                     <spam>Daftar Peserta</spam>
                 </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a href="<?= base_url('admin/quickcount'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Quick Count</spam>
                 </a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a href="<?= base_url('admin/forum'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
@@ -103,6 +103,18 @@
                 <a href="<?= base_url('admin/opentalk'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Forum OpenTalk</spam>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= base_url('admin/ranking'); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Ranking Pengunjung</spam>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="<?= base_url('admin/rating'); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Rating Developer</spam>
                 </a>
             </li>
             <li class="nav-item">

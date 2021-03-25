@@ -20,6 +20,12 @@
         $('#myTable').DataTable();
     } );
 
+    $(document).ready( function () {
+        $('#ratingTabel').DataTable({
+            "order": [[4,'desc']]
+        });
+    } );
+
     $('.btn-detail').on('click',function(){
         const data = "<img src='<?php echo base_url("/assets/vote/img/loading.gif"); ?>'/> Silahkan Tunggu";
         $('#dataPendaftar').html(data);
