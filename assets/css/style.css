@@ -639,7 +639,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 20px 0;
+  padding: 0px 0;
   overflow: hidden;
 }
 
@@ -1174,7 +1174,7 @@ section {
 @media only screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3){
   .team-section{
     /* background-color:#009688; */
-     padding:0px 0px 0px; 
+     padding:70px 0px 0px; 
   }
 }
 
@@ -1210,11 +1210,10 @@ section {
 .team-section .team-items{
 	
 	flex-basis: 100%;
-	max-width: 100%;
+	max-width: 190%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-  padding-bottom: 110px;
 }
 @media only screen and (device-width: 375px) and (device-height: 667px)
   and (-webkit-min-device-pixel-ratio: 2) and (-webkit-max-device-pixel-ratio: 2.1) {
@@ -1225,7 +1224,6 @@ section {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      padding-bottom: 185px;
     }
 }
 /* ip 6/7/8 plus */
@@ -1237,11 +1235,10 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-bottom: 185px;
   }
 }
 /* ip x/xr/ adroid */
-@media (max-width:700px){ 
+@media (max-width:800px){ 
   .team-section .team-items{
 	
     flex-basis: 100%;
@@ -1249,7 +1246,6 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-bottom: 185px;
   }
 }
 .team-section .team-items .item{
@@ -1260,8 +1256,8 @@ section {
 }
 .team-section .team-items .item img{
 	display: block;
-	width: 150%;
-  height: 150%;
+	width: 100%;
+  height: 100%;
 	padding:10px;
 }
 

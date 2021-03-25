@@ -728,11 +728,11 @@
                 <div class="row">
                     <div class="team-items">
                         <div class="item" data-aos="zoom-in" data-aos-delay="100">
-                            <img src="<?= base_url(); ?>/assets/img/PEMBICARA1.png" class="img-fluid" alt="">
+                            <img src="<?= base_url(); ?>/assets/img/PEMBICARA4.png" class="img-fluid" alt="">
                             
                         </div>
                         <div class="item" data-aos="zoom-in" data-aos-delay="100">
-                            <img src="<?= base_url(); ?>/assets/img/PEMBICARA2.png" class="img-fluid" alt="">
+                            <img src="<?= base_url(); ?>/assets/img/PEMBICARA3.png" class="img-fluid" alt="">
                             
                         </div>
                     </div>
