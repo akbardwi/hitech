@@ -80,12 +80,14 @@
                 </div>
                 <div class="content">
                     <br>
-                    <?php if($data['reply_to'] != 0){ ?>
-                        Reply to: <a href="#comment-<?= $data['reply_to']; ?>">Comment #<?= $data['reply_to']; ?></a>
-                    <?php } ?>
-                    <br>
-                    <br>
-                    <?= $data['comment']; ?>
+                    <div class="container">
+                        <div class="comment">
+                            <?php if($data['reply_to'] != 0){ ?>
+                            Reply to: <a href="#comment-<?= $data['reply_to']; ?>">Comment #<?= $data['reply_to']; ?></a>
+                            <?php } ?>
+                            <textarea class="textinput" readonly><?= $data['comment']; ?></textarea>
+                        </div>
+                    </div>
                     <br>
                     <!-- <div class="comment">
                         <button onclick="showReply(<?= $data['id']; ?>)">Reply</button>
