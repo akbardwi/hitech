@@ -577,6 +577,7 @@ h3{
   max-width: 820px;
   margin: 0px auto;
   margin-top: 50px;
+  display: contents;
 }
 .comment {
   float: left;
@@ -594,6 +595,7 @@ h3{
   float: left;
   width: 100%;
   height: auto;
+
 }
 
 .textinput {
@@ -602,5 +604,21 @@ h3{
   min-height: 75px;
   outline: none;
   resize: none;
-  border: 1px solid grey;
+    background: transparent;
+  color: #fff;
+  padding-bottom: 90px;
+    border:none;
+}
+@media(max-width: 900px){
+  .textinput {
+  float: left;
+  width: 112%;
+  min-height: 75px;
+  outline: none;
+  resize: none;
+    background: transparent;
+  color: #fff;
+  padding-bottom: 90px;
+  border:none;
+}
 }
