@@ -368,7 +368,7 @@
                                             <label class="custom-control-label" for="game">Game</label>
                                         </div>
                                     </div>
-                                    <p style="padding-left:20px;"><b>*Note</b> : kekurangan berkas bisa di upload maksimal <br>tanggal 31 Maret 2021 pukul 12.00 WIB</p>
+                                    <p style="padding-left:20px;"><b>*Note</b> : kekurangan berkas bisa di upload di Drive maksimal <br>tanggal 31 Maret 2021 pukul 12.00 WIB</p>
                                 </div>
                                 <div class="modal-body">
                                     <div class="omrs-input-group">
@@ -504,7 +504,7 @@
                                 </button>
                                 
                             </div>
-                            <p style="padding-left:20px;"><b>*Note</b> : kekurangan berkas bisa di upload maksimal <br>tanggal 31 Maret 2021 pukul 12.00 WIB</p>
+                            <p style="padding-left:20px;"><b>*Note</b> : kekurangan berkas bisa di upload di Drive maksimal <br>tanggal 31 Maret 2021 pukul 12.00 WIB</p>
                             <form action="<?= base_url("auth/register_hf"); ?>" method="post">
                                 <div class="modal-body">
                                     <?= csrf_field(); ?>
