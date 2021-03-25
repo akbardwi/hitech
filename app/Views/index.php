@@ -152,11 +152,12 @@
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi di bawah ini</h6>
-                                    <h6>2.Isi form pendaftaran dengan baik</h6>
-                                    <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :    
+                                    <h6><strong>Satu tim harus merupakan mahasiswa dalam satu universitas yang sama<strong></h6>
+                                    <h6>1. Peserta mendaftar dengan cara menekan tombol Registrasi di bawah ini</h6>
+                                    <h6>2. Isi form pendaftaran dengan baik</h6>
+                                    <h6>3. Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :    
                                     </h6> <h6><strong>NAMATIM_NamaAplikasi(event yang diikuti) <br>contoh : TECH_Shopee(Software Fair)</strong> yang diperlukan ke drive perwakilan tim,</br>kemudian copy kan link drive tadi pada form tersebut dan jangan lupa untuk mengubah akses drive nya</h6>
-                                    <h6>4.Untuk Berkas yang di Perlukan :</h6>
+                                    <h6>4. Untuk Berkas yang di Perlukan :</h6>
                                     <h6>• Video Penjelasan serta cara kerja Aplikasi </br>(format : 720p atau 1080p landscape durasi maksimal 5 menit) dikumpulkan dalam bentuk link youtube dan link disertakan pada form deskripsi software</h6>
                                     <h6>• Power Point Mengenai Software tersebut</h6>
                                     <h6>• Foto / screenshoot lengkap aplikasi </br>(format : jpg/png/gif ukuran 1080px X 1080px)</h6>
@@ -167,8 +168,8 @@
                                     <h6>• Scan Kartu Tanda Mahasiswa / KTM</h6>
                                     <h6>• Deskripsi software</br>berisi nama tim dan informasi anggota ,nama software /aplikasi,deskripsi software / aplikasi secara singkat, slogan produk, fitur, keunggulan</br>(format : word atau pdf)</h6>
                                     <h6>• Untuk contoh file pemberkasan bisa diakses pada drive  <a href= "https://drive.google.com/drive/folders/1GFMBxBqFtbmOn2heGuFgvX6fsw0sN2QJ?usp=sharing">berikut</a></h6>
-                                    <h6>5.Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
-                                    <h6>6.Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
+                                    <h6>5. Setelah mendaftar diharapkan developer dapat membayar biaya pendaftaran agar email dapat diverifikasi dan dapat digunakan untuk login kedalam sistem penilaian.</h6>
+                                    <h6>6. Untuk info selanjutnya akan dihubungi via email / Whatsapp</h6>
                                 </div>
                             </div>
                             </div>
@@ -243,6 +244,7 @@
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
+                                    <h6><strong>Satu tim harus merupakan mahasiswa dalam satu universitas yang sama<strong></h6>
                                     <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi di bawah ini</h6>
                                     <h6>2.Isi form pendaftaran dengan baik</h6>
                                     <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :</h6>
