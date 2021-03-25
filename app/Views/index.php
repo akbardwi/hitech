@@ -152,7 +152,7 @@
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    <h6><strong>Satu tim harus merupakan mahasiswa dalam satu universitas yang sama<strong></h6>
+                                    <h6><strong>Satu tim harus merupakan mahasiswa dalam satu universitas yang sama</strong></h6>
                                     <h6>1. Peserta mendaftar dengan cara menekan tombol Registrasi di bawah ini</h6>
                                     <h6>2. Isi form pendaftaran dengan baik</h6>
                                     <h6>3. Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :    
@@ -244,7 +244,7 @@
                             </div>
                             <div class="accordion-item-body">
                                 <div class="accordion-item-body-content">
-                                    <h6><strong>Satu tim harus merupakan mahasiswa dalam satu universitas yang sama<strong></h6>
+                                    <h6><strong>Satu tim harus merupakan mahasiswa dalam satu universitas yang sama</strong></h6>
                                     <h6>1.Peserta mendaftar dengan cara menekan tombol Registrasi di bawah ini</h6>
                                     <h6>2.Isi form pendaftaran dengan baik</h6>
                                     <h6>3.Pada bagian link Drive,peserta dimohon untuk mengupload berkas-berkas kedalam satu folder dengan format penamaan :</h6>
