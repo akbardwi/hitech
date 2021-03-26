@@ -77,7 +77,7 @@ class Auth extends BaseController{
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Konfirmasi Pendaftaran Developer HI TECH 2021");
-                            $email_smtp->setMessage("<div>Halo, Tim $tim</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer software fair di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div>https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Untuk panduan lebih lengkap, Pengunjung bisa membaca guideline melalui link berikut:</div><div>".base_url("assets/guideline/GUIDELINE_PENGUNJUNG_SF-HF_2021.pdf")."</div><br /><div>Salam, Hi-technology 2021</div>");
+                            $email_smtp->setMessage("<div>Halo, Tim $tim</div><div><br /></div><div>Terimakasih telah mendaftar sebagai developer software fair di acara Hi-technology. Untuk para tim developer diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div>https://chat.whatsapp.com/CtJBWZtWbwB3hLVHAZyYx2</div><div><br /></div><div>Untuk panduan lebih lengkap, Developer bisa membaca guideline melalui link berikut:</div><div>".base_url("assets/guideline/GUIDELINE_DEVELOPER_SF-HF_2021.pdf")."</div><br /><div>Salam, Hi-technology 2021</div>");
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $model->tambah($sf);
@@ -423,7 +423,7 @@ class Auth extends BaseController{
                 $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                 $email_smtp->setTo("$email");
                 $email_smtp->setSubject("Konfirmasi Pendaftaran Pengunjung HI TECH 2021");
-                $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai pengunjung di acara Hi-technology. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/HH0P9ffhJd51Vmb8hoGdIZ</div><div><br /></div><div>Untuk panduan lebih lengkap, Developer bisa membaca guideline melalui link berikut:</div><div>".base_url("assets/guideline/GUIDELINE_DEVELOPER_SF-HF_2021.pdf")."</div><br /><div>Salam, Hi-technology 2021</div>");
+                $email_smtp->setMessage("<div>Halo, $nama</div><div><br /></div><div>Terimakasih telah mendaftar sebagai pengunjung di acara Hi-technology. Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru.</div><div>Berikut link whatsapp group :</div><div><br />https://chat.whatsapp.com/HH0P9ffhJd51Vmb8hoGdIZ</div><div><br /></div><div>Untuk panduan lebih lengkap, Pengunjung bisa membaca guideline melalui link berikut:</div><div>".base_url("assets/guideline/GUIDELINE_PENGUNJUNG_SF-HF_2021.pdf")."</div><br /><div>Salam, Hi-technology 2021</div>");
                 $kirim = $email_smtp->send();
                 session()->setFlashdata('success_visitors', 'Email berhasil diverifikasi.');
                 return redirect()->to(base_url()."/#pengunjung"); 
