@@ -13,9 +13,6 @@
                 </div>
                 <div class="details">
                     <h2><?= $dev['nama_app']; ?></h2><br>
-                    <?php if($user_login['feedback'] == 0){ ?>
-                    <button href="javascript:void(0)" class="btn-vote" id="button-a" data-id="<?= $dev['id']; ?>">VOTE</button>
-                    <?php } else { ?>
                     <form action="<?= base_url("users/vote"); ?>" method="post">
                         <?= csrf_field(); ?>
                         <input type="hidden" name="id_dev" value="<?= $dev['id']; ?>">
@@ -26,7 +23,6 @@
                             <button type="submit">Submit</button>
                         </div>
                     </form>
-                    <?php } ?>
                 </div>
             </div>
         <?php } ?>
