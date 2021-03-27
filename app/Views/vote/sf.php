@@ -19,7 +19,14 @@
                         <div class="rating">
                             <input type="hidden" name="dev" value="sf">
                             <span class="fa fa-star checked" style="color:orange"></span>
-                            <input type="number" id="quantity" name="quantity" min="1" max="5" required>
+                            <!-- <input type="number" id="quantity" name="quantity" min="1" max="5" required> -->
+                            <select name="quantity" id="">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
                             <button type="submit">Submit</button>
                         </div>
                     </form>

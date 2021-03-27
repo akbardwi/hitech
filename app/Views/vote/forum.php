@@ -86,7 +86,14 @@
                                     <img src="<?= base_url("assets/vote/img/logo1.png"); ?>" style="width: 30px; height: 30px;">
                                 </td>
                                 <td>
-                                    <input type="number" id="quantity" name="quantity" min="1" max="5">
+                                    <!-- <input type="number" id="quantity" name="quantity" min="1" max="5"> -->
+                                    <select name="quantity" id="">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
                                     <input type="submit">
                                 </td>
                             </table>
