@@ -1,4 +1,4 @@
-	<main>
+<main>
 		<div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -37,6 +37,8 @@
                                 <th>Kategori</th>
                                 <th>Nama</th>
                                 <th>NIM</th>
+                                <th>Email</th>
+                                <th>HP/WA</th>
                                 <th>Kampus</th>
                             </tr>
                         </thead>
@@ -49,6 +51,8 @@
                                 <td><?= $data['kategori']; ?></td>
                                 <td><?= $data['nama']; ?></td>
                                 <td><?= $data['nim']; ?></td>
+                                <td><?= $data['email']; ?></td>
+                                <td><?= $data['wa']; ?></td>
                                 <td><?= $data['kampus']; ?></td>
                             </tr>
                             <?php 
@@ -61,6 +65,8 @@
                                 <th>Kategori</th>
                                 <th>Nama</th>
                                 <th>NIM</th>
+                                <th>Email</th>
+                                <th>HP/WA</th>
                                 <th>Kampus</th>
                             </tr>
                         </tfoot>
