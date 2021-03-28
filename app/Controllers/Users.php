@@ -37,6 +37,7 @@ class Users extends BaseController{
 		$modelHF = new Hf_model();
 		if(session()->get('user_type') == "visitor"){
 			$check_login = $modelUser->check_email($session->get('user_email'));
+			$page = "index";
 		} else {
 			if(session()->get('cat_dev') == "sf"){
 				$check_login = $modelSF->check_email($session->get('user_email'));
@@ -45,6 +46,7 @@ class Users extends BaseController{
 				$check_login = $modelHF->check_email($session->get('user_email'));
 				$check_login['fullname'] = $check_login['nama_ketua'];
 			}
+			$page = "index_dev";
 		}
         
 		$data = [
@@ -54,7 +56,7 @@ class Users extends BaseController{
 		];
 		
 		render_page('vote/layout','header', $data);
-		render_content('vote','index', $data);
+		render_content('vote', $page, $data);
 		render_page('vote/layout','footer', $data);
     }
 
