@@ -352,6 +352,14 @@ class Users extends BaseController{
 			return redirect()->to(base_url("users/dashboard"));
 		}
 
+		if($type == "software-fair" and session()->get('cat_dev') == "sf"){
+			
+		} else if($type == "hardware-fair" and session()->get('cat_dev') == "hf"){
+			
+		} else {
+			return redirect()->to(base_url("users/dashboard"));
+		}
+
 		if($type == "software-fair"){
 			$dev = $modelSF->read($id_dev);
 			$dev['app'] = $dev['nama_app'];
