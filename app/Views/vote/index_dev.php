@@ -1,13 +1,15 @@
     <main>
         <h1 style="text-align: center; color: #fff">Selamat Datang, <?= $user_login['fullname']; ?></h1>
         <br>
-        <p style="text-align: left; color: #fff">Ini merupakan halaman dari sistem penilaian / voting acara Hi-Technology 2021. Para pengunjung Hardware fair & Software fair diharapkan memberikan pilihan kepada developer yang menurutnya menarik. Untuk cara voting/penilaiannya sebagai berikut:</p>
-        <p style="text-align: left; color: #fff">1.Pengunjung yang sudah mendaftar di laman pendaftaran dapat langsung login kedalam laman voting.</p>
-        <p style="text-align: left; color: #fff">2.Pengunjung diberikan 1 kesempatan untuk melakukan voting.</p>
-        <p style="text-align: left; color: #fff">3.Pengunjung menekan tombol Hardware fair atau Software fair, terserah pengunjung dapat memilih untuk melakukan voting pada salah satu event tersebut.</p>
-        <p style="text-align: left; color: #fff">4.Setelah memilih event maka pada layar akan tampak pilihan tim yang dapat divote.</p>
-        <p style="text-align: left; color: #fff">5.Arahkan kursor ke arah tim yang akan divote hingga muncul tombol "vote", setelah itu tekan tombol vote tersebut</p>
-        <p style="text-align: left; color: #fff">6.Setelah menekan tombol vote maka akan muncul form pesan & kesan untuk acara Hi-Technology 2021. Isikan pesan dan kesan kalian selama mengikuti acara Hi-Technology 2021 ini.</p>
+        <p style="text-align: left; color: #fff">Ini merupakan halaman dari sistem forum interaksi acara Hi-Technology 2021. Para Developer Hardware fair & Software fair diharapkan memberikan pertanyaan pada forum  yang telah di sediakan dengan ketentuan umum sebagai berikut:</p>
+        <p style="text-align: left; color: #fff">1. Prosedur input koin pengunjung oleh developer dapat diakses pada halaman forum di
+        web sistem dan diberikan langsung setelah pengunjung bertanya kepada developer.</p>
+        <p style="text-align: left; color: #fff">2. Developer <strong>WAJIB</strong> memberikan 1 pertanyaan yang nantinya apabila jawaban dari
+        peserta benar maka Developer akan memberikan maksimal 5 koin kepada pengunjung.</p>
+        <p style="text-align: left; color: #fff">3. Developer dapat memberikan koin ke pengunjung yang bertanya di forum dengan batas
+        maksimal 5 koin sesuai dengan bobot pertanyaan tersebut.</p>
+        <p style="text-align: left; color: #fff">4. Developer diharapkan “FAIR” dalam pemberian koin kepada pengunjung acara.</p>
+        <p style="text-align: left; color: #fff">5. Developer wajib mematuhi peraturan yang sudah ditentukan panitia</p>
         </div>
         <br>
         <br>

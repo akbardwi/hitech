@@ -1,6 +1,6 @@
 <main>
-    <h1 style="text-align: center; color: #fff">SOFTWARE FAIR</h1>
-    <h4 style="text-align: center; color: #fff; padding-bottom:20px;">isi pesan & kesan lalu beri bintang nilai : 1-5 kepada semua developer yang menurut kamu bagus dan menarik</h4>
+    <h1 style="text-align: center; color: #fff">HARDWARE FAIR</h1>
+    <h4 style="text-align: center; color: #fff; padding-bottom:20px;">Beri bintang nilai : 1-5 kepada semua developer yang menurut kamu bagus dan menarik dengan cara memasukkan jumlah bintang yang telah disediakan, kemudia tekan tombol Submit</h4>
     <div class="box">
         <?php foreach($developer as $dev){?>
             <div class="card">
@@ -27,7 +27,7 @@
                                 <option value="4">4</option>
                                 <option value="5">5</option>
                             </select>
-                            <button type="submit">Submit</button>
+                            <button type="submit" class="button button3">Submit</button>
                         </div>
                     </form>
                 </div>

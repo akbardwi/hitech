@@ -55,7 +55,12 @@ main {
 .nav-item {
   width: 100%;
 }
-
+@media(max-width:800px){
+  .nav-item {
+    width: 100%;
+    padding-left: 10px;
+  }
+}
 .nav-item:last-child {
   margin-top: auto;
 }
@@ -447,4 +452,17 @@ h3{
   main{
     padding-bottom: 120px;
   }
+}
+.button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px px;
+  cursor: pointer;
+  border-radius: 8px;
 }

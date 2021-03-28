@@ -37,7 +37,7 @@
                     <img src="<?= base_url("assets/vote/img/avatar.jpg"); ?>" alt="">
                 </div>
                 <div class="content">
-                    Silhakan berikan komentar atau pertanyaan terhadap developer untuk tim <?= $dev['tim']; ?>
+                    Silhakan Jawab pertanyaan yang diberikan untuk mendapatkan koin dari  <?= $dev['tim']; ?>
                     <hr>
                     <br>
                     <div class="comment">
