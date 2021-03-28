@@ -41,10 +41,10 @@ class Users extends BaseController{
 		} else {
 			if(session()->get('cat_dev') == "sf"){
 				$check_login = $modelSF->check_email($session->get('user_email'));
-				$check_login['fullname'] = $check_login['nama_ketua'];
+				$check_login['fullname'] = $check_login['tim'];
 			} else {
 				$check_login = $modelHF->check_email($session->get('user_email'));
-				$check_login['fullname'] = $check_login['nama_ketua'];
+				$check_login['fullname'] = $check_login['tim'];
 			}
 			$page = "index_dev";
 		}
