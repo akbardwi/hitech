@@ -344,20 +344,20 @@ class Users extends BaseController{
 			} else {
 				$check_login = $modelHF->check_email($session->get('user_email'));
 			}
+
+			if($id_dev != $check_login['id']){
+				return redirect()->to(base_url("users/dashboard"));
+			}
+	
+			if($type == "software-fair" and session()->get('cat_dev') == "sf"){
+				
+			} else if($type == "hardware-fair" and session()->get('cat_dev') == "hf"){
+				
+			} else {
+				return redirect()->to(base_url("users/dashboard"));
+			}
 		} else {
 			$check_login = $modelUser->check_email($session->get('user_email'));
-		}
-
-		if($id_dev != $check_login['id']){
-			return redirect()->to(base_url("users/dashboard"));
-		}
-
-		if($type == "software-fair" and session()->get('cat_dev') == "sf"){
-			
-		} else if($type == "hardware-fair" and session()->get('cat_dev') == "hf"){
-			
-		} else {
-			return redirect()->to(base_url("users/dashboard"));
 		}
 
 		if($type == "software-fair"){
