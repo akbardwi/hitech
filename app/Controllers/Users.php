@@ -300,7 +300,15 @@ class Users extends BaseController{
 		$modelUser = new Visitor_model();
 		$modelHF = new Hf_model();
 		$modelSF = new Sf_model();
-        $check_login = $modelUser->check_email($session->get('user_email'));
+		if(session()->get('user_type') == "developer"){
+			if(session()->get('cat_dev') == "sf"){
+				$check_login = $modelSF->check_email($session->get('user_email'));
+			} else {
+				$check_login = $modelHF->check_email($session->get('user_email'));
+			}
+		} else {
+			$check_login = $modelUser->check_email($session->get('user_email'));
+		}        
 
 		$data = [
 			'title'				=> 'Forum Developer',
@@ -330,7 +338,20 @@ class Users extends BaseController{
 		$modelSF = new Sf_model();
 		$modelForum = new Forum_model();
 
-		$check_login = $modelUser->check_email($session->get('user_email'));
+		if(session()->get('user_type') == "developer"){
+			if(session()->get('cat_dev') == "sf"){
+				$check_login = $modelSF->check_email($session->get('user_email'));
+			} else {
+				$check_login = $modelHF->check_email($session->get('user_email'));
+			}
+		} else {
+			$check_login = $modelUser->check_email($session->get('user_email'));
+		}
+
+		if($id_dev != $check_login['id']){
+			return redirect()->to(base_url("users/dashboard"));
+		}
+
 		if($type == "software-fair"){
 			$dev = $modelSF->read($id_dev);
 			$dev['app'] = $dev['nama_app'];

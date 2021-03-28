@@ -200,13 +200,25 @@
                     <spam>Hardware Fair</spam>
                 </a>
             </li>
-            <?php } ?>
 			<li class="nav-item">
                 <a href="<?= base_url('users/forum'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Forum</spam>
                 </a>
             </li>
+            <?php } else if(session()->get('user_type') == "developer"){
+				if(session()->get('cat_dev') == "sf"){
+					$type = "software-fair";
+				} else {
+					$type = "hardware-fair";	
+				} ?>
+			<li class="nav-item">
+                <a href="<?= base_url("users/forum/$type/".$user_login['id']); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Forum</spam>
+                </a>
+            </li>
+			<?php } ?>
             <!-- <li class="nav-item">
                 <a href="<?= base_url('users/quick-count'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
