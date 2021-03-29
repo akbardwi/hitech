@@ -318,7 +318,7 @@ class Auth extends BaseController{
                             $email_smtp->setFrom("hmti@orma.dinus.ac.id", "HMTI UDINUS");
                             $email_smtp->setTo("$email");
                             $email_smtp->setSubject("Verifikasi Akun Pengunjung HI TECH 2021");
-                            $email_smtp->setMessage('Terima kasih telah mendaftar sebagai pengunjung HI TECH 2021. Silahkan verifikasi akun Anda dengan klik <a href="'.base_url("verification-email/$kode").'">disini</a>&nbsp;atau bisa copy paste link berikut: '.base_url("verification-email/$kode"));
+                            $email_smtp->setMessage('Terima kasih telah mendaftar sebagai pengunjung HI TECH 2021. Silahkan verifikasi akun Anda dengan klik <a href="'.base_url("verification-email/$kode").'">disini</a>&nbsp;atau bisa copy paste link berikut: '.base_url("verification-email/$kode").'<br /> Untuk para peserta diharapkan untuk bergabung kedalam whatsapp group agar mendapatkan informasi-informasi terbaru. <br /> Berikut link whatsapp group : <br /> https://chat.whatsapp.com/HH0P9ffhJd51Vmb8hoGdIZ');
                             $kirim = $email_smtp->send();
                             if($kirim){
                                 $data = [
