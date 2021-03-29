@@ -279,23 +279,23 @@ main {
   transform: rotate(20deg);
   box-shadow: 0 2px 20px rgba(0,0,0,.2);
 }*/
-.card:hover:after {
+/* .card:hover:after {
   transform: rotate(10deg);
   box-shadow: 0 2px 20px rgba(0,0,0,.2);
-}
+} */
 .card .imgBox {
   position: absolute;
   top: 10px;
   left: 10px;
-  bottom: 10px;
+  bottom: 80px;
   right: 10px;
   background: #222;
   transition: 0.5s;
   z-index: 1;
 }
-.card:hover .imgBox {
+/* .card:hover .imgBox {
   bottom: 80px;
-}
+} */
 .card .imgBox img {
   position: absolute;
   top: 0;
@@ -327,9 +327,6 @@ main {
   display: block;
   margin-top: 5px;
 }
-.card .details .rating {
-  margin:-20px;
-}
 img{
   max-width: 100%;
   height: 200px;
@@ -340,6 +337,9 @@ h3{
   text-align: center;
   font-weight: 400;
   margin-bottom: 0;
+}
+.card .details .rating {
+  margin:-20px;
 }
 .carousel-wrapper{
   position: relative;
