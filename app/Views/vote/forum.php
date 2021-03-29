@@ -94,7 +94,7 @@
                                         <option value="4">4</option>
                                         <option value="5">5</option>
                                     </select>
-                                    <input type="submit">
+                                    <input type="submit" class="button button3" style="padding-left:10px; margin-top:10px;">
                                 </td>
                             </table>
                         </form>
