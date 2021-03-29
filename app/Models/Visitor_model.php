@@ -29,6 +29,15 @@ class Visitor_model extends Model{
 		$query = $this->get();
 		return $query->getResultArray();
 	}
+
+	// Leaderboard
+	public function leaderboard(){
+		$this->select('*');
+		$this->orderBy("point", "DESC");
+		$this->limit(20);
+		$query = $this->get();
+		return $query->getResultArray();
+	}
 	
 	// Count
 	public function hitung(){

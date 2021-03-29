@@ -206,6 +206,12 @@
                     <spam>Forum</spam>
                 </a>
             </li>
+			<li class="nav-item">
+                <a href="<?= base_url('users/leaderboard'); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Leaderboard</spam>
+                </a>
+            </li>
             <?php } else if(session()->get('user_type') == "developer"){
 				if(session()->get('cat_dev') == "sf"){
 					$type = "software-fair";

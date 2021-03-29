@@ -462,4 +462,29 @@ class Users extends BaseController{
 			return redirect()->to(base_url("users/forum"));
 		}
 	}
+
+	//Halaman Leaderboard Pengunjung
+	public function leaderboard(){
+		$config = null;
+		$session = \Config\Services::session($config);
+		// Proteksi
+		if($session->get('user_email') =="") {
+			$session->setFlashdata('error_visitors', 'Anda belum login');
+			return redirect()->to(base_url()."/#pengunjung");
+		}
+		// End proteksi
+		$modelUser = new Visitor_model();
+
+		$check_login = $modelUser->check_email($session->get('user_email'));
+		$data = [
+			'title'				=> 'Leaderboard',
+			'leaderboard'		=> $modelUser->leaderboard(),
+			'dashboard'			=> TRUE,
+			'user_login'		=> $check_login
+		];
+		
+		render_page('vote/layout','header', $data);
+		render_content('vote','leaderboard', $data);
+		render_page('vote/layout','footer', $data);
+	}
 }

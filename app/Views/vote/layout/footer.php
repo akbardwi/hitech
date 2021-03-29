@@ -1,6 +1,8 @@
     <script src="<?= base_url(); ?>/assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?= base_url(); ?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.3.4/dist/sweetalert2.all.min.js"></script> -->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>/assets/vote/js/main.js"></script>
     <script src="https://unpkg.com/flickity@2.0.11/dist/flickity.pkgd.min.js"></script>
     <script type="text/javascript">
@@ -9,6 +11,10 @@
         // Call Modal Detail Pendaftar
         $('#feedbackModal').modal('show');
     });
+
+    $(document).ready( function () {
+        $('#myTable').DataTable();
+    } );
     </script>
     <?php
     $sweetalert = session()->getFlashdata('sweetalert');

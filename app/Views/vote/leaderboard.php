@@ -29,39 +29,23 @@
                     </div>
                     <br />
                     <?php } ?>
-                    <h1>Peserta Pengunjung</h1>
+                    <h1>Ranking Pengunjung</h1>
 					<table id="myTable" class="table table-striped table-bordered" style="width:100%; background: white">
                         <thead>
                             <tr>
                                 <th>No.</th>
                                 <th>Nama</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                                <th>Vote</th>
+                                <th>Point</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php 
                             $no = 1;
-                            foreach($peserta as $data){?>
+                            foreach($leaderboard as $data){?>
                             <tr>
                                 <td><?= $no; ?></td>
                                 <td><?= $data['fullname']; ?></td>
-                                <td><?= $data['email']; ?></td>
-                                <td>
-                                    <?php if($data['status'] == 0){
-                                        echo '<span class="badge badge-danger">Belum Aktif</span>';
-                                    } else {
-                                        echo '<span class="badge badge-success">Sudah Aktif</span>';
-                                    } ?>
-                                </td>
-                                <td>
-                                    <?php if($data['vote'] == 0){
-                                        echo '<span class="badge badge-danger">Belum Vote</span>';
-                                    } else {
-                                        echo '<span class="badge badge-success">'.$data['vote'].'x Vote</span>';
-                                    } ?>
-                                </td>
+                                <td><?= $data['point']; ?></td>
                             </tr>
                             <?php 
                             $no++;
@@ -71,9 +55,7 @@
                             <tr>
                                 <th>No.</th>
                                 <th>Nama</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                                <th>Vote</th>
+                                <th>Point</th>
                             </tr>
                         </tfoot>
                     </table>
