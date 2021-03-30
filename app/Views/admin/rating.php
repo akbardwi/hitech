@@ -64,7 +64,7 @@
                                     $rate = $star/$voter;
                                 }
                                 ?>
-                                <td><?= $rate; ?></td>
+                                <td><?= round($rate, 2); ?></td>
                             </tr>
                             <?php 
                             $no++;
@@ -92,7 +92,7 @@
                                     $rate = $star/$voter;
                                 }
                                 ?>
-                                <td><?= $rate; ?></td>
+                                <td><?= round($rate, 2); ?></td>
                             </tr>
                             <?php 
                             $no++;
