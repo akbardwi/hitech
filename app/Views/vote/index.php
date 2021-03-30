@@ -20,8 +20,6 @@
         pukul 14.50, setelah pukul 14.50 sistem pengumpulan koin akan ditutup.</p>
         <p style="text-align: left; color: #fff">11. Akan diadakan sesi kuis selama acara berlangsung, dimohon untuk pengunjung bisa
         mengikuti acara hingga selesai untuk mendapatkan hadiah menarik.</p>
-        <p style="text-align: left; color: #fff">11. Akan diadakan sesi kuis selama acara berlangsung, dimohon untuk pengunjung bisa
-        mengikuti acara hingga selesai untuk mendapatkan hadiah menarik.</p>
         </div>
         <br>
         <br>
