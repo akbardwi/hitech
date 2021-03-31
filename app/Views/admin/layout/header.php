@@ -119,6 +119,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a href="<?= base_url('admin/voting'); ?>" class="nav-link">
+                    <i class="ri-twitter-fill" style="color: #fff;"></i>
+                    <spam>Daftar Voting</spam>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a href="<?= base_url('admin/logout'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
                     <spam>Log Out</spam>    
