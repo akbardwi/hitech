@@ -332,9 +332,9 @@
                         <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otModal">
                             Register
                         </button>
-                        <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otLoginModal">
+                        <!-- <button type="button" class="btn btn-primary btn-register" data-toggle="modal" data-target="#otLoginModal">
                             Login
-                        </button>
+                        </button> -->
                     </div>
                 </section>
 
@@ -370,7 +370,10 @@
                                             <label class="custom-control-label" for="game">Game</label>
                                         </div>
                                     </div>
-                                    <p style="padding-left:20px;"><b>*Note</b> : kekurangan berkas bisa di upload di Drive maksimal <br>tanggal 31 Maret 2021 pukul 12.00 WIB</p>
+                                    <br />
+                                    <p style="padding-left:20px;"><b>*Note</b> : <br />
+                                    Pendaftaran paling lambat tanggal 1 April 2021 pukul 23.59 WIB<br />
+                                    Pemberkasan paling lambat tanggal 2 April 2021 pukul 23.59 WIB</p> 
                                 </div>
                                 <div class="modal-body">
                                     <div class="omrs-input-group">
@@ -504,9 +507,10 @@
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
-                                
                             </div>
-                            <p style="padding-left:20px;"><b>*Note</b> : kekurangan berkas bisa di upload di Drive maksimal <br>tanggal 31 Maret 2021 pukul 12.00 WIB</p>
+                            <p style="padding-left:20px;"><b>*Note</b> : <br />
+                            Pendaftaran paling lambat tanggal 1 April 2021 pukul 23.59 WIB<br />
+                            Pemberkasan paling lambat tanggal 2 April 2021 pukul 23.59 WIB</p> 
                             <form action="<?= base_url("auth/register_hf"); ?>" method="post">
                                 <div class="modal-body">
                                     <?= csrf_field(); ?>
