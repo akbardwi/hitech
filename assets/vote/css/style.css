@@ -30,9 +30,14 @@ body::-webkit-scrollbar-thumb {
 
 main {
   margin-left: 5rem;
-  padding-left: 2.5rem;
+  padding-left: 1rem;
 }
-
+@media(min-width:700px){
+  main {
+    margin-left: 5rem;
+    padding-left: 3.5rem;
+  }
+}
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
@@ -164,7 +169,7 @@ main {
 @media only screen and (min-width: 700px) {
   .navbar {
     top: 0;
-    width: 7rem;
+    width: 8rem;
     height: 100vh;
     padding-left: 0px;
   }

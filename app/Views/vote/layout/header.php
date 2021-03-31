@@ -184,32 +184,32 @@
             <li class="nav-item active">
                 <a href="<?= base_url('users/dashboard'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
-                    <spam>Home</spam>
+                    <span style="padding-left: 5px;">Home</span>
                 </a>
             </li>
             <?php if(session()->get('user_type') == "visitor" and (strtotime(date("03-04-2020 08:00:00")) < strtotime(date("d-m-Y H:i:s")))){?>
             <li class="nav-item">
                 <a href="<?= base_url('users/software-fair'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
-                    <spam>Software Fair</spam>
+                    <span style="padding-left: 5px;">Software Fair</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="<?= base_url('users/hardware-fair'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
-                    <spam>Hardware Fair</spam>
+                    <span style="padding-left: 5px;">Hardware Fair</span>
                 </a>
             </li>
 			<li class="nav-item">
                 <a href="<?= base_url('users/forum'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
-                    <spam>Forum</spam>
+                    <span style="padding-left: 5px;">Forum</span>
                 </a>
             </li>
 			<li class="nav-item">
                 <a href="<?= base_url('users/leaderboard'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
-                    <spam>Leaderboard</spam>
+                    <span style="padding-left: 5px;">Leaderboard</span>
                 </a>
             </li>
             <?php } else if(session()->get('user_type') == "developer"){
@@ -221,7 +221,7 @@
 			<li class="nav-item">
                 <a href="<?= base_url("users/forum/$type/".$user_login['id']); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
-                    <spam>Forum</spam>
+                    <span style="padding-left: 5px;">Forum</span>
                 </a>
             </li>
 			<?php } ?>
@@ -240,7 +240,7 @@
             <li class="nav-item">
                 <a href="<?= base_url('users/logout'); ?>" class="nav-link">
                     <i class="ri-twitter-fill" style="color: #fff;"></i>
-                    <spam>Log Out</spam>    
+                    <span style="padding-left: 5px;">Log Out</span>    
                 </a>
             </li>
         </ul>
