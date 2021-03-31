@@ -243,7 +243,7 @@ class Auth extends BaseController{
                         session()->setFlashdata('errors_ot', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#ot");
                     } else {
-                        $batas = strtotime(date("01-04-2021 23:59:59"));
+                        $batas = strtotime(date("04-04-2021 23:59:59"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             $email_smtp = \Config\Services::email();
@@ -309,7 +309,7 @@ class Auth extends BaseController{
                         session()->setFlashdata('errors_visitors', $this->form_validation->getErrors());
                         return redirect()->to(base_url()."/#pengunjung");
                     } else {
-                        $batas = strtotime(date("01-04-2021 23:59:59"));
+                        $batas = strtotime(date("04-04-2021 23:59:59"));
                         $sekarang = strtotime(date("d-m-Y H:i:s"));
                         if($batas >= $sekarang){
                             $karakter = '0123456789abcdefghijklmnopqrstuvwxyz';
