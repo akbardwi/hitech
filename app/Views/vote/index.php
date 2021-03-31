@@ -1,6 +1,11 @@
     <main>
         <h1 style="text-align: center; color: #fff">Selamat Datang, <?= $user_login['fullname']; ?></h1>
         <br>
+        <div class="flex-container">
+            <div class="flex-item-right">
+                <a href="https://www.artsteps.com/embed/601e79375c382e5b255fc8e3/560/315"><p>Klik di sini untuk join kedalam Artstep</p></a>
+            </div>
+        </div>
         <p style="text-align: left; color: #fff">Ini merupakan halaman dari sistem penilaian / voting acara Hi-Technology 2021. Para pengunjung Hardware fair & Software fair diharapkan memberikan pertanyaan dan voting/penilaiannya terhadap developer yang menurutnya menarik dengan ketentuan umum sebagai berikut:</p>
         <p style="text-align: left; color: #fff">1. Akun yang telah dibuat di web pendaftaran pengunjung digunakan untuk log in system pengunjung melalui gadget pribadi.</p>
         <p style="text-align: left; color: #fff">2. Pengunjung dapat memberikan pertanyaan kepada Developer melalui forum yang
