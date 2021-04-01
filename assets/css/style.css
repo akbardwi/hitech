@@ -639,7 +639,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 0px 0;
+  padding: 0px 5px;
   overflow: hidden;
 }
 
@@ -2676,29 +2676,34 @@ body.showLoginForm .popup {
 }
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  justify-content: center;
-  align-items: center;
-  background: #fbfbfb;
-	border: 1px solid #dddddd;
-	border-radius: 5px;
-  margin: 5px;
-  padding: 5px;
-  color: white;
-  font-weight: 500;
-  background-color: #0077b5;
-  padding: 12px 20px;
-  border: 0;
-  border-radius: 50px;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    background: #fbfbfb;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 5px;
+    color: white;
+    font-weight: 500;
+    background-color: #0077b5;
+    padding: 10px 5px;
+    border: 0;
+    border-radius: 50px;
 }
 .tablinks{
   width: 150px;
+}
+@media(max-width: 700px){
+  .tablinks{
+    width: 120px;
+  }
 }
 
 /* Change background color of buttons on hover */

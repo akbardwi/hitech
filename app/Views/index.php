@@ -830,6 +830,7 @@
             <div class="tab" data-aos="fade-up">
                 <button class="tablinks" onclick="openCity(event, 'form')">Form</button>
                 <button class="tablinks" onclick="openCity(event, 'guide')">Instructions</button>
+                <a href="<?= base_url(); ?>/assets/guideline/GUIDELINE PENGUNJUNG SF-HF 2021.pdf"><button class="tablinks" >Guideline</button></a>
             </div>
             <div id="form" class="tabcontent" style="display: block;">
                 <div class="col-12 text-center align-self-center py-5" data-aos="zoom-in" data-aos-delay="100" >
