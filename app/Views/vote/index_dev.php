@@ -6,10 +6,8 @@
         web sistem dan diberikan langsung setelah pengunjung bertanya kepada developer.</p>
         <p style="text-align: left; color: #fff">2. Developer <strong>WAJIB</strong> memberikan 1 pertanyaan yang nantinya apabila jawaban dari
         peserta benar maka Developer akan memberikan maksimal 5 koin kepada pengunjung.</p>
-        <p style="text-align: left; color: #fff">3. Developer dapat memberikan koin ke pengunjung yang bertanya di forum dengan batas
-        maksimal 5 koin sesuai dengan bobot pertanyaan tersebut.</p>
-        <p style="text-align: left; color: #fff">4. Developer diharapkan “FAIR” dalam pemberian koin kepada pengunjung acara.</p>
-        <p style="text-align: left; color: #fff">5. Developer wajib mematuhi peraturan yang sudah ditentukan panitia</p>
+        <p style="text-align: left; color: #fff">3. Developer diharapkan “FAIR” dalam pemberian koin kepada pengunjung acara.</p>
+        <p style="text-align: left; color: #fff">4. Developer wajib mematuhi peraturan yang sudah ditentukan panitia</p>
         </div>
         <br>
         <br>
