@@ -502,7 +502,7 @@ h3{
 }
 
 .comment-area textarea{
-  width: 120%;
+  width: 100%;
   min-height: 100px;
   padding: 10px;
   margin-block: 10px;
@@ -612,7 +612,7 @@ h3{
 @media(max-width: 900px){
   .textinput {
   float: left;
-  width: 112%;
+  width: 100%;
   min-height: 75px;
   outline: none;
   resize: none;
