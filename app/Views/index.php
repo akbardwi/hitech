@@ -55,6 +55,7 @@
                 <li><a href="#pembicara">Pembicara</a></li>
                 <li><a href="#pengunjung">Pengunjung</a></li>
                 <li><a href="#kontak">Hubungi kami</a></li>
+                <li><a href="#sponsor">Sponsorship</a></li>
                 </ul>
             </nav><!-- .nav-menu -->
         </div>
@@ -1008,6 +1009,17 @@
                 <text transform="matrix(1 0 0 1 4.2921 210.0535)" font-size="104" class="tulisan">HI TECHNOLOGY</text>
             </svg>
         </div>
+        <section id="sponsor" class="cliens section-bg">
+            <h3 style="color: #fff;">Sponsored By</h3>
+            <div class="container">
+                <div class="flex-container">
+                    <div class="flex-item-right">
+                        <img src="<?= base_url(); ?>/assets/img/Bj.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </section>
         <div class="footer-address">
             <h1>Visit <span>Our</span> Social Media</h1>
         </div>
