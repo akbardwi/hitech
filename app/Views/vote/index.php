@@ -3,7 +3,7 @@
         <br>
         <div class="flex-container">
             <div class="flex-item-right">
-                <a href="https://www.artsteps.com/embed/601e79375c382e5b255fc8e3/560/315"><p>Klik di sini untuk join kedalam Artstep</p></a>
+                <a href="https://www.artsteps.com/view/6062e059ec5804747172fd24"><p>Klik di sini untuk join kedalam Artstep</p></a>
             </div>
         </div>
         <p style="text-align: left; color: #fff">Ini merupakan halaman dari sistem penilaian / voting acara Hi-Technology 2021. Para pengunjung Hardware fair & Software fair diharapkan memberikan pertanyaan dan voting/penilaiannya terhadap developer yang menurutnya menarik dengan ketentuan umum sebagai berikut:</p>
